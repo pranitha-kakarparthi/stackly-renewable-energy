@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stackly Renewable Energy | Intelligent Clean Power for a Sustainable Future</title>
+  <meta name="description" content="Pioneering enterprise wind, solar, and smart battery energy storage solutions. Powering over 12 million customers worldwide with 99.9% clean grid reliability.">
+  <meta name="keywords" content="renewable energy, solar energy, wind power, battery energy storage, clean grid, microgrids, Stackly">
+  <meta name="author" content="Stackly Renewable Energy">
+  
+  <!-- Open Graph / Meta -->
+  <meta property="og:title" content="Stackly Renewable Energy | Clean Power for a Greener Future">
+  <meta property="og:description" content="Enterprise solar, wind turbines, and microgrid battery energy storage solutions.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/images/hero-wind-turbines-clean-sky.webp">
+  
+  <link rel="icon" type="image/webp" href="assets/images/logoStackly.webp">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/animations.css">
+</head>
+<body>
+  <a href="#mainContent" class="skip-to-content">Skip to main content</a>
+
+  <!-- =========================================================
+       PAGE LOADER
+       ========================================================= -->
+  <div id="pageLoader" class="page-loader" role="status" aria-live="polite" aria-label="Loading Stackly Renewable Energy">
+    <div class="loader-logo-wrap">
+      <img src="assets/images/logoStackly-dark.webp" alt="Stackly Renewable Energy Logo" width="170" height="58">
+    </div>
+    <div class="loader-spinner" aria-hidden="true"></div>
+    <p class="loader-text">Synchronizing Clean Grid...</p>
+  </div>
+
+  <!-- =========================================================
+       STICKY NAVBAR
+       ========================================================= -->
+  <header class="site-header" role="banner">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo-link" aria-label="Stackly Renewable Energy Home">
+        <img src="assets/images/logoStackly-dark.webp" alt="Stackly Renewable Energy" class="brand-logo-img" width="138" height="46">
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="desktop-nav" aria-label="Main Navigation">
+        <div class="nav-item">
+          <a href="index.html" class="nav-link active">Home</a>
+        </div>
+        <div class="nav-item">
+          <a href="pages/about.html" class="nav-link">About Us</a>
+        </div>
+        <div class="nav-item has-dropdown">
+          <a href="pages/services.html" class="nav-link" aria-haspopup="true" aria-expanded="false">
+            Services
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </a>
+          <ul class="dropdown-menu" role="menu">
+            <li role="none"><a href="pages/solar-energy.html" class="dropdown-link" role="menuitem"><span class="dropdown-icon">☀️</span> Solar Solutions</a></li>
+            <li role="none"><a href="pages/wind-energy.html" class="dropdown-link" role="menuitem"><span class="dropdown-icon">💨</span> Wind Power Systems</a></li>
+            <li role="none"><a href="pages/energy-storage.html" class="dropdown-link" role="menuitem"><span class="dropdown-icon">🔋</span> Battery Energy Storage</a></li>
+            <li role="none"><a href="pages/services.html" class="dropdown-link" role="menuitem"><span class="dropdown-icon">⚡</span> All Solutions & Audits</a></li>
+          </ul>
+        </div>
+        <div class="nav-item">
+          <a href="pages/projects.html" class="nav-link">Projects</a>
+        </div>
+        <div class="nav-item">
+          <a href="pages/pricing.html" class="nav-link">Pricing</a>
+        </div>
+        <div class="nav-item">
+          <a href="pages/contact.html" class="nav-link">Contact</a>
+        </div>
+      </nav>
+
+      <!-- Desktop Header Actions -->
+      <div class="header-actions">
+        <a href="pages/sign-in.html" class="btn btn-secondary btn-sm" aria-label="Sign In to Stackly Dashboard">Sign In</a>
+        <a href="pages/sign-up.html" class="btn btn-primary btn-sm" aria-label="Register Account">
+          Get Started
+          <span class="btn-icon-capsule" aria-hidden="true">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </span>
+        </a>
+        <button class="mobile-nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Overlay Menu -->
+  <div class="mobile-nav-overlay" role="dialog" aria-modal="true" aria-label="Mobile Navigation Menu">
+    <ul class="mobile-nav-list">
+      <li><a href="index.html" class="mobile-nav-link active">Home</a></li>
+      <li><a href="pages/about.html" class="mobile-nav-link">About Us</a></li>
+      <li>
+        <a href="pages/services.html" class="mobile-nav-link">Services</a>
+        <ul class="mobile-nav-sublist">
+          <li><a href="pages/solar-energy.html" class="mobile-nav-sublink">☀️ Solar Solutions</a></li>
+          <li><a href="pages/wind-energy.html" class="mobile-nav-sublink">💨 Wind Power Systems</a></li>
+          <li><a href="pages/energy-storage.html" class="mobile-nav-sublink">🔋 Battery Storage (BESS)</a></li>
+        </ul>
+      </li>
+      <li><a href="pages/projects.html" class="mobile-nav-link">Projects & Impact</a></li>
+      <li><a href="pages/pricing.html" class="mobile-nav-link">Commercial Pricing</a></li>
+      <li><a href="pages/contact.html" class="mobile-nav-link">Contact Support</a></li>
+    </ul>
+
+    <!-- Action buttons inside mobile menu (avoid duplicates in header bar on small screens) -->
+    <div class="mobile-nav-actions">
+      <a href="pages/sign-in.html" class="btn btn-secondary" style="width: 100%;">Sign In</a>
+      <a href="pages/sign-up.html" class="btn btn-primary" style="width: 100%;">
+        Register Account
+        <span class="btn-icon-capsule" aria-hidden="true">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </span>
+      </a>
+    </div>
+  </div>
+
+  <main id="mainContent">
+    <!-- =========================================================
+         SECTION 1: HERO SECTION (Inspired by Video: Clean Sky Atmosphere)
+         ========================================================= -->
+    <section class="hero-section" aria-labelledby="heroHeading">
+      <div class="container hero-content-grid">
+        <div class="hero-left reveal">
+          <div class="hero-greeting-pill">
+            <span class="dynamic-greeting">Welcome to Stackly</span> • <span class="current-local-time"></span>
+          </div>
+          <h1 id="heroHeading" class="hero-title">
+            Greener Future With <br>
+            <span class="highlight-gradient">Intelligent Renewable Energy</span>
+          </h1>
+          <p class="hero-description">
+            Accelerating the global transition to zero-carbon energy. We design, deploy, and operate utility-grade wind turbine farms, smart solar arrays, and high-density battery storage systems for forward-thinking enterprises.
+          </p>
+          <div class="hero-btn-group">
+            <a href="pages/sign-up.html" class="btn btn-primary btn-lg">
+              Get Started Now
+              <span class="btn-icon-capsule" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </span>
+            </a>
+            <a href="pages/projects.html" class="btn btn-secondary btn-lg">Explore Case Studies</a>
+          </div>
+
+          <!-- Video-inspired live badge -->
+          <div style="display: flex; align-items: center; gap: 14px; margin-top: 1rem;">
+            <div style="width: 12px; height: 12px; border-radius: 50%; background: #10b981; box-shadow: 0 0 10px #10b981;" aria-hidden="true"></div>
+            <span style="font-size: 0.9rem; font-weight: 600; color: var(--color-secondary);">99.98% Clean Power Grid Availability Across 14 Regions</span>
+          </div>
+        </div>
+
+        <!-- Hero Visual Right with Real Avatar Floating Card (Inspired by Video) -->
+        <div class="hero-right reveal reveal-delay-2">
+          <div class="hero-visual-card">
+            <img src="assets/images/hero-wind-turbines-clean-sky.webp" alt="Clean wind turbines spinning against a crystal clear blue sky with modern renewable infrastructure" class="hero-main-img" width="800" height="500">
+            
+            <!-- Floating 12M+ Customers Card with Real Faces from Video -->
+            <div class="hero-floating-stat animate-float" role="region" aria-label="Customer Metric Highlight">
+              <div class="avatar-stack" aria-hidden="true">
+                <img src="assets/images/avatar-david-chen-solar-engineer.webp" alt="David Chen" width="36" height="36">
+                <img src="assets/images/avatar-elena-rostova-grid-director.webp" alt="Elena Rostova" width="36" height="36">
+                <img src="assets/images/avatar-sarah-jenkins-energy-analyst.webp" alt="Sarah Jenkins" width="36" height="36">
+                <img src="assets/images/avatar-marcus-vance-sustainability-lead.webp" alt="Marcus Vance" width="36" height="36">
+              </div>
+              <div>
+                <div class="stat-number">12M+</div>
+                <div class="stat-label">Satisfied Customers</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         SECTION 2: GLOBAL METRICS & LIVE GENERATION TICKER
+         ========================================================= -->
+    <section class="section" style="background: #ffffff; border-bottom: 1px solid var(--border-subtle);" aria-label="Key Performance Indicators">
+      <div class="container">
+        <div class="grid-4 text-center">
+          <div class="card reveal" style="padding: 1.8rem; text-align: center;">
+            <div style="font-size: 2.6rem; font-weight: 800; color: var(--color-primary); line-height: 1;">4.8 GW</div>
+            <p style="font-weight: 700; color: var(--color-secondary); margin: 6px 0 2px 0;">Installed Capacity</p>
+            <p style="font-size: 0.85rem; color: var(--text-muted);">Solar & Wind across 38 enterprise facilities</p>
+          </div>
+          <div class="card reveal reveal-delay-1" style="padding: 1.8rem; text-align: center;">
+            <div style="font-size: 2.6rem; font-weight: 800; color: var(--color-accent); line-height: 1;">8.2M Tons</div>
+            <p style="font-weight: 700; color: var(--color-secondary); margin: 6px 0 2px 0;">CO₂ Offset Annually</p>
+            <p style="font-size: 0.85rem; color: var(--text-muted);">Verified under ISO 14064 carbon standards</p>
+          </div>
+          <div class="card reveal reveal-delay-2" style="padding: 1.8rem; text-align: center;">
+            <div style="font-size: 2.6rem; font-weight: 800; color: var(--color-primary); line-height: 1;">99.98%</div>
+            <p style="font-weight: 700; color: var(--color-secondary); margin: 6px 0 2px 0;">Grid Dispatch Uptime</p>
+            <p style="font-size: 0.85rem; color: var(--text-muted);">AI-assisted predictive microgrid balancing</p>
+          </div>
+          <div class="card reveal reveal-delay-3" style="padding: 1.8rem; text-align: center;">
+            <div style="font-size: 2.6rem; font-weight: 800; color: var(--color-secondary); line-height: 1;">$142M+</div>
+            <p style="font-weight: 700; color: var(--color-secondary); margin: 6px 0 2px 0;">Client Cost Savings</p>
+            <p style="font-size: 0.85rem; color: var(--text-muted);">Peak-shaving and net-metering returns</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         SECTION 3: ABOUT US SNAPSHOT (Mission, Vision, Values)
+         ========================================================= -->
+    <section class="section" aria-labelledby="aboutHeading">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="badge-tag">About Stackly Energy</span>
+          <h2 id="aboutHeading">Engineering the Clean Energy Infrastructure of Tomorrow</h2>
+          <p>Founded on the premise that decarbonization requires uncompromising reliability, Stackly delivers complete turnkey clean energy ecosystems for industry leaders.</p>
+        </div>
+
+        <div class="grid-3">
+          <div class="card reveal">
+            <div class="card-icon-wrap" aria-hidden="true">🎯</div>
+            <h3 class="card-title">Our Mission</h3>
+            <p class="card-description">To democratize affordable, limitless clean power through next-generation wind, photovoltaic arrays, and modular grid storage.</p>
+            <a href="pages/about.html" class="btn-ghost">Read Full Story →</a>
+          </div>
+
+          <div class="card reveal reveal-delay-1">
+            <div class="card-icon-wrap" aria-hidden="true">🔭</div>
+            <h3 class="card-title">Our Vision</h3>
+            <p class="card-description">A world where 100% of commercial industrial operations run continuously on resilient, zero-emission decentralized microgrids.</p>
+            <a href="pages/about.html" class="btn-ghost">View Roadmap →</a>
+          </div>
+
+          <div class="card reveal reveal-delay-2">
+            <div class="card-icon-wrap" aria-hidden="true">🛡️</div>
+            <h3 class="card-title">Core Values</h3>
+            <p class="card-description">Unwavering safety, engineering rigor, radical environmental transparency, and round-the-clock stewardship of global ecosystems.</p>
+            <a href="pages/about.html" class="btn-ghost">Discover Values →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         SECTION 4: CORE RENEWABLE SERVICES GRID
+         ========================================================= -->
+    <section class="section" style="background: #ffffff;" aria-labelledby="servicesHeading">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="badge-tag badge-accent">Renewable Solutions</span>
+          <h2 id="servicesHeading">Integrated Clean Energy Solutions</h2>
+          <p>From initial thermal site audits to utility interconnection, our engineering teams manage every step of the renewable lifecycle.</p>
+        </div>
+
+        <div class="grid-3">
+          <!-- Service Card 1 -->
+          <div class="card reveal">
+            <div class="card-icon-wrap" aria-hidden="true">☀️</div>
+            <h3 class="card-title">Commercial & Utility Solar</h3>
+            <p class="card-description">High-efficiency bifacial monocrystalline solar arrays with smart MPPT inverters for commercial rooftops and expansive ground-mount solar parks.</p>
+            <a href="pages/solar-energy.html" class="btn-ghost">Explore Solar Systems →</a>
+          </div>
+
+          <!-- Service Card 2 -->
+          <div class="card reveal reveal-delay-1">
+            <div class="card-icon-wrap" aria-hidden="true">💨</div>
+            <h3 class="card-title">Advanced Wind Turbine Systems</h3>
+            <p class="card-description">Modern Vertical Axis Wind Turbines (VAWT) and high-yield Horizontal Axis systems engineered for low-wind cut-in and aerodynamic quietude.</p>
+            <a href="pages/wind-energy.html" class="btn-ghost">Explore Wind Tech →</a>
+          </div>
+
+          <!-- Service Card 3 -->
+          <div class="card reveal reveal-delay-2">
+            <div class="card-icon-wrap" aria-hidden="true">🔋</div>
+            <h3 class="card-title">Battery Energy Storage (BESS)</h3>
+            <p class="card-description">Utility-scale Lithium Iron Phosphate (LFP) containers with liquid thermal management, peak shaving, frequency regulation, and black-start backup.</p>
+            <a href="pages/energy-storage.html" class="btn-ghost">Explore Storage →</a>
+          </div>
+
+          <!-- Service Card 4 -->
+          <div class="card reveal">
+            <div class="card-icon-wrap" aria-hidden="true">🌐</div>
+            <h3 class="card-title">Smart Grid Integration</h3>
+            <p class="card-description">Decentralized IoT telemetry software that synchronizes onsite solar, wind, and storage directly with regional utility dispatch commands.</p>
+            <a href="pages/services.html" class="btn-ghost">Smart Grid Details →</a>
+          </div>
+
+          <!-- Service Card 5 -->
+          <div class="card reveal reveal-delay-1">
+            <div class="card-icon-wrap" aria-hidden="true">🔍</div>
+            <h3 class="card-title">Energy Auditing & Decarbonization</h3>
+            <p class="card-description">Comprehensive ISO 50001 audits, thermal imaging analysis, load profiling, and financial payback modeling for enterprise facilities.</p>
+            <a href="pages/services.html" class="btn-ghost">Request Audit →</a>
+          </div>
+
+          <!-- Service Card 6 -->
+          <div class="card reveal reveal-delay-2">
+            <div class="card-icon-wrap" aria-hidden="true">🛠️</div>
+            <h3 class="card-title">24/7 Asset O&M Operations</h3>
+            <p class="card-description">Drone-based thermographic inspections, predictive AI vibration analysis, blade maintenance, and guaranteed 99.8% inverter uptime.</p>
+            <a href="pages/services.html" class="btn-ghost">View O&M Services →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         SECTION 5: INTERACTIVE PROJECT SHOWCASE (Inspired by Video Accordion)
+         ========================================================= -->
+    <section class="section" aria-labelledby="showcaseHeading">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="badge-tag">Innovation Spotlight</span>
+          <h2 id="showcaseHeading">Proven Renewable Megawatt Implementations</h2>
+          <p>Real-world clean energy infrastructure operating across the globe, engineered by Stackly certified specialists.</p>
+        </div>
+
+        <div class="reveal" style="background: #ffffff; border-radius: var(--radius-xl); padding: clamp(1.5rem, 4vw, 3rem); box-shadow: var(--shadow-sm); border: 1px solid var(--border-light);">
+          <!-- Row 1 -->
+          <div class="showcase-row">
+            <span class="showcase-index">01</span>
+            <div class="showcase-title">Sunlight Energy's Future: 120 MW Bifacial Solar Plant</div>
+            <div class="showcase-desc">Supplying clean electricity to over 45,000 households with automated dual-axis solar trackers and real-time cloud tracking.</div>
+            <a href="pages/projects.html" class="showcase-btn" aria-label="View Sunlight Energy's Future Project">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+            </a>
+          </div>
+
+          <!-- Row 2 (With Featured Real Engineer Photo from Video) -->
+          <div class="showcase-row" style="flex-direction: column; align-items: stretch;">
+            <div style="display: flex; align-items: center; justify-content: space-between; gap: 1rem; width: 100%;">
+              <span class="showcase-index">02</span>
+              <div class="showcase-title">Wind Power: Electrifying the Industrial Heartland</div>
+              <div class="showcase-desc">In order to meet national Net Zero scenarios, Stackly deployed 34 low-vibration turbines yielding 240 GWh annually.</div>
+              <a href="pages/projects.html" class="showcase-btn" aria-label="View Wind Power Project">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+              </a>
+            </div>
+
+            <div style="margin-top: 1.5rem; position: relative; border-radius: var(--radius-lg); overflow: hidden;">
+              <img src="assets/images/project-wind-engineers-inspecting-turbines.webp" alt="Stackly certified field engineers in safety helmets and vests inspecting offshore wind turbine operations" style="width: 100%; max-height: 440px; object-fit: cover;" width="800" height="440">
+              <div style="position: absolute; bottom: 16px; left: 16px; display: flex; gap: 8px;">
+                <span class="badge-tag badge-light">New Energy</span>
+                <span class="badge-tag badge-light">Wind Farm</span>
+                <span class="badge-tag badge-light">2026 Production</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Row 3 -->
+          <div class="showcase-row">
+            <span class="showcase-index">03</span>
+            <div class="showcase-title">Vertical Axis Wind Turbine (VAWT) Urban Microgrid</div>
+            <div class="showcase-desc">Low-noise aerodynamic omnidirectional turbines mounted atop commercial towers, generating continuous baseload power in complex urban wind corridors.</div>
+            <a href="pages/wind-energy.html" class="showcase-btn" aria-label="View Urban VAWT Project">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         SECTION 6: REAL CUSTOMER TESTIMONIALS (Real Faces)
+         ========================================================= -->
+    <section class="section" style="background: #ffffff;" aria-labelledby="testimonialsHeading">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="badge-tag badge-accent">Client Feedback</span>
+          <h2 id="testimonialsHeading">Trusted by Enterprise Leaders Worldwide</h2>
+          <p>Discover how multinational corporations, municipal operators, and facilities achieve carbon neutrality with Stackly.</p>
+        </div>
+
+        <div class="grid-3">
+          <!-- Testimonial 1 -->
+          <div class="testimonial-card reveal">
+            <div>
+              <div class="testimonial-rating" aria-label="5 out of 5 stars">★★★★★</div>
+              <p class="testimonial-quote">"Stackly cut our peak manufacturing power tariff by 42% in the very first quarter. Their integrated battery storage and rooftop solar system runs seamlessly without a flicker."</p>
+            </div>
+            <div class="testimonial-author">
+              <img src="assets/images/testimonial-robert-langdon-manufacturing-ceo.webp" alt="Robert Langdon portrait" class="testimonial-avatar" width="52" height="52">
+              <div>
+                <div class="author-name">Robert Langdon</div>
+                <div class="author-role">CEO, Apex Precision Manufacturing</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div class="testimonial-card reveal reveal-delay-1">
+            <div>
+              <div class="testimonial-rating" aria-label="5 out of 5 stars">★★★★★</div>
+              <p class="testimonial-quote">"The real-time telemetry dashboard gives our board full visibility over generation vs irradiation. Stackly's engineering standards set the benchmark for modern clean energy."</p>
+            </div>
+            <div class="testimonial-author">
+              <img src="assets/images/testimonial-amara-okafor-facility-director.webp" alt="Amara Okafor portrait" class="testimonial-avatar" width="52" height="52">
+              <div>
+                <div class="author-name">Amara Okafor</div>
+                <div class="author-role">Director of Facilities, Nova BioPharma</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div class="testimonial-card reveal reveal-delay-2">
+            <div>
+              <div class="testimonial-rating" aria-label="5 out of 5 stars">★★★★★</div>
+              <p class="testimonial-quote">"When regional storms knocked out the central utility grid, Stackly’s BESS microgrid kept our data center fully operational for 18 hours without interruption."</p>
+            </div>
+            <div class="testimonial-author">
+              <img src="assets/images/testimonial-vikram-patel-datagrid-executive.webp" alt="Vikram Patel portrait" class="testimonial-avatar" width="52" height="52">
+              <div>
+                <div class="author-name">Vikram Patel</div>
+                <div class="author-role">VP Operations, DataGrid Systems</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         SECTION 7: INTERACTIVE CLEAN ENERGY IMPACT CALCULATOR
+         ========================================================= -->
+    <section class="section" aria-labelledby="calcHeading">
+      <div class="container">
+        <div class="card reveal" style="padding: clamp(2rem, 5vw, 3.5rem); background: radial-gradient(circle at top right, #e0f2fe 0%, #ffffff 80%);">
+          <div class="grid-3" style="grid-template-columns: 1.2fr 1fr; align-items: center;">
+            <div>
+              <span class="badge-tag">ROI Estimator</span>
+              <h2 id="calcHeading" style="margin-bottom: 1rem;">Estimate Your Enterprise Clean Energy Transition</h2>
+              <p style="margin-bottom: 1.5rem;">Calculate projected annual kilowatt-hour output, electric bill savings, and carbon reduction based on facility square footage.</p>
+              
+              <div class="form-group">
+                <label for="facilitySize" class="form-label">Facility Roof / Ground Area (Sq. Ft.)</label>
+                <input type="range" id="facilitySize" min="5000" max="100000" step="5000" value="25000" class="form-control" style="accent-color: var(--color-primary);" oninput="updateCalculator(this.value)">
+                <div style="display: flex; justify-content: space-between; font-size: 0.85rem; color: var(--text-muted); margin-top: 4px;">
+                  <span>5,000 sq ft</span>
+                  <span id="facilitySizeDisplay" style="font-weight: 700; color: var(--color-primary);">25,000 sq ft</span>
+                  <span>100,000 sq ft</span>
+                </div>
+              </div>
+            </div>
+
+            <div style="background: var(--color-secondary); color: #ffffff; border-radius: var(--radius-lg); padding: 2rem; box-shadow: var(--shadow-md);">
+              <h3 style="color: #ffffff; font-size: 1.2rem; margin-bottom: 1.2rem; border-bottom: 1px solid rgba(255, 255, 255, 0.15); padding-bottom: 0.8rem;">Projected Annual Metrics</h3>
+              
+              <div style="margin-bottom: 1rem;">
+                <div style="font-size: 0.85rem; color: #94a3b8;">Clean Generation Yield</div>
+                <div id="calcYield" style="font-size: 1.8rem; font-weight: 800; color: var(--color-primary-light);">485,000 kWh</div>
+              </div>
+
+              <div style="margin-bottom: 1rem;">
+                <div style="font-size: 0.85rem; color: #94a3b8;">Estimated Cost Savings</div>
+                <div id="calcSavings" style="font-size: 1.8rem; font-weight: 800; color: var(--color-accent);">$67,900 / yr</div>
+              </div>
+
+              <div>
+                <div style="font-size: 0.85rem; color: #94a3b8;">Carbon Footprint Offset</div>
+                <div id="calcOffset" style="font-size: 1.5rem; font-weight: 700; color: #ffffff;">344 Tons CO₂e</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         SECTION 8: HIGH-CONVERTING CTA BANNER
+         ========================================================= -->
+    <section class="section" style="padding-bottom: 0;" aria-label="Call to Action">
+      <div class="container">
+        <div class="cta-banner reveal">
+          <h2>Ready to Power Your Operations with 100% Clean Energy?</h2>
+          <p>Join hundreds of forward-thinking enterprises saving millions while meeting stringent ESG compliance targets. Schedule your zero-obligation technical feasibility review.</p>
+          <div style="display: flex; gap: 14px; justify-content: center; flex-wrap: wrap;">
+            <a href="pages/contact.html" class="btn btn-primary btn-lg">
+              Book Technical Consultation
+              <span class="btn-icon-capsule" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </span>
+            </a>
+            <a href="pages/sign-up.html" class="btn btn-secondary btn-lg" style="color: #ffffff; border-color: rgba(255, 255, 255, 0.4); background: rgba(255, 255, 255, 0.1);">Create Enterprise Portal</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================
+       FOOTER (Deep Slate Wave Design Inspired by Video)
+       ========================================================= -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-top-grid">
+        <!-- Col 1: Brand & Bio -->
+        <div class="footer-brand">
+          <a href="index.html" aria-label="Stackly Renewable Energy Homepage">
+            <img src="assets/images/logoStackly.webp" alt="Stackly Renewable Energy" class="brand-logo-img" width="140" height="48">
+          </a>
+          <p>Stackly is a visionary renewable energy company focused on harnessing the power of wind, solar, and battery storage to meet the growing demand for sustainable baseload energy.</p>
+          <div style="font-size: 0.85rem; color: #94a3b8; line-height: 1.5;">
+            <strong>Headquarters:</strong><br>
+            MMR Complex, Chinna Thirupathi, Salem, Tamil Nadu 636008
+          </div>
+        </div>
+
+        <!-- Col 2: Quick Links (Functional navigation links) -->
+        <div>
+          <h4 class="footer-title">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="pages/about.html" class="footer-link">About Us</a></li>
+            <li><a href="pages/services.html" class="footer-link">Renewable Services</a></li>
+            <li><a href="pages/solar-energy.html" class="footer-link">Solar PV Solutions</a></li>
+            <li><a href="pages/wind-energy.html" class="footer-link">Wind Turbines</a></li>
+            <li><a href="pages/energy-storage.html" class="footer-link">Battery Storage (BESS)</a></li>
+            <li><a href="pages/projects.html" class="footer-link">Project Portfolio</a></li>
+            <li><a href="pages/pricing.html" class="footer-link">Commercial Pricing</a></li>
+            <li><a href="pages/contact.html" class="footer-link">Contact Support</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Resources & Sub-services (All redirect to 404.html) -->
+        <div>
+          <h4 class="footer-title">Solutions & Topics</h4>
+          <ul class="footer-links">
+            <li><a href="pages/404.html" class="footer-link">Grid Interconnection</a></li>
+            <li><a href="pages/404.html" class="footer-link">Virtual Power Plants (VPP)</a></li>
+            <li><a href="pages/404.html" class="footer-link">Hydroelectric Microgrids</a></li>
+            <li><a href="pages/404.html" class="footer-link">Green Hydrogen Systems</a></li>
+            <li><a href="pages/404.html" class="footer-link">ESG Compliance Auditing</a></li>
+            <li><a href="pages/404.html" class="footer-link">Carbon Offset Certificates</a></li>
+            <li><a href="pages/404.html" class="footer-link">Turbine Aerodynamics Lab</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Newsletter & Social Links with Icon + Label -->
+        <div>
+          <h4 class="footer-title">Stay Energized</h4>
+          <p style="color: #94a3b8; font-size: 0.9rem; margin-bottom: 1rem;">Subscribe to our bi-weekly clean tech intelligence briefing.</p>
+          <form action="pages/404.html" method="GET" class="footer-newsletter-wrap">
+            <label for="footerEmail" class="sr-only" style="position: absolute; left: -9999px;">Enter your email</label>
+            <input type="email" id="footerEmail" name="email" placeholder="Enter Your Email" class="footer-newsletter-input" required>
+            <button type="submit" class="footer-newsletter-btn" aria-label="Subscribe to newsletter">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+            </button>
+          </form>
+
+          <h5 style="color: #ffffff; font-size: 0.95rem; margin-top: 1.5rem; margin-bottom: 0.5rem;">Connect With Stackly</h5>
+          <div class="social-links-grid">
+            <a href="pages/404.html" class="social-pill-link" aria-label="LinkedIn Profile">
+              <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+              LinkedIn
+            </a>
+            <a href="pages/404.html" class="social-pill-link" aria-label="Twitter X Profile">
+              <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+              Twitter / X
+            </a>
+            <a href="pages/404.html" class="social-pill-link" aria-label="YouTube Channel">
+              <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+              YouTube
+            </a>
+            <a href="pages/404.html" class="social-pill-link" aria-label="Facebook Page">
+              <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+              Facebook
+            </a>
+            <a href="pages/404.html" class="social-pill-link" aria-label="Instagram Profile">
+              <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+              Instagram
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 Stackly Renewable Energy Inc. All Rights Reserved. Clean Energy for a Greener World.
+        </div>
+        <ul class="footer-bottom-links">
+          <li><a href="pages/404.html">Privacy Policy</a></li>
+          <li><a href="pages/404.html">Terms of Service</a></li>
+          <li><a href="pages/404.html">Cookie Preferences</a></li>
+          <li><a href="pages/404.html">Security & Compliance</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/main.js"></script>
+  <script>
+    // Interactive ROI Calculator logic
+    function updateCalculator(sqft) {
+      document.getElementById('facilitySizeDisplay').textContent = Number(sqft).toLocaleString() + ' sq ft';
+      const yieldVal = Math.round(sqft * 19.4);
+      const savingsVal = Math.round(yieldVal * 0.14);
+      const offsetVal = Math.round(yieldVal * 0.00071);
+      
+      document.getElementById('calcYield').textContent = yieldVal.toLocaleString() + ' kWh';
+      document.getElementById('calcSavings').textContent = '$' + savingsVal.toLocaleString() + ' / yr';
+      document.getElementById('calcOffset').textContent = offsetVal.toLocaleString() + ' Tons CO₂e';
+    }
+  </script>
+</body>
+</html>
+

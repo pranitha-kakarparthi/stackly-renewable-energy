@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Settings & Preferences | Stackly Clean Power Dashboard</title>
+  <meta name="description" content="Configure clean energy telemetry thresholds, user operational roles, and SCADA API integrations.">
+  <link rel="icon" type="image/webp" href="../assets/images/logoStackly.webp">
+  <link rel="stylesheet" href="../assets/css/main.css">
+  <link rel="stylesheet" href="../assets/css/animations.css">
+  <link rel="stylesheet" href="../assets/css/dashboard.css">
+</head>
+<body class="dashboard-body">
+  <a href="#mainContent" class="skip-to-content">Skip to content</a>
+
+  <!-- Loader -->
+  <div id="pageLoader" class="page-loader" role="status" aria-live="polite">
+    <div class="loader-logo-wrap">
+      <img src="../assets/images/logoStackly-dark.webp" alt="Stackly Renewable Energy Logo" width="170" height="58">
+    </div>
+    <div class="loader-spinner"></div>
+    <p class="loader-text">Loading User Preferences...</p>
+  </div>
+
+  <!-- Sidebar -->
+  <aside class="dash-sidebar" role="navigation">
+    <div class="sidebar-header">
+      <a href="../index.html" class="sidebar-brand">
+        <img src="../assets/images/logoStackly.webp" alt="Stackly Renewable Energy" width="120" height="40">
+      </a>
+      <button type="button" class="sidebar-toggle-btn" aria-label="Toggle sidebar width">
+        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" width="20" height="20"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 19l-7-7 7-7m8 14l-7-7 7-7"/></svg>
+      </button>
+    </div>
+
+    <ul class="sidebar-menu">
+      <li><a href="dashboard.html" class="sidebar-link" data-tooltip="Dashboard"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg><span class="sidebar-link-text">Dashboard</span></a></li>
+      <li><a href="dashboard-analytics.html" class="sidebar-link" data-tooltip="Analytics"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg><span class="sidebar-link-text">Analytics</span></a></li>
+      <li><a href="dashboard-reports.html" class="sidebar-link" data-tooltip="ESG Reports"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg><span class="sidebar-link-text">ESG Reports</span></a></li>
+      <li><a href="dashboard-assets.html" class="sidebar-link" data-tooltip="Turbine & Solar Fleet"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg><span class="sidebar-link-text">Turbine & Solar Fleet</span></a></li>
+      <li><a href="dashboard-settings.html" class="sidebar-link active" data-tooltip="Settings"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg><span class="sidebar-link-text">Settings</span></a></li>
+    </ul>
+
+    <div class="sidebar-footer">
+      <button type="button" class="btn btn-secondary btn-sm btn-sign-out" style="width: 100%;">Sign Out</button>
+    </div>
+  </aside>
+
+  <!-- Main Content -->
+  <div class="dash-main" id="mainContent">
+    <header class="dash-topbar" role="banner">
+      <div class="dash-topbar-left">
+        <button type="button" class="mobile-sidebar-btn"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" width="24" height="24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+        <div>
+          <h1 class="topbar-greeting">System Settings & Role Configuration</h1>
+          <div class="topbar-time-meta">Local Storage Session Configuration</div>
+        </div>
+      </div>
+      <div class="dash-topbar-right">
+        <span class="dash-role-badge">Admin</span>
+        <div class="user-profile-widget">
+          <img src="../assets/images/team-james-workman-field-operations-lead.webp" alt="User Profile" class="user-avatar-img" width="38" height="38">
+          <span class="user-meta-name">James Workman</span>
+        </div>
+        <button type="button" class="btn btn-secondary btn-sm btn-sign-out">Sign Out</button>
+      </div>
+    </header>
+
+    <main class="dash-content">
+      <!-- Section 1: User Profile Settings Card -->
+      <section class="card" style="background: var(--dash-surface-card); border-color: var(--dash-border-subtle); color: #ffffff;">
+        <h2 style="font-size: 1.25rem; color: #ffffff; margin-bottom: 1.25rem;">Active Profile Details</h2>
+        <div class="grid-3" style="grid-template-columns: 1fr 1fr; gap: 1.25rem;">
+          <div class="form-group">
+            <label class="form-label" style="color: var(--dash-text-muted);">Current Active Role</label>
+            <select id="roleSwitcherSelect" class="form-control" style="background: var(--dash-surface); color: #ffffff; border-color: var(--dash-border-subtle);" onchange="switchDemoRole(this.value)">
+              <option value="Admin">Admin (Full Control Center)</option>
+              <option value="Manager">Manager (Operations & KPI)</option>
+              <option value="Customer">Customer (Solar Billing & Savings)</option>
+              <option value="Vendor/Engineer">Vendor / Engineer (Diagnostics)</option>
+            </select>
+            <div style="font-size: 0.78rem; color: var(--dash-cyan); margin-top: 4px;">Changes active role in localStorage for dashboard testing.</div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" style="color: var(--dash-text-muted);">Notification Alert Frequency</label>
+            <select class="form-control" style="background: var(--dash-surface); color: #ffffff; border-color: var(--dash-border-subtle);">
+              <option>Real-Time Push (Instant)</option>
+              <option>Daily Digest (08:00 AM)</option>
+              <option>Emergency Grid Faults Only</option>
+            </select>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 2: SCADA API Gateway Configuration -->
+      <section class="card" style="background: var(--dash-surface-card); border-color: var(--dash-border-subtle); color: #ffffff;">
+        <h2 style="font-size: 1.25rem; color: #ffffff; margin-bottom: 1.25rem;">SCADA Cloud API Credentials</h2>
+        <div class="form-group">
+          <label class="form-label" style="color: var(--dash-text-muted);">Client Telemetry Secret Key</label>
+          <input type="text" readonly value="stackly_live_sec_7894129487123984712039841" class="form-control" style="background: var(--dash-surface); color: var(--dash-cyan); border-color: var(--dash-border-subtle);">
+        </div>
+        <div>
+          <button type="button" class="btn btn-secondary btn-sm btn-dash-action">Rotate Secret Key</button>
+          <button type="button" class="btn btn-primary btn-sm btn-dash-action" style="margin-left: 8px;">Save Settings</button>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/dashboard.js"></script>
+  <script>
+    function switchDemoRole(newRole) {
+      const rawUser = localStorage.getItem("stackly_current_user");
+      if (rawUser) {
+        const u = JSON.parse(rawUser);
+        u.role = newRole;
+        localStorage.setItem("stackly_current_user", JSON.stringify(u));
+        localStorage.setItem("stackly_role", newRole);
+        window.location.reload();
+      }
+    }
+  </script>
+</body>
+</html>
+

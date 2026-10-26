@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Turbine & Solar Fleet Assets | Stackly Clean Power</title>
+  <meta name="description" content="Manage and monitor wind turbine nacelles, solar string inverters, and battery storage containers across facilities.">
+  <link rel="icon" type="image/webp" href="../assets/images/logoStackly.webp">
+  <link rel="stylesheet" href="../assets/css/main.css">
+  <link rel="stylesheet" href="../assets/css/animations.css">
+  <link rel="stylesheet" href="../assets/css/dashboard.css">
+</head>
+<body class="dashboard-body">
+  <a href="#mainContent" class="skip-to-content">Skip to content</a>
+
+  <!-- Loader -->
+  <div id="pageLoader" class="page-loader" role="status" aria-live="polite">
+    <div class="loader-logo-wrap">
+      <img src="../assets/images/logoStackly-dark.webp" alt="Stackly Renewable Energy Logo" width="170" height="58">
+    </div>
+    <div class="loader-spinner"></div>
+    <p class="loader-text">Loading Asset Fleet Telemetry...</p>
+  </div>
+
+  <!-- Sidebar -->
+  <aside class="dash-sidebar" role="navigation">
+    <div class="sidebar-header">
+      <a href="../index.html" class="sidebar-brand">
+        <img src="../assets/images/logoStackly.webp" alt="Stackly Renewable Energy" width="120" height="40">
+      </a>
+      <button type="button" class="sidebar-toggle-btn" aria-label="Toggle sidebar width">
+        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" width="20" height="20"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 19l-7-7 7-7m8 14l-7-7 7-7"/></svg>
+      </button>
+    </div>
+
+    <ul class="sidebar-menu">
+      <li><a href="dashboard.html" class="sidebar-link" data-tooltip="Dashboard"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg><span class="sidebar-link-text">Dashboard</span></a></li>
+      <li><a href="dashboard-analytics.html" class="sidebar-link" data-tooltip="Analytics"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg><span class="sidebar-link-text">Analytics</span></a></li>
+      <li><a href="dashboard-reports.html" class="sidebar-link" data-tooltip="ESG Reports"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg><span class="sidebar-link-text">ESG Reports</span></a></li>
+      <li><a href="dashboard-assets.html" class="sidebar-link active" data-tooltip="Turbine & Solar Fleet"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg><span class="sidebar-link-text">Turbine & Solar Fleet</span></a></li>
+      <li><a href="dashboard-settings.html" class="sidebar-link" data-tooltip="Settings"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg><span class="sidebar-link-text">Settings</span></a></li>
+    </ul>
+
+    <div class="sidebar-footer">
+      <button type="button" class="btn btn-secondary btn-sm btn-sign-out" style="width: 100%;">Sign Out</button>
+    </div>
+  </aside>
+
+  <!-- Main Content -->
+  <div class="dash-main" id="mainContent">
+    <header class="dash-topbar" role="banner">
+      <div class="dash-topbar-left">
+        <button type="button" class="mobile-sidebar-btn"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" width="24" height="24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+        <div>
+          <h1 class="topbar-greeting">Turbine & Solar Fleet Assets</h1>
+          <div class="topbar-time-meta">Hardware Fleet Management • 142 Monitored Units</div>
+        </div>
+      </div>
+      <div class="dash-topbar-right">
+        <span class="dash-role-badge">Admin</span>
+        <div class="user-profile-widget">
+          <img src="../assets/images/team-james-workman-field-operations-lead.webp" alt="User Profile" class="user-avatar-img" width="38" height="38">
+          <span class="user-meta-name">James Workman</span>
+        </div>
+        <button type="button" class="btn btn-secondary btn-sm btn-sign-out">Sign Out</button>
+      </div>
+    </header>
+
+    <main class="dash-content">
+      <!-- Section 1: Fleet Status Summary -->
+      <section class="dash-kpi-grid">
+        <div class="kpi-card">
+          <div class="kpi-header"><span>Wind Turbines Operational</span><span>HAWT/VAWT</span></div>
+          <div class="kpi-value" style="color: var(--dash-cyan);">38 / 38</div>
+          <div class="kpi-trend positive">100% active spinning</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-header"><span>Solar Inverter Strings</span><span>MPPT</span></div>
+          <div class="kpi-value" style="color: var(--dash-green);">84 / 84</div>
+          <div class="kpi-trend positive">Zero ground fault alerts</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-header"><span>BESS Battery Modules</span><span>LFP</span></div>
+          <div class="kpi-value">20 Racks</div>
+          <div class="kpi-trend positive">Cell balance &lt; 8 mV</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-header"><span>Next Scheduled Drone Audit</span><span>Thermography</span></div>
+          <div class="kpi-value" style="font-size: 1.3rem;">In 4 Days</div>
+          <div class="kpi-trend positive">Salem solar park scan</div>
+        </div>
+      </section>
+
+      <!-- Section 2: Detailed Hardware Asset Health Table -->
+      <section class="dash-table-card">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.25rem;">
+          <div>
+            <h2 style="font-size: 1.15rem; font-weight: 700; color: #ffffff;">Asset Fleet Status & Diagnostics</h2>
+            <div style="font-size: 0.8rem; color: var(--dash-text-muted);">Real-time vibration, bearing temperature, and inverter load</div>
+          </div>
+          <button type="button" class="btn btn-primary btn-sm btn-dash-action">+ Register Asset</button>
+        </div>
+
+        <table class="dash-table">
+          <thead>
+            <tr>
+              <th>Asset Identifier</th>
+              <th>Hardware Type</th>
+              <th>Rated Output</th>
+              <th>Health Index</th>
+              <th>Operating Hours</th>
+              <th>Status</th>
+              <th>Control</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>VAWT-TURBINE-01</strong></td>
+              <td>Vertical Axis Omnidirectional</td>
+              <td>500 kW</td>
+              <td>99.6% Excellent</td>
+              <td>14,240 hrs</td>
+              <td><span class="status-pill online">● Operational</span></td>
+              <td><button type="button" class="btn btn-secondary btn-sm btn-dash-action" style="padding: 4px 10px; font-size: 0.75rem;">Calibrate</button></td>
+            </tr>
+            <tr>
+              <td><strong>SOLAR-STRING-XAVIER</strong></td>
+              <td>Bifacial N-Type Array</td>
+              <td>600 kW</td>
+              <td>99.1% Excellent</td>
+              <td>8,120 hrs</td>
+              <td><span class="status-pill online">● Operational</span></td>
+              <td><button type="button" class="btn btn-secondary btn-sm btn-dash-action" style="padding: 4px 10px; font-size: 0.75rem;">Calibrate</button></td>
+            </tr>
+            <tr>
+              <td><strong>BESS-CONTAINER-C2500</strong></td>
+              <td>Liquid-Cooled LFP 2.8 MWh</td>
+              <td>1,250 kW</td>
+              <td>98.8% Balanced</td>
+              <td>5,400 hrs</td>
+              <td><span class="status-pill online">● Operational</span></td>
+              <td><button type="button" class="btn btn-secondary btn-sm btn-dash-action" style="padding: 4px 10px; font-size: 0.75rem;">Calibrate</button></td>
+            </tr>
+            <tr>
+              <td><strong>HAWT-COASTAL-ROTOR-09</strong></td>
+              <td>Horizontal 3.2 MW Wind</td>
+              <td>3,200 kW</td>
+              <td>97.9% Good</td>
+              <td>22,100 hrs</td>
+              <td><span class="status-pill online">● Operational</span></td>
+              <td><button type="button" class="btn btn-secondary btn-sm btn-dash-action" style="padding: 4px 10px; font-size: 0.75rem;">Calibrate</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+  </div>
+
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/dashboard.js"></script>
+</body>
+</html>
+

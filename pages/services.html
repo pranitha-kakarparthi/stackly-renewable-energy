@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Renewable Services & Solutions | Stackly Clean Power</title>
+  <meta name="description" content="Explore Stackly's comprehensive renewable energy services: utility solar, advanced wind turbine arrays, battery storage, and 24/7 IoT grid management.">
+  <link rel="icon" type="image/webp" href="../assets/images/logoStackly.webp">
+  <link rel="stylesheet" href="../assets/css/main.css">
+  <link rel="stylesheet" href="../assets/css/animations.css">
+</head>
+<body>
+  <a href="#mainContent" class="skip-to-content">Skip to main content</a>
+
+  <!-- Loader -->
+  <div id="pageLoader" class="page-loader" role="status" aria-live="polite" aria-label="Loading Services">
+    <div class="loader-logo-wrap">
+      <img src="../assets/images/logoStackly-dark.webp" alt="Stackly Renewable Energy Logo" width="170" height="58">
+    </div>
+    <div class="loader-spinner" aria-hidden="true"></div>
+    <p class="loader-text">Loading Renewable Services...</p>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header" role="banner">
+    <div class="container nav-container">
+      <a href="../index.html" class="brand-logo-link" aria-label="Stackly Renewable Energy Home">
+        <img src="../assets/images/logoStackly-dark.webp" alt="Stackly Renewable Energy" class="brand-logo-img" width="138" height="46">
+      </a>
+
+      <nav class="desktop-nav" aria-label="Main Navigation">
+        <div class="nav-item"><a href="../index.html" class="nav-link">Home</a></div>
+        <div class="nav-item"><a href="about.html" class="nav-link">About Us</a></div>
+        <div class="nav-item has-dropdown">
+          <a href="services.html" class="nav-link active" aria-haspopup="true" aria-expanded="false">
+            Services
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+          </a>
+          <ul class="dropdown-menu" role="menu">
+            <li role="none"><a href="solar-energy.html" class="dropdown-link" role="menuitem">☀️ Solar Solutions</a></li>
+            <li role="none"><a href="wind-energy.html" class="dropdown-link" role="menuitem">💨 Wind Power Systems</a></li>
+            <li role="none"><a href="energy-storage.html" class="dropdown-link" role="menuitem">🔋 Battery Energy Storage</a></li>
+            <li role="none"><a href="services.html" class="dropdown-link" role="menuitem">⚡ All Solutions & Audits</a></li>
+          </ul>
+        </div>
+        <div class="nav-item"><a href="projects.html" class="nav-link">Projects</a></div>
+        <div class="nav-item"><a href="pricing.html" class="nav-link">Pricing</a></div>
+        <div class="nav-item"><a href="contact.html" class="nav-link">Contact</a></div>
+      </nav>
+
+      <div class="header-actions">
+        <a href="sign-in.html" class="btn btn-secondary btn-sm">Sign In</a>
+        <a href="sign-up.html" class="btn btn-primary btn-sm">Get Started</a>
+        <button class="mobile-nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Overlay -->
+  <div class="mobile-nav-overlay" role="dialog" aria-modal="true">
+    <ul class="mobile-nav-list">
+      <li><a href="../index.html" class="mobile-nav-link">Home</a></li>
+      <li><a href="about.html" class="mobile-nav-link">About Us</a></li>
+      <li>
+        <a href="services.html" class="mobile-nav-link active">Services</a>
+        <ul class="mobile-nav-sublist">
+          <li><a href="solar-energy.html" class="mobile-nav-sublink">☀️ Solar Solutions</a></li>
+          <li><a href="wind-energy.html" class="mobile-nav-sublink">💨 Wind Power Systems</a></li>
+          <li><a href="energy-storage.html" class="mobile-nav-sublink">🔋 Battery Storage</a></li>
+        </ul>
+      </li>
+      <li><a href="projects.html" class="mobile-nav-link">Projects</a></li>
+      <li><a href="pricing.html" class="mobile-nav-link">Pricing</a></li>
+      <li><a href="contact.html" class="mobile-nav-link">Contact</a></li>
+    </ul>
+    <div class="mobile-nav-actions">
+      <a href="sign-in.html" class="btn btn-secondary" style="width: 100%;">Sign In</a>
+      <a href="sign-up.html" class="btn btn-primary" style="width: 100%;">Register Account</a>
+    </div>
+  </div>
+
+  <main id="mainContent">
+    <!-- Section 1: Hero -->
+    <section class="section" style="background: radial-gradient(100% 85% at 50% 0%, #cbe8f6 0%, #f4f8fb 100%); padding-bottom: 3.5rem;">
+      <div class="container text-center">
+        <nav aria-label="Breadcrumb" style="margin-bottom: 1rem;">
+          <ol style="display: inline-flex; gap: 8px; list-style: none; font-size: 0.9rem; color: var(--text-muted);">
+            <li><a href="../index.html">Home</a></li>
+            <li>/</li>
+            <li aria-current="page" style="color: var(--color-primary); font-weight: 600;">Services</li>
+          </ol>
+        </nav>
+        <span class="badge-tag">End-to-End Clean Energy</span>
+        <h1 style="max-width: 800px; margin: 0 auto 1.25rem auto;">Decarbonize Your Enterprise with Turnkey Renewable Solutions</h1>
+        <p style="max-width: 680px; margin: 0 auto 2rem auto; font-size: 1.15rem;">
+          From feasibility assessments and grid interconnection engineering to lifetime asset operations, Stackly delivers unmatched reliability and bankability.
+        </p>
+      </div>
+    </section>
+
+    <!-- Section 2: Comprehensive Services Grid -->
+    <section class="section" style="background: #ffffff;" aria-labelledby="allServicesHeading">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="badge-tag badge-accent">Our Core Services</span>
+          <h2 id="allServicesHeading">Engineered for Megawatt Precision</h2>
+          <p>Explore our domain-specific clean energy service offerings designed for industrial manufacturers, tech campuses, and utilities.</p>
+        </div>
+
+        <div class="grid-3">
+          <!-- Card 1 -->
+          <div class="card reveal">
+            <div class="card-icon-wrap">☀️</div>
+            <h3 class="card-title">Solar Photovoltaic Parks</h3>
+            <p class="card-description">Ground-mount bifacial solar parks, tracker integration, and commercial rooftop photovoltaic arrays generating low-cost green electricity.</p>
+            <a href="solar-energy.html" class="btn-ghost">View Solar Engineering →</a>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="card reveal reveal-delay-1">
+            <div class="card-icon-wrap">💨</div>
+            <h3 class="card-title">Wind Turbine Farms</h3>
+            <p class="card-description">Horizontal and Vertical Axis Wind Turbines (VAWT) optimized for smooth aerodynamics, low cut-in wind velocities, and minimal acoustic signature.</p>
+            <a href="wind-energy.html" class="btn-ghost">View Wind Power →</a>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="card reveal reveal-delay-2">
+            <div class="card-icon-wrap">🔋</div>
+            <h3 class="card-title">Battery Energy Storage (BESS)</h3>
+            <p class="card-description">Modular containerized Lithium Iron Phosphate (LFP) systems providing millisecond frequency response, peak shaving, and emergency microgrid backup.</p>
+            <a href="energy-storage.html" class="btn-ghost">View Storage Systems →</a>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="card reveal">
+            <div class="card-icon-wrap">⚡</div>
+            <h3 class="card-title">Virtual Power Plants (VPP)</h3>
+            <p class="card-description">Software-driven aggregation of distributed solar and battery storage assets, participating directly in wholesale energy arbitrage.</p>
+            <a href="404.html" class="btn-ghost">Explore VPP Architecture →</a>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="card reveal reveal-delay-1">
+            <div class="card-icon-wrap">🔍</div>
+            <h3 class="card-title">Industrial Energy Audits</h3>
+            <p class="card-description">Detailed thermal drone imaging, load factor profiling, harmonic distortion analysis, and actionable carbon reduction roadmaps.</p>
+            <a href="404.html" class="btn-ghost">Schedule Facility Audit →</a>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="card reveal reveal-delay-2">
+            <div class="card-icon-wrap">🛠️</div>
+            <h3 class="card-title">24/7 Operations & Maintenance</h3>
+            <p class="card-description">Continuous remote SCADA telemetry monitoring, predictive bearing vibration analysis, annual inverter servicing, and guaranteed 99.8% uptime.</p>
+            <a href="404.html" class="btn-ghost">Explore O&M Service SLA →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: Step-by-Step Transition Workflow -->
+    <section class="section" aria-labelledby="workflowHeading">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="badge-tag">Methodology</span>
+          <h2 id="workflowHeading">Our 4-Phase Engineering Framework</h2>
+          <p>How we take your facility from initial energy consumption analysis to synchronized zero-carbon generation.</p>
+        </div>
+
+        <div class="grid-4">
+          <div class="card reveal" style="position: relative;">
+            <div style="font-size: 2.2rem; font-weight: 800; color: var(--color-primary); margin-bottom: 0.5rem;">01</div>
+            <h4 style="margin-bottom: 0.5rem;">Audit & Modeling</h4>
+            <p style="font-size: 0.88rem; color: var(--text-muted);">Site irradiance analysis, wind velocity measurements, and 12-month interval load profiling.</p>
+          </div>
+
+          <div class="card reveal reveal-delay-1">
+            <div style="font-size: 2.2rem; font-weight: 800; color: var(--color-primary); margin-bottom: 0.5rem;">02</div>
+            <h4 style="margin-bottom: 0.5rem;">Permitting & Design</h4>
+            <p style="font-size: 0.88rem; color: var(--text-muted);">Detailed CAD structural schematics, utility interconnection studies, and environmental compliance filings.</p>
+          </div>
+
+          <div class="card reveal reveal-delay-2">
+            <div style="font-size: 2.2rem; font-weight: 800; color: var(--color-primary); margin-bottom: 0.5rem;">03</div>
+            <h4 style="margin-bottom: 0.5rem;">Procurement & EPC</h4>
+            <p style="font-size: 0.88rem; color: var(--text-muted);">Turnkey construction, high-voltage substation interconnection, and rigorous IEEE safety commissioning.</p>
+          </div>
+
+          <div class="card reveal reveal-delay-3">
+            <div style="font-size: 2.2rem; font-weight: 800; color: var(--color-accent); margin-bottom: 0.5rem;">04</div>
+            <h4 style="margin-bottom: 0.5rem;">Telemetry & O&M</h4>
+            <p style="font-size: 0.88rem; color: var(--text-muted);">Integration with Stackly Cloud SCADA, automated carbon credit generation, and lifetime maintenance.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: Technology Stack & Inverter Architecture -->
+    <section class="section" style="background: #ffffff;" aria-labelledby="techStackHeading">
+      <div class="container">
+        <div class="grid-3" style="grid-template-columns: 1fr 1fr; align-items: center; gap: 3rem;">
+          <div class="reveal">
+            <img src="../assets/images/service-smart-energy-audit-thermal-inspection.webp" alt="Field engineers performing precision thermal and electrical telemetry on renewable equipment" style="border-radius: var(--radius-lg); width: 100%; aspect-ratio: 16/10; object-fit: cover;" width="600" height="375">
+          </div>
+
+          <div class="reveal reveal-delay-1">
+            <span class="badge-tag badge-accent">IoT Architecture</span>
+            <h2 id="techStackHeading" style="margin-bottom: 1.2rem;">Intelligent Telemetry & AI Dispatch Engine</h2>
+            <p style="margin-bottom: 1rem;">Our renewable assets are equipped with industrial IoT gateways transmitting 1-second telemetry to the Stackly Cloud Engine.</p>
+            <ul style="list-style: none; display: flex; flex-direction: column; gap: 12px;">
+              <li style="display: flex; gap: 10px; align-items: center; color: var(--color-secondary); font-weight: 600;">
+                <span style="color: var(--color-primary);">⚡</span> Multi-string MPPT efficiency optimization with sub-second response
+              </li>
+              <li style="display: flex; gap: 10px; align-items: center; color: var(--color-secondary); font-weight: 600;">
+                <span style="color: var(--color-primary);">⚡</span> Neural weather forecasting anticipating cloud cover 4 hours in advance
+              </li>
+              <li style="display: flex; gap: 10px; align-items: center; color: var(--color-secondary); font-weight: 600;">
+                <span style="color: var(--color-primary);">⚡</span> Automated tariff peak shaving shifting battery discharge to high-rate windows
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 5: Commercial vs Utility Solutions -->
+    <section class="section" aria-labelledby="scaleHeading">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="badge-tag">Deployment Models</span>
+          <h2 id="scaleHeading">Tailored Scales for Every Operational Profile</h2>
+          <p>Whether you require rooftop solar for a distribution hub or a 100 MW utility wind farm, Stackly delivers engineered excellence.</p>
+        </div>
+
+        <div class="grid-3" style="grid-template-columns: 1fr 1fr;">
+          <div class="card reveal" style="padding: 2.5rem;">
+            <span class="badge-tag">Commercial & Industrial</span>
+            <h3 style="margin-top: 0.5rem; margin-bottom: 1rem;">C&I Onsite Microgrids</h3>
+            <p>Designed for logistics centers, corporate headquarters, cold storage facilities, and data centers seeking bill reduction and backup resilience.</p>
+            <ul style="margin: 1.2rem 0; padding-left: 1.2rem; color: var(--text-muted); font-size: 0.95rem; line-height: 1.8;">
+              <li>Typical capacity: 250 kW to 10 MW</li>
+              <li>Estimated payback period: 3.8 to 5.2 years</li>
+              <li>Direct net-metering interconnection</li>
+              <li>Zero upfront capital options (PPA models)</li>
+            </ul>
+            <a href="pricing.html" class="btn btn-secondary" style="margin-top: 1rem;">View C&I Plans</a>
+          </div>
+
+          <div class="card reveal reveal-delay-1" style="padding: 2.5rem; background: radial-gradient(circle at top left, #f0fdf4 0%, #ffffff 80%); border-color: rgba(16, 185, 129, 0.3);">
+            <span class="badge-tag badge-accent">Utility Scale</span>
+            <h3 style="margin-top: 0.5rem; margin-bottom: 1rem;">Utility Grid Plants</h3>
+            <p>High-voltage utility interconnection, substation engineering, and multi-hundred-megawatt solar, wind, and storage developments.</p>
+            <ul style="margin: 1.2rem 0; padding-left: 1.2rem; color: var(--text-muted); font-size: 0.95rem; line-height: 1.8;">
+              <li>Typical capacity: 20 MW to 500+ MW</li>
+              <li>High-voltage substation (66 kV to 400 kV)</li>
+              <li>Black-start and dynamic frequency control</li>
+              <li>Long-term power purchase agreements (PPA)</li>
+            </ul>
+            <a href="contact.html" class="btn btn-primary" style="margin-top: 1rem;">Inquire for Utility Project</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 6: FAQ Section -->
+    <section class="section" style="background: #ffffff;" aria-labelledby="faqHeading">
+      <div class="container" style="max-width: 860px;">
+        <div class="section-header reveal">
+          <span class="badge-tag">Frequently Asked Questions</span>
+          <h2 id="faqHeading">Common Questions Regarding Renewable Deployment</h2>
+        </div>
+
+        <div class="reveal" style="display: flex; flex-direction: column; gap: 1rem;">
+          <div class="card" style="padding: 1.5rem;">
+            <h4 style="margin-bottom: 0.5rem; color: var(--color-secondary);">How long does a commercial solar or wind installation typically take?</h4>
+            <p style="font-size: 0.92rem; margin-bottom: 0;">C&I rooftop solar installations usually require 8 to 14 weeks from permit approvals to utility commissioning. Utility wind and solar farms range from 6 to 14 months depending on site civil works.</p>
+          </div>
+
+          <div class="card" style="padding: 1.5rem;">
+            <h4 style="margin-bottom: 0.5rem; color: var(--color-secondary);">What warranties and performance guarantees does Stackly provide?</h4>
+            <p style="font-size: 0.92rem; margin-bottom: 0;">We provide 25-year linear power output warranties on photovoltaic panels, 15-year warranties on wind turbines, 10-year / 6,000-cycle warranties on BESS systems, and a 99.8% inverter uptime SLA.</p>
+          </div>
+
+          <div class="card" style="padding: 1.5rem;">
+            <h4 style="margin-bottom: 0.5rem; color: var(--color-secondary);">Can Stackly's system function during an electric grid blackout?</h4>
+            <p style="font-size: 0.92rem; margin-bottom: 0;">Yes. When paired with our Battery Energy Storage Systems (BESS), the microgrid switches to islanding mode within 16 milliseconds, sustaining mission-critical loads without interruption.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 7: CTA Banner -->
+    <section class="section" style="padding-bottom: 0;">
+      <div class="container">
+        <div class="cta-banner reveal">
+          <h2>Transform Your Energy Operations Today</h2>
+          <p>Speak with our renewable engineering architects to analyze your facility's energy profile and calculate potential savings.</p>
+          <div style="display: flex; gap: 14px; justify-content: center; flex-wrap: wrap;">
+            <a href="contact.html" class="btn btn-primary btn-lg">Schedule Consultation</a>
+            <a href="pricing.html" class="btn btn-secondary btn-lg" style="color: #ffffff; border-color: rgba(255, 255, 255, 0.4); background: rgba(255, 255, 255, 0.1);">View Commercial Pricing</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-top-grid">
+        <div class="footer-brand">
+          <a href="../index.html">
+            <img src="../assets/images/logoStackly.webp" alt="Stackly Renewable Energy" class="brand-logo-img" width="140" height="48">
+          </a>
+          <p>Stackly is a visionary renewable energy company focused on harnessing the power of wind, solar, and battery storage to meet the growing demand for sustainable baseload energy.</p>
+          <div style="font-size: 0.85rem; color: #94a3b8;">
+            <strong>Headquarters:</strong><br>
+            MMR Complex, Chinna Thirupathi, Salem, Tamil Nadu 636008
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="../index.html" class="footer-link">Home</a></li>
+            <li><a href="about.html" class="footer-link">About Us</a></li>
+            <li><a href="services.html" class="footer-link">Renewable Services</a></li>
+            <li><a href="solar-energy.html" class="footer-link">Solar PV Solutions</a></li>
+            <li><a href="wind-energy.html" class="footer-link">Wind Turbines</a></li>
+            <li><a href="energy-storage.html" class="footer-link">Battery Storage (BESS)</a></li>
+            <li><a href="projects.html" class="footer-link">Project Portfolio</a></li>
+            <li><a href="pricing.html" class="footer-link">Commercial Pricing</a></li>
+            <li><a href="contact.html" class="footer-link">Contact Support</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Engineering Topics</h4>
+          <ul class="footer-links">
+            <li><a href="404.html" class="footer-link">Grid Interconnection</a></li>
+            <li><a href="404.html" class="footer-link">Virtual Power Plants (VPP)</a></li>
+            <li><a href="404.html" class="footer-link">Thermal Drone Audits</a></li>
+            <li><a href="404.html" class="footer-link">ESG Certifications</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Connect With Stackly</h4>
+          <div class="social-links-grid">
+            <a href="404.html" class="social-pill-link">
+              <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+              LinkedIn
+            </a>
+            <a href="404.html" class="social-pill-link">
+              <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+              Twitter / X
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 Stackly Renewable Energy Inc. All Rights Reserved.</div>
+        <ul class="footer-bottom-links">
+          <li><a href="404.html">Privacy Policy</a></li>
+          <li><a href="404.html">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
+

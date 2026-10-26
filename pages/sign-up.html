@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Enterprise Account | Stackly Renewable Energy</title>
+  <meta name="description" content="Register for a Stackly clean energy portal account to manage utility solar, wind turbine diagnostics, and battery microgrid reserves.">
+  <link rel="icon" type="image/webp" href="../assets/images/logoStackly.webp">
+  <link rel="stylesheet" href="../assets/css/main.css">
+  <link rel="stylesheet" href="../assets/css/animations.css">
+</head>
+<body style="background: #ffffff;">
+  <a href="#mainContent" class="skip-to-content">Skip to main content</a>
+
+  <!-- Loader -->
+  <div id="pageLoader" class="page-loader" role="status" aria-live="polite">
+    <div class="loader-logo-wrap">
+      <img src="../assets/images/logoStackly-dark.webp" alt="Stackly Renewable Energy Logo" width="170" height="58">
+    </div>
+    <div class="loader-spinner"></div>
+    <p class="loader-text">Preparing Secure Account Setup...</p>
+  </div>
+
+  <!-- AUTH SPLIT LAYOUT (No Navbar as required) -->
+  <div class="auth-page-wrapper" id="mainContent">
+    <!-- Left Side: Brand Visual & Renewable Trust Messaging -->
+    <div class="auth-banner-side">
+      <div>
+        <a href="../index.html" aria-label="Return to Homepage">
+          <img src="../assets/images/logoStackly.webp" alt="Stackly Renewable Energy Logo" style="height: 42px; width: auto; margin-bottom: 2.5rem;" width="140" height="48">
+        </a>
+        <div class="badge-tag badge-accent" style="margin-bottom: 1.25rem;">Clean Tech Membership</div>
+        <h2 style="color: #ffffff; font-size: clamp(2rem, 3.5vw, 2.8rem); line-height: 1.15; margin-bottom: 1.2rem;">
+          Join 12 Million Clean Energy Operators.
+        </h2>
+        <p style="color: #cbd5e1; font-size: 1.05rem; line-height: 1.6; max-width: 480px;">
+          Set up your organization's energy portal to track real-time decarbonization, automate peak tariff shaving, and access certified green power generation reports.
+        </p>
+
+        <ul style="list-style: none; display: flex; flex-direction: column; gap: 12px; margin-top: 2rem;">
+          <li style="display: flex; gap: 10px; align-items: center; color: #ffffff; font-weight: 600;">
+            <span style="color: var(--color-accent); font-size: 1.2rem;">✓</span> Instant access to solar and wind SCADA telemetry
+          </li>
+          <li style="display: flex; gap: 10px; align-items: center; color: #ffffff; font-weight: 600;">
+            <span style="color: var(--color-accent); font-size: 1.2rem;">✓</span> Automated ISO 14064 carbon credit tracking
+          </li>
+          <li style="display: flex; gap: 10px; align-items: center; color: #ffffff; font-weight: 600;">
+            <span style="color: var(--color-accent); font-size: 1.2rem;">✓</span> 24/7 Priority engineering dispatch assistance
+          </li>
+        </ul>
+      </div>
+
+      <div style="font-size: 0.82rem; color: #64748b; margin-top: 2rem;">
+        &copy; 2026 Stackly Renewable Energy Inc. Industry-grade OAuth2 & Local Storage Persistence.
+      </div>
+    </div>
+
+    <!-- Right Side: Registration Form -->
+    <div class="auth-form-side" style="padding-top: 2.5rem; padding-bottom: 2.5rem;">
+      <div class="auth-header-nav">
+        <a href="../index.html" class="btn btn-ghost" style="padding-left: 0;">
+          ← Back to Home
+        </a>
+        <div style="font-size: 0.9rem; color: var(--text-muted);">
+          Already Registered? <a href="sign-in.html" style="font-weight: 700;">Sign In</a>
+        </div>
+      </div>
+
+      <div style="margin-bottom: 1.5rem;">
+        <h1 style="font-size: 2rem; color: var(--color-secondary); margin-bottom: 0.5rem;">Create Your Account</h1>
+        <p style="color: var(--text-muted); font-size: 0.95rem;">Enter details below to establish your verified clean energy role.</p>
+      </div>
+
+      <!-- Registration Success Banner -->
+      <div id="signUpSuccess" style="display: none; background: #ecfdf5; border: 1.5px solid var(--color-accent); color: #065f46; padding: 1.5rem; border-radius: var(--radius-md); margin-bottom: 2rem;" role="alert">
+        <h3 style="color: #065f46; margin-bottom: 4px;">✓ Account Created Successfully!</h3>
+        <p style="margin: 0; font-size: 0.95rem;">Redirecting to the Sign In portal...</p>
+      </div>
+
+      <form id="signUpForm" novalidate>
+        <!-- Row 1: First Name & Last Name (Strict Alphabets Only, No Digits) -->
+        <div class="grid-3" style="grid-template-columns: 1fr 1fr; gap: 1rem;">
+          <div class="form-group">
+            <label for="regFirstName" class="form-label">First Name <span class="required-star">*</span></label>
+            <input type="text" id="regFirstName" class="form-control" value="Sarah" required placeholder="Alphabets only">
+            <div class="form-error-feedback">First name must contain only alphabets (no digits).</div>
+          </div>
+
+          <div class="form-group">
+            <label for="regLastName" class="form-label">Last Name <span class="required-star">*</span></label>
+            <input type="text" id="regLastName" class="form-control" value="Jenkins" required placeholder="Alphabets only">
+            <div class="form-error-feedback">Last name must contain only alphabets (no digits).</div>
+          </div>
+        </div>
+
+        <!-- Row 2: Username & Email -->
+        <div class="grid-3" style="grid-template-columns: 1fr 1fr; gap: 1rem;">
+          <div class="form-group">
+            <label for="regUsername" class="form-label">Username <span class="required-star">*</span></label>
+            <input type="text" id="regUsername" class="form-control" value="sarah_jenkins" required placeholder="Unique username">
+            <div class="form-error-feedback">Username must be at least 3 characters and unique.</div>
+          </div>
+
+          <div class="form-group">
+            <label for="regEmail" class="form-label">Email Address <span class="required-star">*</span></label>
+            <input type="email" id="regEmail" class="form-control" value="sarah.jenkins@thestackly.com" required placeholder="name@company.com">
+            <div class="form-error-feedback">Please enter a valid email address.</div>
+          </div>
+        </div>
+
+        <!-- Row 3: Mobile (Country Code + 10 Digits) & Role Selector -->
+        <div class="grid-3" style="grid-template-columns: 1.1fr 0.9fr; gap: 1rem;">
+          <div class="form-group">
+            <label for="regMobile" class="form-label">Mobile Number <span class="required-star">*</span></label>
+            <div class="phone-input-split">
+              <select id="regCountryCode" class="form-control" aria-label="Country Code">
+                <option value="+91" selected>🇮🇳 +91</option>
+                <option value="+1">🇺🇸 +1</option>
+                <option value="+44">🇬🇧 +44</option>
+              </select>
+              <input type="tel" id="regMobile" class="form-control" value="9876543299" required maxlength="10" placeholder="10-digit number">
+            </div>
+            <div class="form-error-feedback">Mobile number must have an exact length of 10 digits.</div>
+          </div>
+
+          <div class="form-group">
+            <label for="regRole" class="form-label">Operational Role <span class="required-star">*</span></label>
+            <select id="regRole" class="form-control" required>
+              <option value="Admin">Admin (Control Center)</option>
+              <option value="Manager" selected>Manager (Operations)</option>
+              <option value="Customer">Customer (Solar Billing)</option>
+              <option value="Vendor/Engineer">Vendor / Engineer</option>
+            </select>
+            <div class="form-error-feedback">Please select a role.</div>
+          </div>
+        </div>
+
+        <!-- Row 4: Password with Strength Meter & Eye Toggle -->
+        <div class="grid-3" style="grid-template-columns: 1fr 1fr; gap: 1rem;">
+          <div class="form-group">
+            <label for="regPassword" class="form-label">Password <span class="required-star">*</span></label>
+            <div class="password-wrap">
+              <input type="password" id="regPassword" class="form-control" value="SecureGreen@2026" required placeholder="Min 8 characters">
+              <button type="button" class="password-toggle-btn" data-target="regPassword" aria-label="Show password">
+                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" width="20" height="20"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
+              </button>
+            </div>
+            <div class="password-strength-bar">
+              <div id="passStrengthFill" class="password-strength-fill" style="width: 100%; background-color: #10b981;"></div>
+            </div>
+            <div id="passStrengthText" style="font-size: 0.78rem; color: #10b981; margin-top: 4px;">Strong renewable password!</div>
+            <div class="form-error-feedback">Password must have 8+ characters, uppercase, lowercase, number, and special character.</div>
+          </div>
+
+          <div class="form-group">
+            <label for="regConfirmPassword" class="form-label">Confirm Password <span class="required-star">*</span></label>
+            <div class="password-wrap">
+              <input type="password" id="regConfirmPassword" class="form-control" value="SecureGreen@2026" required placeholder="Repeat password">
+              <button type="button" class="password-toggle-btn" data-target="regConfirmPassword" aria-label="Show confirm password">
+                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" width="20" height="20"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
+              </button>
+            </div>
+            <div class="form-error-feedback">Passwords do not match.</div>
+          </div>
+        </div>
+
+        <!-- Row 5: Address (Optional) & Avatar (UI Only) -->
+        <div class="grid-3" style="grid-template-columns: 1.4fr 0.6fr; gap: 1rem; align-items: center;">
+          <div class="form-group">
+            <label for="regAddress" class="form-label">Facility / Office Address (Optional)</label>
+            <input type="text" id="regAddress" class="form-control" value="Salem Clean Energy Park, Tamil Nadu" placeholder="Corporate address">
+          </div>
+
+          <div class="form-group" style="text-align: center;">
+            <label class="form-label">Avatar (UI)</label>
+            <div style="display: flex; align-items: center; justify-content: center; gap: 10px;">
+              <img id="avatarPreviewImg" src="../assets/images/avatar-sarah-jenkins-energy-analyst.webp" alt="Avatar preview" style="width: 44px; height: 44px; border-radius: 50%; object-fit: cover; border: 2px solid var(--color-primary);" width="44" height="44">
+              <label for="regAvatar" class="btn btn-secondary btn-sm" style="cursor: pointer; padding: 6px 12px; font-size: 0.8rem;">Change</label>
+              <input type="file" id="regAvatar" accept="image/*" style="display: none;">
+            </div>
+          </div>
+        </div>
+
+        <!-- Mandatory Checkbox: Terms of Use & Privacy Policy -->
+        <div class="form-group" style="margin-top: 0.5rem;">
+          <label style="display: flex; align-items: flex-start; gap: 10px; font-size: 0.88rem; color: var(--text-main); cursor: pointer;">
+            <input type="checkbox" id="regTerms" checked required style="margin-top: 3px; accent-color: var(--color-primary); width: 16px; height: 16px;">
+            <span>
+              I agree to the <a href="404.html" target="_blank" style="text-decoration: underline; font-weight: 600;">Terms of Use</a> and <a href="404.html" target="_blank" style="text-decoration: underline; font-weight: 600;">Privacy Policy</a>. <span class="required-star">*</span>
+            </span>
+          </label>
+          <div class="form-error-feedback" id="termsError">You must accept the Terms of Use and Privacy Policy to register.</div>
+        </div>
+
+        <!-- Optional Checkbox: Newsletter Opt-In -->
+        <div class="form-group" style="margin-bottom: 1.5rem;">
+          <label style="display: flex; align-items: flex-start; gap: 10px; font-size: 0.85rem; color: var(--text-muted); cursor: pointer;">
+            <input type="checkbox" id="regNewsletter" checked style="margin-top: 3px; accent-color: var(--color-primary); width: 16px; height: 16px;">
+            <span>
+              I would like to receive newsletters, promotional content, updates, product announcements, and marketing communication. I understand that I may unsubscribe at any time. <a href="404.html" style="font-weight: 600;">Read More</a>
+            </span>
+          </label>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">
+          Complete Registration
+          <span class="btn-icon-capsule">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </span>
+        </button>
+      </form>
+
+      <div class="auth-divider">or register with corporate provider</div>
+
+      <!-- Social Registration (All redirect to 404 as requested) -->
+      <div class="auth-social-buttons">
+        <a href="404.html" class="btn-social">
+          <svg width="18" height="18" viewBox="0 0 24 24"><path fill="#4285F4" d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.8-2.4 3.66v3.05h3.88c2.27-2.09 3.665-5.17 3.665-9.15z"/><path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.05c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.77-2.1-6.72-4.93H1.27v3.15C3.25 21.36 7.31 24 12 24z"/><path fill="#FBBC05" d="M5.28 14.27c-.25-.72-.38-1.49-.38-2.27s.13-1.55.38-2.27V6.58H1.27C.46 8.2 0 10.04 0 12s.46 3.8 1.27 5.42l4.01-3.15z"/><path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.31 0 3.25 2.64 1.27 6.58l4.01 3.15c.95-2.83 3.6-4.98 6.72-4.98z"/></svg>
+          Google
+        </a>
+        <a href="404.html" class="btn-social">
+          <svg width="18" height="18" viewBox="0 0 24 24"><path fill="#f25022" d="M1 1h10v10H1z"/><path fill="#00a4ef" d="M1 13h10v10H1z"/><path fill="#7fba00" d="M13 1h10v10H13z"/><path fill="#ffb900" d="M13 13h10v10H13z"/></svg>
+          Microsoft
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/auth.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Commercial Pricing & PPA Models | Stackly Clean Power</title>
+  <meta name="description" content="Transparent, scalable pricing and Power Purchase Agreement (PPA) financing models for commercial solar, wind, and battery storage microgrids.">
+  <link rel="icon" type="image/webp" href="../assets/images/logoStackly.webp">
+  <link rel="stylesheet" href="../assets/css/main.css">
+  <link rel="stylesheet" href="../assets/css/animations.css">
+</head>
+<body>
+  <a href="#mainContent" class="skip-to-content">Skip to main content</a>
+
+  <!-- Loader -->
+  <div id="pageLoader" class="page-loader" role="status" aria-live="polite">
+    <div class="loader-logo-wrap">
+      <img src="../assets/images/logoStackly-dark.webp" alt="Stackly Renewable Energy Logo" width="170" height="58">
+    </div>
+    <div class="loader-spinner"></div>
+    <p class="loader-text">Loading Financial & PPA Models...</p>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header" role="banner">
+    <div class="container nav-container">
+      <a href="../index.html" class="brand-logo-link">
+        <img src="../assets/images/logoStackly-dark.webp" alt="Stackly Renewable Energy" class="brand-logo-img" width="138" height="46">
+      </a>
+      <nav class="desktop-nav">
+        <div class="nav-item"><a href="../index.html" class="nav-link">Home</a></div>
+        <div class="nav-item"><a href="about.html" class="nav-link">About Us</a></div>
+        <div class="nav-item has-dropdown">
+          <a href="services.html" class="nav-link" aria-haspopup="true">
+            Services
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a href="solar-energy.html" class="dropdown-link">☀️ Solar Solutions</a></li>
+            <li><a href="wind-energy.html" class="dropdown-link">💨 Wind Power Systems</a></li>
+            <li><a href="energy-storage.html" class="dropdown-link">🔋 Battery Energy Storage</a></li>
+            <li><a href="services.html" class="dropdown-link">⚡ All Solutions & Audits</a></li>
+          </ul>
+        </div>
+        <div class="nav-item"><a href="projects.html" class="nav-link">Projects</a></div>
+        <div class="nav-item"><a href="pricing.html" class="nav-link active">Pricing</a></div>
+        <div class="nav-item"><a href="contact.html" class="nav-link">Contact</a></div>
+      </nav>
+      <div class="header-actions">
+        <a href="sign-in.html" class="btn btn-secondary btn-sm">Sign In</a>
+        <a href="sign-up.html" class="btn btn-primary btn-sm">Get Started</a>
+        <button class="mobile-nav-toggle" aria-label="Toggle navigation menu">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Overlay -->
+  <div class="mobile-nav-overlay" role="dialog" aria-modal="true">
+    <ul class="mobile-nav-list">
+      <li><a href="../index.html" class="mobile-nav-link">Home</a></li>
+      <li><a href="about.html" class="mobile-nav-link">About Us</a></li>
+      <li><a href="services.html" class="mobile-nav-link">Services</a></li>
+      <li><a href="projects.html" class="mobile-nav-link">Projects</a></li>
+      <li><a href="pricing.html" class="mobile-nav-link active">Pricing</a></li>
+      <li><a href="contact.html" class="mobile-nav-link">Contact</a></li>
+    </ul>
+    <div class="mobile-nav-actions">
+      <a href="sign-in.html" class="btn btn-secondary" style="width: 100%;">Sign In</a>
+      <a href="sign-up.html" class="btn btn-primary" style="width: 100%;">Register Account</a>
+    </div>
+  </div>
+
+  <main id="mainContent">
+    <!-- Section 1: Hero & Breadcrumb -->
+    <section class="section" style="background: radial-gradient(100% 85% at 50% 0%, #cdeaf7 0%, #f4f8fb 100%); padding-bottom: 3.5rem;">
+      <div class="container text-center">
+        <nav aria-label="Breadcrumb" style="margin-bottom: 1rem;">
+          <ol style="display: inline-flex; gap: 8px; list-style: none; font-size: 0.9rem; color: var(--text-muted);">
+            <li><a href="../index.html">Home</a></li>
+            <li>/</li>
+            <li aria-current="page" style="color: var(--color-primary); font-weight: 600;">Pricing & PPA</li>
+          </ol>
+        </nav>
+        <span class="badge-tag">Bankable Financing</span>
+        <h1 style="max-width: 820px; margin: 0 auto 1.25rem auto;">Transparent Clean Energy Tiers & Zero-CapEx PPA Options</h1>
+        <p style="max-width: 680px; margin: 0 auto 2rem auto; font-size: 1.15rem;">
+          Choose between direct turnkey EPC ownership with accelerated tax depreciation or zero-upfront-capital Power Purchase Agreements (PPA) with fixed low rates.
+        </p>
+
+        <!-- Billing Toggle -->
+        <div style="display: inline-flex; align-items: center; gap: 12px; background: rgba(255, 255, 255, 0.9); padding: 6px 12px; border-radius: var(--radius-pill); border: 1px solid var(--border-light); margin-top: 1rem;">
+          <span style="font-size: 0.9rem; font-weight: 600; color: var(--color-secondary);">CapEx Ownership</span>
+          <button type="button" id="toggleBillingBtn" onclick="toggleBilling()" style="width: 52px; height: 28px; border-radius: var(--radius-pill); background: var(--color-primary); border: none; cursor: pointer; position: relative; padding: 2px;" aria-label="Toggle between CapEx and PPA financing">
+            <span id="toggleCircle" style="display: block; width: 24px; height: 24px; border-radius: 50%; background: #ffffff; transition: transform 0.25s ease;"></span>
+          </button>
+          <span style="font-size: 0.9rem; font-weight: 600; color: var(--color-secondary);">Zero-CapEx PPA <span class="badge-tag badge-accent" style="font-size: 0.72rem; padding: 2px 8px; margin: 0;">Save Upfront</span></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: Pricing Tier Cards -->
+    <section class="section" style="background: #ffffff;" aria-labelledby="tierHeading">
+      <div class="container">
+        <div class="grid-3">
+          <!-- Tier 1 -->
+          <div class="card reveal" style="padding: 2.2rem;">
+            <span class="badge-tag">Starter Green</span>
+            <h3 style="margin: 0.5rem 0 0.25rem 0;">C&I Solar Core</h3>
+            <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 1.25rem;">Ideal for commercial office buildings, light manufacturing, and retail warehouses.</p>
+            
+            <div style="margin-bottom: 1.5rem; border-bottom: 1px solid var(--border-subtle); padding-bottom: 1.25rem;">
+              <div class="tier-price" style="font-size: 2.4rem; font-weight: 800; color: var(--color-secondary);">$0.078 <span style="font-size: 1rem; font-weight: 500; color: var(--text-muted);">/ kWh (PPA)</span></div>
+              <div style="font-size: 0.82rem; color: var(--color-accent); font-weight: 600;">Standard CapEx: $280,000 turnkey (250 kW)</div>
+            </div>
+
+            <ul style="list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 0.9rem; color: var(--text-main); margin-bottom: 2rem;">
+              <li>✓ 250 kW High-Efficiency Bifacial Solar Array</li>
+              <li>✓ Non-penetrating ballasted roof mounting</li>
+              <li>✓ Cloud SCADA monitoring dashboard</li>
+              <li>✓ Annual thermographic drone audit</li>
+              <li>✓ 25-Year panel power output warranty</li>
+            </ul>
+
+            <a href="contact.html" class="btn btn-secondary" style="width: 100%;">Select Starter Core</a>
+          </div>
+
+          <!-- Tier 2 (Featured) -->
+          <div class="card reveal reveal-delay-1" style="padding: 2.2rem; border-color: var(--color-primary); background: radial-gradient(circle at top right, #f0f9ff 0%, #ffffff 80%); box-shadow: var(--shadow-lg); transform: scale(1.02);">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+              <span class="badge-tag">Commercial Pro</span>
+              <span class="badge-tag badge-accent" style="margin-bottom: 0;">Most Popular</span>
+            </div>
+            <h3 style="margin: 0.5rem 0 0.25rem 0;">Solar + Battery Hybrid</h3>
+            <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 1.25rem;">Complete energy independence and peak shaving for heavy manufacturing and cold logistics.</p>
+            
+            <div style="margin-bottom: 1.5rem; border-bottom: 1px solid var(--border-subtle); padding-bottom: 1.25rem;">
+              <div class="tier-price" style="font-size: 2.4rem; font-weight: 800; color: var(--color-primary);">$0.064 <span style="font-size: 1rem; font-weight: 500; color: var(--text-muted);">/ kWh (PPA)</span></div>
+              <div style="font-size: 0.82rem; color: var(--color-accent); font-weight: 600;">Standard CapEx: $1.15M turnkey (1 MW + 2 MWh BESS)</div>
+            </div>
+
+            <ul style="list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 0.9rem; color: var(--text-main); margin-bottom: 2rem;">
+              <li>✓ 1.0 MW Bifacial Photovoltaic Rooftop/Ground Array</li>
+              <li>✓ 2.0 MWh Liquid-Cooled LFP Battery Storage (BESS)</li>
+              <li>✓ Automated peak demand shaving & tariff arbitrage</li>
+              <li>✓ 16ms Emergency microgrid blackout islanding</li>
+              <li>✓ 24/7 Remote operations center monitoring (99.8% SLA)</li>
+            </ul>
+
+            <a href="contact.html" class="btn btn-primary" style="width: 100%;">
+              Select Commercial Pro
+              <span class="btn-icon-capsule">→</span>
+            </a>
+          </div>
+
+          <!-- Tier 3 -->
+          <div class="card reveal reveal-delay-2" style="padding: 2.2rem;">
+            <span class="badge-tag">Enterprise Grid</span>
+            <h3 style="margin: 0.5rem 0 0.25rem 0;">Utility Microgrid</h3>
+            <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 1.25rem;">Multi-megawatt solar, wind, and storage developments for hyperscale data centers and utilities.</p>
+            
+            <div style="margin-bottom: 1.5rem; border-bottom: 1px solid var(--border-subtle); padding-bottom: 1.25rem;">
+              <div class="tier-price" style="font-size: 2.4rem; font-weight: 800; color: var(--color-secondary);">$0.049 <span style="font-size: 1rem; font-weight: 500; color: var(--text-muted);">/ kWh (PPA)</span></div>
+              <div style="font-size: 0.82rem; color: var(--color-accent); font-weight: 600;">Custom Multi-Megawatt Scope (10 MW to 100+ MW)</div>
+            </div>
+
+            <ul style="list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 0.9rem; color: var(--text-main); margin-bottom: 2rem;">
+              <li>✓ 10+ MW Wind & Solar Hybrid Generation Field</li>
+              <li>✓ 20+ MWh Containerized BESS Substation</li>
+              <li>✓ High-voltage grid interconnection (66 kV to 230 kV)</li>
+              <li>✓ Dedicated onsite engineering team & 99.98% uptime SLA</li>
+              <li>✓ Automated ESG compliance & carbon credit certification</li>
+            </ul>
+
+            <a href="contact.html" class="btn btn-dark" style="width: 100%;">Request Enterprise Scope</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: Feature Comparison Matrix -->
+    <section class="section" aria-labelledby="matrixHeading">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="badge-tag">Detailed Comparison</span>
+          <h2 id="matrixHeading">Compare Renewable Specifications</h2>
+          <p>Every tier includes tier-1 bankable hardware and lifetime engineering oversight.</p>
+        </div>
+
+        <div class="card reveal" style="padding: 1.5rem; overflow-x: auto;">
+          <table class="dash-table" style="min-width: 650px;">
+            <thead>
+              <tr>
+                <th style="color: var(--color-secondary); font-size: 0.95rem;">Feature / Service</th>
+                <th>Starter Green</th>
+                <th>Commercial Pro</th>
+                <th>Enterprise Grid</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Solar Generation</strong></td>
+                <td>250 kW</td>
+                <td>1,000 kW (1 MW)</td>
+                <td>10 MW - 100+ MW</td>
+              </tr>
+              <tr>
+                <td><strong>Battery Storage (BESS)</strong></td>
+                <td>Optional Add-on</td>
+                <td>2.0 MWh Included</td>
+                <td>20+ MWh Substation</td>
+              </tr>
+              <tr>
+                <td><strong>Wind Turbine Integration</strong></td>
+                <td>Not Included</td>
+                <td>Optional VAWT</td>
+                <td>Onshore/Offshore HAWT</td>
+              </tr>
+              <tr>
+                <td><strong>Islanding Response Time</strong></td>
+                <td>Manual Grid Disconnect</td>
+                <td>&lt; 16 Milliseconds</td>
+                <td>Zero-Interruption Grid Forming</td>
+              </tr>
+              <tr>
+                <td><strong>Availability Guarantee</strong></td>
+                <td>99.0% SLA</td>
+                <td>99.8% SLA</td>
+                <td>99.98% Premium SLA</td>
+              </tr>
+              <tr>
+                <td><strong>Telemetry & Cloud SCADA</strong></td>
+                <td>15-minute intervals</td>
+                <td>1-second real-time</td>
+                <td>Dedicated On-Premise Gateway</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: Payback & EROI Estimator -->
+    <section class="section" style="background: #ffffff;" aria-labelledby="eroiHeading">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="badge-tag badge-accent">Payback Economics</span>
+          <h2 id="eroiHeading">Accelerated Clean Energy Payback Cycle</h2>
+          <p>How clean energy pays for itself within 3 to 5 years through reduced energy bills, peak shaving, and tax depreciation.</p>
+        </div>
+
+        <div class="grid-4 text-center">
+          <div class="card reveal" style="padding: 1.8rem;">
+            <div style="font-size: 2.2rem; font-weight: 800; color: var(--color-primary);">Year 1</div>
+            <h4 style="margin: 6px 0;">30% Tax Credit + MACRS</h4>
+            <p style="font-size: 0.85rem; color: var(--text-muted);">Recover up to 48% of gross project investment via tax offsets.</p>
+          </div>
+          <div class="card reveal reveal-delay-1" style="padding: 1.8rem;">
+            <div style="font-size: 2.2rem; font-weight: 800; color: var(--color-primary);">Year 2</div>
+            <h4 style="margin: 6px 0;">40% Tariff Savings</h4>
+            <p style="font-size: 0.85rem; color: var(--text-muted);">Eliminate daytime peak demand rates and sell excess clean solar to grid.</p>
+          </div>
+          <div class="card reveal reveal-delay-2" style="padding: 1.8rem;">
+            <div style="font-size: 2.2rem; font-weight: 800; color: var(--color-accent);">Year 4</div>
+            <h4 style="margin: 6px 0;">100% Breakeven Point</h4>
+            <p style="font-size: 0.85rem; color: var(--text-muted);">Cumulative electricity savings equal total initial system investment.</p>
+          </div>
+          <div class="card reveal reveal-delay-3" style="padding: 1.8rem;">
+            <div style="font-size: 2.2rem; font-weight: 800; color: var(--color-secondary);">Years 5-30</div>
+            <h4 style="margin: 6px 0;">Pure Net Revenue</h4>
+            <p style="font-size: 0.85rem; color: var(--text-muted);">Decades of virtually free clean power and monetizable carbon credits.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 5: Pricing FAQs -->
+    <section class="section" aria-labelledby="pricingFaqHeading">
+      <div class="container" style="max-width: 860px;">
+        <div class="section-header reveal">
+          <span class="badge-tag">Financing FAQ</span>
+          <h2 id="pricingFaqHeading">Frequently Asked Financing Questions</h2>
+        </div>
+
+        <div class="reveal" style="display: flex; flex-direction: column; gap: 1rem;">
+          <div class="card" style="padding: 1.5rem;">
+            <h4 style="margin-bottom: 0.5rem; color: var(--color-secondary);">What is a Power Purchase Agreement (PPA)?</h4>
+            <p style="font-size: 0.92rem; margin-bottom: 0;">Under a PPA, Stackly finances, installs, owns, and maintains the entire solar and battery storage system on your property with $0 upfront investment. You simply buy the clean power generated at a predictable rate significantly lower than utility retail tariffs.</p>
+          </div>
+
+          <div class="card" style="padding: 1.5rem;">
+            <h4 style="margin-bottom: 0.5rem; color: var(--color-secondary);">Can we buy out the system during the PPA term?</h4>
+            <p style="font-size: 0.92rem; margin-bottom: 0;">Yes. Standard Stackly PPA agreements include fair market buyout options starting after Year 5, allowing your company to transition to full asset ownership at any time.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 6: CTA Banner -->
+    <section class="section" style="padding-bottom: 0;">
+      <div class="container">
+        <div class="cta-banner reveal">
+          <h2>Lock In Low Energy Rates for the Next 25 Years</h2>
+          <p>Protect your enterprise from volatile fossil fuel utility spikes. Request your tailored financing proposal.</p>
+          <div style="display: flex; gap: 14px; justify-content: center; flex-wrap: wrap;">
+            <a href="contact.html" class="btn btn-primary btn-lg">Request Custom Quote</a>
+            <a href="sign-up.html" class="btn btn-secondary btn-lg" style="color: #ffffff; border-color: rgba(255, 255, 255, 0.4); background: rgba(255, 255, 255, 0.1);">Create Client Account</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-top-grid">
+        <div class="footer-brand">
+          <a href="../index.html"><img src="../assets/images/logoStackly.webp" alt="Stackly Renewable Energy" class="brand-logo-img" width="140" height="48"></a>
+          <p>Harnessing wind, solar, and battery energy storage for resilient decarbonized enterprise grids.</p>
+          <div style="font-size: 0.85rem; color: #94a3b8;">MMR Complex, Chinna Thirupathi, Salem, Tamil Nadu 636008</div>
+        </div>
+        <div>
+          <h4 class="footer-title">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="../index.html" class="footer-link">Home</a></li>
+            <li><a href="about.html" class="footer-link">About Us</a></li>
+            <li><a href="services.html" class="footer-link">Services</a></li>
+            <li><a href="solar-energy.html" class="footer-link">Solar Solutions</a></li>
+            <li><a href="wind-energy.html" class="footer-link">Wind Turbines</a></li>
+            <li><a href="energy-storage.html" class="footer-link">Battery Storage</a></li>
+            <li><a href="pricing.html" class="footer-link">Commercial Pricing</a></li>
+            <li><a href="contact.html" class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">Finance Topics</h4>
+          <ul class="footer-links">
+            <li><a href="404.html" class="footer-link">PPA Contracts</a></li>
+            <li><a href="404.html" class="footer-link">ITC Tax Credits</a></li>
+            <li><a href="404.html" class="footer-link">MACRS Depreciation</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">Social</h4>
+          <div class="social-links-grid">
+            <a href="404.html" class="social-pill-link">LinkedIn</a>
+            <a href="404.html" class="social-pill-link">Twitter / X</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>&copy; 2026 Stackly Renewable Energy Inc. All Rights Reserved.</div>
+        <ul class="footer-bottom-links">
+          <li><a href="404.html">Privacy Policy</a></li>
+          <li><a href="404.html">Terms</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  <script src="../assets/js/main.js"></script>
+  <script>
+    let isPPA = true;
+    function toggleBilling() {
+      isPPA = !isPPA;
+      const circle = document.getElementById('toggleCircle');
+      circle.style.transform = isPPA ? 'translateX(0)' : 'translateX(24px)';
+    }
+  </script>
+</body>
+</html>
+

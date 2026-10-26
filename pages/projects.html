@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Renewable Energy Projects & Case Studies | Stackly</title>
+  <meta name="description" content="Explore Stackly's portfolio of utility-scale solar farms, wind turbine installations, and containerized battery storage microgrids worldwide.">
+  <link rel="icon" type="image/webp" href="../assets/images/logoStackly.webp">
+  <link rel="stylesheet" href="../assets/css/main.css">
+  <link rel="stylesheet" href="../assets/css/animations.css">
+</head>
+<body>
+  <a href="#mainContent" class="skip-to-content">Skip to main content</a>
+
+  <!-- Loader -->
+  <div id="pageLoader" class="page-loader" role="status" aria-live="polite">
+    <div class="loader-logo-wrap">
+      <img src="../assets/images/logoStackly-dark.webp" alt="Stackly Renewable Energy Logo" width="170" height="58">
+    </div>
+    <div class="loader-spinner"></div>
+    <p class="loader-text">Loading Megawatt Project Portfolio...</p>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header" role="banner">
+    <div class="container nav-container">
+      <a href="../index.html" class="brand-logo-link">
+        <img src="../assets/images/logoStackly-dark.webp" alt="Stackly Renewable Energy" class="brand-logo-img" width="138" height="46">
+      </a>
+      <nav class="desktop-nav">
+        <div class="nav-item"><a href="../index.html" class="nav-link">Home</a></div>
+        <div class="nav-item"><a href="about.html" class="nav-link">About Us</a></div>
+        <div class="nav-item has-dropdown">
+          <a href="services.html" class="nav-link" aria-haspopup="true">
+            Services
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a href="solar-energy.html" class="dropdown-link">☀️ Solar Solutions</a></li>
+            <li><a href="wind-energy.html" class="dropdown-link">💨 Wind Power Systems</a></li>
+            <li><a href="energy-storage.html" class="dropdown-link">🔋 Battery Energy Storage</a></li>
+            <li><a href="services.html" class="dropdown-link">⚡ All Solutions & Audits</a></li>
+          </ul>
+        </div>
+        <div class="nav-item"><a href="projects.html" class="nav-link active">Projects</a></div>
+        <div class="nav-item"><a href="pricing.html" class="nav-link">Pricing</a></div>
+        <div class="nav-item"><a href="contact.html" class="nav-link">Contact</a></div>
+      </nav>
+      <div class="header-actions">
+        <a href="sign-in.html" class="btn btn-secondary btn-sm">Sign In</a>
+        <a href="sign-up.html" class="btn btn-primary btn-sm">Get Started</a>
+        <button class="mobile-nav-toggle" aria-label="Toggle navigation menu">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Overlay -->
+  <div class="mobile-nav-overlay" role="dialog" aria-modal="true">
+    <ul class="mobile-nav-list">
+      <li><a href="../index.html" class="mobile-nav-link">Home</a></li>
+      <li><a href="about.html" class="mobile-nav-link">About Us</a></li>
+      <li><a href="services.html" class="mobile-nav-link">Services</a></li>
+      <li><a href="projects.html" class="mobile-nav-link active">Projects</a></li>
+      <li><a href="pricing.html" class="mobile-nav-link">Pricing</a></li>
+      <li><a href="contact.html" class="mobile-nav-link">Contact</a></li>
+    </ul>
+    <div class="mobile-nav-actions">
+      <a href="sign-in.html" class="btn btn-secondary" style="width: 100%;">Sign In</a>
+      <a href="sign-up.html" class="btn btn-primary" style="width: 100%;">Register Account</a>
+    </div>
+  </div>
+
+  <main id="mainContent">
+    <!-- Section 1: Hero -->
+    <section class="section" style="background: radial-gradient(100% 85% at 50% 0%, #cbe8f6 0%, #f4f8fb 100%); padding-bottom: 3.5rem;">
+      <div class="container text-center">
+        <nav aria-label="Breadcrumb" style="margin-bottom: 1rem;">
+          <ol style="display: inline-flex; gap: 8px; list-style: none; font-size: 0.9rem; color: var(--text-muted);">
+            <li><a href="../index.html">Home</a></li>
+            <li>/</li>
+            <li aria-current="page" style="color: var(--color-primary); font-weight: 600;">Projects</li>
+          </ol>
+        </nav>
+        <span class="badge-tag">Proven Deployments</span>
+        <h1 style="max-width: 820px; margin: 0 auto 1.25rem auto;">Decarbonizing Industries with 4.8 GW of Clean Power</h1>
+        <p style="max-width: 680px; margin: 0 auto 2rem auto; font-size: 1.15rem;">
+          Discover how Stackly engineers execute complex utility solar farms, offshore wind rotors, and high-capacity battery storage systems worldwide.
+        </p>
+
+        <!-- Project Filter Buttons -->
+        <div style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-top: 1rem;">
+          <button type="button" class="btn btn-sm btn-primary filter-btn active" onclick="filterProjects('all')">All Projects</button>
+          <button type="button" class="btn btn-sm btn-secondary filter-btn" onclick="filterProjects('solar')">Solar Parks</button>
+          <button type="button" class="btn btn-sm btn-secondary filter-btn" onclick="filterProjects('wind')">Wind Farms</button>
+          <button type="button" class="btn btn-sm btn-secondary filter-btn" onclick="filterProjects('bess')">Battery Storage</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: 6+ Rich Case Study Cards -->
+    <section class="section" style="background: #ffffff;" aria-labelledby="portfolioHeading">
+      <div class="container">
+        <div class="grid-3" id="projectsContainer">
+          <!-- Project 1 (Wind) -->
+          <div class="card reveal project-item" data-category="wind">
+            <img src="../assets/images/project-wind-engineers-inspecting-turbines.webp" alt="Wind turbine engineers examining high yield rotor blades" style="border-radius: var(--radius-md); width: 100%; aspect-ratio: 16/10; object-fit: cover; margin-bottom: 1.25rem;" width="600" height="375">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+              <span class="badge-tag badge-accent">Wind Power</span>
+              <span style="font-size: 0.85rem; font-weight: 700; color: var(--color-primary);">240 MW Total</span>
+            </div>
+            <h3 class="card-title">Apex Wind Plateau Project</h3>
+            <p class="card-description">Deployed 34 low-vibration wind turbines generating 420 GWh annually, offsetting 290,000 tons of CO₂ for heavy steel manufacturing.</p>
+            <div style="border-top: 1px solid var(--border-subtle); padding-top: 1rem; display: flex; justify-content: space-between; font-size: 0.85rem; color: var(--text-muted);">
+              <span>Client: Apex Steel</span>
+              <span style="color: var(--color-accent); font-weight: 600;">Operational 2026</span>
+            </div>
+          </div>
+
+          <!-- Project 2 (Solar) -->
+          <div class="card reveal reveal-delay-1 project-item" data-category="solar">
+            <img src="../assets/images/project-solar-technicians-installing-rooftop-array.webp" alt="Technicians inspecting commercial rooftop solar array" style="border-radius: var(--radius-md); width: 100%; aspect-ratio: 16/10; object-fit: cover; margin-bottom: 1.25rem;" width="600" height="375">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+              <span class="badge-tag">Solar PV</span>
+              <span style="font-size: 0.85rem; font-weight: 700; color: var(--color-primary);">120 MW Bifacial</span>
+            </div>
+            <h3 class="card-title">Sunlight Future Solar Park</h3>
+            <p class="card-description">Equipped with single-axis astronomical sun trackers, powering over 45,000 homes while feeding green energy to regional transit systems.</p>
+            <div style="border-top: 1px solid var(--border-subtle); padding-top: 1rem; display: flex; justify-content: space-between; font-size: 0.85rem; color: var(--text-muted);">
+              <span>Client: Regional Grid</span>
+              <span style="color: var(--color-accent); font-weight: 600;">Operational 2025</span>
+            </div>
+          </div>
+
+          <!-- Project 3 (BESS) -->
+          <div class="card reveal reveal-delay-2 project-item" data-category="bess">
+            <img src="../assets/images/project-bess-battery-storage-facility-engineers.webp" alt="Utility battery storage facility inspection" style="border-radius: var(--radius-md); width: 100%; aspect-ratio: 16/10; object-fit: cover; margin-bottom: 1.25rem;" width="600" height="375">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+              <span class="badge-tag badge-accent">Battery BESS</span>
+              <span style="font-size: 0.85rem; font-weight: 700; color: var(--color-primary);">50 MWh Storage</span>
+            </div>
+            <h3 class="card-title">NovaBio Grid Buffer Microgrid</h3>
+            <p class="card-description">Liquid-cooled LFP container array capable of sub-second frequency regulation and 18-hour continuous blackout protection for clean pharma labs.</p>
+            <div style="border-top: 1px solid var(--border-subtle); padding-top: 1rem; display: flex; justify-content: space-between; font-size: 0.85rem; color: var(--text-muted);">
+              <span>Client: Nova BioPharma</span>
+              <span style="color: var(--color-accent); font-weight: 600;">Operational 2026</span>
+            </div>
+          </div>
+
+          <!-- Project 4 (Solar) -->
+          <div class="card reveal project-item" data-category="solar">
+            <img src="../assets/images/service-utility-scale-solar-farm.webp" alt="Utility scale solar farm panels in high desert" style="border-radius: var(--radius-md); width: 100%; aspect-ratio: 16/10; object-fit: cover; margin-bottom: 1.25rem;" width="600" height="375">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+              <span class="badge-tag">Solar PV</span>
+              <span style="font-size: 0.85rem; font-weight: 700; color: var(--color-primary);">85 MW Array</span>
+            </div>
+            <h3 class="card-title">Helios Desert Clean Hub</h3>
+            <p class="card-description">High-albedo desert installation producing 180 GWh with zero water cleaning consumption through robotic electrostatic dust removal.</p>
+            <div style="border-top: 1px solid var(--border-subtle); padding-top: 1rem; display: flex; justify-content: space-between; font-size: 0.85rem; color: var(--text-muted);">
+              <span>Client: CleanTech Grid</span>
+              <span style="color: var(--color-accent); font-weight: 600;">Operational 2024</span>
+            </div>
+          </div>
+
+          <!-- Project 5 (Wind) -->
+          <div class="card reveal reveal-delay-1 project-item" data-category="wind">
+            <img src="../assets/images/service-offshore-wind-farm-horizon.webp" alt="Offshore wind farm turbines on open water" style="border-radius: var(--radius-md); width: 100%; aspect-ratio: 16/10; object-fit: cover; margin-bottom: 1.25rem;" width="600" height="375">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+              <span class="badge-tag badge-accent">Offshore Wind</span>
+              <span style="font-size: 0.85rem; font-weight: 700; color: var(--color-primary);">310 MW Offshore</span>
+            </div>
+            <h3 class="card-title">Zephyr Coastal Offshore Array</h3>
+            <p class="card-description">Deep-water monopile turbines enduring Atlantic gale conditions with real-time wake steering and automated blade anti-icing loops.</p>
+            <div style="border-top: 1px solid var(--border-subtle); padding-top: 1rem; display: flex; justify-content: space-between; font-size: 0.85rem; color: var(--text-muted);">
+              <span>Client: Atlantic Power Corp</span>
+              <span style="color: var(--color-accent); font-weight: 600;">Operational 2025</span>
+            </div>
+          </div>
+
+          <!-- Project 6 (Community Solar & Microgrid) -->
+          <div class="card reveal reveal-delay-2 project-item" data-category="solar">
+            <img src="../assets/images/project-community-solar-park-handover.webp" alt="Engineers handing over community solar farm" style="border-radius: var(--radius-md); width: 100%; aspect-ratio: 16/10; object-fit: cover; margin-bottom: 1.25rem;" width="600" height="375">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+              <span class="badge-tag">Community Solar</span>
+              <span style="font-size: 0.85rem; font-weight: 700; color: var(--color-primary);">18 MW Park</span>
+            </div>
+            <h3 class="card-title">Salem EcoDistrict Solar Project</h3>
+            <p class="card-description">Decentralized community solar hub delivering discounted electricity to over 4,200 local Salem households and small enterprises.</p>
+            <div style="border-top: 1px solid var(--border-subtle); padding-top: 1rem; display: flex; justify-content: space-between; font-size: 0.85rem; color: var(--text-muted);">
+              <span>Client: Salem Municipal Energy</span>
+              <span style="color: var(--color-accent); font-weight: 600;">Operational 2026</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: Engineering Rigor & Certifications -->
+    <section class="section" aria-labelledby="standardsHeading">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="badge-tag">Quality Benchmark</span>
+          <h2 id="standardsHeading">Certified to Global Engineering Standards</h2>
+          <p>Every Stackly installation adheres strictly to rigorous international power system standards.</p>
+        </div>
+
+        <div class="grid-4 text-center">
+          <div class="card reveal" style="padding: 1.5rem;">
+            <h4 style="color: var(--color-primary);">ISO 14064</h4>
+            <p style="font-size: 0.85rem; color: var(--text-muted);">Greenhouse Gas & Carbon Credit Verification</p>
+          </div>
+          <div class="card reveal reveal-delay-1" style="padding: 1.5rem;">
+            <h4 style="color: var(--color-primary);">IEEE 1547</h4>
+            <p style="font-size: 0.85rem; color: var(--text-muted);">Interconnection and Interoperability of Distributed Energy</p>
+          </div>
+          <div class="card reveal reveal-delay-2" style="padding: 1.5rem;">
+            <h4 style="color: var(--color-primary);">UL 9540A</h4>
+            <p style="font-size: 0.85rem; color: var(--text-muted);">BESS Thermal Runaway Fire Safety Standard</p>
+          </div>
+          <div class="card reveal reveal-delay-3" style="padding: 1.5rem;">
+            <h4 style="color: var(--color-primary);">IEC 61400</h4>
+            <p style="font-size: 0.85rem; color: var(--text-muted);">Wind Turbine Design & Acoustic Compliance</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: CTA Banner -->
+    <section class="section" style="padding-bottom: 0;">
+      <div class="container">
+        <div class="cta-banner reveal">
+          <h2>Have an Upcoming Megawatt Renewable Project?</h2>
+          <p>Our certified project architects are ready to review your site parameters and supply an EPC feasibility roadmap.</p>
+          <div style="display: flex; gap: 14px; justify-content: center; flex-wrap: wrap;">
+            <a href="contact.html" class="btn btn-primary btn-lg">Contact Project Team</a>
+            <a href="pricing.html" class="btn btn-secondary btn-lg" style="color: #ffffff; border-color: rgba(255, 255, 255, 0.4); background: rgba(255, 255, 255, 0.1);">Explore Financing</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-top-grid">
+        <div class="footer-brand">
+          <a href="../index.html"><img src="../assets/images/logoStackly.webp" alt="Stackly Renewable Energy" class="brand-logo-img" width="140" height="48"></a>
+          <p>Harnessing wind, solar, and battery energy storage for resilient decarbonized enterprise grids.</p>
+          <div style="font-size: 0.85rem; color: #94a3b8;">MMR Complex, Chinna Thirupathi, Salem, Tamil Nadu 636008</div>
+        </div>
+        <div>
+          <h4 class="footer-title">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="../index.html" class="footer-link">Home</a></li>
+            <li><a href="about.html" class="footer-link">About Us</a></li>
+            <li><a href="services.html" class="footer-link">Services</a></li>
+            <li><a href="solar-energy.html" class="footer-link">Solar Solutions</a></li>
+            <li><a href="wind-energy.html" class="footer-link">Wind Turbines</a></li>
+            <li><a href="energy-storage.html" class="footer-link">Battery Storage</a></li>
+            <li><a href="pricing.html" class="footer-link">Pricing</a></li>
+            <li><a href="contact.html" class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">Case Studies</h4>
+          <ul class="footer-links">
+            <li><a href="404.html" class="footer-link">Apex Wind 240 MW</a></li>
+            <li><a href="404.html" class="footer-link">Sunlight Solar 120 MW</a></li>
+            <li><a href="404.html" class="footer-link">NovaBio BESS 50 MWh</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">Social</h4>
+          <div class="social-links-grid">
+            <a href="404.html" class="social-pill-link">LinkedIn</a>
+            <a href="404.html" class="social-pill-link">Twitter / X</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>&copy; 2026 Stackly Renewable Energy Inc. All Rights Reserved.</div>
+        <ul class="footer-bottom-links">
+          <li><a href="404.html">Privacy Policy</a></li>
+          <li><a href="404.html">Terms</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  <script src="../assets/js/main.js"></script>
+  <script>
+    function filterProjects(category) {
+      const items = document.querySelectorAll('.project-item');
+      const buttons = document.querySelectorAll('.filter-btn');
+      
+      buttons.forEach(btn => {
+        btn.classList.remove('active', 'btn-primary');
+        btn.classList.add('btn-secondary');
+      });
+      event.target.classList.add('active', 'btn-primary');
+      event.target.classList.remove('btn-secondary');
+
+      items.forEach(item => {
+        if (category === 'all' || item.getAttribute('data-category') === category) {
+          item.style.display = '';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    }
+  </script>
+</body>
+</html>
+

@@ -1,0 +1,535 @@
+/* =========================================================
+   STACKLY RENEWABLE ENERGY - DASHBOARD SYSTEM
+   Inspired by Video: Obsidian Slate Command Center & Telemetry
+   Role-Aware: Admin, Manager, Customer, Engineer/Vendor
+   ========================================================= */
+
+:root {
+  --dash-bg: #0b151f;
+  --dash-surface: #12202c;
+  --dash-surface-card: #172837;
+  --dash-surface-hover: #1e3346;
+  --dash-border: rgba(2, 132, 199, 0.16);
+  --dash-border-subtle: rgba(255, 255, 255, 0.08);
+  
+  --dash-text: #f1f5f9;
+  --dash-text-muted: #94a3b8;
+  --dash-cyan: #38bdf8;
+  --dash-green: #34d399;
+  --dash-purple: #c084fc;
+  --dash-yellow: #fbbf24;
+  
+  --sidebar-width: 260px;
+  --sidebar-collapsed-width: 76px;
+  --dash-header-height: 72px;
+}
+
+body.dashboard-body {
+  background-color: var(--dash-bg);
+  color: var(--dash-text);
+  min-height: 100vh;
+  display: flex;
+}
+
+/* =========================================================
+   SIDEBAR COMPONENT
+   ========================================================= */
+
+.dash-sidebar {
+  width: var(--sidebar-width);
+  background: var(--dash-surface);
+  border-right: 1px solid var(--dash-border-subtle);
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1), transform 0.3s ease;
+}
+
+.dash-sidebar.collapsed {
+  width: var(--sidebar-collapsed-width);
+}
+
+.sidebar-header {
+  height: var(--dash-header-height);
+  padding: 0 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--dash-border-subtle);
+}
+
+.sidebar-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  overflow: hidden;
+}
+
+.sidebar-brand img {
+  height: 32px;
+  width: auto;
+}
+
+.sidebar-toggle-btn {
+  background: transparent;
+  border: none;
+  color: var(--dash-text-muted);
+  cursor: pointer;
+  padding: 6px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s ease, background 0.2s ease;
+}
+
+.sidebar-toggle-btn:hover {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.sidebar-menu {
+  list-style: none;
+  padding: 1.25rem 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 10px 14px;
+  border-radius: var(--radius-md);
+  color: var(--dash-text-muted);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+  position: relative;
+  white-space: nowrap;
+}
+
+.sidebar-link svg {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+}
+
+.sidebar-link:hover {
+  color: #ffffff;
+  background: var(--dash-surface-hover);
+}
+
+.sidebar-link.active {
+  color: #ffffff;
+  background: linear-gradient(90deg, rgba(2, 132, 199, 0.25) 0%, rgba(2, 132, 199, 0.08) 100%);
+  border-left: 3px solid var(--dash-cyan);
+  font-weight: 600;
+}
+
+/* Tooltip on Collapsed Sidebar */
+.dash-sidebar.collapsed .sidebar-link-text {
+  display: none;
+}
+
+.dash-sidebar.collapsed .sidebar-link:hover::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  left: calc(100% + 12px);
+  top: 50%;
+  transform: translateY(-50%);
+  background: #0f172a;
+  color: #ffffff;
+  padding: 6px 12px;
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+  white-space: nowrap;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  border: 1px solid var(--dash-border);
+  z-index: 1010;
+  pointer-events: none;
+}
+
+.sidebar-footer {
+  padding: 1rem;
+  border-top: 1px solid var(--dash-border-subtle);
+}
+
+/* =========================================================
+   MAIN DASHBOARD WRAPPER & HEADER
+   ========================================================= */
+
+.dash-main {
+  flex-grow: 1;
+  margin-left: var(--sidebar-width);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  transition: margin-left 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  background: var(--dash-bg);
+}
+
+.dash-sidebar.collapsed ~ .dash-main {
+  margin-left: var(--sidebar-collapsed-width);
+}
+
+.dash-topbar {
+  height: var(--dash-header-height);
+  background: rgba(18, 32, 44, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--dash-border-subtle);
+  position: sticky;
+  top: 0;
+  z-index: 900;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 clamp(1rem, 3vw, 2rem);
+  gap: 1.5rem;
+}
+
+.dash-topbar-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.mobile-sidebar-btn {
+  display: none;
+  background: transparent;
+  border: none;
+  color: var(--dash-text);
+  cursor: pointer;
+  padding: 6px;
+}
+
+.topbar-greeting-wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.topbar-greeting {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.topbar-time-meta {
+  font-size: 0.8rem;
+  color: var(--dash-text-muted);
+}
+
+.dash-topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.dash-role-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px;
+  border-radius: var(--radius-pill);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background: rgba(56, 189, 248, 0.15);
+  color: var(--dash-cyan);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+}
+
+.user-profile-widget {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 4px 8px;
+  border-radius: var(--radius-pill);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.user-avatar-img {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1.5px solid var(--dash-cyan);
+}
+
+.user-meta-name {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+/* =========================================================
+   DASHBOARD CONTENT & WIDGET GRIDS
+   ========================================================= */
+
+.dash-content {
+  padding: clamp(1.2rem, 3vw, 2rem);
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+}
+
+/* Weather & Rotation Live Bar from Video */
+.weather-telemetry-card {
+  background: linear-gradient(135deg, rgba(56, 189, 248, 0.12) 0%, rgba(18, 32, 44, 0.6) 100%);
+  border: 1px solid var(--dash-border);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.telemetry-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.telemetry-icon-box {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-md);
+  background: rgba(56, 189, 248, 0.2);
+  color: var(--dash-cyan);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+}
+
+/* KPI Cards Grid */
+.dash-kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.25rem;
+}
+
+.kpi-card {
+  background: var(--dash-surface-card);
+  border: 1px solid var(--dash-border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.kpi-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--dash-border);
+}
+
+.kpi-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--dash-text-muted);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.kpi-value {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.1;
+}
+
+.kpi-trend {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+.kpi-trend.positive { color: var(--dash-green); }
+.kpi-trend.negative { color: #f87171; }
+
+/* Chart and Telemetry Double Grid */
+.dash-charts-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1.5rem;
+}
+
+.chart-card {
+  background: var(--dash-surface-card);
+  border: 1px solid var(--dash-border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.chart-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+}
+
+.chart-card-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+/* Interactive SVG Bar Chart from Video */
+.chart-container-box {
+  width: 100%;
+  height: 240px;
+  position: relative;
+}
+
+/* Radial Gauge Widget */
+.radial-meter-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.radial-svg-wrap {
+  width: 170px;
+  height: 170px;
+  position: relative;
+}
+
+/* Live Dispatch Data Table */
+.dash-table-card {
+  background: var(--dash-surface-card);
+  border: 1px solid var(--dash-border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  overflow-x: auto;
+}
+
+.dash-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.9rem;
+}
+
+.dash-table th {
+  padding: 12px 14px;
+  color: var(--dash-text-muted);
+  font-weight: 600;
+  border-bottom: 1px solid var(--dash-border-subtle);
+  text-transform: uppercase;
+  font-size: 0.78rem;
+  letter-spacing: 0.05em;
+}
+
+.dash-table td {
+  padding: 14px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  color: var(--dash-text);
+}
+
+.dash-table tr:hover td {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 3px 10px;
+  border-radius: var(--radius-pill);
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+.status-pill.online {
+  background: rgba(52, 211, 153, 0.15);
+  color: var(--dash-green);
+}
+
+.status-pill.standby {
+  background: rgba(251, 191, 36, 0.15);
+  color: var(--dash-yellow);
+}
+
+/* Activity Timeline */
+.timeline-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  position: relative;
+}
+
+.timeline-item {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+
+.timeline-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--dash-cyan);
+  margin-top: 6px;
+  box-shadow: 0 0 10px var(--dash-cyan);
+  flex-shrink: 0;
+}
+
+/* =========================================================
+   RESPONSIVE DASHBOARD (Span full width on smaller screens)
+   ========================================================= */
+
+@media (max-width: 1024px) {
+  .dash-charts-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .mobile-sidebar-btn {
+    display: block;
+  }
+  
+  .dash-sidebar {
+    transform: translateX(-100%);
+    width: 100% !important; /* Always span entire width of screen when expanded */
+    z-index: 9999;
+  }
+  
+  .dash-sidebar.is-open {
+    transform: translateX(0);
+  }
+  
+  .dash-main {
+    margin-left: 0 !important;
+  }
+  
+  .weather-telemetry-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+

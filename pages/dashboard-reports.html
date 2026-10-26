@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ESG & Carbon Reports | Stackly Renewable Energy Dashboard</title>
+  <meta name="description" content="Generate and download verified ISO 14064 carbon credit audit reports and renewable energy certificate ledger.">
+  <link rel="icon" type="image/webp" href="../assets/images/logoStackly.webp">
+  <link rel="stylesheet" href="../assets/css/main.css">
+  <link rel="stylesheet" href="../assets/css/animations.css">
+  <link rel="stylesheet" href="../assets/css/dashboard.css">
+</head>
+<body class="dashboard-body">
+  <a href="#mainContent" class="skip-to-content">Skip to content</a>
+
+  <!-- Loader -->
+  <div id="pageLoader" class="page-loader" role="status" aria-live="polite">
+    <div class="loader-logo-wrap">
+      <img src="../assets/images/logoStackly-dark.webp" alt="Stackly Renewable Energy Logo" width="170" height="58">
+    </div>
+    <div class="loader-spinner"></div>
+    <p class="loader-text">Loading ESG & Compliance Ledger...</p>
+  </div>
+
+  <!-- Sidebar -->
+  <aside class="dash-sidebar" role="navigation">
+    <div class="sidebar-header">
+      <a href="../index.html" class="sidebar-brand">
+        <img src="../assets/images/logoStackly.webp" alt="Stackly Renewable Energy" width="120" height="40">
+      </a>
+      <button type="button" class="sidebar-toggle-btn" aria-label="Toggle sidebar width">
+        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" width="20" height="20"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 19l-7-7 7-7m8 14l-7-7 7-7"/></svg>
+      </button>
+    </div>
+
+    <ul class="sidebar-menu">
+      <li><a href="dashboard.html" class="sidebar-link" data-tooltip="Dashboard"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg><span class="sidebar-link-text">Dashboard</span></a></li>
+      <li><a href="dashboard-analytics.html" class="sidebar-link" data-tooltip="Analytics"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg><span class="sidebar-link-text">Analytics</span></a></li>
+      <li><a href="dashboard-reports.html" class="sidebar-link active" data-tooltip="ESG Reports"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg><span class="sidebar-link-text">ESG Reports</span></a></li>
+      <li><a href="dashboard-assets.html" class="sidebar-link" data-tooltip="Turbine & Solar Fleet"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg><span class="sidebar-link-text">Turbine & Solar Fleet</span></a></li>
+      <li><a href="dashboard-settings.html" class="sidebar-link" data-tooltip="Settings"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg><span class="sidebar-link-text">Settings</span></a></li>
+    </ul>
+
+    <div class="sidebar-footer">
+      <button type="button" class="btn btn-secondary btn-sm btn-sign-out" style="width: 100%;">Sign Out</button>
+    </div>
+  </aside>
+
+  <!-- Main Content -->
+  <div class="dash-main" id="mainContent">
+    <header class="dash-topbar" role="banner">
+      <div class="dash-topbar-left">
+        <button type="button" class="mobile-sidebar-btn"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" width="24" height="24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+        <div>
+          <h1 class="topbar-greeting">ESG & Carbon Compliance Reports</h1>
+          <div class="topbar-time-meta">ISO 14064 Verified • Real-Time Renewable Energy Credits (RECs)</div>
+        </div>
+      </div>
+      <div class="dash-topbar-right">
+        <span class="dash-role-badge">Admin</span>
+        <div class="user-profile-widget">
+          <img src="../assets/images/team-james-workman-field-operations-lead.webp" alt="User Profile" class="user-avatar-img" width="38" height="38">
+          <span class="user-meta-name">James Workman</span>
+        </div>
+        <button type="button" class="btn btn-secondary btn-sm btn-sign-out">Sign Out</button>
+      </div>
+    </header>
+
+    <main class="dash-content">
+      <!-- Section 1: KPI Carbon Summary -->
+      <section class="dash-kpi-grid">
+        <div class="kpi-card">
+          <div class="kpi-header"><span>Cumulative Carbon Avoidance</span><span>CO₂e</span></div>
+          <div class="kpi-value" style="color: var(--dash-green);">1,428 Tons</div>
+          <div class="kpi-trend positive">Equivalent to 64,000 mature trees</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-header"><span>Verified RECs Issued</span><span>MWh</span></div>
+          <div class="kpi-value">1,940 RECs</div>
+          <div class="kpi-trend positive">Registered on I-REC ledger</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-header"><span>Corporate ESG Score</span><span>Rating</span></div>
+          <div class="kpi-value" style="color: var(--dash-cyan);">AAA</div>
+          <div class="kpi-trend positive">Top decile global ranking</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-header"><span>Annual Bill Savings</span><span>USD</span></div>
+          <div class="kpi-value">$214,500</div>
+          <div class="kpi-trend positive">Audited financial return</div>
+        </div>
+      </section>
+
+      <!-- Section 2: Certified Document Downloads Table -->
+      <section class="dash-table-card">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.25rem;">
+          <div>
+            <h2 style="font-size: 1.15rem; font-weight: 700; color: #ffffff;">Download Official ESG Certificates & Audits</h2>
+            <div style="font-size: 0.8rem; color: var(--dash-text-muted);">Cryptographically signed environmental compliance documents</div>
+          </div>
+          <button type="button" class="btn btn-primary btn-sm btn-dash-action">Generate Custom Audit</button>
+        </div>
+
+        <table class="dash-table">
+          <thead>
+            <tr>
+              <th>Document Title</th>
+              <th>Audit Standard</th>
+              <th>Reporting Period</th>
+              <th>Offset Quantity</th>
+              <th>Status</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Annual Corporate Sustainability Report 2026</strong></td>
+              <td>GRI & Scope 1/2 GHG</td>
+              <td>Jan 2026 - Present</td>
+              <td>104.2 Tons / mo</td>
+              <td><span class="status-pill online">● Verified</span></td>
+              <td><button type="button" class="btn btn-secondary btn-sm btn-dash-action" style="padding: 4px 10px; font-size: 0.75rem;">Download PDF</button></td>
+            </tr>
+            <tr>
+              <td><strong>ISO 14064 Carbon Abatement Certificate</strong></td>
+              <td>ISO 14064-2:2019</td>
+              <td>Q3 2026 Audit</td>
+              <td>312.6 Tons Net</td>
+              <td><span class="status-pill online">● Certified</span></td>
+              <td><button type="button" class="btn btn-secondary btn-sm btn-dash-action" style="padding: 4px 10px; font-size: 0.75rem;">Download PDF</button></td>
+            </tr>
+            <tr>
+              <td><strong>Utility Net-Metering Tariff Reconciliation</strong></td>
+              <td>IEEE 1547 Billing</td>
+              <td>September 2026</td>
+              <td>94.8 MWh Export</td>
+              <td><span class="status-pill online">● Settled</span></td>
+              <td><button type="button" class="btn btn-secondary btn-sm btn-dash-action" style="padding: 4px 10px; font-size: 0.75rem;">Download PDF</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+  </div>
+
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/dashboard.js"></script>
+</body>
+</html>
+

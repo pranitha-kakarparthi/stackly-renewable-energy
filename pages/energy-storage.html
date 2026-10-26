@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Battery Energy Storage Systems (BESS) | Stackly Clean Power</title>
+  <meta name="description" content="Containerized utility-scale Lithium Iron Phosphate (LFP) battery storage systems engineered for frequency regulation, peak shaving, and blackout microgrid resilience.">
+  <link rel="icon" type="image/webp" href="../assets/images/logoStackly.webp">
+  <link rel="stylesheet" href="../assets/css/main.css">
+  <link rel="stylesheet" href="../assets/css/animations.css">
+</head>
+<body>
+  <a href="#mainContent" class="skip-to-content">Skip to main content</a>
+
+  <!-- Loader -->
+  <div id="pageLoader" class="page-loader" role="status" aria-live="polite">
+    <div class="loader-logo-wrap">
+      <img src="../assets/images/logoStackly-dark.webp" alt="Stackly Renewable Energy Logo" width="170" height="58">
+    </div>
+    <div class="loader-spinner"></div>
+    <p class="loader-text">Initializing Battery Storage Telemetry...</p>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header" role="banner">
+    <div class="container nav-container">
+      <a href="../index.html" class="brand-logo-link">
+        <img src="../assets/images/logoStackly-dark.webp" alt="Stackly Renewable Energy" class="brand-logo-img" width="138" height="46">
+      </a>
+      <nav class="desktop-nav">
+        <div class="nav-item"><a href="../index.html" class="nav-link">Home</a></div>
+        <div class="nav-item"><a href="about.html" class="nav-link">About Us</a></div>
+        <div class="nav-item has-dropdown">
+          <a href="services.html" class="nav-link active" aria-haspopup="true">
+            Services
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a href="solar-energy.html" class="dropdown-link">☀️ Solar Solutions</a></li>
+            <li><a href="wind-energy.html" class="dropdown-link">💨 Wind Power Systems</a></li>
+            <li><a href="energy-storage.html" class="dropdown-link active">🔋 Battery Energy Storage</a></li>
+            <li><a href="services.html" class="dropdown-link">⚡ All Solutions & Audits</a></li>
+          </ul>
+        </div>
+        <div class="nav-item"><a href="projects.html" class="nav-link">Projects</a></div>
+        <div class="nav-item"><a href="pricing.html" class="nav-link">Pricing</a></div>
+        <div class="nav-item"><a href="contact.html" class="nav-link">Contact</a></div>
+      </nav>
+      <div class="header-actions">
+        <a href="sign-in.html" class="btn btn-secondary btn-sm">Sign In</a>
+        <a href="sign-up.html" class="btn btn-primary btn-sm">Get Started</a>
+        <button class="mobile-nav-toggle" aria-label="Toggle navigation menu">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Overlay -->
+  <div class="mobile-nav-overlay" role="dialog" aria-modal="true">
+    <ul class="mobile-nav-list">
+      <li><a href="../index.html" class="mobile-nav-link">Home</a></li>
+      <li><a href="about.html" class="mobile-nav-link">About Us</a></li>
+      <li>
+        <a href="services.html" class="mobile-nav-link active">Services</a>
+        <ul class="mobile-nav-sublist">
+          <li><a href="solar-energy.html" class="mobile-nav-sublink">☀️ Solar Solutions</a></li>
+          <li><a href="wind-energy.html" class="mobile-nav-sublink">💨 Wind Power Systems</a></li>
+          <li><a href="energy-storage.html" class="mobile-nav-sublink active">🔋 Battery Storage</a></li>
+        </ul>
+      </li>
+      <li><a href="projects.html" class="mobile-nav-link">Projects</a></li>
+      <li><a href="pricing.html" class="mobile-nav-link">Pricing</a></li>
+      <li><a href="contact.html" class="mobile-nav-link">Contact</a></li>
+    </ul>
+    <div class="mobile-nav-actions">
+      <a href="sign-in.html" class="btn btn-secondary" style="width: 100%;">Sign In</a>
+      <a href="sign-up.html" class="btn btn-primary" style="width: 100%;">Register Account</a>
+    </div>
+  </div>
+
+  <main id="mainContent">
+    <!-- Section 1: Hero -->
+    <section class="section" style="background: radial-gradient(100% 85% at 50% 0%, #d1fae5 0%, #ecfdf5 30%, #f4f8fb 100%); padding-bottom: 3.5rem;">
+      <div class="container text-center">
+        <nav aria-label="Breadcrumb" style="margin-bottom: 1rem;">
+          <ol style="display: inline-flex; gap: 8px; list-style: none; font-size: 0.9rem; color: var(--text-muted);">
+            <li><a href="../index.html">Home</a></li>
+            <li>/</li>
+            <li><a href="services.html">Services</a></li>
+            <li>/</li>
+            <li aria-current="page" style="color: var(--color-primary); font-weight: 600;">Battery Storage</li>
+          </ol>
+        </nav>
+        <span class="badge-tag badge-accent">Grid Storage Architecture</span>
+        <h1 style="max-width: 820px; margin: 0 auto 1.25rem auto;">Utility-Scale Battery Energy Storage Systems (BESS)</h1>
+        <p style="max-width: 680px; margin: 0 auto 2rem auto; font-size: 1.15rem;">
+          Stabilizing electric grids, eliminating intermittent renewable curtailment, and unlocking 24/7 clean baseload power with high-safety Lithium Iron Phosphate (LFP) containers.
+        </p>
+      </div>
+    </section>
+
+    <!-- Section 2: BESS Hardware & Safety Architecture -->
+    <section class="section" style="background: #ffffff;" aria-labelledby="bessSafetyHeading">
+      <div class="container">
+        <div class="grid-3" style="grid-template-columns: 1fr 1fr; align-items: center; gap: 3rem;">
+          <div class="reveal">
+            <span class="badge-tag">Safety Engineering</span>
+            <h2 id="bessSafetyHeading" style="margin-bottom: 1rem;">Prismatic LFP Cells & Liquid Cooling</h2>
+            <p style="margin-bottom: 1rem;">Safety is the cornerstone of Stackly BESS engineering. We exclusively deploy Lithium Iron Phosphate (LiFePO4) chemistry which exhibits zero thermal runaway propensity up to 270°C.</p>
+            <div class="grid-3" style="grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1.5rem;">
+              <div style="background: var(--bg-body); padding: 1.2rem; border-radius: var(--radius-md);">
+                <div style="font-size: 1.8rem; font-weight: 800; color: var(--color-accent);">6,000+</div>
+                <div style="font-size: 0.85rem; color: var(--text-muted); font-weight: 600;">Full Cycles to 80% EOL</div>
+              </div>
+              <div style="background: var(--bg-body); padding: 1.2rem; border-radius: var(--radius-md);">
+                <div style="font-size: 1.8rem; font-weight: 800; color: var(--color-primary);">92.4%</div>
+                <div style="font-size: 0.85rem; color: var(--text-muted); font-weight: 600;">Round-Trip Efficiency</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="reveal reveal-delay-1">
+            <img src="../assets/images/project-bess-battery-storage-facility-engineers.webp" alt="Engineers inspecting modular containerized utility battery energy storage system racks" style="border-radius: var(--radius-lg); width: 100%; aspect-ratio: 16/10; object-fit: cover;" width="600" height="375">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: Core Utility Applications -->
+    <section class="section" aria-labelledby="applicationsHeading">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="badge-tag badge-accent">Operational Roles</span>
+          <h2 id="applicationsHeading">Four Pillars of BESS Value Creation</h2>
+          <p>Unlocking multiple revenue and savings streams through flexible battery dispatch algorithms.</p>
+        </div>
+
+        <div class="grid-4">
+          <div class="card reveal">
+            <div class="card-icon-wrap">⚡</div>
+            <h4 style="margin-bottom: 0.5rem;">Peak Shaving</h4>
+            <p style="font-size: 0.88rem; color: var(--text-muted);">Discharges stored solar/wind electricity during expensive peak utility rate windows, slashing billing demand spikes.</p>
+          </div>
+
+          <div class="card reveal reveal-delay-1">
+            <div class="card-icon-wrap">⏱️</div>
+            <h4 style="margin-bottom: 0.5rem;">Frequency Regulation</h4>
+            <p style="font-size: 0.88rem; color: var(--text-muted);">Injects or absorbs power in under 20 milliseconds to stabilize grid frequency at 50/60 Hz, earning ancillary grid service revenue.</p>
+          </div>
+
+          <div class="card reveal reveal-delay-2">
+            <div class="card-icon-wrap">🔄</div>
+            <h4 style="margin-bottom: 0.5rem;">Energy Arbitrage</h4>
+            <p style="font-size: 0.88rem; color: var(--text-muted);">Charges batteries when wholesale grid prices are low (or negative) and discharges during evening scarcity hours.</p>
+          </div>
+
+          <div class="card reveal reveal-delay-3">
+            <div class="card-icon-wrap">🛡️</div>
+            <h4 style="margin-bottom: 0.5rem;">Black-Start Resilience</h4>
+            <p style="font-size: 0.88rem; color: var(--text-muted);">Provides instant grid-forming voltage reference during major blackout events, maintaining critical plant operations.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: Hybrid Microgrid Integration -->
+    <section class="section" style="background: #ffffff;" aria-labelledby="hybridHeading">
+      <div class="container">
+        <div class="grid-3" style="grid-template-columns: 1fr 1fr; align-items: center; gap: 3rem;">
+          <div class="reveal">
+            <img src="../assets/images/service-bess-modular-battery-containers.webp" alt="Clean white modular battery storage containers integrated with solar array field" style="border-radius: var(--radius-lg); width: 100%; aspect-ratio: 16/10; object-fit: cover;" width="600" height="375">
+          </div>
+
+          <div class="reveal reveal-delay-1">
+            <span class="badge-tag">Hybrid Architecture</span>
+            <h2 id="hybridHeading" style="margin-bottom: 1rem;">Seamless Solar + Wind + BESS Integration</h2>
+            <p style="margin-bottom: 1rem;">DC-coupled and AC-coupled topologies that eliminate redundant inverter losses and maximize renewable self-consumption.</p>
+            <ul style="list-style: none; display: flex; flex-direction: column; gap: 10px; font-weight: 500; color: var(--color-secondary);">
+              <li>✓ Bidirectional 4-quadrant power conversion systems (PCS)</li>
+              <li>✓ Cloud-synchronized Battery Management System (BMS) with cell-level telemetry</li>
+              <li>✓ NFPA 855 and UL 9540A certified multi-stage aerosol fire suppression</li>
+              <li>✓ Ambient operating range: -30°C to +55°C without derating</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 5: BESS Capacity Specifications -->
+    <section class="section" aria-labelledby="specsHeading">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="badge-tag badge-accent">Modular Containers</span>
+          <h2 id="specsHeading">Standard Container Configurations</h2>
+          <p>Pre-engineered 20-foot and 40-foot ISO intermodal containers ready for rapid on-site deployment.</p>
+        </div>
+
+        <div class="grid-3">
+          <div class="card reveal" style="padding: 2rem;">
+            <span class="badge-tag">Stackly C-1000</span>
+            <h3 style="margin: 0.5rem 0 0.8rem 0;">1.25 MWh / 500 kW</h3>
+            <p style="font-size: 0.9rem; color: var(--text-muted);">Ideal for commercial warehouses, cold storage facilities, and EV fleet charging hubs.</p>
+            <div style="margin-top: 1.2rem; font-size: 0.88rem; line-height: 1.8; color: var(--color-secondary); font-weight: 600;">
+              <div>• Footprint: 20ft ISO container</div>
+              <div>• Liquid thermal loop cooling</div>
+              <div>• 2-hour or 4-hour discharge duration</div>
+            </div>
+          </div>
+
+          <div class="card reveal reveal-delay-1" style="padding: 2rem; border-color: var(--color-primary); background: radial-gradient(circle at top right, #f0f9ff 0%, #ffffff 80%);">
+            <span class="badge-tag">Stackly C-2500</span>
+            <h3 style="margin: 0.5rem 0 0.8rem 0;">2.80 MWh / 1,250 kW</h3>
+            <p style="font-size: 0.9rem; color: var(--text-muted);">Our most popular configuration for industrial manufacturing plants and large campus microgrids.</p>
+            <div style="margin-top: 1.2rem; font-size: 0.88rem; line-height: 1.8; color: var(--color-secondary); font-weight: 600;">
+              <div>• Footprint: 30ft custom container</div>
+              <div>• Automated grid-islanding transfer switch</div>
+              <div>• 2-hour, 4-hour, or 6-hour duration</div>
+            </div>
+          </div>
+
+          <div class="card reveal reveal-delay-2" style="padding: 2rem;">
+            <span class="badge-tag badge-accent">Stackly C-5000</span>
+            <h3 style="margin: 0.5rem 0 0.8rem 0;">5.01 MWh / 2,500 kW</h3>
+            <p style="font-size: 0.9rem; color: var(--text-muted);">Utility transmission substation support, wind farm firming, and wholesale market participation.</p>
+            <div style="margin-top: 1.2rem; font-size: 0.88rem; line-height: 1.8; color: var(--color-secondary); font-weight: 600;">
+              <div>• Footprint: 40ft High-Cube container</div>
+              <div>• High-voltage 34.5 kV skid-mounted transformer</div>
+              <div>• Multi-container parallel cluster up to 500 MWh</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 6: CTA Banner -->
+    <section class="section" style="padding-bottom: 0;">
+      <div class="container">
+        <div class="cta-banner reveal">
+          <h2>Secure Your Clean Energy Storage Reserve</h2>
+          <p>Request an engineering load-curve analysis to size the ideal battery storage capacity for your facility.</p>
+          <div style="display: flex; gap: 14px; justify-content: center; flex-wrap: wrap;">
+            <a href="contact.html" class="btn btn-primary btn-lg">Request BESS Sizing Review</a>
+            <a href="pricing.html" class="btn btn-secondary btn-lg" style="color: #ffffff; border-color: rgba(255, 255, 255, 0.4); background: rgba(255, 255, 255, 0.1);">View Commercial Pricing</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-top-grid">
+        <div class="footer-brand">
+          <a href="../index.html"><img src="../assets/images/logoStackly.webp" alt="Stackly Renewable Energy" class="brand-logo-img" width="140" height="48"></a>
+          <p>Harnessing wind, solar, and battery energy storage for resilient decarbonized enterprise grids.</p>
+          <div style="font-size: 0.85rem; color: #94a3b8;">MMR Complex, Chinna Thirupathi, Salem, Tamil Nadu 636008</div>
+        </div>
+        <div>
+          <h4 class="footer-title">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="../index.html" class="footer-link">Home</a></li>
+            <li><a href="about.html" class="footer-link">About Us</a></li>
+            <li><a href="services.html" class="footer-link">Services</a></li>
+            <li><a href="solar-energy.html" class="footer-link">Solar Solutions</a></li>
+            <li><a href="wind-energy.html" class="footer-link">Wind Turbines</a></li>
+            <li><a href="energy-storage.html" class="footer-link">Battery Storage</a></li>
+            <li><a href="pricing.html" class="footer-link">Pricing</a></li>
+            <li><a href="contact.html" class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">Storage Specs</h4>
+          <ul class="footer-links">
+            <li><a href="404.html" class="footer-link">LFP Battery Chemistry</a></li>
+            <li><a href="404.html" class="footer-link">Liquid Cooling Systems</a></li>
+            <li><a href="404.html" class="footer-link">UL 9540A Certification</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">Social</h4>
+          <div class="social-links-grid">
+            <a href="404.html" class="social-pill-link">LinkedIn</a>
+            <a href="404.html" class="social-pill-link">Twitter / X</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>&copy; 2026 Stackly Renewable Energy Inc. All Rights Reserved.</div>
+        <ul class="footer-bottom-links">
+          <li><a href="404.html">Privacy Policy</a></li>
+          <li><a href="404.html">Terms</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
+

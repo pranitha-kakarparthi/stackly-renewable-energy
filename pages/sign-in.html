@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign In | Stackly Renewable Energy Enterprise Portal</title>
+  <meta name="description" content="Sign in to the Stackly Renewable Energy dashboard to monitor solar generation, wind turbine speeds, and battery storage levels.">
+  <link rel="icon" type="image/webp" href="../assets/images/logoStackly.webp">
+  <link rel="stylesheet" href="../assets/css/main.css">
+  <link rel="stylesheet" href="../assets/css/animations.css">
+</head>
+<body style="background: #ffffff;">
+  <a href="#mainContent" class="skip-to-content">Skip to main content</a>
+
+  <!-- Loader -->
+  <div id="pageLoader" class="page-loader" role="status" aria-live="polite">
+    <div class="loader-logo-wrap">
+      <img src="../assets/images/logoStackly-dark.webp" alt="Stackly Renewable Energy Logo" width="170" height="58">
+    </div>
+    <div class="loader-spinner"></div>
+    <p class="loader-text">Loading Portal Security...</p>
+  </div>
+
+  <!-- AUTH SPLIT LAYOUT (No Navbar as required) -->
+  <div class="auth-page-wrapper" id="mainContent">
+    <!-- Left Side: Brand Visual & Renewable Trust Messaging -->
+    <div class="auth-banner-side">
+      <div>
+        <a href="../index.html" aria-label="Return to Homepage">
+          <img src="../assets/images/logoStackly.webp" alt="Stackly Renewable Energy Logo" style="height: 42px; width: auto; margin-bottom: 2.5rem;" width="140" height="48">
+        </a>
+        <div class="badge-tag badge-accent" style="margin-bottom: 1.25rem;">Enterprise Clean Grid Portal</div>
+        <h2 style="color: #ffffff; font-size: clamp(2rem, 3.5vw, 2.8rem); line-height: 1.15; margin-bottom: 1.2rem;">
+          Real-Time Clean Energy Telemetry at Your Fingertips.
+        </h2>
+        <p style="color: #cbd5e1; font-size: 1.05rem; line-height: 1.6; max-width: 480px;">
+          Access your utility solar generation curves, wind rotor RPM telemetry, and microgrid battery reserves in one unified command center.
+        </p>
+      </div>
+
+      <div style="background: rgba(255, 255, 255, 0.08); backdrop-filter: blur(12px); border-radius: var(--radius-lg); padding: 1.5rem; border: 1px solid rgba(255, 255, 255, 0.15); margin-top: 2rem;">
+        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 0.8rem;">
+          <img src="../assets/images/avatar-david-chen-solar-engineer.webp" alt="David Chen" style="width: 44px; height: 44px; border-radius: 50%; border: 2px solid var(--color-primary-light);" width="44" height="44">
+          <div>
+            <div style="font-weight: 700; color: #ffffff; font-size: 0.95rem;">David Chen</div>
+            <div style="color: #94a3b8; font-size: 0.8rem;">Chief Electrical Superintendent</div>
+          </div>
+        </div>
+        <p style="font-size: 0.88rem; color: #e2e8f0; font-style: italic; margin: 0;">
+          "The Stackly portal gives our electrical team instant visibility during peak tariff events, reducing facility consumption automatically."
+        </p>
+      </div>
+
+      <div style="font-size: 0.82rem; color: #64748b; margin-top: 2rem;">
+        &copy; 2026 Stackly Renewable Energy Inc. 256-Bit SSL Encrypted SCADA Session.
+      </div>
+    </div>
+
+    <!-- Right Side: Sign In Form -->
+    <div class="auth-form-side">
+      <div class="auth-header-nav">
+        <a href="../index.html" class="btn btn-ghost" style="padding-left: 0;">
+          ← Back to Home
+        </a>
+        <div style="font-size: 0.9rem; color: var(--text-muted);">
+          New to Stackly? <a href="sign-up.html" style="font-weight: 700;">Create Account</a>
+        </div>
+      </div>
+
+      <div style="margin-bottom: 2rem;">
+        <h1 style="font-size: 2rem; color: var(--color-secondary); margin-bottom: 0.5rem;">Sign In to Portal</h1>
+        <p style="color: var(--text-muted); font-size: 0.95rem;">Enter your verified credentials to access clean energy monitoring and controls.</p>
+      </div>
+
+      <!-- Demo Notification Helper -->
+      <div style="background: #f0f9ff; border: 1px solid rgba(2, 132, 199, 0.25); border-radius: var(--radius-md); padding: 10px 14px; margin-bottom: 1.5rem; font-size: 0.85rem; color: var(--color-secondary);">
+        <strong>Demo Mode:</strong> Pre-filled with verified credentials. Click <strong>Sign In to Dashboard</strong> to proceed immediately.
+      </div>
+
+      <form id="signInForm" novalidate>
+        <!-- Field 1: Email Address -->
+        <div class="form-group">
+          <label for="loginEmail" class="form-label">Email Address <span class="required-star">*</span></label>
+          <input type="email" id="loginEmail" class="form-control" value="james.workman@thestackly.com" required placeholder="name@company.com">
+          <div class="form-error-feedback" id="loginEmailError">Please enter a valid email address.</div>
+        </div>
+
+        <!-- Field 2: Password with Toggle Eye -->
+        <div class="form-group">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+            <label for="loginPassword" class="form-label" style="margin-bottom: 0;">Password <span class="required-star">*</span></label>
+            <a href="404.html" style="font-size: 0.82rem; font-weight: 600;">Forgot Password?</a>
+          </div>
+          <div class="password-wrap">
+            <input type="password" id="loginPassword" class="form-control" value="Password@123" required placeholder="Enter your password">
+            <button type="button" class="password-toggle-btn" data-target="loginPassword" aria-label="Show password">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" width="20" height="20"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
+            </button>
+          </div>
+          <div class="form-error-feedback" id="loginPassError">Please enter your password (minimum 6 characters).</div>
+        </div>
+
+        <!-- Field 3: Login As / Role Selector -->
+        <div class="form-group">
+          <label for="loginRole" class="form-label">Login As / Operational Role <span class="required-star">*</span></label>
+          <select id="loginRole" class="form-control" required>
+            <option value="Admin" selected>Admin (System Overview & Control)</option>
+            <option value="Manager">Manager (Facility KPIs & Yield Reports)</option>
+            <option value="Customer">Customer (Consumption & Solar Billing)</option>
+            <option value="Vendor/Engineer">Vendor / Engineer (Hardware Diagnostics & Telemetry)</option>
+          </select>
+          <div class="form-error-feedback" id="loginRoleError">Please select an operational role.</div>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-lg" style="width: 100%; margin-top: 1rem;">
+          Sign In to Dashboard
+          <span class="btn-icon-capsule">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </span>
+        </button>
+      </form>
+
+      <div class="auth-divider">or sign in with corporate SSO</div>
+
+      <!-- Social Login Buttons (All redirect to 404 as requested) -->
+      <div class="auth-social-buttons">
+        <a href="404.html" class="btn-social">
+          <svg width="18" height="18" viewBox="0 0 24 24"><path fill="#4285F4" d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.8-2.4 3.66v3.05h3.88c2.27-2.09 3.665-5.17 3.665-9.15z"/><path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.05c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.77-2.1-6.72-4.93H1.27v3.15C3.25 21.36 7.31 24 12 24z"/><path fill="#FBBC05" d="M5.28 14.27c-.25-.72-.38-1.49-.38-2.27s.13-1.55.38-2.27V6.58H1.27C.46 8.2 0 10.04 0 12s.46 3.8 1.27 5.42l4.01-3.15z"/><path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.31 0 3.25 2.64 1.27 6.58l4.01 3.15c.95-2.83 3.6-4.98 6.72-4.98z"/></svg>
+          Google SSO
+        </a>
+        <a href="404.html" class="btn-social">
+          <svg width="18" height="18" viewBox="0 0 24 24"><path fill="#f25022" d="M1 1h10v10H1z"/><path fill="#00a4ef" d="M1 13h10v10H1z"/><path fill="#7fba00" d="M13 1h10v10H13z"/><path fill="#ffb900" d="M13 13h10v10H13z"/></svg>
+          Microsoft
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/auth.js"></script>
+</body>
+</html>
+
