@@ -2855,3 +2855,169 @@ img[src*="founder"] {
     height: 20px;
   }
 }
+
+
+/* ==========================================================================
+   Project Filter Buttons Component
+   ========================================================================== */
+.project-filter-group {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 2.2rem;
+}
+
+.filter-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  padding: 9px 24px;
+  font-size: 0.92rem;
+  font-weight: 700;
+  border: 1.5px solid rgba(0, 162, 232, 0.35);
+  background: rgba(255, 255, 255, 0.95);
+  color: var(--color-secondary);
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  user-select: none;
+}
+
+.filter-btn:hover {
+  background: #ffffff;
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 162, 232, 0.22);
+}
+
+.filter-btn.active {
+  background: var(--color-primary) !important;
+  color: #ffffff !important;
+  border-color: var(--color-primary) !important;
+  box-shadow: 0 6px 20px rgba(0, 162, 232, 0.4) !important;
+  transform: translateY(-1px);
+}
+
+@media (max-width: 600px) {
+  .filter-btn {
+    padding: 8px 18px;
+    font-size: 0.85rem;
+  }
+}
+
+/* ==========================================================================
+   Services Subpages Responsive Two-Column Tech Feature Sections
+   ========================================================================== */
+.tech-feature-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 3rem;
+  width: 100%;
+}
+
+.tech-feature-img {
+  width: 100%;
+  max-width: 100%;
+  aspect-ratio: 16/10;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+  display: block;
+}
+
+.subservice-stat-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+@media (max-width: 900px) {
+  .tech-feature-grid {
+    grid-template-columns: 1fr !important;
+    gap: 2.2rem !important;
+  }
+  .tech-feature-img {
+    aspect-ratio: 16/9;
+    max-height: 320px;
+  }
+}
+
+@media (max-width: 640px) {
+  .tech-feature-grid {
+    gap: 1.8rem !important;
+  }
+  .tech-feature-img {
+    max-height: 250px;
+    border-radius: var(--radius-md);
+  }
+}
+
+@media (max-width: 480px) {
+  .tech-feature-img {
+    max-height: 210px;
+  }
+  .subservice-stat-grid {
+    grid-template-columns: 1fr !important;
+    gap: 0.75rem !important;
+  }
+}
+
+/* ==========================================================================
+   Wind Energy Turbine Architecture Responsive Refinements
+   ========================================================================== */
+.turbine-arch-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  width: 100%;
+}
+
+.turbine-arch-card {
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100%;
+}
+
+@media (max-width: 900px) {
+  .turbine-arch-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .turbine-arch-card {
+    padding: 1.5rem !important;
+  }
+  .turbine-arch-card h3 {
+    font-size: 1.25rem !important;
+    margin: 0.4rem 0 0.8rem 0 !important;
+  }
+  .turbine-arch-card p {
+    font-size: 0.92rem !important;
+    line-height: 1.6 !important;
+  }
+  .turbine-arch-card ul {
+    margin: 0.9rem 0 !important;
+    padding-left: 1.1rem !important;
+    font-size: 0.88rem !important;
+    line-height: 1.6 !important;
+  }
+}
+
+@media (max-width: 420px) {
+  .turbine-arch-card {
+    padding: 1.2rem !important;
+  }
+  .turbine-arch-card ul {
+    padding-left: 0.9rem !important;
+    font-size: 0.84rem !important;
+  }
+}

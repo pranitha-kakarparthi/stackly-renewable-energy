@@ -39,7 +39,6 @@
             <li><a href="solar-energy.html" class="dropdown-link">☀️ Solar Solutions</a></li>
             <li><a href="wind-energy.html" class="dropdown-link">💨 Wind Power Systems</a></li>
             <li><a href="energy-storage.html" class="dropdown-link">🔋 Battery Energy Storage</a></li>
-            <li><a href="services.html" class="dropdown-link">⚡ All Solutions & Audits</a></li>
           </ul>
         </div>
         <div class="nav-item"><a href="projects.html" class="nav-link active">Projects</a></div>
@@ -72,7 +71,6 @@
           <li><a href="solar-energy.html" class="mobile-nav-sublink"><span class="sublink-icon">☀️</span> Solar Solutions</a></li>
           <li><a href="wind-energy.html" class="mobile-nav-sublink"><span class="sublink-icon">💨</span> Wind Power Systems</a></li>
           <li><a href="energy-storage.html" class="mobile-nav-sublink"><span class="sublink-icon">🔋</span> Battery Storage (BESS)</a></li>
-          <li><a href="services.html" class="mobile-nav-sublink"><span class="sublink-icon">⚡</span> All Solutions & Audits</a></li>
         </ul>
       </li>
       <li><a href="projects.html" class="mobile-nav-link active">Projects</a></li>
@@ -138,11 +136,11 @@
         </div>
 
         <!-- Project Filter Buttons -->
-        <div style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-bottom: 2.2rem;">
-          <button type="button" class="btn btn-sm btn-primary filter-btn active" style="border-radius: 9999px; padding: 8px 20px;" onclick="filterProjects('all')">All Projects</button>
-          <button type="button" class="btn btn-sm btn-secondary filter-btn" style="border-radius: 9999px; padding: 8px 20px; background: rgba(255,255,255,0.85);" onclick="filterProjects('solar')">Solar Parks</button>
-          <button type="button" class="btn btn-sm btn-secondary filter-btn" style="border-radius: 9999px; padding: 8px 20px; background: rgba(255,255,255,0.85);" onclick="filterProjects('wind')">Wind Farms</button>
-          <button type="button" class="btn btn-sm btn-secondary filter-btn" style="border-radius: 9999px; padding: 8px 20px; background: rgba(255,255,255,0.85);" onclick="filterProjects('bess')">Battery Storage</button>
+        <div class="project-filter-group" style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-bottom: 2.2rem;">
+          <button type="button" class="filter-btn active" onclick="filterProjects('all', this)">All Projects</button>
+          <button type="button" class="filter-btn" onclick="filterProjects('solar', this)">Solar Parks</button>
+          <button type="button" class="filter-btn" onclick="filterProjects('wind', this)">Wind Farms</button>
+          <button type="button" class="filter-btn" onclick="filterProjects('bess', this)">Battery Storage</button>
         </div>
 
         <!-- Unique Windora Projects Spotlight Floating Glass Card -->
@@ -485,16 +483,17 @@
   </footer>
   <script src="../assets/js/main.js"></script>
   <script>
-    function filterProjects(category) {
+    function filterProjects(category, clickedBtn) {
       const items = document.querySelectorAll('.project-item');
       const buttons = document.querySelectorAll('.filter-btn');
+      const activeBtn = clickedBtn || (typeof event !== 'undefined' ? (event.currentTarget || event.target) : null);
       
       buttons.forEach(btn => {
-        btn.classList.remove('active', 'btn-primary');
-        btn.classList.add('btn-secondary');
+        btn.classList.remove('active');
       });
-      event.target.classList.add('active', 'btn-primary');
-      event.target.classList.remove('btn-secondary');
+      if (activeBtn) {
+        activeBtn.classList.add('active');
+      }
 
       items.forEach(item => {
         if (category === 'all' || item.getAttribute('data-category') === category) {
