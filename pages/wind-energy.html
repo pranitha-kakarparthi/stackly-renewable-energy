@@ -90,12 +90,15 @@
         <div class="hero-video-overlay"></div>
       </div>
 
-      <!-- Dynamic Aerodynamic Wind Streamlines SVG -->
-      <div class="hero-streamlines-wrap" aria-hidden="true">
-        <svg viewBox="0 0 1440 400" width="100%" height="100%" preserveAspectRatio="none">
-          <path class="hero-streamline-path" d="M -100 80 C 350 140 700 40 1540 120" stroke="rgba(2, 132, 199, 0.4)"/>
-          <path class="hero-streamline-path delay-1" d="M -100 180 C 400 240 800 80 1540 200" stroke="rgba(56, 189, 248, 0.45)"/>
-          <path class="hero-streamline-path delay-2" d="M -100 320 C 300 380 900 180 1540 300" stroke="rgba(16, 185, 129, 0.35)"/>
+      <!-- Aerospace Wind Tunnel Streamline Simulation & Velocity Vectors -->
+      <div class="hero-windtunnel-wrap" aria-hidden="true">
+        <svg viewBox="0 0 1440 450" width="100%" height="100%" preserveAspectRatio="none">
+          <line x1="-100" y1="60" x2="1540" y2="60" stroke="rgba(2, 132, 199, 0.35)" stroke-width="2" class="windtunnel-line"/>
+          <line x1="-100" y1="120" x2="1540" y2="120" stroke="rgba(56, 189, 248, 0.45)" stroke-width="2.5" class="windtunnel-line-fast"/>
+          <line x1="-100" y1="180" x2="1540" y2="180" stroke="rgba(2, 132, 199, 0.3)" stroke-width="1.8" class="windtunnel-line"/>
+          <line x1="-100" y1="240" x2="1540" y2="240" stroke="rgba(56, 189, 248, 0.5)" stroke-width="3" class="windtunnel-line-fast"/>
+          <line x1="-100" y1="300" x2="1540" y2="300" stroke="rgba(16, 185, 129, 0.35)" stroke-width="2" class="windtunnel-line"/>
+          <line x1="-100" y1="360" x2="1540" y2="360" stroke="rgba(2, 132, 199, 0.4)" stroke-width="2.2" class="windtunnel-line"/>
         </svg>
       </div>
 
@@ -144,21 +147,48 @@
           </div>
         </div>
 
-        <!-- Unique Wind Spec Spotlight Floating Glass Card -->
-        <div class="reveal reveal-delay-2" style="max-width: 720px; margin: 0 auto;">
-          <div class="windora-telemetry-glass-card" style="display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; text-align: left; padding: 1.25rem 2rem;">
-            <div style="display: flex; align-items: center; gap: 1rem;">
-              <div style="width: 44px; height: 44px; border-radius: 12px; background: rgba(0, 162, 232, 0.15); display: flex; align-items: center; justify-content: center; font-size: 1.3rem;">
-                🌪️
-              </div>
+        <!-- Interactive Wind Aerodynamics & Rotor Speed Simulator (Unique to Wind Energy) -->
+        <div class="wind-aerodynamics-card tilt-card reveal reveal-delay-2">
+          <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
+            <div style="display: flex; align-items: center; gap: 10px;">
+              <span style="font-size: 1.4rem;">💨</span>
               <div>
-                <div style="font-weight: 800; font-size: 0.95rem; color: var(--color-secondary);">Direct-Drive Aerodynamic Engineering</div>
-                <div style="font-size: 0.8rem; color: var(--text-muted);">Class 1A Typhoon Survival • Pitch-Regulated Carbon Fiber Rotor</div>
+                <div style="font-weight: 800; font-size: 1.05rem; color: var(--color-secondary);">Interactive Aerodynamic Rotor Simulator</div>
+                <div style="font-size: 0.82rem; color: var(--text-muted);">Adjust ambient wind speed to model real-time rotor pitch & power curve</div>
               </div>
             </div>
-            <div style="text-align: right;">
-              <span class="beacon-pulse" style="width: 8px; height: 8px; border-radius: 50%; background: #10b981; display: inline-block; margin-right: 4px;" aria-hidden="true"></span>
-              <span style="font-size: 0.82rem; font-weight: 700; color: #10b981;">18 / 18 Online</span>
+            <span class="badge-tag" style="margin: 0; background: rgba(2, 132, 199, 0.12); color: var(--color-primary-dark);">LiDAR Yaw Active</span>
+          </div>
+
+          <div class="pricing-calc-slider-wrap">
+            <div style="display: flex; justify-content: space-between; font-size: 0.88rem; font-weight: 700; margin-bottom: 6px;">
+              <span>Ambient Inflow Velocity:</span>
+              <span id="windSliderVal" style="color: #0284c7; font-size: 1.05rem;">8.5 m/s (Fresh Breeze)</span>
+            </div>
+            <input type="range" id="windSlider" min="3" max="25" step="0.5" value="8.5" class="wind-sim-slider" aria-label="Wind Velocity in meters per second">
+            <div style="display: flex; justify-content: space-between; font-size: 0.75rem; color: var(--text-muted); margin-top: 4px;">
+              <span>3.0 m/s (Cut-In)</span>
+              <span>12.0 m/s (Rated Peak)</span>
+              <span>25.0 m/s (Storm Cut-Out)</span>
+            </div>
+          </div>
+
+          <div class="wind-sim-metrics-grid">
+            <div class="wind-sim-metric-box">
+              <div class="wind-sim-label">Generator Output</div>
+              <div class="wind-sim-value" id="windPowerVal" style="color: #0284c7;">1,840 kW</div>
+            </div>
+            <div class="wind-sim-metric-box">
+              <div class="wind-sim-label">Rotor Speed</div>
+              <div class="wind-sim-value" id="windRpmVal">11.4 RPM</div>
+            </div>
+            <div class="wind-sim-metric-box">
+              <div class="wind-sim-label">Blade Pitch Angle</div>
+              <div class="wind-sim-value" id="windPitchVal" style="color: #10b981;">+2.0° Optimal</div>
+            </div>
+            <div class="wind-sim-metric-box">
+              <div class="wind-sim-label">Turbine Operational State</div>
+              <div class="wind-sim-value" id="windStateVal" style="font-size: 1.05rem; color: #047857;">● Active Generation</div>
             </div>
           </div>
         </div>
@@ -405,6 +435,56 @@
     </div>
   </footer>
   <script src="../assets/js/main.js"></script>
+  <script>
+    const windSlider = document.getElementById("windSlider");
+    const windSliderVal = document.getElementById("windSliderVal");
+    const windPowerVal = document.getElementById("windPowerVal");
+    const windRpmVal = document.getElementById("windRpmVal");
+    const windPitchVal = document.getElementById("windPitchVal");
+    const windStateVal = document.getElementById("windStateVal");
+
+    if (windSlider) {
+      windSlider.addEventListener("input", (e) => {
+        const v = parseFloat(e.target.value);
+        let desc = "Light Air";
+        if (v >= 3 && v < 6) desc = "Gentle Breeze";
+        else if (v >= 6 && v < 10) desc = "Fresh Breeze";
+        else if (v >= 10 && v < 15) desc = "Strong Breeze";
+        else if (v >= 15 && v < 22) desc = "Near Gale";
+        else desc = "Storm Cut-Out";
+
+        windSliderVal.textContent = `${v.toFixed(1)} m/s (${desc})`;
+        
+        if (v < 3.0) {
+          windPowerVal.textContent = "0 kW";
+          windRpmVal.textContent = "0.0 RPM";
+          windPitchVal.textContent = "+0.0° Idling";
+          windStateVal.textContent = "○ Below Cut-In";
+          windStateVal.style.color = "#94a3b8";
+        } else if (v > 24.0) {
+          windPowerVal.textContent = "0 kW (Feathered)";
+          windRpmVal.textContent = "0.0 RPM (Braked)";
+          windPitchVal.textContent = "+90.0° Full Feather";
+          windStateVal.textContent = "⚠ High-Wind Trip";
+          windStateVal.style.color = "#ef4444";
+        } else {
+          let power = 0;
+          if (v <= 12) {
+            power = Math.round(3200 * Math.pow((v - 2.5) / 9.5, 2.4));
+          } else {
+            power = 3200;
+          }
+          windPowerVal.textContent = `${power.toLocaleString()} kW`;
+          const rpm = (3.2 + (v / 25.0) * 11.8).toFixed(1);
+          windRpmVal.textContent = `${rpm} RPM`;
+          const pitch = v > 12 ? `+${((v - 12) * 1.8 + 2.0).toFixed(1)}° Shed` : "+2.0° Optimal";
+          windPitchVal.textContent = pitch;
+          windStateVal.textContent = "● Active Generation";
+          windStateVal.style.color = "#047857";
+        }
+      });
+    }
+  </script>
 </body>
 </html>
 

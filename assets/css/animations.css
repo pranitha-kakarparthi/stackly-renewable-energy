@@ -313,6 +313,245 @@
   animation: beaconPing 2s infinite;
 }
 
+/* =========================================================
+   UNIQUE HERO OVERLAYS & INTERACTIVE SIMULATORS
+   ========================================================= */
+
+/* 1. HOME: Orbital Clean Energy Rings & Photons */
+.hero-orbital-matrix-wrap {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.orbital-ring {
+  position: absolute;
+  border-radius: 50%;
+  border: 1.5px dashed rgba(2, 132, 199, 0.28);
+  top: 50%;
+  left: 65%;
+  transform: translate(-50%, -50%);
+}
+
+.orbital-ring.ring-1 {
+  width: 550px;
+  height: 550px;
+  animation: orbitSpin 35s linear infinite;
+}
+
+.orbital-ring.ring-2 {
+  width: 850px;
+  height: 850px;
+  border-color: rgba(56, 189, 248, 0.22);
+  animation: counterOrbitSpin 50s linear infinite;
+}
+
+.orbital-node {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #0284c7;
+  box-shadow: 0 0 16px #0284c7;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.orbital-node.node-green {
+  background: #10b981;
+  box-shadow: 0 0 16px #10b981;
+  top: 50%;
+  left: 100%;
+}
+
+.orbital-node.node-gold {
+  background: #f59e0b;
+  box-shadow: 0 0 16px #f59e0b;
+  top: 80%;
+  left: 15%;
+}
+
+/* 2. PRICING: Fintech Candlesticks & ROI Simulator */
+.hero-fintech-matrix-wrap {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.fintech-grid-lines {
+  position: absolute;
+  inset: 0;
+  background-size: 55px 55px;
+  background-image: 
+    linear-gradient(to right, rgba(16, 185, 129, 0.08) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(16, 185, 129, 0.08) 1px, transparent 1px);
+}
+
+.fintech-candlestick-wrap {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 130px;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  padding: 0 4%;
+  opacity: 0.38;
+}
+
+.fintech-bar {
+  width: 12px;
+  background: linear-gradient(180deg, #10b981 0%, rgba(16, 185, 129, 0.2) 100%);
+  border-radius: 4px 4px 0 0;
+  animation: barFluctuate 3s ease-in-out infinite alternate;
+}
+
+@keyframes barFluctuate {
+  0% { transform: scaleY(0.7); }
+  100% { transform: scaleY(1.35); }
+}
+
+.pricing-roi-calc-card {
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1.5px solid rgba(16, 185, 129, 0.35);
+  border-radius: var(--radius-xl);
+  box-shadow: 0 20px 45px -10px rgba(16, 185, 129, 0.16), 0 10px 24px rgba(0,0,0,0.04);
+  padding: clamp(1.2rem, 3vw, 2rem);
+  max-width: 780px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.pricing-calc-slider-wrap {
+  margin: 1.25rem 0;
+}
+
+.pricing-calc-slider {
+  width: 100%;
+  height: 8px;
+  border-radius: 4px;
+  background: #e2e8f0;
+  outline: none;
+  accent-color: #10b981;
+  cursor: pointer;
+}
+
+.pricing-calc-output-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid rgba(0,0,0,0.06);
+}
+
+.pricing-calc-metric {
+  background: rgba(240, 253, 244, 0.85);
+  padding: 0.85rem;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(16, 185, 129, 0.22);
+}
+
+.pricing-calc-metric-label {
+  font-size: 0.75rem;
+  color: #047857;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.pricing-calc-metric-val {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--color-secondary);
+  margin-top: 4px;
+}
+
+/* 3. WIND: Aerospace Wind Tunnel Vectors & Simulator */
+.hero-windtunnel-wrap {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.windtunnel-line {
+  stroke-dasharray: 24 14;
+  animation: windTunnelRush 1.6s linear infinite;
+  will-change: stroke-dashoffset;
+}
+
+.windtunnel-line-fast {
+  stroke-dasharray: 45 25;
+  animation: windTunnelRush 0.95s linear infinite;
+}
+
+@keyframes windTunnelRush {
+  0% { stroke-dashoffset: 400; }
+  100% { stroke-dashoffset: 0; }
+}
+
+.wind-aerodynamics-card {
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1.5px solid rgba(2, 132, 199, 0.35);
+  border-radius: var(--radius-xl);
+  box-shadow: 0 20px 45px -10px rgba(2, 132, 199, 0.18), 0 10px 24px rgba(0,0,0,0.04);
+  padding: clamp(1.2rem, 3vw, 2rem);
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.wind-sim-slider {
+  width: 100%;
+  height: 8px;
+  border-radius: 4px;
+  background: #e2e8f0;
+  outline: none;
+  accent-color: #0284c7;
+  cursor: pointer;
+}
+
+.wind-sim-metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1rem;
+  margin-top: 1.25rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid rgba(0,0,0,0.06);
+}
+
+.wind-sim-metric-box {
+  background: rgba(240, 249, 255, 0.85);
+  padding: 0.85rem;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(2, 132, 199, 0.22);
+}
+
+.wind-sim-label {
+  font-size: 0.75rem;
+  color: #0369a1;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.wind-sim-value {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--color-secondary);
+  margin-top: 4px;
+}
+
 /* Reduced Motion Safety */
 @media (prefers-reduced-motion: reduce) {
   *, ::before, ::after {

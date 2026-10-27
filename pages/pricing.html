@@ -83,12 +83,19 @@
         <div class="hero-video-overlay"></div>
       </div>
 
-      <!-- Aerodynamic Streamline Ambient SVG -->
-      <div class="hero-streamlines-wrap" aria-hidden="true">
-        <svg viewBox="0 0 1440 400" width="100%" height="100%" preserveAspectRatio="none">
-          <path class="hero-streamline-path" d="M -100 80 C 450 140 850 40 1540 100"/>
-          <path class="hero-streamline-path delay-2" d="M -100 240 C 350 300 900 120 1540 220"/>
-        </svg>
+      <!-- Fintech Clean Energy Grid & Fluctuating Yield Matrix -->
+      <div class="hero-fintech-matrix-wrap" aria-hidden="true">
+        <div class="fintech-grid-lines"></div>
+        <div class="fintech-candlestick-wrap">
+          <div class="fintech-bar" style="height: 60px; animation-delay: 0s;"></div>
+          <div class="fintech-bar" style="height: 85px; animation-delay: 0.2s;"></div>
+          <div class="fintech-bar" style="height: 110px; animation-delay: 0.4s;"></div>
+          <div class="fintech-bar" style="height: 75px; animation-delay: 0.6s;"></div>
+          <div class="fintech-bar" style="height: 125px; animation-delay: 0.8s;"></div>
+          <div class="fintech-bar" style="height: 95px; animation-delay: 1.0s;"></div>
+          <div class="fintech-bar" style="height: 140px; animation-delay: 1.2s;"></div>
+          <div class="fintech-bar" style="height: 80px; animation-delay: 1.4s;"></div>
+        </div>
       </div>
 
       <div class="container windora-page-hero-centered">
@@ -131,21 +138,48 @@
           </span>
         </div>
 
-        <!-- Unique Pricing Spotlight Floating Glass Card -->
-        <div class="reveal reveal-delay-2" style="max-width: 720px; margin: 0 auto;">
-          <div class="windora-telemetry-glass-card" style="display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; text-align: left; padding: 1.25rem 2rem;">
-            <div style="display: flex; align-items: center; gap: 1rem;">
-              <div style="width: 44px; height: 44px; border-radius: 12px; background: rgba(0, 162, 232, 0.15); display: flex; align-items: center; justify-content: center; font-size: 1.3rem;">
-                📈
-              </div>
+        <!-- Interactive Commercial ROI & PPA Savings Calculator (Unique to Pricing) -->
+        <div class="pricing-roi-calc-card tilt-card reveal reveal-delay-2">
+          <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
+            <div style="display: flex; align-items: center; gap: 10px;">
+              <span style="font-size: 1.4rem;">📊</span>
               <div>
-                <div style="font-weight: 800; font-size: 0.95rem; color: var(--color-secondary);">Accelerated Commercial ROI</div>
-                <div style="font-size: 0.8rem; color: var(--text-muted);">3.8-Year Average Payback • 0% Down Options • Levelized $0.038 / kWh</div>
+                <div style="font-weight: 800; font-size: 1.05rem; color: var(--color-secondary);">Interactive Clean Energy ROI Calculator</div>
+                <div style="font-size: 0.82rem; color: var(--text-muted);">Slide your facility system size to model live generation & annual savings</div>
               </div>
             </div>
-            <div style="text-align: right;">
-              <span class="beacon-pulse" style="width: 8px; height: 8px; border-radius: 50%; background: #10b981; display: inline-block; margin-right: 4px;" aria-hidden="true"></span>
-              <span style="font-size: 0.82rem; font-weight: 700; color: #10b981;">Guaranteed ROI</span>
+            <span class="badge-tag badge-accent" style="margin: 0;">Levelized $0.038 / kWh</span>
+          </div>
+
+          <div class="pricing-calc-slider-wrap">
+            <div style="display: flex; justify-content: space-between; font-size: 0.88rem; font-weight: 700; margin-bottom: 6px;">
+              <span>Target Solar/BESS Capacity:</span>
+              <span id="roiSliderVal" style="color: #059669; font-size: 1.05rem;">250 kW Peak</span>
+            </div>
+            <input type="range" id="roiSlider" min="50" max="1500" step="25" value="250" class="pricing-calc-slider" aria-label="Target System Capacity in kW">
+            <div style="display: flex; justify-content: space-between; font-size: 0.75rem; color: var(--text-muted); margin-top: 4px;">
+              <span>50 kW (Rooftop)</span>
+              <span>500 kW (Industrial)</span>
+              <span>1,500 kW (Megawatt Park)</span>
+            </div>
+          </div>
+
+          <div class="pricing-calc-output-grid">
+            <div class="pricing-calc-metric">
+              <div class="pricing-calc-metric-label">Annual Output</div>
+              <div class="pricing-calc-metric-val" id="roiGenVal">365 MWh</div>
+            </div>
+            <div class="pricing-calc-metric">
+              <div class="pricing-calc-metric-label">Annual Utility Savings</div>
+              <div class="pricing-calc-metric-val" id="roiSavingsVal" style="color: #059669;">$37,200 / yr</div>
+            </div>
+            <div class="pricing-calc-metric">
+              <div class="pricing-calc-metric-label">Carbon Offset</div>
+              <div class="pricing-calc-metric-val" id="roiCarbonVal">295 Tons CO₂e</div>
+            </div>
+            <div class="pricing-calc-metric">
+              <div class="pricing-calc-metric-label">Payback Window</div>
+              <div class="pricing-calc-metric-val" id="roiPaybackVal" style="color: #0284c7;">3.2 Years</div>
             </div>
           </div>
         </div>
@@ -471,6 +505,28 @@
       isPPA = !isPPA;
       const circle = document.getElementById('toggleCircle');
       circle.style.transform = isPPA ? 'translateX(0)' : 'translateX(24px)';
+    }
+
+    const roiSlider = document.getElementById("roiSlider");
+    const roiSliderVal = document.getElementById("roiSliderVal");
+    const roiGenVal = document.getElementById("roiGenVal");
+    const roiSavingsVal = document.getElementById("roiSavingsVal");
+    const roiCarbonVal = document.getElementById("roiCarbonVal");
+    const roiPaybackVal = document.getElementById("roiPaybackVal");
+
+    if (roiSlider) {
+      roiSlider.addEventListener("input", (e) => {
+        const kw = parseInt(e.target.value, 10);
+        roiSliderVal.textContent = `${kw} kW Peak`;
+        const mwh = Math.round(kw * 1.46);
+        roiGenVal.textContent = `${mwh} MWh`;
+        const savings = Math.round(kw * 148.8);
+        roiSavingsVal.textContent = `$${savings.toLocaleString()} / yr`;
+        const carbon = Math.round(kw * 1.18);
+        roiCarbonVal.textContent = `${carbon} Tons CO₂e`;
+        const payback = (3.0 + (kw / 2000.0)).toFixed(1);
+        roiPaybackVal.textContent = `${payback} Years`;
+      });
     }
   </script>
 </body>
