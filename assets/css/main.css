@@ -2559,3 +2559,299 @@ img {
     gap: 12px;
   }
 }
+
+/* =========================================================
+   UNIVERSAL HUMAN FACE CUT-OFF PREVENTION
+   ========================================================= */
+.testimonial-avatar,
+.avatar-stack img,
+.windora-avatar-pair img,
+img[src*="team-"],
+img[src*="avatar-"],
+img[src*="testimonial-"],
+img[src*="engineers"],
+img[src*="scientist"],
+img[src*="founder"] {
+  object-fit: cover !important;
+  object-position: top center !important;
+}
+
+/* Auth Bottom Create Account Link */
+.auth-bottom-signup-prompt {
+  text-align: center;
+  margin-top: 1.75rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--border-subtle);
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+.auth-bottom-signup-link {
+  color: var(--color-primary);
+  font-weight: 700;
+  text-decoration: none;
+}
+.auth-bottom-signup-link:hover {
+  text-decoration: underline;
+}
+
+/* About Council Spotlight Card */
+.about-council-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  text-align: left;
+  padding: 1.25rem 2rem;
+}
+.council-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.council-status {
+  text-align: right;
+  flex-shrink: 0;
+}
+@media (max-width: 640px) {
+  .about-council-card {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.25rem 1rem;
+    gap: 1rem;
+  }
+  .council-header {
+    width: 100%;
+  }
+  .council-status {
+    width: 100%;
+    text-align: left;
+    padding-top: 0.5rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
+  }
+}
+
+/* Competitive Advantage Grid */
+.competitive-adv-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: clamp(1.5rem, 3.5vw, 3rem);
+}
+@media (max-width: 900px) {
+  .competitive-adv-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+@media (max-width: 480px) {
+  .competitive-adv-grid .card {
+    padding: 1rem;
+  }
+  .competitive-adv-grid img {
+    height: auto;
+    max-height: 220px;
+    object-fit: cover;
+  }
+}
+
+/* Projects Spotlight Card */
+.projects-spotlight-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  text-align: left;
+  padding: 1.25rem 2rem;
+}
+.projects-spotlight-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.projects-spotlight-status {
+  text-align: right;
+  flex-shrink: 0;
+}
+@media (max-width: 640px) {
+  .projects-spotlight-card {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.25rem 1rem;
+    gap: 1rem;
+  }
+  .projects-spotlight-header {
+    width: 100%;
+  }
+  .projects-spotlight-status {
+    width: 100%;
+    text-align: left;
+    padding-top: 0.5rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
+  }
+}
+
+/* Services SLA Card */
+.services-sla-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  text-align: left;
+  padding: 1.25rem 2rem;
+}
+.services-sla-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.services-sla-status {
+  text-align: right;
+  flex-shrink: 0;
+}
+@media (max-width: 640px) {
+  .services-sla-card {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.25rem 1rem;
+    gap: 1rem;
+  }
+  .services-sla-header {
+    width: 100%;
+  }
+  .services-sla-status {
+    width: 100%;
+    text-align: left;
+    padding-top: 0.5rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
+  }
+}
+
+/* IoT Architecture Grid */
+.iot-arch-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: clamp(1.5rem, 3.5vw, 3rem);
+}
+@media (max-width: 900px) {
+  .iot-arch-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+@media (max-width: 480px) {
+  .iot-arch-grid img {
+    width: 100%;
+    height: auto;
+    max-height: 220px;
+    object-fit: cover;
+    border-radius: 12px;
+  }
+}
+
+/* Deployment Models Grid */
+.deployment-models-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(1.5rem, 3vw, 2.5rem);
+}
+@media (max-width: 900px) {
+  .deployment-models-grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 480px) {
+  .deployment-models-grid .card {
+    padding: 1.25rem 1rem;
+  }
+  .deployment-models-grid ul {
+    padding-left: 1rem;
+    font-size: 0.88rem;
+    line-height: 1.6;
+  }
+  .deployment-models-grid .btn {
+    width: 100%;
+  }
+}
+
+/* Pricing Billing Toggle Switch */
+.pricing-billing-switch-wrap {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(16px);
+  padding: 8px 22px;
+  border-radius: 9999px;
+  border: 1.5px solid rgba(255, 255, 255, 0.95);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
+  margin: 0 auto 2.2rem auto;
+  max-width: 100%;
+}
+
+.switch-label {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #64748b;
+  cursor: pointer;
+  transition: color 0.2s ease;
+  user-select: none;
+}
+.switch-label.active {
+  color: var(--color-secondary);
+}
+
+.pricing-toggle-switch {
+  width: 52px;
+  height: 28px;
+  border-radius: 9999px;
+  background: var(--color-primary);
+  border: none;
+  cursor: pointer;
+  position: relative;
+  padding: 3px;
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+  transition: background 0.25s ease;
+}
+
+.pricing-toggle-circle {
+  display: block;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #ffffff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@media (max-width: 600px) {
+  .pricing-billing-switch-wrap {
+    flex-direction: row;
+    padding: 8px 12px;
+    gap: 8px;
+    border-radius: 20px;
+    width: 100%;
+    justify-content: space-between;
+  }
+  .switch-label {
+    font-size: 0.8rem;
+    line-height: 1.2;
+    text-align: center;
+    flex: 1;
+  }
+  .pricing-toggle-switch {
+    width: 46px;
+    height: 26px;
+  }
+  .pricing-toggle-circle {
+    width: 20px;
+    height: 20px;
+  }
+}
