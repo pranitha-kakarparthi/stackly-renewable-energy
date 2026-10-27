@@ -33,10 +33,24 @@
     </div>
   </header>
 
-  <main id="mainContent">
-    <div class="container">
+  <main id="mainContent" style="position: relative; overflow: hidden;">
+    <!-- Cinematic Ambient Background Video Animation -->
+    <div class="hero-video-ambient-wrap" aria-hidden="true">
+      <video class="hero-bg-video" autoplay muted loop playsinline preload="auto">
+        <source src="../assets/videos/renewable-energy.mp4" type="video/mp4">
+      </video>
+      <div class="hero-video-overlay" style="background: radial-gradient(circle at center, rgba(255, 255, 255, 0.88) 0%, rgba(248, 250, 252, 0.96) 100%);"></div>
+    </div>
+
+    <div class="container" style="position: relative; z-index: 2;">
       <div class="error-404-container reveal">
-        <div class="badge-tag badge-accent" style="margin-bottom: 1rem;">⚡ Transmission Line Offline</div>
+        <div style="display: flex; align-items: center; justify-content: center; gap: 12px; margin-bottom: 1rem; flex-wrap: wrap;">
+          <div class="badge-tag badge-accent" style="margin-bottom: 0;">⚡ Transmission Line Offline</div>
+          <div class="hero-video-badge" title="Live Video Background Motion Active (Click to toggle)">
+            <span class="hero-video-badge-dot"></span>
+            <span class="hero-video-badge-text">Video Active</span>
+          </div>
+        </div>
         <div class="error-number" aria-label="Error 404">404</div>
         <h1 style="font-size: clamp(1.8rem, 4vw, 2.8rem); margin-bottom: 1rem; color: var(--color-secondary);">Circuit Disconnected • Page Not Found</h1>
         <p style="max-width: 580px; margin: 0 auto 2.5rem auto; font-size: 1.15rem; color: var(--text-muted);">
@@ -56,18 +70,18 @@
         </div>
 
         <!-- Quick Links Hub -->
-        <div class="card" style="max-width: 760px; width: 100%; padding: 2rem; text-align: left; background: #ffffff;">
+        <div class="card tilt-card" style="max-width: 760px; width: 100%; padding: 2rem; text-align: left; background: #ffffff;">
           <h3 style="font-size: 1.1rem; color: var(--color-secondary); margin-bottom: 1rem; text-align: center;">Active Renewable Subsystems</h3>
           <div class="grid-3" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
-            <a href="solar-energy.html" class="card" style="padding: 1rem; text-decoration: none; border-color: var(--border-subtle);">
+            <a href="solar-energy.html" class="card tilt-card" style="padding: 1rem; text-decoration: none; border-color: var(--border-subtle);">
               <div style="font-weight: 700; color: var(--color-primary); margin-bottom: 4px;">☀️ Solar Solutions</div>
               <div style="font-size: 0.82rem; color: var(--text-muted);">Bifacial photovoltaic systems</div>
             </a>
-            <a href="wind-energy.html" class="card" style="padding: 1rem; text-decoration: none; border-color: var(--border-subtle);">
+            <a href="wind-energy.html" class="card tilt-card" style="padding: 1rem; text-decoration: none; border-color: var(--border-subtle);">
               <div style="font-weight: 700; color: var(--color-primary); margin-bottom: 4px;">💨 Wind Power</div>
               <div style="font-size: 0.82rem; color: var(--text-muted);">HAWT & VAWT aerodynamic rotors</div>
             </a>
-            <a href="energy-storage.html" class="card" style="padding: 1rem; text-decoration: none; border-color: var(--border-subtle);">
+            <a href="energy-storage.html" class="card tilt-card" style="padding: 1rem; text-decoration: none; border-color: var(--border-subtle);">
               <div style="font-weight: 700; color: var(--color-primary); margin-bottom: 4px;">🔋 Battery Storage</div>
               <div style="font-size: 0.82rem; color: var(--text-muted);">Containerized LFP microgrids</div>
             </a>
@@ -77,48 +91,102 @@
     </div>
   </main>
 
-  <!-- Footer -->
+  <!-- =========================================================
+       SITE FOOTER (Standardized Across All Pages)
+       ========================================================= -->
   <footer class="site-footer" role="contentinfo">
     <div class="container">
       <div class="footer-top-grid">
+        <!-- Col 1: Brand & Bio -->
         <div class="footer-brand">
-          <a href="../index.html"><img src="../assets/images/logoStackly.webp" alt="Stackly Renewable Energy" class="brand-logo-img" width="140" height="48"></a>
-          <p>Harnessing wind, solar, and battery energy storage for resilient decarbonized enterprise grids.</p>
-          <div style="font-size: 0.85rem; color: #94a3b8;">MMR Complex, Chinna Thirupathi, Salem, Tamil Nadu 636008</div>
+          <a href="../index.html" aria-label="Stackly Renewable Energy Homepage">
+            <img src="../assets/images/logoStackly.webp" alt="Stackly Renewable Energy" class="brand-logo-img" width="140" height="48">
+          </a>
+          <p>Stackly is a visionary renewable energy company focused on harnessing the power of wind, solar, and battery storage to meet the growing demand for sustainable baseload energy.</p>
+          <div style="font-size: 0.85rem; color: #94a3b8; line-height: 1.5;">
+            <strong>Headquarters:</strong><br>
+            MMR Complex, Chinna Thirupathi, Salem, Tamil Nadu 636008
+          </div>
         </div>
+
+        <!-- Col 2: Quick Links (Functional navigation links) -->
         <div>
           <h4 class="footer-title">Quick Links</h4>
           <ul class="footer-links">
             <li><a href="../index.html" class="footer-link">Home</a></li>
             <li><a href="about.html" class="footer-link">About Us</a></li>
-            <li><a href="services.html" class="footer-link">Services</a></li>
-            <li><a href="solar-energy.html" class="footer-link">Solar Solutions</a></li>
+            <li><a href="services.html" class="footer-link">Renewable Services</a></li>
+            <li><a href="solar-energy.html" class="footer-link">Solar PV Solutions</a></li>
             <li><a href="wind-energy.html" class="footer-link">Wind Turbines</a></li>
-            <li><a href="energy-storage.html" class="footer-link">Battery Storage</a></li>
+            <li><a href="energy-storage.html" class="footer-link">Battery Storage (BESS)</a></li>
+            <li><a href="projects.html" class="footer-link">Project Portfolio</a></li>
             <li><a href="pricing.html" class="footer-link">Commercial Pricing</a></li>
             <li><a href="contact.html" class="footer-link">Contact Support</a></li>
           </ul>
         </div>
+
+        <!-- Col 3: Solutions & Topics (All redirect to 404.html) -->
         <div>
-          <h4 class="footer-title">Status</h4>
+          <h4 class="footer-title">Solutions & Topics</h4>
           <ul class="footer-links">
-            <li><a href="404.html" class="footer-link">Grid Interconnection Status</a></li>
-            <li><a href="404.html" class="footer-link">System Maintenance Logs</a></li>
+            <li><a href="404.html" class="footer-link">Grid Interconnection</a></li>
+            <li><a href="404.html" class="footer-link">Virtual Power Plants (VPP)</a></li>
+            <li><a href="404.html" class="footer-link">Hydroelectric Microgrids</a></li>
+            <li><a href="404.html" class="footer-link">Green Hydrogen Systems</a></li>
+            <li><a href="404.html" class="footer-link">ESG Compliance Auditing</a></li>
+            <li><a href="404.html" class="footer-link">Carbon Offset Certificates</a></li>
+            <li><a href="404.html" class="footer-link">Turbine Aerodynamics Lab</a></li>
           </ul>
         </div>
+
+        <!-- Col 4: Stay Energized Newsletter & Social Media (Redirects to 404.html) -->
         <div>
-          <h4 class="footer-title">Social</h4>
+          <h4 class="footer-title">Stay Energized</h4>
+          <p style="color: #94a3b8; font-size: 0.9rem; margin-bottom: 1rem;">Subscribe to our bi-weekly clean tech intelligence briefing.</p>
+          <form action="404.html" method="GET" class="footer-newsletter-wrap">
+            <label for="footerEmail" class="sr-only" style="position: absolute; left: -9999px;">Enter your email</label>
+            <input type="email" id="footerEmail" name="email" placeholder="Enter Your Email" class="footer-newsletter-input" required>
+            <button type="submit" class="footer-newsletter-btn" aria-label="Subscribe to newsletter">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+            </button>
+          </form>
+
+          <h5 style="color: #ffffff; font-size: 0.95rem; margin-top: 1.5rem; margin-bottom: 0.5rem;">Connect With Stackly</h5>
           <div class="social-links-grid">
-            <a href="404.html" class="social-pill-link">LinkedIn</a>
-            <a href="404.html" class="social-pill-link">Twitter / X</a>
+            <a href="404.html" class="social-pill-link" aria-label="LinkedIn Profile">
+              <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+              LinkedIn
+            </a>
+            <a href="404.html" class="social-pill-link" aria-label="Twitter X Profile">
+              <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+              Twitter / X
+            </a>
+            <a href="404.html" class="social-pill-link" aria-label="YouTube Channel">
+              <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+              YouTube
+            </a>
+            <a href="404.html" class="social-pill-link" aria-label="Facebook Page">
+              <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+              Facebook
+            </a>
+            <a href="404.html" class="social-pill-link" aria-label="Instagram Profile">
+              <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+              Instagram
+            </a>
           </div>
         </div>
       </div>
+
+      <!-- Footer Bottom -->
       <div class="footer-bottom">
-        <div>&copy; 2026 Stackly Renewable Energy Inc. All Rights Reserved.</div>
+        <div>
+          &copy; 2026 Stackly Renewable Energy Inc. All Rights Reserved. Clean Energy for a Greener World.
+        </div>
         <ul class="footer-bottom-links">
           <li><a href="404.html">Privacy Policy</a></li>
-          <li><a href="404.html">Terms</a></li>
+          <li><a href="404.html">Terms of Service</a></li>
+          <li><a href="404.html">Cookie Preferences</a></li>
+          <li><a href="404.html">Security & Compliance</a></li>
         </ul>
       </div>
     </div>

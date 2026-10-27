@@ -1,7 +1,7 @@
 /* =========================================================
-   STACKLY RENEWABLE ENERGY - ANIMATIONS & TRANSITIONS
-   Inspired by aerodynamic airflow, clean wind & solar energy
-   Lighthouse 90+ optimized, zero heavy libraries
+   STACKLY RENEWABLE ENERGY - ADVANCED ANIMATIONS & TRANSITIONS
+   Inspired by aerodynamic wind streams, solar insolation & battery loops
+   Hardware-accelerated (will-change & GPU transforms), Lighthouse 90+ optimized
    ========================================================= */
 
 @keyframes spinLoader {
@@ -9,49 +9,102 @@
   100% { transform: rotate(360deg); }
 }
 
-@keyframes pulseGlow {
-  0%, 100% { opacity: 0.6; transform: scale(1); }
-  50% { opacity: 1; transform: scale(1.05); }
+/* Aerodynamic Wind Stream Lines */
+@keyframes windStreamFlow {
+  0% {
+    stroke-dashoffset: 800;
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 0.7;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    opacity: 0.2;
+  }
 }
 
-@keyframes floatGentle {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-8px); }
+/* Turbine Blade Realistic Spinning */
+@keyframes turbineSpin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 
-@keyframes floatSubtle {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-4px); }
+/* Solar Ray Influx Pulse */
+@keyframes solarPulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.55;
+    filter: drop-shadow(0 0 15px rgba(251, 191, 36, 0.4));
+  }
+  50% {
+    transform: scale(1.08);
+    opacity: 0.85;
+    filter: drop-shadow(0 0 35px rgba(251, 191, 36, 0.7));
+  }
 }
 
-@keyframes waveAura {
-  0% { transform: translateX(0) scaleY(1); }
-  50% { transform: translateX(-2%) scaleY(1.03); }
-  100% { transform: translateX(0) scaleY(1); }
+/* Battery Thermal Cooling Flow */
+@keyframes batteryLiquidFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
-@keyframes fadeInUp {
-  from {
+/* Beacon Radar Ping */
+@keyframes beaconPing {
+  0% {
+    transform: scale(0.9);
+    opacity: 0.9;
+  }
+  70% {
+    transform: scale(2.2);
     opacity: 0;
-    transform: translateY(24px);
   }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+  100% {
+    transform: scale(2.4);
+    opacity: 0;
   }
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+/* Floating Hero Card Multi-Axis Depth */
+@keyframes floatHeroCard1 {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-12px) rotate(0.8deg);
+  }
 }
 
-@keyframes shimmer {
-  0% { background-position: -200% 0; }
-  100% { background-position: 200% 0; }
+@keyframes floatHeroCard2 {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(-0.8deg);
+  }
 }
 
-/* Scroll reveal utilities (AOS alternative via IntersectionObserver) */
+/* Shimmering Text & Surface Effect */
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Orbital Ecosystem Rotation */
+@keyframes orbitSpin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes counterOrbitSpin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(-360deg); }
+}
+
+/* Reveal Utilities */
 .reveal {
   opacity: 0;
   transform: translateY(28px);
@@ -69,25 +122,198 @@
 .reveal-delay-3 { transition-delay: 0.3s; }
 .reveal-delay-4 { transition-delay: 0.4s; }
 
-/* Micro-interactions */
+/* Enhanced Micro-Interactions */
 .hover-lift {
-  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.28s ease;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
 }
 
 .hover-lift:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 16px 32px -8px rgba(2, 132, 199, 0.18);
+  transform: translateY(-6px) scale(1.01);
+  box-shadow: 0 20px 40px -10px rgba(2, 132, 199, 0.25);
 }
 
-.animate-float {
-  animation: floatGentle 5s ease-in-out infinite;
+.animate-turbine {
+  animation: turbineSpin 9s linear infinite;
+  transform-origin: center;
+  will-change: transform;
 }
 
-.animate-float-delayed {
-  animation: floatGentle 6s ease-in-out infinite 1.5s;
+.animate-turbine:hover {
+  animation-duration: 3s;
 }
 
-/* Reduced motion preference */
+.animate-solar-pulse {
+  animation: solarPulse 4s ease-in-out infinite;
+}
+
+.animate-float-card-1 {
+  animation: floatHeroCard1 5.5s ease-in-out infinite;
+  will-change: transform;
+}
+
+.animate-float-card-2 {
+  animation: floatHeroCard2 6.5s ease-in-out infinite 1s;
+  will-change: transform;
+}
+
+.animate-liquid-flow {
+  background-size: 200% 200%;
+  animation: batteryLiquidFlow 4s ease infinite;
+}
+
+.beacon-pulse {
+  position: relative;
+  display: inline-flex;
+}
+
+.beacon-pulse::before {
+  content: "";
+  position: absolute;
+  inset: -3px;
+  border-radius: 50%;
+  background: inherit;
+  animation: beaconPing 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+  pointer-events: none;
+}
+
+/* =========================================================
+   3D TILT, ZOOM, AND ADVANCED INTERACTION ANIMATIONS
+   ========================================================= */
+
+/* 3D Perspective Card Tilt Container */
+.tilt-card {
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  will-change: transform;
+  transition: transform 0.15s cubic-bezier(0.2, 0.8, 0.4, 1), box-shadow 0.25s ease;
+}
+
+.tilt-card:hover {
+  box-shadow: 0 24px 50px -12px rgba(2, 132, 199, 0.22);
+}
+
+.tilt-card > * {
+  transform: translateZ(20px);
+  transform-style: preserve-3d;
+}
+
+/* Image Zoom on Hover Container */
+.zoom-effect-wrap,
+.img-zoom-box {
+  overflow: hidden;
+  position: relative;
+  border-radius: inherit;
+}
+
+.zoom-effect-wrap img,
+.img-zoom-box img {
+  transition: transform 0.55s cubic-bezier(0.16, 1, 0.3, 1), filter 0.4s ease;
+  will-change: transform;
+}
+
+.zoom-effect-wrap:hover img,
+.img-zoom-box:hover img,
+.card:hover .zoom-effect-wrap img,
+.card:hover .img-zoom-box img {
+  transform: scale(1.08);
+  filter: brightness(1.03);
+}
+
+/* Zoom Hover Micro-Interaction */
+.zoom-hover {
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform;
+}
+
+.zoom-hover:hover {
+  transform: scale(1.05);
+}
+
+/* Gentle Breathing Zoom Pulse */
+@keyframes zoomPulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.045);
+  }
+}
+
+.animate-zoom-pulse {
+  animation: zoomPulse 3.5s ease-in-out infinite;
+  will-change: transform;
+}
+
+/* Scroll Reveal with Zoom */
+.reveal-zoom {
+  opacity: 0;
+  transform: scale(0.92) translateY(24px);
+  transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1), transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-zoom.is-revealed {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+}
+
+/* =========================================================
+   CINEMATIC HERO BACKGROUND VIDEO ANIMATION
+   ========================================================= */
+
+.hero-video-ambient-wrap {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.hero-bg-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0.35;
+  filter: saturate(1.2) contrast(1.05);
+  transform: scale(1.02);
+  transition: opacity 0.5s ease;
+}
+
+.hero-video-overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 25%, rgba(228, 245, 252, 0.4) 0%, rgba(178, 226, 246, 0.68) 55%, rgba(126, 199, 232, 0.88) 100%);
+  mix-blend-mode: multiply;
+}
+
+/* Ambient Video Active Indicator Pill */
+.hero-video-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  padding: 5px 14px;
+  border-radius: 9999px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--color-primary-dark);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.hero-video-badge-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #10b981;
+  animation: beaconPing 2s infinite;
+}
+
+/* Reduced Motion Safety */
 @media (prefers-reduced-motion: reduce) {
   *, ::before, ::after {
     animation-duration: 0.01ms !important;
@@ -101,4 +327,3 @@
     transition: none !important;
   }
 }
-

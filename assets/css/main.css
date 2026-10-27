@@ -1430,3 +1430,718 @@ img {
   }
 }
 
+
+
+/* =========================================================
+   SPECIALIZED UNIQUE HERO STYLES & INTERACTIVE PRESENTATIONS
+   ========================================================= */
+
+/* Aerodynamic Wind Streamlines Background (Canvas / SVG) */
+.hero-streamlines-wrap {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.hero-streamline-path {
+  fill: none;
+  stroke: rgba(2, 132, 199, 0.22);
+  stroke-width: 2;
+  stroke-dasharray: 400 400;
+  animation: windStreamFlow 10s linear infinite;
+}
+
+.hero-streamline-path.delay-1 {
+  stroke: rgba(56, 189, 248, 0.28);
+  stroke-width: 2.5;
+  animation-duration: 7s;
+  animation-delay: -2s;
+}
+
+.hero-streamline-path.delay-2 {
+  stroke: rgba(16, 185, 129, 0.25);
+  stroke-width: 1.8;
+  animation-duration: 12s;
+  animation-delay: -5s;
+}
+
+/* Landing Page Dual Floating Cards Row (Direct Video Inspiration) */
+.hero-dual-card-row {
+  display: flex;
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-story-card {
+  flex: 1.2;
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-radius: var(--radius-lg);
+  padding: 1rem 1.25rem;
+  box-shadow: 0 16px 36px -8px rgba(11, 30, 40, 0.12);
+  border: 1px solid rgba(2, 132, 199, 0.18);
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.hero-story-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 42px -6px rgba(2, 132, 199, 0.22);
+  border-color: var(--color-primary);
+}
+
+.hero-story-thumb {
+  width: 72px;
+  height: 72px;
+  border-radius: var(--radius-md);
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 1.5px solid rgba(2, 132, 199, 0.2);
+}
+
+.hero-metric-card {
+  flex: 0.9;
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-radius: var(--radius-lg);
+  padding: 1rem 1.25rem;
+  box-shadow: 0 16px 36px -8px rgba(11, 30, 40, 0.12);
+  border: 1px solid rgba(2, 132, 199, 0.18);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  transition: transform 0.25s ease;
+}
+
+.hero-metric-card:hover {
+  transform: translateY(-4px);
+}
+
+/* Shimmering Headline */
+.shimmer-headline {
+  background: linear-gradient(90deg, #0f2a37 0%, #0284c7 35%, #10b981 70%, #0f2a37 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientShift 8s ease infinite;
+}
+
+/* =========================================================
+   UNIQUE HERO PRESENTATIONS FOR SUBPAGES
+   ========================================================= */
+
+/* 1. About Hero: Milestone Horizon & Presence Badge */
+.hero-about-wrap {
+  position: relative;
+  background: radial-gradient(100% 90% at 50% 0%, #d4eef9 0%, #eaf5fa 40%, #f4f8fb 100%);
+}
+
+.milestone-chips-row {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+}
+
+.milestone-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+  padding: 8px 18px;
+  border-radius: var(--radius-pill);
+  border: 1px solid rgba(2, 132, 199, 0.2);
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--color-secondary);
+  box-shadow: 0 4px 14px rgba(2, 132, 199, 0.08);
+}
+
+.milestone-chip span {
+  color: var(--color-primary);
+}
+
+/* 2. Services Hero: Orbiting Clean Energy Ecosystem */
+.hero-services-wrap {
+  position: relative;
+  background: radial-gradient(100% 90% at 50% 0%, #c9e8f6 0%, #e2f2fa 45%, #f4f8fb 100%);
+}
+
+.ecosystem-orbit-banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.orbit-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #ffffff;
+  padding: 10px 20px;
+  border-radius: var(--radius-pill);
+  box-shadow: 0 8px 24px -4px rgba(2, 132, 199, 0.15);
+  border: 1.5px solid rgba(2, 132, 199, 0.15);
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--color-secondary);
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.orbit-pill:hover {
+  transform: translateY(-4px) scale(1.03);
+  border-color: var(--color-primary);
+}
+
+/* 3. Solar Energy Hero: Radiant Solar Halo & Azimuth Simulator */
+.hero-solar-wrap {
+  position: relative;
+  background: radial-gradient(100% 90% at 50% 0%, #fef3c7 0%, #fffbeb 40%, #f4f8fb 100%);
+  overflow: hidden;
+}
+
+.solar-halo-orb {
+  position: absolute;
+  top: -80px;
+  right: 15%;
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(251, 191, 36, 0.35) 0%, rgba(245, 158, 11, 0.1) 60%, transparent 100%);
+  pointer-events: none;
+  animation: solarPulse 5s ease-in-out infinite;
+}
+
+.solar-tracking-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(12px);
+  padding: 8px 20px;
+  border-radius: var(--radius-pill);
+  border: 1.5px solid rgba(245, 158, 11, 0.3);
+  box-shadow: 0 8px 24px rgba(245, 158, 11, 0.12);
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: #b45309;
+  margin-top: 1rem;
+}
+
+/* 4. Wind Energy Hero: Aerodynamic Air Stream & Tachometer */
+.hero-wind-wrap {
+  position: relative;
+  background: radial-gradient(100% 90% at 50% 0%, #bde4f4 0%, #def1fa 40%, #f4f8fb 100%);
+}
+
+.wind-tachometer-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(12px);
+  padding: 8px 20px;
+  border-radius: var(--radius-pill);
+  border: 1.5px solid rgba(2, 132, 199, 0.3);
+  box-shadow: 0 8px 24px rgba(2, 132, 199, 0.14);
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--color-primary-dark);
+  margin-top: 1rem;
+}
+
+/* 5. Battery Storage Hero: Liquid Thermal Flow & Cell Grid */
+.hero-storage-wrap {
+  position: relative;
+  background: radial-gradient(100% 90% at 50% 0%, #d1fae5 0%, #e6f9f0 40%, #f4f8fb 100%);
+}
+
+.bess-status-beam {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(12px);
+  padding: 8px 22px;
+  border-radius: var(--radius-pill);
+  border: 1.5px solid rgba(16, 185, 129, 0.3);
+  box-shadow: 0 8px 24px rgba(16, 185, 129, 0.15);
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: #065f46;
+  margin-top: 1rem;
+}
+
+/* 6. Projects Hero: Radar Ping Beacon & Megawatt Odometer */
+.hero-projects-wrap {
+  position: relative;
+  background: radial-gradient(100% 90% at 50% 0%, #cde8f6 0%, #e4f3fa 40%, #f4f8fb 100%);
+}
+
+.projects-odometer-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(12px);
+  padding: 8px 22px;
+  border-radius: var(--radius-pill);
+  border: 1.5px solid rgba(2, 132, 199, 0.25);
+  box-shadow: 0 8px 24px rgba(2, 132, 199, 0.12);
+  font-weight: 700;
+  font-size: 0.92rem;
+  color: var(--color-secondary);
+  margin-top: 1rem;
+}
+
+/* 7. Contact Hero: Salem SCADA Gateway Live Ping */
+.hero-contact-wrap {
+  position: relative;
+  background: radial-gradient(100% 90% at 50% 0%, #cde8f6 0%, #e3f2fa 40%, #f4f8fb 100%);
+}
+
+.scada-ping-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(12px);
+  padding: 8px 20px;
+  border-radius: var(--radius-pill);
+  border: 1.5px solid rgba(16, 185, 129, 0.35);
+  box-shadow: 0 8px 24px rgba(16, 185, 129, 0.15);
+  font-weight: 700;
+  font-size: 0.88rem;
+  color: #065f46;
+  margin-top: 1rem;
+}
+
+
+/* =========================================================
+   WINDORA DRIBBLE-SHOT EXACT STYLES (Shot 24959916)
+   ========================================================= */
+
+.windora-hero-section {
+  position: relative;
+  min-height: 88vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: clamp(3rem, 6vw, 5rem);
+  padding-bottom: clamp(2.5rem, 5vw, 4rem);
+  background: url('../images/hero-sky-clouds-windora.webp') no-repeat center bottom / cover,
+              radial-gradient(100% 85% at 50% 0%, #7ec7e8 0%, #b2e2f6 40%, #e4f5fc 100%);
+  overflow: hidden;
+}
+
+.windora-hero-top {
+  max-width: 820px;
+  margin-bottom: clamp(2.5rem, 5vw, 4.5rem);
+  position: relative;
+  z-index: 2;
+}
+
+.windora-hero-headline {
+  font-size: clamp(2.8rem, 6.5vw, 4.8rem);
+  font-weight: 800;
+  line-height: 1.05;
+  color: #173747;
+  letter-spacing: -0.035em;
+  margin-bottom: 1.4rem;
+}
+
+.windora-hero-headline .highlight-word {
+  color: #1a4254;
+  position: relative;
+  display: inline-block;
+}
+
+.windora-hero-subtitle {
+  font-size: clamp(1.05rem, 1.8vw, 1.25rem);
+  line-height: 1.6;
+  color: #4b6877;
+  max-width: 620px;
+  margin-bottom: 2.2rem;
+  font-weight: 500;
+}
+
+/* Primary pill button with round cyan emblem on right */
+.windora-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  padding: 8px 10px 8px 28px;
+  border-radius: 9999px;
+  background: #00a2e8;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 1.05rem;
+  text-decoration: none;
+  box-shadow: 0 10px 28px -4px rgba(0, 162, 232, 0.45);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.windora-btn-primary:hover {
+  background: #028ecb;
+  transform: translateY(-2px);
+  box-shadow: 0 14px 34px -4px rgba(0, 162, 232, 0.55);
+  color: #ffffff;
+}
+
+.windora-btn-emblem {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  transition: transform 0.25s ease;
+}
+
+.windora-btn-primary:hover .windora-btn-emblem {
+  transform: rotate(45deg);
+  background: rgba(255, 255, 255, 0.35);
+}
+
+/* Bottom Dual Cards Row */
+.windora-bottom-cards-row {
+  display: grid;
+  grid-template-columns: 1.45fr 0.85fr;
+  gap: 1.8rem;
+  align-items: stretch;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+.windora-story-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border-radius: 28px;
+  padding: 1.4rem 1.8rem;
+  border: 1.5px solid rgba(255, 255, 255, 0.85);
+  box-shadow: 0 20px 48px -10px rgba(11, 40, 55, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.windora-story-card:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: 0 26px 56px -8px rgba(0, 162, 232, 0.2);
+  border-color: rgba(0, 162, 232, 0.3);
+}
+
+.windora-story-img {
+  width: 140px;
+  height: 96px;
+  border-radius: 20px;
+  object-fit: cover;
+  flex-shrink: 0;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+}
+
+.windora-story-title {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #173747;
+  line-height: 1.2;
+  margin-bottom: 6px;
+}
+
+.windora-story-desc {
+  font-size: 0.88rem;
+  color: #5f7582;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.windora-metric-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border-radius: 28px;
+  padding: 1.4rem 2rem;
+  border: 1.5px solid rgba(255, 255, 255, 0.85);
+  box-shadow: 0 20px 48px -10px rgba(11, 40, 55, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.windora-metric-card:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: 0 26px 56px -8px rgba(0, 162, 232, 0.2);
+}
+
+.windora-avatar-pair {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.windora-avatar-pair img {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 2.5px solid #ffffff;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.windora-avatar-pair img:last-child {
+  margin-left: -12px;
+}
+
+.windora-metric-num {
+  font-size: 2.6rem;
+  font-weight: 900;
+  color: #173747;
+  line-height: 1;
+}
+
+.windora-metric-label {
+  font-size: 0.95rem;
+  color: #5f7582;
+  font-weight: 600;
+  margin-top: 2px;
+}
+
+/* Embedded Obsidian Dashboard Container from Shot 24959916 */
+.windora-obsidian-board {
+  background: #111a24;
+  border-radius: 36px;
+  padding: clamp(1.5rem, 3.5vw, 2.5rem);
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+}
+
+.windora-board-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding-bottom: 1.25rem;
+  margin-bottom: 1.8rem;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.windora-board-tabs {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.windora-board-tab {
+  padding: 6px 18px;
+  border-radius: 9999px;
+  color: #94a3b8;
+  font-size: 0.88rem;
+  font-weight: 600;
+  text-decoration: none;
+  background: transparent;
+  transition: all 0.2s ease;
+}
+
+.windora-board-tab.active {
+  background: #00a2e8;
+  color: #ffffff;
+}
+
+.windora-board-tab:hover:not(.active) {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+/* Windora Obsidian Dashboard Elements */
+.windora-board-kpi-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+  margin-bottom: 1.75rem;
+}
+
+.windora-kpi-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 1.25rem;
+  transition: all 0.25s ease;
+}
+
+.windora-kpi-card:hover {
+  background: rgba(255, 255, 255, 0.07);
+  border-color: rgba(0, 162, 232, 0.4);
+  transform: translateY(-3px);
+}
+
+.windora-kpi-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.6rem;
+}
+
+.windora-kpi-title {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.windora-kpi-val {
+  font-size: 1.85rem;
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.1;
+  margin-bottom: 0.35rem;
+}
+
+.windora-kpi-sub {
+  font-size: 0.78rem;
+  color: #10b981;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.windora-board-main-grid {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 1.75rem;
+}
+
+.windora-chart-panel {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 24px;
+  padding: 1.5rem;
+}
+
+.windora-donut-panel {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 24px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.windora-feeders-strip {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding-top: 1.25rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.windora-feeder-chip {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  padding: 8px 16px;
+  border-radius: 9999px;
+  font-size: 0.82rem;
+  color: #cbd5e1;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Subpage Windora Unified Hero Styles */
+.windora-page-hero {
+  position: relative;
+  padding-top: clamp(3rem, 5vw, 4.5rem);
+  padding-bottom: clamp(3rem, 5vw, 4.5rem);
+  background: url('../images/hero-sky-clouds-windora.webp') no-repeat center top / cover,
+              radial-gradient(100% 85% at 50% 0%, #8cd1ee 0%, #c4e9f7 45%, #f4fbfd 100%);
+  overflow: hidden;
+}
+
+.windora-page-hero-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 2.5rem;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.windora-page-hero-centered {
+  max-width: 860px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.windora-telemetry-glass-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1.5px solid rgba(255, 255, 255, 0.9);
+  border-radius: 28px;
+  padding: 1.75rem;
+  box-shadow: 0 20px 48px -10px rgba(11, 40, 55, 0.12);
+  transition: all 0.3s ease;
+}
+
+.windora-telemetry-glass-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 24px 56px -8px rgba(0, 162, 232, 0.22);
+}
+
+@media (max-width: 1024px) {
+  .windora-board-kpi-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .windora-board-main-grid {
+    grid-template-columns: 1fr;
+  }
+  .windora-page-hero-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 900px) {
+  .windora-bottom-cards-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .windora-board-kpi-row {
+    grid-template-columns: 1fr;
+  }
+}

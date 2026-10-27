@@ -120,55 +120,294 @@
 
   <main id="mainContent">
     <!-- =========================================================
-         SECTION 1: HERO SECTION (Inspired by Video: Clean Sky Atmosphere)
+         SECTION 1: HERO SECTION (Inspired by Dribbble 24959916 & Video Animation)
          ========================================================= -->
-    <section class="hero-section" aria-labelledby="heroHeading">
-      <div class="container hero-content-grid">
-        <div class="hero-left reveal">
-          <div class="hero-greeting-pill">
-            <span class="dynamic-greeting">Welcome to Stackly</span> • <span class="current-local-time"></span>
-          </div>
-          <h1 id="heroHeading" class="hero-title">
-            Greener Future With <br>
-            <span class="highlight-gradient">Intelligent Renewable Energy</span>
-          </h1>
-          <p class="hero-description">
-            Accelerating the global transition to zero-carbon energy. We design, deploy, and operate utility-grade wind turbine farms, smart solar arrays, and high-density battery storage systems for forward-thinking enterprises.
-          </p>
-          <div class="hero-btn-group">
-            <a href="pages/sign-up.html" class="btn btn-primary btn-lg">
-              Get Started Now
-              <span class="btn-icon-capsule" aria-hidden="true">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-              </span>
-            </a>
-            <a href="pages/projects.html" class="btn btn-secondary btn-lg">Explore Case Studies</a>
+    <section class="windora-hero-section" aria-labelledby="heroHeading">
+      <!-- Cinematic Ambient Background Video Animation -->
+      <div class="hero-video-ambient-wrap" aria-hidden="true">
+        <video class="hero-bg-video" autoplay muted loop playsinline preload="auto">
+          <source src="assets/videos/renewable-energy.mp4" type="video/mp4">
+        </video>
+        <div class="hero-video-overlay"></div>
+      </div>
+
+      <!-- Aerodynamic Wind Streamlines SVG Flowing Animation -->
+      <div class="hero-streamlines-wrap" aria-hidden="true">
+        <svg viewBox="0 0 1440 600" width="100%" height="100%" preserveAspectRatio="none">
+          <path class="hero-streamline-path" d="M -100 120 C 300 80 600 220 1540 80"/>
+          <path class="hero-streamline-path delay-1" d="M -100 240 C 400 320 800 120 1540 280"/>
+          <path class="hero-streamline-path delay-2" d="M -100 420 C 350 480 900 360 1540 440"/>
+        </svg>
+      </div>
+
+      <div class="container" style="position: relative; z-index: 2; width: 100%;">
+        <!-- Top Hero Content -->
+        <div class="windora-hero-top reveal">
+          <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin-bottom: 1.25rem;">
+            <div class="hero-greeting-pill">
+              <span class="beacon-pulse" style="width: 10px; height: 10px; border-radius: 50%; background: #10b981; margin-right: 4px;" aria-hidden="true"></span>
+              <span class="dynamic-greeting">Welcome to Stackly</span> • <span class="current-local-time"></span>
+            </div>
+            <div class="hero-video-badge" title="Live Video Background Motion Active (Click to toggle)">
+              <span class="hero-video-badge-dot"></span>
+              <span class="hero-video-badge-text">Video Active</span>
+            </div>
           </div>
 
-          <!-- Video-inspired live badge -->
-          <div style="display: flex; align-items: center; gap: 14px; margin-top: 1rem;">
-            <div style="width: 12px; height: 12px; border-radius: 50%; background: #10b981; box-shadow: 0 0 10px #10b981;" aria-hidden="true"></div>
-            <span style="font-size: 0.9rem; font-weight: 600; color: var(--color-secondary);">99.98% Clean Power Grid Availability Across 14 Regions</span>
+          <h1 id="heroHeading" class="windora-hero-headline">
+            Greener Future With <br>
+            <span class="highlight-word">Renewable Energy</span>
+          </h1>
+
+          <p class="windora-hero-subtitle">
+            Accelerating the global transition to zero-carbon energy. We design, deploy, and operate utility-grade wind turbine farms, smart solar arrays, and high-density battery storage systems for forward-thinking enterprises.
+          </p>
+
+          <div style="display: flex; align-items: center; gap: 1.25rem; flex-wrap: wrap; margin-bottom: 1.5rem;">
+            <a href="pages/404.html" class="windora-btn-primary zoom-hover" aria-label="Get Started with Stackly Renewable Energy">
+              <span>Get Started</span>
+              <span class="windora-btn-emblem" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </span>
+            </a>
+            <a href="pages/404.html" class="btn btn-secondary btn-lg zoom-hover" style="background: rgba(255, 255, 255, 0.75); backdrop-filter: blur(12px); border-radius: 9999px; border: 1.5px solid rgba(255, 255, 255, 0.9);">
+              Explore Projects
+            </a>
+          </div>
+
+          <div style="display: flex; align-items: center; gap: 10px; font-size: 0.9rem; font-weight: 600; color: #334e68;">
+            <span class="beacon-pulse" style="width: 10px; height: 10px; border-radius: 50%; background: var(--color-primary);" aria-hidden="true"></span>
+            <span>99.98% Clean Power Grid Availability Across 14 Regions</span>
           </div>
         </div>
 
-        <!-- Hero Visual Right with Real Avatar Floating Card (Inspired by Video) -->
-        <div class="hero-right reveal reveal-delay-2">
-          <div class="hero-visual-card">
-            <img src="assets/images/hero-wind-turbines-clean-sky.webp" alt="Clean wind turbines spinning against a crystal clear blue sky with modern renewable infrastructure" class="hero-main-img" width="800" height="500">
-            
-            <!-- Floating 12M+ Customers Card with Real Faces from Video -->
-            <div class="hero-floating-stat animate-float" role="region" aria-label="Customer Metric Highlight">
-              <div class="avatar-stack" aria-hidden="true">
-                <img src="assets/images/avatar-david-chen-solar-engineer.webp" alt="David Chen" width="36" height="36">
-                <img src="assets/images/avatar-elena-rostova-grid-director.webp" alt="Elena Rostova" width="36" height="36">
-                <img src="assets/images/avatar-sarah-jenkins-energy-analyst.webp" alt="Sarah Jenkins" width="36" height="36">
-                <img src="assets/images/avatar-marcus-vance-sustainability-lead.webp" alt="Marcus Vance" width="36" height="36">
+        <!-- Windora Dual Floating Cards Row (Spanning lower hero with 3D Tilt) -->
+        <div class="windora-bottom-cards-row reveal reveal-delay-2">
+          <!-- Card 1: View Our Success Stories In Green Energy -->
+          <a href="pages/404.html" class="windora-story-card tilt-card animate-float-card-1" aria-label="View our success stories in green energy">
+            <div class="img-zoom-box" style="border-radius: 20px; overflow: hidden; flex-shrink: 0;">
+              <img src="assets/images/story-wind-turbine.webp" alt="Clean wind turbines in mountain valley" class="windora-story-img" width="140" height="96">
+            </div>
+            <div style="flex: 1;">
+              <h2 class="windora-story-title">View Our Success Stories In Green Energy</h2>
+              <p class="windora-story-desc">Demonstrating our dedication to sustainability and community effects across 38 global installations.</p>
+            </div>
+            <div class="windora-btn-emblem" style="background: var(--color-primary); color: #ffffff; flex-shrink: 0;" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+          </a>
+
+          <!-- Card 2: 12M+ Customers Floating Metric Card -->
+          <div class="windora-metric-card tilt-card animate-float-card-2" role="region" aria-label="Customer Metric Highlight">
+            <div class="windora-avatar-pair" aria-hidden="true">
+              <img src="assets/images/avatar-david-chen-solar-engineer.webp" alt="David Chen" width="44" height="44">
+              <img src="assets/images/avatar-elena-rostova-grid-director.webp" alt="Elena Rostova" width="44" height="44">
+              <img src="assets/images/avatar-sarah-jenkins-energy-analyst.webp" alt="Sarah Jenkins" width="44" height="44">
+            </div>
+            <div class="windora-metric-num animate-zoom-pulse">12M+</div>
+            <div class="windora-metric-label">Satisfied Customers</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         SECTION 2: BIO-ENERGY REVOLUTION PLATFORM & SCADA PREVIEW
+         ========================================================= -->
+    <section class="section" style="padding-top: 4.5rem; padding-bottom: 5rem; background: linear-gradient(180deg, #f4fbfd 0%, #ffffff 100%);" aria-labelledby="platformHeading">
+      <div class="container">
+        <div class="section-header text-center reveal" style="max-width: 820px; margin: 0 auto 3rem auto;">
+          <span class="badge-tag badge-accent">Unified Energy Platform</span>
+          <h2 id="platformHeading" style="font-size: clamp(2.2rem, 4.5vw, 3.2rem); font-weight: 800; color: var(--color-secondary);">
+            Bio- Energy Revolution Platform For People
+          </h2>
+          <p style="font-size: 1.15rem; color: var(--text-muted);">
+            Manage, monitor, and optimize your hybrid solar, wind, and battery assets from a single intelligent control surface. Built for mission-critical grid reliability.
+          </p>
+        </div>
+
+        <!-- Embedded Obsidian Slate SCADA Console from Windora Shot 24959916 -->
+        <div class="windora-obsidian-board reveal reveal-delay-1" role="region" aria-label="Interactive SCADA Command Center Preview">
+          <!-- Top Console Nav Bar -->
+          <div class="windora-board-nav">
+            <div style="display: flex; align-items: center; gap: 14px; flex-wrap: wrap;">
+              <div style="display: inline-flex; align-items: center; gap: 8px; background: rgba(16, 185, 129, 0.15); border: 1px solid rgba(16, 185, 129, 0.3); padding: 5px 14px; border-radius: 9999px; font-size: 0.8rem; font-weight: 700; color: #34d399;">
+                <span class="beacon-pulse" style="width: 8px; height: 8px; border-radius: 50%; background: #10b981;" aria-hidden="true"></span>
+                <span>Operational • 99.98% SLA</span>
               </div>
+              <div class="windora-board-tabs" role="tablist" aria-label="Console Views">
+                <button class="windora-board-tab active" role="tab" aria-selected="true">Overview</button>
+                <button class="windora-board-tab" role="tab" aria-selected="false">Live Generation</button>
+                <button class="windora-board-tab" role="tab" aria-selected="false">Storage Reserve</button>
+                <button class="windora-board-tab" role="tab" aria-selected="false">Feeder Grid</button>
+              </div>
+            </div>
+
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <div style="display: flex; align-items: center; background: rgba(255,255,255,0.08); border-radius: 9999px; padding: 4px; border: 1px solid rgba(255,255,255,0.12);" title="Console Day / Night mode indicator">
+                <span style="padding: 4px 10px; border-radius: 9999px; background: rgba(0, 162, 232, 0.3); font-size: 0.78rem; font-weight: 700; color: #fff;">☀️ 28°C Clear</span>
+              </div>
+              <a href="pages/dashboard.html" class="btn btn-sm btn-primary" style="border-radius: 9999px; padding: 6px 18px; font-size: 0.82rem;">
+                Open Full Console
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- 4 Telemetry Metric Tiles -->
+          <div class="windora-board-kpi-row">
+            <div class="windora-kpi-card">
+              <div class="windora-kpi-header">
+                <span class="windora-kpi-title">Total Active Dispatch</span>
+                <span style="color: #38bdf8;">⚡</span>
+              </div>
+              <div class="windora-kpi-val">4.82 GW</div>
+              <div class="windora-kpi-sub">
+                <span>▲ +14.2%</span> vs yesterday baseline
+              </div>
+            </div>
+
+            <div class="windora-kpi-card">
+              <div class="windora-kpi-header">
+                <span class="windora-kpi-title">Wind Farms Online</span>
+                <span style="color: #38bdf8;">💨</span>
+              </div>
+              <div class="windora-kpi-val">18 / 18</div>
+              <div class="windora-kpi-sub">
+                <span class="animate-turbine" style="display: inline-block;">⚙️</span> 4.8 RPM Rotor Speed
+              </div>
+            </div>
+
+            <div class="windora-kpi-card">
+              <div class="windora-kpi-header">
+                <span class="windora-kpi-title">Solar PV Influx</span>
+                <span style="color: #fbbf24;">☀️</span>
+              </div>
+              <div class="windora-kpi-val">942 W/m²</div>
+              <div class="windora-kpi-sub">
+                <span>▲ +27%</span> Bifacial albedo gain
+              </div>
+            </div>
+
+            <div class="windora-kpi-card">
+              <div class="windora-kpi-header">
+                <span class="windora-kpi-title">BESS Battery SOC</span>
+                <span style="color: #10b981;">🔋</span>
+              </div>
+              <div class="windora-kpi-val">94.6%</div>
+              <div class="windora-kpi-sub">
+                <span>38.4 MWh</span> Liquid-cooled reserve
+              </div>
+            </div>
+          </div>
+
+          <!-- Main Interactive Charts Grid -->
+          <div class="windora-board-main-grid">
+            <!-- Left: Real-time 24h Clean Generation Curve -->
+            <div class="windora-chart-panel">
+              <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.25rem;">
+                <div>
+                  <h3 style="font-size: 1.1rem; color: #ffffff; font-weight: 700; margin-bottom: 2px;">24-Hour Clean Power Generation vs Grid Demand</h3>
+                  <p style="font-size: 0.8rem; color: #94a3b8; margin: 0;">Automated AI peak-shaving with millisecond frequency dispatch</p>
+                </div>
+                <div style="display: flex; gap: 8px; font-size: 0.75rem;">
+                  <span style="display: inline-flex; align-items: center; gap: 4px; color: #38bdf8;"><span style="width: 8px; height: 8px; background: #38bdf8; border-radius: 2px;"></span> Actual (GW)</span>
+                  <span style="display: inline-flex; align-items: center; gap: 4px; color: #94a3b8;"><span style="width: 8px; height: 8px; background: #94a3b8; border-radius: 2px;"></span> Target</span>
+                </div>
+              </div>
+
+              <!-- Responsive SVG Area Chart -->
+              <div style="width: 100%; height: 210px;">
+                <svg viewBox="0 0 600 200" width="100%" height="100%" preserveAspectRatio="none" style="overflow: visible;">
+                  <defs>
+                    <linearGradient id="chartGradientWindora" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0%" stop-color="#00a2e8" stop-opacity="0.5"/>
+                      <stop offset="100%" stop-color="#00a2e8" stop-opacity="0.0"/>
+                    </linearGradient>
+                    <linearGradient id="chartLineGradient" x1="0" y1="0" x2="1" y2="0">
+                      <stop offset="0%" stop-color="#38bdf8"/>
+                      <stop offset="50%" stop-color="#00a2e8"/>
+                      <stop offset="100%" stop-color="#10b981"/>
+                    </linearGradient>
+                  </defs>
+                  <!-- Horizontal Grid Lines -->
+                  <line x1="0" y1="40" x2="600" y2="40" stroke="rgba(255,255,255,0.08)" stroke-dasharray="4"/>
+                  <line x1="0" y1="90" x2="600" y2="90" stroke="rgba(255,255,255,0.08)" stroke-dasharray="4"/>
+                  <line x1="0" y1="140" x2="600" y2="140" stroke="rgba(255,255,255,0.08)" stroke-dasharray="4"/>
+
+                  <!-- Filled Area Curve -->
+                  <path d="M 0 160 C 80 150 140 120 200 90 C 260 60 320 30 380 45 C 440 60 500 85 600 70 L 600 180 L 0 180 Z" fill="url(#chartGradientWindora)"/>
+                  
+                  <!-- Target Line (Dashed) -->
+                  <path d="M 0 140 C 120 120 240 70 360 65 C 480 60 540 75 600 80" fill="none" stroke="#64748b" stroke-width="1.8" stroke-dasharray="5"/>
+
+                  <!-- Generation Curve Line -->
+                  <path d="M 0 160 C 80 150 140 120 200 90 C 260 60 320 30 380 45 C 440 60 500 85 600 70" fill="none" stroke="url(#chartLineGradient)" stroke-width="3.5" stroke-linecap="round"/>
+
+                  <!-- Active Pulse Node at peak -->
+                  <circle cx="380" cy="45" r="5" fill="#ffffff" stroke="#00a2e8" stroke-width="3"/>
+                  <circle cx="380" cy="45" r="10" fill="none" stroke="#00a2e8" stroke-width="1.5" class="beacon-pulse"/>
+                  <text x="380" y="28" fill="#38bdf8" font-size="11" font-weight="700" text-anchor="middle">4.82 GW Peak</text>
+
+                  <!-- Time markers -->
+                  <text x="20" y="195" fill="#64748b" font-size="10">00:00</text>
+                  <text x="160" y="195" fill="#64748b" font-size="10">06:00</text>
+                  <text x="300" y="195" fill="#64748b" font-size="10">12:00 (Solar Peak)</text>
+                  <text x="440" y="195" fill="#64748b" font-size="10">18:00 (Wind Surge)</text>
+                  <text x="560" y="195" fill="#64748b" font-size="10">23:59</text>
+                </svg>
+              </div>
+            </div>
+
+            <!-- Right: Clean Energy Mix Radial Donut & Health -->
+            <div class="windora-donut-panel">
               <div>
-                <div class="stat-number">12M+</div>
-                <div class="stat-label">Satisfied Customers</div>
+                <h3 style="font-size: 1.1rem; color: #ffffff; font-weight: 700; margin-bottom: 2px;">Clean Energy Mix</h3>
+                <p style="font-size: 0.8rem; color: #94a3b8; margin-bottom: 1rem;">Live dispatch distribution</p>
+                
+                <div style="display: flex; align-items: center; justify-content: center; position: relative; height: 140px;">
+                  <svg width="130" height="130" viewBox="0 0 100 100">
+                    <!-- Solar Segment 48% -->
+                    <circle cx="50" cy="50" r="38" fill="transparent" stroke="#fbbf24" stroke-width="14" stroke-dasharray="114.6 238.7" stroke-dashoffset="0"/>
+                    <!-- Wind Segment 38% -->
+                    <circle cx="50" cy="50" r="38" fill="transparent" stroke="#00a2e8" stroke-width="14" stroke-dasharray="90.7 238.7" stroke-dashoffset="-114.6"/>
+                    <!-- Storage Segment 14% -->
+                    <circle cx="50" cy="50" r="38" fill="transparent" stroke="#10b981" stroke-width="14" stroke-dasharray="33.4 238.7" stroke-dashoffset="-205.3"/>
+                  </svg>
+                  <div style="position: absolute; text-align: center;">
+                    <div style="font-size: 1.25rem; font-weight: 800; color: #ffffff;">100%</div>
+                    <div style="font-size: 0.7rem; color: #94a3b8; text-transform: uppercase;">Renewable</div>
+                  </div>
+                </div>
+
+                <div style="display: flex; justify-content: space-around; margin-top: 0.75rem; font-size: 0.78rem;">
+                  <span style="color: #fbbf24; font-weight: 600;">● Solar 48%</span>
+                  <span style="color: #38bdf8; font-weight: 600;">● Wind 38%</span>
+                  <span style="color: #10b981; font-weight: 600;">● BESS 14%</span>
+                </div>
               </div>
+
+              <div style="margin-top: 1rem; padding: 10px 14px; background: rgba(255,255,255,0.05); border-radius: 12px; display: flex; align-items: center; justify-content: space-between;">
+                <span style="font-size: 0.8rem; color: #cbd5e1;">Inverter Health:</span>
+                <span style="font-size: 0.8rem; font-weight: 700; color: #34d399;">98 Inverters Online (100%)</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bottom Microgrid Feeder Strip -->
+          <div class="windora-feeders-strip">
+            <span style="font-size: 0.82rem; color: #94a3b8; font-weight: 600;">Active Feeders:</span>
+            <div class="windora-feeder-chip">
+              <span class="beacon-pulse" style="width: 8px; height: 8px; border-radius: 50%; background: #10b981;" aria-hidden="true"></span>
+              <span>Nordic Offshore Hub (1.82 GW)</span>
+            </div>
+            <div class="windora-feeder-chip">
+              <span class="beacon-pulse" style="width: 8px; height: 8px; border-radius: 50%; background: #10b981;" aria-hidden="true"></span>
+              <span>Mojave Bifacial Array (1.64 GW)</span>
+            </div>
+            <div class="windora-feeder-chip">
+              <span class="beacon-pulse" style="width: 8px; height: 8px; border-radius: 50%; background: #10b981;" aria-hidden="true"></span>
+              <span>Atacama BESS Substation (1.36 GW)</span>
             </div>
           </div>
         </div>
@@ -176,7 +415,7 @@
     </section>
 
     <!-- =========================================================
-         SECTION 2: GLOBAL METRICS & LIVE GENERATION TICKER
+         SECTION 3: GLOBAL METRICS & LIVE GENERATION TICKER
          ========================================================= -->
     <section class="section" style="background: #ffffff; border-bottom: 1px solid var(--border-subtle);" aria-label="Key Performance Indicators">
       <div class="container">
@@ -217,25 +456,25 @@
         </div>
 
         <div class="grid-3">
-          <div class="card reveal">
+          <div class="card reveal tilt-card">
             <div class="card-icon-wrap" aria-hidden="true">🎯</div>
             <h3 class="card-title">Our Mission</h3>
             <p class="card-description">To democratize affordable, limitless clean power through next-generation wind, photovoltaic arrays, and modular grid storage.</p>
-            <a href="pages/about.html" class="btn-ghost">Read Full Story →</a>
+            <a href="pages/404.html" class="btn-ghost">Read Full Story →</a>
           </div>
 
-          <div class="card reveal reveal-delay-1">
+          <div class="card reveal reveal-delay-1 tilt-card">
             <div class="card-icon-wrap" aria-hidden="true">🔭</div>
             <h3 class="card-title">Our Vision</h3>
             <p class="card-description">A world where 100% of commercial industrial operations run continuously on resilient, zero-emission decentralized microgrids.</p>
-            <a href="pages/about.html" class="btn-ghost">View Roadmap →</a>
+            <a href="pages/404.html" class="btn-ghost">View Roadmap →</a>
           </div>
 
-          <div class="card reveal reveal-delay-2">
+          <div class="card reveal reveal-delay-2 tilt-card">
             <div class="card-icon-wrap" aria-hidden="true">🛡️</div>
             <h3 class="card-title">Core Values</h3>
             <p class="card-description">Unwavering safety, engineering rigor, radical environmental transparency, and round-the-clock stewardship of global ecosystems.</p>
-            <a href="pages/about.html" class="btn-ghost">Discover Values →</a>
+            <a href="pages/404.html" class="btn-ghost">Discover Values →</a>
           </div>
         </div>
       </div>
@@ -254,51 +493,51 @@
 
         <div class="grid-3">
           <!-- Service Card 1 -->
-          <div class="card reveal">
+          <div class="card reveal tilt-card">
             <div class="card-icon-wrap" aria-hidden="true">☀️</div>
             <h3 class="card-title">Commercial & Utility Solar</h3>
             <p class="card-description">High-efficiency bifacial monocrystalline solar arrays with smart MPPT inverters for commercial rooftops and expansive ground-mount solar parks.</p>
-            <a href="pages/solar-energy.html" class="btn-ghost">Explore Solar Systems →</a>
+            <a href="pages/404.html" class="btn-ghost">Explore Solar Systems →</a>
           </div>
 
           <!-- Service Card 2 -->
-          <div class="card reveal reveal-delay-1">
+          <div class="card reveal reveal-delay-1 tilt-card">
             <div class="card-icon-wrap" aria-hidden="true">💨</div>
             <h3 class="card-title">Advanced Wind Turbine Systems</h3>
             <p class="card-description">Modern Vertical Axis Wind Turbines (VAWT) and high-yield Horizontal Axis systems engineered for low-wind cut-in and aerodynamic quietude.</p>
-            <a href="pages/wind-energy.html" class="btn-ghost">Explore Wind Tech →</a>
+            <a href="pages/404.html" class="btn-ghost">Explore Wind Tech →</a>
           </div>
 
           <!-- Service Card 3 -->
-          <div class="card reveal reveal-delay-2">
+          <div class="card reveal reveal-delay-2 tilt-card">
             <div class="card-icon-wrap" aria-hidden="true">🔋</div>
             <h3 class="card-title">Battery Energy Storage (BESS)</h3>
             <p class="card-description">Utility-scale Lithium Iron Phosphate (LFP) containers with liquid thermal management, peak shaving, frequency regulation, and black-start backup.</p>
-            <a href="pages/energy-storage.html" class="btn-ghost">Explore Storage →</a>
+            <a href="pages/404.html" class="btn-ghost">Explore Storage →</a>
           </div>
 
           <!-- Service Card 4 -->
-          <div class="card reveal">
+          <div class="card reveal tilt-card">
             <div class="card-icon-wrap" aria-hidden="true">🌐</div>
             <h3 class="card-title">Smart Grid Integration</h3>
             <p class="card-description">Decentralized IoT telemetry software that synchronizes onsite solar, wind, and storage directly with regional utility dispatch commands.</p>
-            <a href="pages/services.html" class="btn-ghost">Smart Grid Details →</a>
+            <a href="pages/404.html" class="btn-ghost">Smart Grid Details →</a>
           </div>
 
           <!-- Service Card 5 -->
-          <div class="card reveal reveal-delay-1">
+          <div class="card reveal reveal-delay-1 tilt-card">
             <div class="card-icon-wrap" aria-hidden="true">🔍</div>
             <h3 class="card-title">Energy Auditing & Decarbonization</h3>
             <p class="card-description">Comprehensive ISO 50001 audits, thermal imaging analysis, load profiling, and financial payback modeling for enterprise facilities.</p>
-            <a href="pages/services.html" class="btn-ghost">Request Audit →</a>
+            <a href="pages/404.html" class="btn-ghost">Request Audit →</a>
           </div>
 
           <!-- Service Card 6 -->
-          <div class="card reveal reveal-delay-2">
+          <div class="card reveal reveal-delay-2 tilt-card">
             <div class="card-icon-wrap" aria-hidden="true">🛠️</div>
             <h3 class="card-title">24/7 Asset O&M Operations</h3>
             <p class="card-description">Drone-based thermographic inspections, predictive AI vibration analysis, blade maintenance, and guaranteed 99.8% inverter uptime.</p>
-            <a href="pages/services.html" class="btn-ghost">View O&M Services →</a>
+            <a href="pages/404.html" class="btn-ghost">View O&M Services →</a>
           </div>
         </div>
       </div>
@@ -321,7 +560,7 @@
             <span class="showcase-index">01</span>
             <div class="showcase-title">Sunlight Energy's Future: 120 MW Bifacial Solar Plant</div>
             <div class="showcase-desc">Supplying clean electricity to over 45,000 households with automated dual-axis solar trackers and real-time cloud tracking.</div>
-            <a href="pages/projects.html" class="showcase-btn" aria-label="View Sunlight Energy's Future Project">
+            <a href="pages/404.html" class="showcase-btn zoom-hover" aria-label="View Sunlight Energy's Future Project">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
             </a>
           </div>
@@ -332,12 +571,12 @@
               <span class="showcase-index">02</span>
               <div class="showcase-title">Wind Power: Electrifying the Industrial Heartland</div>
               <div class="showcase-desc">In order to meet national Net Zero scenarios, Stackly deployed 34 low-vibration turbines yielding 240 GWh annually.</div>
-              <a href="pages/projects.html" class="showcase-btn" aria-label="View Wind Power Project">
+              <a href="pages/404.html" class="showcase-btn zoom-hover" aria-label="View Wind Power Project">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
               </a>
             </div>
 
-            <div style="margin-top: 1.5rem; position: relative; border-radius: var(--radius-lg); overflow: hidden;">
+            <div class="img-zoom-box" style="margin-top: 1.5rem; position: relative; border-radius: var(--radius-lg); overflow: hidden;">
               <img src="assets/images/project-wind-engineers-inspecting-turbines.webp" alt="Stackly certified field engineers in safety helmets and vests inspecting offshore wind turbine operations" style="width: 100%; max-height: 440px; object-fit: cover;" width="800" height="440">
               <div style="position: absolute; bottom: 16px; left: 16px; display: flex; gap: 8px;">
                 <span class="badge-tag badge-light">New Energy</span>
@@ -352,10 +591,13 @@
             <span class="showcase-index">03</span>
             <div class="showcase-title">Vertical Axis Wind Turbine (VAWT) Urban Microgrid</div>
             <div class="showcase-desc">Low-noise aerodynamic omnidirectional turbines mounted atop commercial towers, generating continuous baseload power in complex urban wind corridors.</div>
-            <a href="pages/wind-energy.html" class="showcase-btn" aria-label="View Urban VAWT Project">
+            <a href="pages/404.html" class="showcase-btn zoom-hover" aria-label="View Urban VAWT Project">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
             </a>
           </div>
+        </div>
+      </div>
+    </section>
         </div>
       </div>
     </section>
@@ -475,13 +717,13 @@
           <h2>Ready to Power Your Operations with 100% Clean Energy?</h2>
           <p>Join hundreds of forward-thinking enterprises saving millions while meeting stringent ESG compliance targets. Schedule your zero-obligation technical feasibility review.</p>
           <div style="display: flex; gap: 14px; justify-content: center; flex-wrap: wrap;">
-            <a href="pages/contact.html" class="btn btn-primary btn-lg">
+            <a href="pages/404.html" class="btn btn-primary btn-lg zoom-hover">
               Book Technical Consultation
               <span class="btn-icon-capsule" aria-hidden="true">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
               </span>
             </a>
-            <a href="pages/sign-up.html" class="btn btn-secondary btn-lg" style="color: #ffffff; border-color: rgba(255, 255, 255, 0.4); background: rgba(255, 255, 255, 0.1);">Create Enterprise Portal</a>
+            <a href="pages/404.html" class="btn btn-secondary btn-lg zoom-hover" style="color: #ffffff; border-color: rgba(255, 255, 255, 0.4); background: rgba(255, 255, 255, 0.1);">Create Enterprise Portal</a>
           </div>
         </div>
       </div>

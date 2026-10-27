@@ -11,6 +11,9 @@ document.addEventListener("DOMContentLoaded", () => {
   initScrollReveals();
   initCharCounters();
   initActionRedirections();
+  initWindoraBoardTabs();
+  init3DCardTilt();
+  initAmbientHeroVideos();
 });
 
 /* =========================================================
@@ -238,6 +241,119 @@ function initActionRedirections() {
       const isPagesDir = window.location.pathname.includes("/pages/");
       window.location.href = isPagesDir ? "404.html" : "pages/404.html";
     }
+  });
+}
+
+/* =========================================================
+   8. WINDORA OBSIDIAN BOARD INTERACTIVE TABS
+   ========================================================= */
+function initWindoraBoardTabs() {
+  const tabs = document.querySelectorAll(".windora-board-tab");
+  tabs.forEach((tab) => {
+    tab.addEventListener("click", () => {
+      tabs.forEach((t) => {
+        t.classList.remove("active");
+        t.setAttribute("aria-selected", "false");
+      });
+      tab.classList.add("active");
+      tab.setAttribute("aria-selected", "true");
+    });
+  });
+}
+
+/* =========================================================
+   9. INTERACTIVE 3D PERSPECTIVE CARD TILT ENGINE
+   Calculates mouse coordinates relative to card center, applies
+   smooth 3D transform with RAF for 60fps performance
+   ========================================================= */
+function init3DCardTilt() {
+  // Check for reduced motion preference or touch devices
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches || window.innerWidth < 768) {
+    return;
+  }
+
+  const tiltTargets = document.querySelectorAll(
+    ".tilt-card, .card, .windora-story-card, .windora-metric-card, .windora-kpi-card, .windora-telemetry-glass-card, .testimonial-card"
+  );
+
+  tiltTargets.forEach((card) => {
+    let ticking = false;
+
+    card.addEventListener("mousemove", (e) => {
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          const rect = card.getBoundingClientRect();
+          const cardX = e.clientX - rect.left;
+          const cardY = e.clientY - rect.top;
+          const centerX = rect.width / 2;
+          const centerY = rect.height / 2;
+
+          // Compute tilt angles (max 8 degrees for clean, subtle elegance)
+          const rotateX = ((cardY - centerY) / centerY) * -7.5;
+          const rotateY = ((cardX - centerX) / centerX) * 7.5;
+
+          card.style.transform = `perspective(1000px) rotateX(${rotateX.toFixed(2)}deg) rotateY(${rotateY.toFixed(2)}deg) scale3d(1.02, 1.02, 1.02)`;
+          card.style.transition = "transform 0.08s ease-out, box-shadow 0.25s ease";
+          ticking = false;
+        });
+        ticking = true;
+      }
+    });
+
+    card.addEventListener("mouseleave", () => {
+      card.style.transform = "perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)";
+      card.style.transition = "transform 0.45s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease";
+    });
+  });
+}
+
+/* =========================================================
+   10. AMBIENT HERO VIDEO ANIMATION CONTROLLER
+   Ensures video loops silently, handles autoplay & reduction
+   ========================================================= */
+function initAmbientHeroVideos() {
+  const videos = document.querySelectorAll(".hero-bg-video");
+  if (!videos.length) return;
+
+  const isReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  videos.forEach((video) => {
+    if (isReduced) {
+      video.pause();
+      video.style.opacity = "0.15";
+      return;
+    }
+
+    // Force muted & playsinline for safe iOS/Android/Chrome autoplay policy
+    video.muted = true;
+    video.playsInline = true;
+
+    const playPromise = video.play();
+    if (playPromise !== undefined) {
+      playPromise.catch(() => {
+        // Autoplay may be restricted until first user interaction
+        document.addEventListener("click", () => {
+          video.play().catch(() => {});
+        }, { once: true });
+      });
+    }
+  });
+
+  // Interactive toggle badge if clicked
+  const toggleBadges = document.querySelectorAll(".hero-video-badge");
+  toggleBadges.forEach((badge) => {
+    badge.style.cursor = "pointer";
+    badge.addEventListener("click", () => {
+      videos.forEach((v) => {
+        if (v.paused) {
+          v.play();
+          badge.querySelector(".hero-video-badge-text").textContent = "Video Active";
+        } else {
+          v.pause();
+          badge.querySelector(".hero-video-badge-text").textContent = "Video Paused";
+        }
+      });
+    });
   });
 }
 
