@@ -106,17 +106,160 @@ function initDashboardSidebar() {
 }
 
 /* =========================================================
-   3. ROLE AWARENESS & CUSTOMIZED DATA PROFILES
+   3. ROLE AWARENESS & CUSTOMIZED INDEPENDENT DATA PROFILES
    ========================================================= */
+const ROLE_PERSONAS = {
+  "Admin": {
+    name: "James Workman",
+    title: "Global SCADA Operations Lead",
+    avatar: "team-james-workman-field-operations-lead.webp",
+    badgeClass: "role-admin",
+    kpis: {
+      gen: "128.4 MWh",
+      feed: "94.8 MWh",
+      offset: "104.2 Tons",
+      rev: "$34,890",
+      custom1: "38 / 38 Active",
+      custom2: "0 Critical Faults"
+    },
+    banner: "Admin Mode: Full SCADA grid dispatch authority, sub-second telemetry write permissions & API key configuration."
+  },
+  "Manager": {
+    name: "Elena Rostova",
+    title: "Grid Operations & PPA Director",
+    avatar: "avatar-elena-rostova-grid-director.webp",
+    badgeClass: "role-manager",
+    kpis: {
+      gen: "84.6 MWh",
+      feed: "62.1 MWh",
+      offset: "68.4 Tons",
+      rev: "$18,420",
+      custom1: "99.8% Availability",
+      custom2: "PPA On Target"
+    },
+    banner: "Manager Mode: Executive ESG reporting, PPA billing settlements, workforce dispatch schedule & yield targets."
+  },
+  "Customer": {
+    name: "Marcus Vance",
+    title: "Commercial Facility Director",
+    avatar: "avatar-marcus-vance-sustainability-lead.webp",
+    badgeClass: "role-customer",
+    kpis: {
+      gen: "1.42 MWh",
+      feed: "0.85 MWh",
+      offset: "1.12 Tons",
+      rev: "$382 Saved",
+      custom1: "100% Green Match",
+      custom2: "Net-Metered Credit"
+    },
+    banner: "Customer Portal: Contracted solar & wind capacity, monthly utility cost avoidance, verified I-REC certificates."
+  },
+  "Vendor/Engineer": {
+    name: "David Chen",
+    title: "Senior Photovoltaic Field Specialist",
+    avatar: "avatar-david-chen-solar-engineer.webp",
+    badgeClass: "role-vendor",
+    kpis: {
+      gen: "99.4% Eff",
+      feed: "435 RPM Max",
+      offset: "0 Faults",
+      rev: "18 Units Ok",
+      custom1: "41.2°C Thermal Nominal",
+      custom2: "Zero Ground Shorts"
+    },
+    banner: "Vendor / Field Engineer Mode: Hardware diagnostics, inverter MPPT string telemetry, vibration FFT spectrum analysis."
+  }
+};
+
+function switchActiveRole(newRole) {
+  if (!ROLE_PERSONAS[newRole]) newRole = "Admin";
+  const persona = ROLE_PERSONAS[newRole];
+  
+  // Determine relative avatar prefix
+  const isSubpage = window.location.pathname.includes("/pages/");
+  const avatarPrefix = isSubpage ? "../assets/images/" : "assets/images/";
+  
+  const updatedUser = {
+    firstName: persona.name.split(" ")[0],
+    lastName: persona.name.split(" ").slice(1).join(" "),
+    email: `${persona.name.toLowerCase().replace(" ", ".")}@stacklyenergy.com`,
+    role: newRole,
+    avatar: `${avatarPrefix}${persona.avatar}`
+  };
+  
+  localStorage.setItem("stackly_current_user", JSON.stringify(updatedUser));
+  localStorage.setItem("stackly_role", newRole);
+  
+  // Sync all role selects on page
+  document.querySelectorAll(".topbar-role-select, #roleSwitcherSelect").forEach(sel => {
+    sel.value = newRole;
+  });
+  
+  applyRoleData(newRole, updatedUser);
+}
+
 function initDashboardRoleView() {
   const rawUser = localStorage.getItem("stackly_current_user");
-  if (!rawUser) return;
-  const user = JSON.parse(rawUser);
-  const role = user.role || "Admin";
+  let user = rawUser ? JSON.parse(rawUser) : null;
+  let role = (user && user.role) ? user.role : (localStorage.getItem("stackly_role") || "Admin");
+  
+  if (!ROLE_PERSONAS[role]) role = "Admin";
+  
+  // Sync all role selects on page
+  document.querySelectorAll(".topbar-role-select, #roleSwitcherSelect").forEach(sel => {
+    sel.value = role;
+    sel.addEventListener("change", (e) => {
+      switchActiveRole(e.target.value);
+    });
+  });
 
+  applyRoleData(role, user);
+}
+
+function applyRoleData(role, user) {
+  const persona = ROLE_PERSONAS[role];
+  const isSubpage = window.location.pathname.includes("/pages/");
+  const avatarPrefix = isSubpage ? "../assets/images/" : "assets/images/";
+  
+  // Update name & role in UI
+  document.querySelectorAll(".user-meta-name, .dash-username").forEach(el => {
+    el.textContent = persona.name;
+  });
+  
+  document.querySelectorAll(".dash-role-badge, .dash-user-role").forEach(el => {
+    el.textContent = role;
+    el.className = `dash-role-badge ${persona.badgeClass}`;
+  });
+  
+  document.querySelectorAll(".user-avatar-img").forEach(el => {
+    el.src = `${avatarPrefix}${persona.avatar}`;
+  });
+
+  // Dynamic Greeting
+  const greetingEl = document.querySelector(".topbar-greeting");
+  if (greetingEl) {
+    const hour = new Date().getHours();
+    let timeGreeting = "Good day";
+    if (hour >= 5 && hour < 12) timeGreeting = "Good morning";
+    else if (hour >= 12 && hour < 17) timeGreeting = "Good afternoon";
+    else if (hour >= 17 && hour < 22) timeGreeting = "Good evening";
+    else timeGreeting = "Good night";
+
+    greetingEl.textContent = `${timeGreeting}, ${persona.name.split(" ")[0]}`;
+  }
+
+  // Role Banner
+  const bannerEl = document.getElementById("roleBannerAlert");
+  if (bannerEl) {
+    bannerEl.className = `role-banner-alert role-${role.toLowerCase().replace(/[^a-z]/g, '')}-banner`;
+    const bannerText = bannerEl.querySelector(".role-banner-text");
+    if (bannerText) bannerText.textContent = persona.banner;
+  }
+
+  // Filter role containers
   const roleContainers = document.querySelectorAll("[data-role-view]");
   roleContainers.forEach((container) => {
-    const targetRoles = container.getAttribute("data-role-view").split(",");
+    const targetRoles = container.getAttribute("data-role-view").split(",").map(s => s.trim());
     if (targetRoles.includes(role) || targetRoles.includes("All")) {
       container.style.display = "";
     } else {
@@ -130,28 +273,10 @@ function initDashboardRoleView() {
   const kpiOffset = document.getElementById("kpiCarbonOffset");
   const kpiRev = document.getElementById("kpiNetRevenue");
 
-  if (role === "Customer") {
-    if (kpiGen) kpiGen.textContent = "1.42 MWh";
-    if (kpiFeed) kpiFeed.textContent = "0.85 MWh";
-    if (kpiOffset) kpiOffset.textContent = "1.12 Tons";
-    if (kpiRev) kpiRev.textContent = "$382 Saved";
-  } else if (role === "Manager") {
-    if (kpiGen) kpiGen.textContent = "84.6 MWh";
-    if (kpiFeed) kpiFeed.textContent = "62.1 MWh";
-    if (kpiOffset) kpiOffset.textContent = "68.4 Tons";
-    if (kpiRev) kpiRev.textContent = "$18,420";
-  } else if (role === "Vendor/Engineer") {
-    if (kpiGen) kpiGen.textContent = "99.4% Eff";
-    if (kpiFeed) kpiFeed.textContent = "435 RPM Max";
-    if (kpiOffset) kpiOffset.textContent = "0 Faults";
-    if (kpiRev) kpiRev.textContent = "18 Units Ok";
-  } else {
-    // Admin default
-    if (kpiGen) kpiGen.textContent = "128.4 MWh";
-    if (kpiFeed) kpiFeed.textContent = "94.8 MWh";
-    if (kpiOffset) kpiOffset.textContent = "104.2 Tons";
-    if (kpiRev) kpiRev.textContent = "$34,890";
-  }
+  if (kpiGen) kpiGen.textContent = persona.kpis.gen;
+  if (kpiFeed) kpiFeed.textContent = persona.kpis.feed;
+  if (kpiOffset) kpiOffset.textContent = persona.kpis.offset;
+  if (kpiRev) kpiRev.textContent = persona.kpis.rev;
 }
 
 /* =========================================================

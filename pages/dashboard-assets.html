@@ -23,26 +23,54 @@
   </div>
 
   <!-- Sidebar -->
-  <aside class="dash-sidebar" role="navigation">
+  <aside class="dash-sidebar" role="navigation" aria-label="Dashboard Sidebar Navigation">
     <div class="sidebar-header">
-      <a href="../index.html" class="sidebar-brand">
+      <a href="../index.html" class="sidebar-brand" aria-label="Stackly Homepage (Redirects to index.html)">
         <img src="../assets/images/logoStackly.webp" alt="Stackly Renewable Energy" width="120" height="40">
       </a>
-      <button type="button" class="sidebar-toggle-btn" aria-label="Toggle sidebar width">
+      <button type="button" class="sidebar-toggle-btn" aria-label="Toggle sidebar width" title="Toggle Sidebar">
         <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" width="20" height="20"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 19l-7-7 7-7m8 14l-7-7 7-7"/></svg>
       </button>
     </div>
 
     <ul class="sidebar-menu">
-      <li><a href="dashboard.html" class="sidebar-link" data-tooltip="Dashboard"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg><span class="sidebar-link-text">Dashboard</span></a></li>
-      <li><a href="dashboard-analytics.html" class="sidebar-link" data-tooltip="Analytics"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg><span class="sidebar-link-text">Analytics</span></a></li>
-      <li><a href="dashboard-reports.html" class="sidebar-link" data-tooltip="ESG Reports"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg><span class="sidebar-link-text">ESG Reports</span></a></li>
-      <li><a href="dashboard-assets.html" class="sidebar-link active" data-tooltip="Turbine & Solar Fleet"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg><span class="sidebar-link-text">Turbine & Solar Fleet</span></a></li>
-      <li><a href="dashboard-settings.html" class="sidebar-link" data-tooltip="Settings"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg><span class="sidebar-link-text">Settings</span></a></li>
+      <li>
+        <a href="dashboard.html" class="sidebar-link" data-tooltip="Dashboard Overview">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
+          <span class="sidebar-link-text">Dashboard</span>
+        </a>
+      </li>
+      <li>
+        <a href="dashboard-analytics.html" class="sidebar-link" data-tooltip="Telemetry Analytics">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+          <span class="sidebar-link-text">Analytics</span>
+        </a>
+      </li>
+      <li>
+        <a href="dashboard-reports.html" class="sidebar-link" data-tooltip="ESG & Carbon Reports">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+          <span class="sidebar-link-text">ESG Reports</span>
+        </a>
+      </li>
+      <li>
+        <a href="dashboard-assets.html" class="sidebar-link active" data-tooltip="Wind & Solar Fleet">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+          <span class="sidebar-link-text">Turbine & Solar Fleet</span>
+        </a>
+      </li>
+      <li>
+        <a href="dashboard-settings.html" class="sidebar-link" data-tooltip="System Settings">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+          <span class="sidebar-link-text">Settings</span>
+        </a>
+      </li>
     </ul>
 
     <div class="sidebar-footer">
-      <button type="button" class="btn btn-secondary btn-sm btn-sign-out" style="width: 100%;">Sign Out</button>
+      <button type="button" class="btn btn-secondary btn-sm btn-sign-out" style="width: 100%; gap: 8px;">
+        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" width="16" height="16"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"/></svg>
+        <span class="sidebar-link-text">Sign Out</span>
+      </button>
     </div>
   </aside>
 
@@ -50,25 +78,55 @@
   <div class="dash-main" id="mainContent">
     <header class="dash-topbar" role="banner">
       <div class="dash-topbar-left">
-        <button type="button" class="mobile-sidebar-btn"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" width="24" height="24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg></button>
-        <div>
+        <button type="button" class="mobile-sidebar-btn" aria-label="Open mobile navigation sidebar">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" width="24" height="24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+        <div class="topbar-greeting-wrap">
           <h1 class="topbar-greeting">Turbine & Solar Fleet Assets</h1>
           <div class="topbar-time-meta">Hardware Fleet Management • 142 Monitored Units</div>
         </div>
       </div>
+
       <div class="dash-topbar-right">
-        <span class="dash-role-badge">Admin</span>
+        <!-- Interactive Role Switcher -->
+        <div class="topbar-role-selector">
+          <label for="topbarRoleSelect">Role:</label>
+          <select id="topbarRoleSelect" class="topbar-role-select" aria-label="Select active user role">
+            <option value="Admin">Admin</option>
+            <option value="Manager">Manager</option>
+            <option value="Customer">Customer</option>
+            <option value="Vendor/Engineer">Vendor / Engineer</option>
+          </select>
+        </div>
+
+        <span class="dash-role-badge role-admin">Admin</span>
+
+        <button type="button" class="btn-dash-action" aria-label="View notifications" style="background: rgba(255, 255, 255, 0.05); border: 1px solid var(--dash-border-subtle); color: #ffffff; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer;">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" width="20" height="20"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/></svg>
+        </button>
+
         <div class="user-profile-widget">
           <img src="../assets/images/team-james-workman-field-operations-lead.webp" alt="User Profile" class="user-avatar-img" width="38" height="38">
           <span class="user-meta-name">James Workman</span>
         </div>
-        <button type="button" class="btn btn-secondary btn-sm btn-sign-out">Sign Out</button>
+
+        <button type="button" class="btn btn-secondary btn-sm btn-sign-out" aria-label="Sign Out">Sign Out</button>
       </div>
     </header>
 
+    <!-- 8 Distinct Asset Management Sections -->
     <main class="dash-content">
-      <!-- Section 1: Fleet Status Summary -->
-      <section class="dash-kpi-grid">
+      <!-- Role Notification Banner -->
+      <div id="roleBannerAlert" class="role-banner-alert role-admin-banner" role="status">
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <span style="font-size: 1.2rem;">⚡</span>
+          <span class="role-banner-text" style="font-size: 0.88rem; font-weight: 600;">Admin Mode: Full SCADA grid dispatch authority, sub-second telemetry write permissions & API key configuration.</span>
+        </div>
+        <button type="button" class="btn btn-secondary btn-sm btn-dash-action" style="padding: 4px 10px; font-size: 0.75rem;">Asset Inventory</button>
+      </div>
+
+      <!-- Section 1: Fleet Hardware Health Overview KPIs -->
+      <section class="dash-kpi-grid" aria-label="Fleet Summary KPIs">
         <div class="kpi-card">
           <div class="kpi-header"><span>Wind Turbines Operational</span><span>HAWT/VAWT</span></div>
           <div class="kpi-value" style="color: var(--dash-cyan);">38 / 38</div>
@@ -85,14 +143,14 @@
           <div class="kpi-trend positive">Cell balance &lt; 8 mV</div>
         </div>
         <div class="kpi-card">
-          <div class="kpi-header"><span>Next Scheduled Drone Audit</span><span>Thermography</span></div>
-          <div class="kpi-value" style="font-size: 1.3rem;">In 4 Days</div>
+          <div class="kpi-header"><span>Scheduled Drone Audit</span><span>Thermography</span></div>
+          <div class="kpi-value" style="font-size: 1.4rem;">In 4 Days</div>
           <div class="kpi-trend positive">Salem solar park scan</div>
         </div>
       </section>
 
       <!-- Section 2: Detailed Hardware Asset Health Table -->
-      <section class="dash-table-card">
+      <section class="dash-table-card" aria-label="Asset Fleet Registry">
         <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.25rem;">
           <div>
             <h2 style="font-size: 1.15rem; font-weight: 700; color: #ffffff;">Asset Fleet Status & Diagnostics</h2>
@@ -101,57 +159,314 @@
           <button type="button" class="btn btn-primary btn-sm btn-dash-action">+ Register Asset</button>
         </div>
 
-        <table class="dash-table">
-          <thead>
-            <tr>
-              <th>Asset Identifier</th>
-              <th>Hardware Type</th>
-              <th>Rated Output</th>
-              <th>Health Index</th>
-              <th>Operating Hours</th>
-              <th>Status</th>
-              <th>Control</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><strong>VAWT-TURBINE-01</strong></td>
-              <td>Vertical Axis Omnidirectional</td>
-              <td>500 kW</td>
-              <td>99.6% Excellent</td>
-              <td>14,240 hrs</td>
-              <td><span class="status-pill online">● Operational</span></td>
-              <td><button type="button" class="btn btn-secondary btn-sm btn-dash-action" style="padding: 4px 10px; font-size: 0.75rem;">Calibrate</button></td>
-            </tr>
-            <tr>
-              <td><strong>SOLAR-STRING-XAVIER</strong></td>
-              <td>Bifacial N-Type Array</td>
-              <td>600 kW</td>
-              <td>99.1% Excellent</td>
-              <td>8,120 hrs</td>
-              <td><span class="status-pill online">● Operational</span></td>
-              <td><button type="button" class="btn btn-secondary btn-sm btn-dash-action" style="padding: 4px 10px; font-size: 0.75rem;">Calibrate</button></td>
-            </tr>
-            <tr>
-              <td><strong>BESS-CONTAINER-C2500</strong></td>
-              <td>Liquid-Cooled LFP 2.8 MWh</td>
-              <td>1,250 kW</td>
-              <td>98.8% Balanced</td>
-              <td>5,400 hrs</td>
-              <td><span class="status-pill online">● Operational</span></td>
-              <td><button type="button" class="btn btn-secondary btn-sm btn-dash-action" style="padding: 4px 10px; font-size: 0.75rem;">Calibrate</button></td>
-            </tr>
-            <tr>
-              <td><strong>HAWT-COASTAL-ROTOR-09</strong></td>
-              <td>Horizontal 3.2 MW Wind</td>
-              <td>3,200 kW</td>
-              <td>97.9% Good</td>
-              <td>22,100 hrs</td>
-              <td><span class="status-pill online">● Operational</span></td>
-              <td><button type="button" class="btn btn-secondary btn-sm btn-dash-action" style="padding: 4px 10px; font-size: 0.75rem;">Calibrate</button></td>
-            </tr>
-          </tbody>
-        </table>
+        <div class="dash-table-wrap">
+          <table class="dash-table">
+            <thead>
+              <tr>
+                <th>Asset Identifier</th>
+                <th>Hardware Type</th>
+                <th>Rated Output</th>
+                <th>Health Index</th>
+                <th>Operating Hours</th>
+                <th>Status</th>
+                <th>Control</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>VAWT-TURBINE-01</strong></td>
+                <td>Vertical Axis Omnidirectional</td>
+                <td>500 kW</td>
+                <td>99.6% Excellent</td>
+                <td>14,240 hrs</td>
+                <td><span class="status-pill online">● Operational</span></td>
+                <td><button type="button" class="btn btn-secondary btn-sm btn-dash-action" style="padding: 4px 10px; font-size: 0.75rem;">Calibrate</button></td>
+              </tr>
+              <tr>
+                <td><strong>SOLAR-STRING-XAVIER</strong></td>
+                <td>Bifacial N-Type Array</td>
+                <td>600 kW</td>
+                <td>99.1% Excellent</td>
+                <td>8,120 hrs</td>
+                <td><span class="status-pill online">● Operational</span></td>
+                <td><button type="button" class="btn btn-secondary btn-sm btn-dash-action" style="padding: 4px 10px; font-size: 0.75rem;">Calibrate</button></td>
+              </tr>
+              <tr>
+                <td><strong>BESS-CONTAINER-C2500</strong></td>
+                <td>Liquid-Cooled LFP 2.8 MWh</td>
+                <td>1,250 kW</td>
+                <td>98.8% Balanced</td>
+                <td>5,400 hrs</td>
+                <td><span class="status-pill online">● Operational</span></td>
+                <td><button type="button" class="btn btn-secondary btn-sm btn-dash-action" style="padding: 4px 10px; font-size: 0.75rem;">Calibrate</button></td>
+              </tr>
+              <tr>
+                <td><strong>HAWT-COASTAL-ROTOR-09</strong></td>
+                <td>Horizontal 3.2 MW Wind</td>
+                <td>3,200 kW</td>
+                <td>97.9% Good</td>
+                <td>22,100 hrs</td>
+                <td><span class="status-pill online">● Operational</span></td>
+                <td><button type="button" class="btn btn-secondary btn-sm btn-dash-action" style="padding: 4px 10px; font-size: 0.75rem;">Calibrate</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Section 3: Subsystem Degradation & Criticality Radar -->
+      <section class="card tilt-card" style="background: var(--dash-surface-card); border-color: var(--dash-border-subtle); color: #ffffff;" aria-label="Component Health Radar">
+        <h3 style="color: #ffffff; font-size: 1.15rem; margin-bottom: 0.8rem;">Subsystem Health & Degradation Diagnostics</h3>
+        <p style="font-size: 0.82rem; color: var(--dash-text-muted); margin-bottom: 1.25rem;">Automated SCADA condition monitoring across critical mechanical and electrical sub-assemblies.</p>
+        <div class="grid-3" style="gap: 1.2rem;">
+          <div style="background: rgba(255, 255, 255, 0.03); padding: 1.2rem; border-radius: var(--radius-md); border-top: 3px solid var(--dash-cyan);">
+            <div style="display: flex; justify-content: space-between; font-size: 0.82rem; color: var(--dash-text-muted);">
+              <span>Turbine Main Bearing</span>
+              <strong style="color: var(--dash-cyan);">99.4%</strong>
+            </div>
+            <div style="height: 6px; background: rgba(255,255,255,0.08); border-radius: 3px; margin: 8px 0; overflow: hidden;">
+              <div style="width: 99.4%; height: 100%; background: var(--dash-cyan);"></div>
+            </div>
+            <div style="font-size: 0.75rem; color: var(--dash-text-muted);">Acoustic emission within ISO 10816 limits</div>
+          </div>
+
+          <div style="background: rgba(255, 255, 255, 0.03); padding: 1.2rem; border-radius: var(--radius-md); border-top: 3px solid var(--dash-green);">
+            <div style="display: flex; justify-content: space-between; font-size: 0.82rem; color: var(--dash-text-muted);">
+              <span>PV String Junction Isolation</span>
+              <strong style="color: var(--dash-green);">99.8%</strong>
+            </div>
+            <div style="height: 6px; background: rgba(255,255,255,0.08); border-radius: 3px; margin: 8px 0; overflow: hidden;">
+              <div style="width: 99.8%; height: 100%; background: var(--dash-green);"></div>
+            </div>
+            <div style="font-size: 0.75rem; color: var(--dash-text-muted);">Insulation resistance Riso &gt; 2.4 MΩ</div>
+          </div>
+
+          <div style="background: rgba(255, 255, 255, 0.03); padding: 1.2rem; border-radius: var(--radius-md); border-top: 3px solid var(--dash-purple);">
+            <div style="display: flex; justify-content: space-between; font-size: 0.82rem; color: var(--dash-text-muted);">
+              <span>BESS Cell Balancing</span>
+              <strong style="color: var(--dash-purple);">98.9%</strong>
+            </div>
+            <div style="height: 6px; background: rgba(255,255,255,0.08); border-radius: 3px; margin: 8px 0; overflow: hidden;">
+              <div style="width: 98.9%; height: 100%; background: var(--dash-purple);"></div>
+            </div>
+            <div style="font-size: 0.75rem; color: var(--dash-text-muted);">Active charge shuttle balancing active</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 4: Real-Time Solar String Inverter Telemetry Matrix -->
+      <section class="card tilt-card" style="background: var(--dash-surface-card); border-color: var(--dash-border-subtle); color: #ffffff;" aria-label="Inverter String Telemetry">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.25rem;">
+          <div>
+            <h3 style="color: #ffffff; font-size: 1.15rem; margin-bottom: 4px;">MPPT String Inverter Live Telemetry</h3>
+            <p style="font-size: 0.82rem; color: var(--dash-text-muted); margin: 0;">Multi-channel Maximum Power Point Tracking (MPPT) voltage, current, and conversion ratio.</p>
+          </div>
+          <span class="status-pill online">● 8 Strings Balanced</span>
+        </div>
+        <div class="dash-table-wrap">
+          <table class="dash-table" style="font-size: 0.85rem;">
+            <thead>
+              <tr>
+                <th>MPPT Channel</th>
+                <th>Array Location</th>
+                <th>DC Voltage (V)</th>
+                <th>DC Current (A)</th>
+                <th>MPPT Power (kW)</th>
+                <th>Isolation (MΩ)</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>MPPT-01</strong></td>
+                <td>Salem East Row 1-4</td>
+                <td>742.6 V</td>
+                <td>24.8 A</td>
+                <td>18.4 kW</td>
+                <td>3.8 MΩ</td>
+                <td><span class="status-pill online">● Optimal</span></td>
+              </tr>
+              <tr>
+                <td><strong>MPPT-02</strong></td>
+                <td>Salem East Row 5-8</td>
+                <td>739.1 V</td>
+                <td>24.6 A</td>
+                <td>18.2 kW</td>
+                <td>4.1 MΩ</td>
+                <td><span class="status-pill online">● Optimal</span></td>
+              </tr>
+              <tr>
+                <td><strong>MPPT-03</strong></td>
+                <td>Salem West Row 1-4</td>
+                <td>744.0 V</td>
+                <td>25.1 A</td>
+                <td>18.7 kW</td>
+                <td>3.6 MΩ</td>
+                <td><span class="status-pill online">● Optimal</span></td>
+              </tr>
+              <tr>
+                <td><strong>MPPT-04</strong></td>
+                <td>Salem West Row 5-8</td>
+                <td>741.2 V</td>
+                <td>24.9 A</td>
+                <td>18.5 kW</td>
+                <td>3.9 MΩ</td>
+                <td><span class="status-pill online">● Optimal</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Section 5: Wind Turbine Vibration & Harmonic FFT Spectrum Analyzer -->
+      <section class="card tilt-card" style="background: var(--dash-surface-card); border-color: var(--dash-border-subtle); color: #ffffff;" aria-label="Turbine Vibration FFT Spectrum">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.25rem;">
+          <div>
+            <h3 style="color: #ffffff; font-size: 1.15rem; margin-bottom: 4px;">Turbine Vibration & Harmonic FFT Spectrum</h3>
+            <p style="font-size: 0.82rem; color: var(--dash-text-muted); margin: 0;">Real-time fast Fourier transform accelerometer monitoring on planetary gearbox.</p>
+          </div>
+          <span style="font-size: 0.8rem; color: var(--dash-cyan);">Sampling: 20 kHz</span>
+        </div>
+        <div class="grid-3" style="grid-template-columns: 2fr 1fr; gap: 1.5rem;">
+          <div style="background: rgba(0,0,0,0.25); border-radius: var(--radius-md); padding: 1.25rem; border: 1px solid var(--dash-border-subtle);">
+            <div style="font-size: 0.78rem; color: var(--dash-text-muted); margin-bottom: 8px;">Acoustic Frequency Spectrum (0 Hz to 2,500 Hz)</div>
+            <svg viewBox="0 0 500 120" width="100%" height="100" preserveAspectRatio="none">
+              <!-- Spectrum baseline noise floor -->
+              <path d="M 0 100 Q 50 95 100 102 T 200 98 T 300 101 T 400 97 T 500 100" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1.5"/>
+              <!-- Harmonic peaks: 1X (shaft), 2X (mesh), Gear mesh frequency -->
+              <line x1="80" y1="100" x2="80" y2="40" stroke="#38bdf8" stroke-width="3"/>
+              <line x1="160" y1="100" x2="160" y2="65" stroke="#38bdf8" stroke-width="2"/>
+              <line x1="320" y1="100" x2="320" y2="50" stroke="#34d399" stroke-width="2.5"/>
+              <!-- Peak labels -->
+              <text x="80" y="32" fill="#38bdf8" font-size="10" text-anchor="middle">1X Shaft</text>
+              <text x="160" y="58" fill="#38bdf8" font-size="10" text-anchor="middle">2X Blade</text>
+              <text x="320" y="42" fill="#34d399" font-size="10" text-anchor="middle">GMF Peak</text>
+            </svg>
+          </div>
+          <div style="display: flex; flex-direction: column; justify-content: center; gap: 12px; background: rgba(255,255,255,0.02); padding: 1.25rem; border-radius: var(--radius-md);">
+            <div>
+              <div style="font-size: 0.78rem; color: var(--dash-text-muted);">Overall Velocity RMS</div>
+              <div style="font-size: 1.5rem; font-weight: 800; color: var(--dash-green);">0.84 mm/s</div>
+              <div style="font-size: 0.72rem; color: var(--dash-text-muted);">Class I limit: &lt; 2.8 mm/s</div>
+            </div>
+            <div>
+              <div style="font-size: 0.78rem; color: var(--dash-text-muted);">Bearing Temperature</div>
+              <div style="font-size: 1.5rem; font-weight: 800; color: #ffffff;">52.4°C</div>
+              <div style="font-size: 0.72rem; color: var(--dash-cyan);">Alarm limit: 85.0°C</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 6: BESS Battery Container Rack Balancing & Thermal Skid -->
+      <section class="card tilt-card" style="background: var(--dash-surface-card); border-color: var(--dash-border-subtle); color: #ffffff;" aria-label="BESS Rack Balancing">
+        <h3 style="color: #ffffff; font-size: 1.15rem; margin-bottom: 0.8rem;">BESS Container Rack Balancing & Liquid Thermal Skid</h3>
+        <p style="font-size: 0.82rem; color: var(--dash-text-muted); margin-bottom: 1.25rem;">Real-time cell balancing status across 20 modular lithium iron phosphate racks.</p>
+        <div class="dash-kpi-grid">
+          <div class="kpi-card" style="padding: 1rem;">
+            <div class="kpi-header"><span>Cell Delta Voltage</span><span>ΔV</span></div>
+            <div class="kpi-value" style="color: var(--dash-cyan); font-size: 1.4rem;">5.4 mV</div>
+            <div class="kpi-trend positive">Threshold &lt; 15 mV</div>
+          </div>
+          <div class="kpi-card" style="padding: 1rem;">
+            <div class="kpi-header"><span>Glycol Inlet Temp</span><span>Inlet</span></div>
+            <div class="kpi-value" style="color: var(--dash-green); font-size: 1.4rem;">21.8°C</div>
+            <div class="kpi-trend positive">Chiller PID active</div>
+          </div>
+          <div class="kpi-card" style="padding: 1rem;">
+            <div class="kpi-header"><span>Glycol Outlet Temp</span><span>Outlet</span></div>
+            <div class="kpi-value" style="color: var(--dash-green); font-size: 1.4rem;">24.2°C</div>
+            <div class="kpi-trend positive">ΔT = 2.4°C optimal</div>
+          </div>
+          <div class="kpi-card" style="padding: 1rem;">
+            <div class="kpi-header"><span>Pouch Expansion</span><span>Sensor</span></div>
+            <div class="kpi-value" style="color: #ffffff; font-size: 1.4rem;">0.02 mm</div>
+            <div class="kpi-trend positive">Zero swelling detected</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 7: Step-Up Substation Power Transformers & DGA Monitor -->
+      <section class="card tilt-card" style="background: var(--dash-surface-card); border-color: var(--dash-border-subtle); color: #ffffff;" aria-label="Transformer DGA Telemetry">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.25rem;">
+          <div>
+            <h3 style="color: #ffffff; font-size: 1.15rem; margin-bottom: 4px;">Substation Step-Up Transformers (33 kV / 110 kV)</h3>
+            <p style="font-size: 0.82rem; color: var(--dash-text-muted); margin: 0;">Online dissolved gas analysis (DGA) and SF6 switchgear dielectric pressure.</p>
+          </div>
+          <span class="status-pill online">● Substation Alpha OK</span>
+        </div>
+        <div class="grid-3" style="gap: 1.25rem;">
+          <div style="background: rgba(255, 255, 255, 0.03); padding: 1.2rem; border-radius: var(--radius-md);">
+            <div style="font-size: 0.8rem; color: var(--dash-text-muted);">Dissolved Hydrogen (H₂)</div>
+            <div style="font-size: 1.4rem; font-weight: 700; color: var(--dash-green); margin: 4px 0;">8.2 ppm</div>
+            <div style="font-size: 0.72rem; color: var(--dash-text-muted);">Normal baseline (&lt; 100 ppm)</div>
+          </div>
+          <div style="background: rgba(255, 255, 255, 0.03); padding: 1.2rem; border-radius: var(--radius-md);">
+            <div style="font-size: 0.8rem; color: var(--dash-text-muted);">SF6 Switchgear Gas Pressure</div>
+            <div style="font-size: 1.4rem; font-weight: 700; color: var(--dash-cyan); margin: 4px 0;">6.2 Bar</div>
+            <div style="font-size: 0.72rem; color: var(--dash-text-muted);">Nominal dielectric density</div>
+          </div>
+          <div style="background: rgba(255, 255, 255, 0.03); padding: 1.2rem; border-radius: var(--radius-md);">
+            <div style="font-size: 0.8rem; color: var(--dash-text-muted);">On-Load Tap Changer (OLTC)</div>
+            <div style="font-size: 1.4rem; font-weight: 700; color: #ffffff; margin: 4px 0;">Tap #8 Normal</div>
+            <div style="font-size: 0.72rem; color: var(--dash-green);">Automatic voltage regulation</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 8: Geographic Fleet Deployment Map & Work Order Dispatch Queue -->
+      <section class="card tilt-card" style="background: var(--dash-surface-card); border-color: var(--dash-border-subtle); color: #ffffff;" aria-label="Work Order Dispatch Queue">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.25rem;">
+          <div>
+            <h3 style="color: #ffffff; font-size: 1.15rem; margin-bottom: 4px;">Field Maintenance Work Orders & Dispatch Queue</h3>
+            <p style="font-size: 0.82rem; color: var(--dash-text-muted); margin: 0;">Automated predictive work orders scheduled based on SCADA telemetry.</p>
+          </div>
+          <button type="button" class="btn btn-secondary btn-sm btn-dash-action">+ New Work Order</button>
+        </div>
+        <div class="dash-table-wrap">
+          <table class="dash-table" style="font-size: 0.85rem;">
+            <thead>
+              <tr>
+                <th>Ticket ID</th>
+                <th>Target Facility</th>
+                <th>Maintenance Scope</th>
+                <th>Priority</th>
+                <th>Assigned Crew</th>
+                <th>Scheduled Date</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>WO-8941</strong></td>
+                <td>Salem Solar Park - East</td>
+                <td>Autonomous Drone Thermography Scan</td>
+                <td><span class="status-pill standby">Medium</span></td>
+                <td>Robotics Team A</td>
+                <td>Oct 31, 2026</td>
+                <td><button type="button" class="btn btn-secondary btn-sm btn-dash-action" style="padding: 4px 8px; font-size: 0.75rem;">View</button></td>
+              </tr>
+              <tr>
+                <td><strong>WO-8938</strong></td>
+                <td>Coastal Wind Ridge #14</td>
+                <td>Annual Gearbox Oil Spectrometry</td>
+                <td><span class="status-pill online">Scheduled</span></td>
+                <td>Wind Crew Delta</td>
+                <td>Nov 03, 2026</td>
+                <td><button type="button" class="btn btn-secondary btn-sm btn-dash-action" style="padding: 4px 8px; font-size: 0.75rem;">View</button></td>
+              </tr>
+              <tr>
+                <td><strong>WO-8932</strong></td>
+                <td>BESS Cluster Alpha</td>
+                <td>Coolant Pump Filter Element Replacement</td>
+                <td><span class="status-pill online">Scheduled</span></td>
+                <td>HVAC Specialists</td>
+                <td>Nov 08, 2026</td>
+                <td><button type="button" class="btn btn-secondary btn-sm btn-dash-action" style="padding: 4px 8px; font-size: 0.75rem;">View</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </section>
     </main>
   </div>
@@ -160,4 +475,3 @@
   <script src="../assets/js/dashboard.js"></script>
 </body>
 </html>
-

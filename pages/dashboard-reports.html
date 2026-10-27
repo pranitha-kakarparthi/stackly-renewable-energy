@@ -23,26 +23,54 @@
   </div>
 
   <!-- Sidebar -->
-  <aside class="dash-sidebar" role="navigation">
+  <aside class="dash-sidebar" role="navigation" aria-label="Dashboard Sidebar Navigation">
     <div class="sidebar-header">
-      <a href="../index.html" class="sidebar-brand">
+      <a href="../index.html" class="sidebar-brand" aria-label="Stackly Homepage (Redirects to index.html)">
         <img src="../assets/images/logoStackly.webp" alt="Stackly Renewable Energy" width="120" height="40">
       </a>
-      <button type="button" class="sidebar-toggle-btn" aria-label="Toggle sidebar width">
+      <button type="button" class="sidebar-toggle-btn" aria-label="Toggle sidebar width" title="Toggle Sidebar">
         <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" width="20" height="20"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 19l-7-7 7-7m8 14l-7-7 7-7"/></svg>
       </button>
     </div>
 
     <ul class="sidebar-menu">
-      <li><a href="dashboard.html" class="sidebar-link" data-tooltip="Dashboard"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg><span class="sidebar-link-text">Dashboard</span></a></li>
-      <li><a href="dashboard-analytics.html" class="sidebar-link" data-tooltip="Analytics"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg><span class="sidebar-link-text">Analytics</span></a></li>
-      <li><a href="dashboard-reports.html" class="sidebar-link active" data-tooltip="ESG Reports"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg><span class="sidebar-link-text">ESG Reports</span></a></li>
-      <li><a href="dashboard-assets.html" class="sidebar-link" data-tooltip="Turbine & Solar Fleet"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg><span class="sidebar-link-text">Turbine & Solar Fleet</span></a></li>
-      <li><a href="dashboard-settings.html" class="sidebar-link" data-tooltip="Settings"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg><span class="sidebar-link-text">Settings</span></a></li>
+      <li>
+        <a href="dashboard.html" class="sidebar-link" data-tooltip="Dashboard Overview">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
+          <span class="sidebar-link-text">Dashboard</span>
+        </a>
+      </li>
+      <li>
+        <a href="dashboard-analytics.html" class="sidebar-link" data-tooltip="Telemetry Analytics">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+          <span class="sidebar-link-text">Analytics</span>
+        </a>
+      </li>
+      <li>
+        <a href="dashboard-reports.html" class="sidebar-link active" data-tooltip="ESG & Carbon Reports">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+          <span class="sidebar-link-text">ESG Reports</span>
+        </a>
+      </li>
+      <li>
+        <a href="dashboard-assets.html" class="sidebar-link" data-tooltip="Wind & Solar Fleet">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+          <span class="sidebar-link-text">Turbine & Solar Fleet</span>
+        </a>
+      </li>
+      <li>
+        <a href="dashboard-settings.html" class="sidebar-link" data-tooltip="System Settings">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+          <span class="sidebar-link-text">Settings</span>
+        </a>
+      </li>
     </ul>
 
     <div class="sidebar-footer">
-      <button type="button" class="btn btn-secondary btn-sm btn-sign-out" style="width: 100%;">Sign Out</button>
+      <button type="button" class="btn btn-secondary btn-sm btn-sign-out" style="width: 100%; gap: 8px;">
+        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" width="16" height="16"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"/></svg>
+        <span class="sidebar-link-text">Sign Out</span>
+      </button>
     </div>
   </aside>
 
@@ -50,25 +78,55 @@
   <div class="dash-main" id="mainContent">
     <header class="dash-topbar" role="banner">
       <div class="dash-topbar-left">
-        <button type="button" class="mobile-sidebar-btn"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" width="24" height="24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg></button>
-        <div>
+        <button type="button" class="mobile-sidebar-btn" aria-label="Open mobile navigation sidebar">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" width="24" height="24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+        <div class="topbar-greeting-wrap">
           <h1 class="topbar-greeting">ESG & Carbon Compliance Reports</h1>
           <div class="topbar-time-meta">ISO 14064 Verified • Real-Time Renewable Energy Credits (RECs)</div>
         </div>
       </div>
+
       <div class="dash-topbar-right">
-        <span class="dash-role-badge">Admin</span>
+        <!-- Interactive Role Switcher -->
+        <div class="topbar-role-selector">
+          <label for="topbarRoleSelect">Role:</label>
+          <select id="topbarRoleSelect" class="topbar-role-select" aria-label="Select active user role">
+            <option value="Admin">Admin</option>
+            <option value="Manager">Manager</option>
+            <option value="Customer">Customer</option>
+            <option value="Vendor/Engineer">Vendor / Engineer</option>
+          </select>
+        </div>
+
+        <span class="dash-role-badge role-admin">Admin</span>
+
+        <button type="button" class="btn-dash-action" aria-label="View notifications" style="background: rgba(255, 255, 255, 0.05); border: 1px solid var(--dash-border-subtle); color: #ffffff; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer;">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" width="20" height="20"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/></svg>
+        </button>
+
         <div class="user-profile-widget">
           <img src="../assets/images/team-james-workman-field-operations-lead.webp" alt="User Profile" class="user-avatar-img" width="38" height="38">
           <span class="user-meta-name">James Workman</span>
         </div>
-        <button type="button" class="btn btn-secondary btn-sm btn-sign-out">Sign Out</button>
+
+        <button type="button" class="btn btn-secondary btn-sm btn-sign-out" aria-label="Sign Out">Sign Out</button>
       </div>
     </header>
 
+    <!-- 8 Distinct ESG & Compliance Sections -->
     <main class="dash-content">
+      <!-- Role Notification Banner -->
+      <div id="roleBannerAlert" class="role-banner-alert role-admin-banner" role="status">
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <span style="font-size: 1.2rem;">⚡</span>
+          <span class="role-banner-text" style="font-size: 0.88rem; font-weight: 600;">Admin Mode: Full SCADA grid dispatch authority, sub-second telemetry write permissions & API key configuration.</span>
+        </div>
+        <button type="button" class="btn btn-secondary btn-sm btn-dash-action" style="padding: 4px 10px; font-size: 0.75rem;">Download All</button>
+      </div>
+
       <!-- Section 1: KPI Carbon Summary -->
-      <section class="dash-kpi-grid">
+      <section class="dash-kpi-grid" aria-label="Carbon Summary KPIs">
         <div class="kpi-card">
           <div class="kpi-header"><span>Cumulative Carbon Avoidance</span><span>CO₂e</span></div>
           <div class="kpi-value" style="color: var(--dash-green);">1,428 Tons</div>
@@ -92,7 +150,7 @@
       </section>
 
       <!-- Section 2: Certified Document Downloads Table -->
-      <section class="dash-table-card">
+      <section class="dash-table-card" aria-label="ESG Certificates Table">
         <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.25rem;">
           <div>
             <h2 style="font-size: 1.15rem; font-weight: 700; color: #ffffff;">Download Official ESG Certificates & Audits</h2>
@@ -101,44 +159,284 @@
           <button type="button" class="btn btn-primary btn-sm btn-dash-action">Generate Custom Audit</button>
         </div>
 
-        <table class="dash-table">
-          <thead>
-            <tr>
-              <th>Document Title</th>
-              <th>Audit Standard</th>
-              <th>Reporting Period</th>
-              <th>Offset Quantity</th>
-              <th>Status</th>
-              <th>Action</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><strong>Annual Corporate Sustainability Report 2026</strong></td>
-              <td>GRI & Scope 1/2 GHG</td>
-              <td>Jan 2026 - Present</td>
-              <td>104.2 Tons / mo</td>
-              <td><span class="status-pill online">● Verified</span></td>
-              <td><button type="button" class="btn btn-secondary btn-sm btn-dash-action" style="padding: 4px 10px; font-size: 0.75rem;">Download PDF</button></td>
-            </tr>
-            <tr>
-              <td><strong>ISO 14064 Carbon Abatement Certificate</strong></td>
-              <td>ISO 14064-2:2019</td>
-              <td>Q3 2026 Audit</td>
-              <td>312.6 Tons Net</td>
-              <td><span class="status-pill online">● Certified</span></td>
-              <td><button type="button" class="btn btn-secondary btn-sm btn-dash-action" style="padding: 4px 10px; font-size: 0.75rem;">Download PDF</button></td>
-            </tr>
-            <tr>
-              <td><strong>Utility Net-Metering Tariff Reconciliation</strong></td>
-              <td>IEEE 1547 Billing</td>
-              <td>September 2026</td>
-              <td>94.8 MWh Export</td>
-              <td><span class="status-pill online">● Settled</span></td>
-              <td><button type="button" class="btn btn-secondary btn-sm btn-dash-action" style="padding: 4px 10px; font-size: 0.75rem;">Download PDF</button></td>
-            </tr>
-          </tbody>
-        </table>
+        <div class="dash-table-wrap">
+          <table class="dash-table">
+            <thead>
+              <tr>
+                <th>Document Title</th>
+                <th>Audit Standard</th>
+                <th>Reporting Period</th>
+                <th>Offset Quantity</th>
+                <th>Status</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Annual Corporate Sustainability Report 2026</strong></td>
+                <td>GRI & Scope 1/2 GHG</td>
+                <td>Jan 2026 - Present</td>
+                <td>104.2 Tons / mo</td>
+                <td><span class="status-pill online">● Verified</span></td>
+                <td><button type="button" class="btn btn-secondary btn-sm btn-dash-action" style="padding: 4px 10px; font-size: 0.75rem;">Download PDF</button></td>
+              </tr>
+              <tr>
+                <td><strong>ISO 14064 Carbon Abatement Certificate</strong></td>
+                <td>ISO 14064-2:2019</td>
+                <td>Q3 2026 Audit</td>
+                <td>312.6 Tons Net</td>
+                <td><span class="status-pill online">● Certified</span></td>
+                <td><button type="button" class="btn btn-secondary btn-sm btn-dash-action" style="padding: 4px 10px; font-size: 0.75rem;">Download PDF</button></td>
+              </tr>
+              <tr>
+                <td><strong>Utility Net-Metering Tariff Reconciliation</strong></td>
+                <td>IEEE 1547 Billing</td>
+                <td>September 2026</td>
+                <td>94.8 MWh Export</td>
+                <td><span class="status-pill online">● Settled</span></td>
+                <td><button type="button" class="btn btn-secondary btn-sm btn-dash-action" style="padding: 4px 10px; font-size: 0.75rem;">Download PDF</button></td>
+              </tr>
+              <tr>
+                <td><strong>I-REC Renewable Energy Registry Batch #841</strong></td>
+                <td>I-REC Standard</td>
+                <td>October 2026</td>
+                <td>180 MWh Minted</td>
+                <td><span class="status-pill online">● Active</span></td>
+                <td><button type="button" class="btn btn-secondary btn-sm btn-dash-action" style="padding: 4px 10px; font-size: 0.75rem;">Download PDF</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Section 3: Monthly Generation vs Target Audit (Interactive SVG) -->
+      <section class="chart-card" aria-label="Monthly Generation vs Target">
+        <div class="chart-card-header">
+          <div>
+            <h2 class="chart-card-title">Monthly Generation vs PPA Target Audit (2026 YTD)</h2>
+            <div style="font-size: 0.8rem; color: var(--dash-text-muted);">Actual clean generation (Green) vs Contracted PPA minimum (Dotted white)</div>
+          </div>
+          <span style="font-size: 0.85rem; font-weight: 700; color: var(--dash-green);">+14.8% Above Target</span>
+        </div>
+        <div class="chart-container-box" style="height: 220px;">
+          <svg viewBox="0 0 700 200" width="100%" height="100%" preserveAspectRatio="none">
+            <line x1="40" y1="30" x2="680" y2="30" stroke="rgba(255,255,255,0.06)" stroke-dasharray="4"/>
+            <line x1="40" y1="80" x2="680" y2="80" stroke="rgba(255,255,255,0.06)" stroke-dasharray="4"/>
+            <line x1="40" y1="130" x2="680" y2="130" stroke="rgba(255,255,255,0.06)" stroke-dasharray="4"/>
+            <line x1="40" y1="170" x2="680" y2="170" stroke="rgba(255,255,255,0.15)"/>
+
+            <!-- Contracted Target line (dotted) -->
+            <line x1="60" y1="90" x2="640" y2="90" stroke="rgba(255,255,255,0.4)" stroke-dasharray="6 4" stroke-width="2"/>
+            <text x="650" y="94" fill="#94a3b8" font-size="10">Target (100 MWh)</text>
+
+            <!-- Actual Bars -->
+            <rect x="70" y="110" width="30" height="60" rx="4" fill="#38bdf8"/>
+            <text x="85" y="190" fill="#94a3b8" font-size="11" text-anchor="middle">May</text>
+
+            <rect x="140" y="70" width="30" height="100" rx="4" fill="#34d399"/>
+            <text x="155" y="190" fill="#94a3b8" font-size="11" text-anchor="middle">Jun</text>
+
+            <rect x="210" y="50" width="30" height="120" rx="4" fill="#34d399"/>
+            <text x="225" y="190" fill="#94a3b8" font-size="11" text-anchor="middle">Jul</text>
+
+            <rect x="280" y="65" width="30" height="105" rx="4" fill="#34d399"/>
+            <text x="295" y="190" fill="#94a3b8" font-size="11" text-anchor="middle">Aug</text>
+
+            <rect x="350" y="75" width="30" height="95" rx="4" fill="#34d399"/>
+            <text x="365" y="190" fill="#94a3b8" font-size="11" text-anchor="middle">Sep</text>
+
+            <rect x="420" y="60" width="30" height="110" rx="4" fill="#34d399"/>
+            <text x="435" y="190" fill="#94a3b8" font-size="11" text-anchor="middle">Oct</text>
+
+            <rect x="490" y="85" width="30" height="85" rx="4" fill="#38bdf8"/>
+            <text x="505" y="190" fill="#94a3b8" font-size="11" text-anchor="middle">Nov</text>
+
+            <rect x="560" y="80" width="30" height="90" rx="4" fill="#38bdf8"/>
+            <text x="575" y="190" fill="#94a3b8" font-size="11" text-anchor="middle">Dec</text>
+          </svg>
+        </div>
+      </section>
+
+      <!-- Section 4: Grid Interconnection Compliance & LVRT Log -->
+      <section class="card tilt-card" style="background: var(--dash-surface-card); border-color: var(--dash-border-subtle); color: #ffffff;" aria-label="Grid Interconnection Compliance">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.25rem;">
+          <div>
+            <h3 style="color: #ffffff; font-size: 1.15rem; margin-bottom: 4px;">Grid Interconnection & IEEE 1547 Ride-Through Log</h3>
+            <p style="font-size: 0.82rem; color: var(--dash-text-muted); margin: 0;">Automated compliance logging of low-voltage ride-through (LVRT) and frequency support.</p>
+          </div>
+          <span class="status-pill online">● 100% Code Conformance</span>
+        </div>
+        <div class="grid-3" style="gap: 1.2rem;">
+          <div style="background: rgba(255, 255, 255, 0.03); padding: 1.2rem; border-radius: var(--radius-md);">
+            <div style="font-size: 0.8rem; color: var(--dash-text-muted);">Low-Voltage Ride-Through (LVRT)</div>
+            <div style="font-size: 1.3rem; font-weight: 700; color: var(--dash-green); margin: 4px 0;">0 Grid Trips</div>
+            <div style="font-size: 0.75rem; color: var(--dash-text-muted);">Sustained 0.15 p.u. voltage dip without disconnect</div>
+          </div>
+          <div style="background: rgba(255, 255, 255, 0.03); padding: 1.2rem; border-radius: var(--radius-md);">
+            <div style="font-size: 0.8rem; color: var(--dash-text-muted);">Fast Frequency Response (FFR)</div>
+            <div style="font-size: 1.3rem; font-weight: 700; color: var(--dash-cyan); margin: 4px 0;">&lt; 200 ms Ramp</div>
+            <div style="font-size: 0.75rem; color: var(--dash-text-muted);">Inverter synthetic droop injection verified</div>
+          </div>
+          <div style="background: rgba(255, 255, 255, 0.03); padding: 1.2rem; border-radius: var(--radius-md);">
+            <div style="font-size: 0.8rem; color: var(--dash-text-muted);">Anti-Islanding Test Conformance</div>
+            <div style="font-size: 1.3rem; font-weight: 700; color: #ffffff; margin: 4px 0;">UL 1741-SB Pass</div>
+            <div style="font-size: 0.75rem; color: var(--dash-green);">Trip time 1.48s (Standard &lt; 2.0s)</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 5: Cryptographic Carbon Offset Ledger & I-REC Serial Registry -->
+      <section class="card tilt-card" style="background: var(--dash-surface-card); border-color: var(--dash-border-subtle); color: #ffffff;" aria-label="Cryptographic Ledger">
+        <h3 style="color: #ffffff; font-size: 1.15rem; margin-bottom: 0.8rem;">Cryptographic Carbon Offset & I-REC Serial Registry</h3>
+        <p style="font-size: 0.82rem; color: var(--dash-text-muted); margin-bottom: 1.25rem;">Immutable cryptographic hash receipts for audited renewable energy generation.</p>
+        <div class="dash-table-wrap">
+          <table class="dash-table" style="font-size: 0.82rem;">
+            <thead>
+              <tr>
+                <th>Batch Serial Number</th>
+                <th>Facility Origin</th>
+                <th>MWh Minted</th>
+                <th>Sha-256 Proof Hash</th>
+                <th>Issuance Date</th>
+                <th>Verification</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>REC-2026-SLM-00841</strong></td>
+                <td>Salem Photovoltaic Park</td>
+                <td>64.0 MWh</td>
+                <td><code style="color: var(--dash-cyan); font-size: 0.75rem;">7f83b165...9b84a2</td>
+                <td>Oct 24, 2026</td>
+                <td><span class="status-pill online">● Verified</span></td>
+              </tr>
+              <tr>
+                <td><strong>REC-2026-WND-00392</strong></td>
+                <td>Coastal Wind Ridge #1</td>
+                <td>82.4 MWh</td>
+                <td><code style="color: var(--dash-cyan); font-size: 0.75rem;">e3b0c442...4c718a</td>
+                <td>Oct 20, 2026</td>
+                <td><span class="status-pill online">● Verified</span></td>
+              </tr>
+              <tr>
+                <td><strong>REC-2026-BES-00109</strong></td>
+                <td>Urban Storage Cluster</td>
+                <td>34.0 MWh</td>
+                <td><code style="color: var(--dash-cyan); font-size: 0.75rem;">3a98d10b...f72021</td>
+                <td>Oct 15, 2026</td>
+                <td><span class="status-pill online">● Verified</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Section 6: GHG Protocol Scope 1, Scope 2 & Scope 3 Carbon Footprint Breakdown -->
+      <section class="card tilt-card" style="background: var(--dash-surface-card); border-color: var(--dash-border-subtle); color: #ffffff;" aria-label="GHG Protocol Breakdown">
+        <h3 style="color: #ffffff; font-size: 1.15rem; margin-bottom: 0.8rem;">GHG Protocol Carbon Footprint Accounting</h3>
+        <p style="font-size: 0.82rem; color: var(--dash-text-muted); margin-bottom: 1.25rem;">Standardized Greenhouse Gas Protocol Corporate Accounting and Reporting Standard.</p>
+        <div class="grid-3" style="gap: 1.25rem;">
+          <div style="background: rgba(255, 255, 255, 0.04); padding: 1.2rem; border-radius: var(--radius-md);">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+              <span style="font-weight: 700; color: #ffffff;">Scope 1: Direct</span>
+              <span class="badge-tag">Zero Direct</span>
+            </div>
+            <div style="font-size: 1.8rem; font-weight: 800; color: var(--dash-green); margin: 8px 0;">0.0 t CO₂e</div>
+            <p style="font-size: 0.78rem; color: var(--dash-text-muted); margin: 0;">100% fossil-free field operations with all-electric maintenance vehicles.</p>
+          </div>
+
+          <div style="background: rgba(255, 255, 255, 0.04); padding: 1.2rem; border-radius: var(--radius-md);">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+              <span style="font-weight: 700; color: #ffffff;">Scope 2: Market</span>
+              <span class="badge-tag badge-accent">Net Negative</span>
+            </div>
+            <div style="font-size: 1.8rem; font-weight: 800; color: var(--dash-cyan); margin: 8px 0;">-1,380 t CO₂e</div>
+            <p style="font-size: 0.78rem; color: var(--dash-text-muted); margin: 0;">Displaced fossil utility grid power via regional clean energy feed-in.</p>
+          </div>
+
+          <div style="background: rgba(255, 255, 255, 0.04); padding: 1.2rem; border-radius: var(--radius-md);">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+              <span style="font-weight: 700; color: #ffffff;">Scope 3: Value Chain</span>
+              <span class="badge-tag">Monitored</span>
+            </div>
+            <div style="font-size: 1.8rem; font-weight: 800; color: #ffffff; margin: 8px 0;">48.2 t CO₂e</div>
+            <p style="font-size: 0.78rem; color: var(--dash-text-muted); margin: 0;">Embedded module life-cycle emissions, fully offset by Q1 2027.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 7: Power Purchase Agreement (PPA) Billing Reconciliation & Tariff Arbitrage Ledger -->
+      <section class="dash-table-card" aria-label="PPA Tariff Billing">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.25rem;">
+          <div>
+            <h3 style="color: #ffffff; font-size: 1.15rem; margin-bottom: 4px;">PPA Billing Reconciliation & Tariff Arbitrage Ledger</h3>
+            <p style="font-size: 0.82rem; color: var(--dash-text-muted); margin: 0;">Net-metering credits and peak-shaving economic savings reconciliation.</p>
+          </div>
+          <button type="button" class="btn btn-secondary btn-sm btn-dash-action">Export Financial CSV</button>
+        </div>
+        <div class="dash-table-wrap">
+          <table class="dash-table" style="font-size: 0.85rem;">
+            <thead>
+              <tr>
+                <th>Billing Cycle</th>
+                <th>Export Energy (MWh)</th>
+                <th>Feed-In Tariff ($/kWh)</th>
+                <th>BESS Arbitrage Yield</th>
+                <th>Net Credit ($)</th>
+                <th>Reconciliation</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>September 2026</strong></td>
+                <td>94.8 MWh</td>
+                <td>$0.142</td>
+                <td>+$3,420</td>
+                <td><strong style="color: var(--dash-green);">$16,881.60</strong></td>
+                <td><span class="status-pill online">● Reconciled</span></td>
+              </tr>
+              <tr>
+                <td><strong>August 2026</strong></td>
+                <td>102.4 MWh</td>
+                <td>$0.142</td>
+                <td>+$3,850</td>
+                <td><strong style="color: var(--dash-green);">$18,390.80</strong></td>
+                <td><span class="status-pill online">● Reconciled</span></td>
+              </tr>
+              <tr>
+                <td><strong>July 2026</strong></td>
+                <td>118.6 MWh</td>
+                <td>$0.142</td>
+                <td>+$4,120</td>
+                <td><strong style="color: var(--dash-green);">$20,961.20</strong></td>
+                <td><span class="status-pill online">● Reconciled</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Section 8: Health, Safety & Environmental (HSE) Audits & OSHA Compliance -->
+      <section class="card tilt-card" style="background: var(--dash-surface-card); border-color: var(--dash-border-subtle); color: #ffffff;" aria-label="HSE Safety Audit">
+        <h3 style="color: #ffffff; font-size: 1.15rem; margin-bottom: 0.8rem;">Health, Safety & Environmental (HSE) & OSHA 1910 Audits</h3>
+        <p style="font-size: 0.82rem; color: var(--dash-text-muted); margin-bottom: 1.25rem;">High-voltage electrical safety and tower climbing safety inspection records.</p>
+        <div class="grid-3" style="gap: 1.25rem;">
+          <div style="background: rgba(255, 255, 255, 0.03); padding: 1.2rem; border-radius: var(--radius-md);">
+            <div style="font-size: 0.8rem; color: var(--dash-text-muted);">Lost-Time Injury (LTI) Record</div>
+            <div style="font-size: 1.6rem; font-weight: 800; color: var(--dash-green); margin: 4px 0;">1,240 Days</div>
+            <div style="font-size: 0.75rem; color: var(--dash-text-muted);">Zero workplace safety incidents logged</div>
+          </div>
+          <div style="background: rgba(255, 255, 255, 0.03); padding: 1.2rem; border-radius: var(--radius-md);">
+            <div style="font-size: 0.8rem; color: var(--dash-text-muted);">High-Voltage PPE Recertification</div>
+            <div style="font-size: 1.6rem; font-weight: 800; color: var(--dash-cyan); margin: 4px 0;">100% Current</div>
+            <div style="font-size: 0.75rem; color: var(--dash-text-muted);">NFPA 70E Arc Flash rating certified</div>
+          </div>
+          <div style="background: rgba(255, 255, 255, 0.03); padding: 1.2rem; border-radius: var(--radius-md);">
+            <div style="font-size: 0.8rem; color: var(--dash-text-muted);">Environmental Spill Prevention</div>
+            <div style="font-size: 1.6rem; font-weight: 800; color: #ffffff; margin: 4px 0;">SPCC Pass</div>
+            <div style="font-size: 0.75rem; color: var(--dash-green);">Transformer oil containment verified</div>
+          </div>
+        </div>
       </section>
     </main>
   </div>
@@ -147,4 +445,3 @@
   <script src="../assets/js/dashboard.js"></script>
 </body>
 </html>
-

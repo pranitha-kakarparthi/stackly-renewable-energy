@@ -248,6 +248,111 @@ body.dashboard-body {
   background: rgba(56, 189, 248, 0.15);
   color: var(--dash-cyan);
   border: 1px solid rgba(56, 189, 248, 0.3);
+  transition: all 0.2s ease;
+}
+
+.dash-role-badge.role-admin {
+  background: rgba(56, 189, 248, 0.15);
+  color: var(--dash-cyan);
+  border-color: rgba(56, 189, 248, 0.35);
+}
+
+.dash-role-badge.role-manager {
+  background: rgba(192, 132, 252, 0.15);
+  color: var(--dash-purple);
+  border-color: rgba(192, 132, 252, 0.35);
+}
+
+.dash-role-badge.role-customer {
+  background: rgba(52, 211, 153, 0.15);
+  color: var(--dash-green);
+  border-color: rgba(52, 211, 153, 0.35);
+}
+
+.dash-role-badge.role-vendor {
+  background: rgba(251, 191, 36, 0.15);
+  color: var(--dash-yellow);
+  border-color: rgba(251, 191, 36, 0.35);
+}
+
+.topbar-role-selector {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 4px 12px;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--dash-border-subtle);
+  transition: border-color 0.2s ease;
+}
+
+.topbar-role-selector:hover {
+  border-color: var(--dash-cyan);
+}
+
+.topbar-role-selector label {
+  font-size: 0.75rem;
+  color: var(--dash-text-muted);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.topbar-role-select {
+  background: transparent;
+  color: #ffffff;
+  border: none;
+  font-size: 0.82rem;
+  font-weight: 700;
+  cursor: pointer;
+  outline: none;
+}
+
+.topbar-role-select option {
+  background: var(--dash-surface);
+  color: #ffffff;
+}
+
+.dash-table-wrap {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.role-banner-alert {
+  padding: 1rem 1.25rem;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  border: 1px solid;
+  transition: all 0.3s ease;
+}
+
+.role-banner-alert.role-admin-banner {
+  background: rgba(56, 189, 248, 0.08);
+  border-color: rgba(56, 189, 248, 0.25);
+  color: #e0f2fe;
+}
+
+.role-banner-alert.role-manager-banner {
+  background: rgba(192, 132, 252, 0.08);
+  border-color: rgba(192, 132, 252, 0.25);
+  color: #f3e8ff;
+}
+
+.role-banner-alert.role-customer-banner {
+  background: rgba(52, 211, 153, 0.08);
+  border-color: rgba(52, 211, 153, 0.25);
+  color: #d1fae5;
+}
+
+.role-banner-alert.role-vendor-banner {
+  background: rgba(251, 191, 36, 0.08);
+  border-color: rgba(251, 191, 36, 0.25);
+  color: #fef3c7;
+}
 }
 
 .user-profile-widget {
@@ -530,6 +635,72 @@ body.dashboard-body {
   .weather-telemetry-card {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .grid-3 {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .dash-topbar {
+    height: auto;
+    min-height: var(--dash-header-height);
+    padding: 0.75rem 1rem;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+  
+  .dash-topbar-left {
+    flex: 1 1 auto;
+  }
+  
+  .dash-topbar-right {
+    flex-wrap: wrap;
+    gap: 8px;
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .topbar-role-selector {
+    flex: 1 1 auto;
+  }
+
+  .dash-content {
+    padding: 1rem;
+    gap: 1.25rem;
+  }
+
+  .dash-kpi-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .user-meta-name {
+    display: none;
+  }
+
+  .dash-table th, .dash-table td {
+    padding: 10px 8px;
+    font-size: 0.78rem;
+  }
+
+  .kpi-value {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .dash-content {
+    padding: 0.75rem;
+  }
+
+  .kpi-card {
+    padding: 1rem;
+  }
+
+  .btn-sm {
+    padding: 6px 10px;
+    font-size: 0.75rem;
   }
 }
 

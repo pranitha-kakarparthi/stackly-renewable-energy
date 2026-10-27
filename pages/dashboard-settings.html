@@ -23,26 +23,54 @@
   </div>
 
   <!-- Sidebar -->
-  <aside class="dash-sidebar" role="navigation">
+  <aside class="dash-sidebar" role="navigation" aria-label="Dashboard Sidebar Navigation">
     <div class="sidebar-header">
-      <a href="../index.html" class="sidebar-brand">
+      <a href="../index.html" class="sidebar-brand" aria-label="Stackly Homepage (Redirects to index.html)">
         <img src="../assets/images/logoStackly.webp" alt="Stackly Renewable Energy" width="120" height="40">
       </a>
-      <button type="button" class="sidebar-toggle-btn" aria-label="Toggle sidebar width">
+      <button type="button" class="sidebar-toggle-btn" aria-label="Toggle sidebar width" title="Toggle Sidebar">
         <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" width="20" height="20"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 19l-7-7 7-7m8 14l-7-7 7-7"/></svg>
       </button>
     </div>
 
     <ul class="sidebar-menu">
-      <li><a href="dashboard.html" class="sidebar-link" data-tooltip="Dashboard"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg><span class="sidebar-link-text">Dashboard</span></a></li>
-      <li><a href="dashboard-analytics.html" class="sidebar-link" data-tooltip="Analytics"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg><span class="sidebar-link-text">Analytics</span></a></li>
-      <li><a href="dashboard-reports.html" class="sidebar-link" data-tooltip="ESG Reports"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg><span class="sidebar-link-text">ESG Reports</span></a></li>
-      <li><a href="dashboard-assets.html" class="sidebar-link" data-tooltip="Turbine & Solar Fleet"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg><span class="sidebar-link-text">Turbine & Solar Fleet</span></a></li>
-      <li><a href="dashboard-settings.html" class="sidebar-link active" data-tooltip="Settings"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg><span class="sidebar-link-text">Settings</span></a></li>
+      <li>
+        <a href="dashboard.html" class="sidebar-link" data-tooltip="Dashboard Overview">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
+          <span class="sidebar-link-text">Dashboard</span>
+        </a>
+      </li>
+      <li>
+        <a href="dashboard-analytics.html" class="sidebar-link" data-tooltip="Telemetry Analytics">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+          <span class="sidebar-link-text">Analytics</span>
+        </a>
+      </li>
+      <li>
+        <a href="dashboard-reports.html" class="sidebar-link" data-tooltip="ESG & Carbon Reports">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+          <span class="sidebar-link-text">ESG Reports</span>
+        </a>
+      </li>
+      <li>
+        <a href="dashboard-assets.html" class="sidebar-link" data-tooltip="Wind & Solar Fleet">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+          <span class="sidebar-link-text">Turbine & Solar Fleet</span>
+        </a>
+      </li>
+      <li>
+        <a href="dashboard-settings.html" class="sidebar-link active" data-tooltip="System Settings">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+          <span class="sidebar-link-text">Settings</span>
+        </a>
+      </li>
     </ul>
 
     <div class="sidebar-footer">
-      <button type="button" class="btn btn-secondary btn-sm btn-sign-out" style="width: 100%;">Sign Out</button>
+      <button type="button" class="btn btn-secondary btn-sm btn-sign-out" style="width: 100%; gap: 8px;">
+        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" width="16" height="16"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"/></svg>
+        <span class="sidebar-link-text">Sign Out</span>
+      </button>
     </div>
   </aside>
 
@@ -50,42 +78,72 @@
   <div class="dash-main" id="mainContent">
     <header class="dash-topbar" role="banner">
       <div class="dash-topbar-left">
-        <button type="button" class="mobile-sidebar-btn"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" width="24" height="24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg></button>
-        <div>
+        <button type="button" class="mobile-sidebar-btn" aria-label="Open mobile navigation sidebar">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" width="24" height="24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+        <div class="topbar-greeting-wrap">
           <h1 class="topbar-greeting">System Settings & Role Configuration</h1>
-          <div class="topbar-time-meta">Local Storage Session Configuration</div>
+          <div class="topbar-time-meta">Local Storage Session Configuration • SCADA Administration</div>
         </div>
       </div>
+
       <div class="dash-topbar-right">
-        <span class="dash-role-badge">Admin</span>
+        <!-- Interactive Role Switcher -->
+        <div class="topbar-role-selector">
+          <label for="topbarRoleSelect">Role:</label>
+          <select id="topbarRoleSelect" class="topbar-role-select" aria-label="Select active user role">
+            <option value="Admin">Admin</option>
+            <option value="Manager">Manager</option>
+            <option value="Customer">Customer</option>
+            <option value="Vendor/Engineer">Vendor / Engineer</option>
+          </select>
+        </div>
+
+        <span class="dash-role-badge role-admin">Admin</span>
+
+        <button type="button" class="btn-dash-action" aria-label="View notifications" style="background: rgba(255, 255, 255, 0.05); border: 1px solid var(--dash-border-subtle); color: #ffffff; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer;">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" width="20" height="20"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/></svg>
+        </button>
+
         <div class="user-profile-widget">
           <img src="../assets/images/team-james-workman-field-operations-lead.webp" alt="User Profile" class="user-avatar-img" width="38" height="38">
           <span class="user-meta-name">James Workman</span>
         </div>
-        <button type="button" class="btn btn-secondary btn-sm btn-sign-out">Sign Out</button>
+
+        <button type="button" class="btn btn-secondary btn-sm btn-sign-out" aria-label="Sign Out">Sign Out</button>
       </div>
     </header>
 
+    <!-- 8 Distinct System Settings Sections -->
     <main class="dash-content">
+      <!-- Role Notification Banner -->
+      <div id="roleBannerAlert" class="role-banner-alert role-admin-banner" role="status">
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <span style="font-size: 1.2rem;">⚡</span>
+          <span class="role-banner-text" style="font-size: 0.88rem; font-weight: 600;">Admin Mode: Full SCADA grid dispatch authority, sub-second telemetry write permissions & API key configuration.</span>
+        </div>
+        <button type="button" class="btn btn-secondary btn-sm btn-dash-action" style="padding: 4px 10px; font-size: 0.75rem;">Security Keys</button>
+      </div>
+
       <!-- Section 1: User Profile Settings Card -->
-      <section class="card" style="background: var(--dash-surface-card); border-color: var(--dash-border-subtle); color: #ffffff;">
-        <h2 style="font-size: 1.25rem; color: #ffffff; margin-bottom: 1.25rem;">Active Profile Details</h2>
+      <section class="card" style="background: var(--dash-surface-card); border-color: var(--dash-border-subtle); color: #ffffff;" aria-label="Profile Details">
+        <h2 style="font-size: 1.25rem; color: #ffffff; margin-bottom: 1.25rem;">Active Profile Details & Role Switching</h2>
         <div class="grid-3" style="grid-template-columns: 1fr 1fr; gap: 1.25rem;">
           <div class="form-group">
             <label class="form-label" style="color: var(--dash-text-muted);">Current Active Role</label>
-            <select id="roleSwitcherSelect" class="form-control" style="background: var(--dash-surface); color: #ffffff; border-color: var(--dash-border-subtle);" onchange="switchActiveRole(this.value)">
-              <option value="Admin">Admin (Full Control Center)</option>
-              <option value="Manager">Manager (Operations & KPI)</option>
+            <select id="roleSwitcherSelect" class="form-control" style="background: var(--dash-surface); color: #ffffff; border-color: var(--dash-border-subtle);">
+              <option value="Admin">Admin (Full Control Center & SCADA)</option>
+              <option value="Manager">Manager (Operations, PPA & ESG)</option>
               <option value="Customer">Customer (Solar Billing & Savings)</option>
               <option value="Vendor/Engineer">Vendor / Engineer (Diagnostics)</option>
             </select>
-            <div style="font-size: 0.78rem; color: var(--dash-cyan); margin-top: 4px;">Updates active profile role in local session.</div>
+            <div style="font-size: 0.78rem; color: var(--dash-cyan); margin-top: 4px;">Updates active profile role in local session immediately.</div>
           </div>
 
           <div class="form-group">
             <label class="form-label" style="color: var(--dash-text-muted);">Notification Alert Frequency</label>
             <select class="form-control" style="background: var(--dash-surface); color: #ffffff; border-color: var(--dash-border-subtle);">
-              <option>Real-Time Push (Instant)</option>
+              <option>Real-Time Push (Instant Webhooks)</option>
               <option>Daily Digest (08:00 AM)</option>
               <option>Emergency Grid Faults Only</option>
             </select>
@@ -93,16 +151,242 @@
         </div>
       </section>
 
-      <!-- Section 2: SCADA API Gateway Configuration -->
-      <section class="card" style="background: var(--dash-surface-card); border-color: var(--dash-border-subtle); color: #ffffff;">
-        <h2 style="font-size: 1.25rem; color: #ffffff; margin-bottom: 1.25rem;">SCADA Cloud API Credentials</h2>
-        <div class="form-group">
+      <!-- Section 2: Role-Based Access Control (RBAC) Permissions Matrix -->
+      <section class="dash-table-card" aria-label="RBAC Permissions Matrix">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.25rem;">
+          <div>
+            <h3 style="color: #ffffff; font-size: 1.15rem; margin-bottom: 4px;">Role-Based Access Control (RBAC) Matrix</h3>
+            <p style="font-size: 0.82rem; color: var(--dash-text-muted); margin: 0;">Granular operational permissions defined across the 4 distinct user tiers.</p>
+          </div>
+          <span class="badge-tag badge-accent">Strict Least-Privilege</span>
+        </div>
+        <div class="dash-table-wrap">
+          <table class="dash-table" style="font-size: 0.85rem;">
+            <thead>
+              <tr>
+                <th>Capability / Module</th>
+                <th>Admin</th>
+                <th>Manager</th>
+                <th>Customer</th>
+                <th>Vendor / Engineer</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>High-Voltage Breaker Trip Control</strong></td>
+                <td><span class="status-pill online">Full Read/Write</span></td>
+                <td><span class="status-pill standby">Read Only</span></td>
+                <td><span style="color: var(--dash-text-muted);">No Access</span></td>
+                <td><span class="status-pill online">Field Override</span></td>
+              </tr>
+              <tr>
+                <td><strong>PPA Financial Settlement & Tariffs</strong></td>
+                <td><span class="status-pill online">Full Access</span></td>
+                <td><span class="status-pill online">Approve Invoices</span></td>
+                <td><span class="status-pill standby">View Own Bill</span></td>
+                <td><span style="color: var(--dash-text-muted);">No Access</span></td>
+              </tr>
+              <tr>
+                <td><strong>Inverter MPPT Calibration Setpoints</strong></td>
+                <td><span class="status-pill online">Full Access</span></td>
+                <td><span class="status-pill standby">Audit Only</span></td>
+                <td><span style="color: var(--dash-text-muted);">No Access</span></td>
+                <td><span class="status-pill online">Full Calibrate</span></td>
+              </tr>
+              <tr>
+                <td><strong>SCADA Cloud API Key Management</strong></td>
+                <td><span class="status-pill online">Full Key Admin</span></td>
+                <td><span style="color: var(--dash-text-muted);">No Access</span></td>
+                <td><span style="color: var(--dash-text-muted);">No Access</span></td>
+                <td><span style="color: var(--dash-text-muted);">No Access</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Section 3: SCADA API Gateway Configuration -->
+      <section class="card" style="background: var(--dash-surface-card); border-color: var(--dash-border-subtle); color: #ffffff;" aria-label="API Credentials">
+        <h3 style="font-size: 1.15rem; color: #ffffff; margin-bottom: 1.25rem;">SCADA Cloud API Credentials & Endpoints</h3>
+        <div class="form-group" style="margin-bottom: 1rem;">
           <label class="form-label" style="color: var(--dash-text-muted);">Client Telemetry Secret Key</label>
           <input type="text" readonly value="stackly_live_sec_7894129487123984712039841" class="form-control" style="background: var(--dash-surface); color: var(--dash-cyan); border-color: var(--dash-border-subtle);">
+        </div>
+        <div class="grid-3" style="grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem;">
+          <div>
+            <label class="form-label" style="color: var(--dash-text-muted); font-size: 0.82rem;">Modbus-TCP Edge Gateway IP</label>
+            <input type="text" value="192.168.10.50:502" class="form-control" style="background: var(--dash-surface); color: #ffffff; border-color: var(--dash-border-subtle);">
+          </div>
+          <div>
+            <label class="form-label" style="color: var(--dash-text-muted); font-size: 0.82rem;">MQTT TLS 1.3 Telemetry Ingress Broker</label>
+            <input type="text" value="mqtts://telemetry.stacklyenergy.com:8883" class="form-control" style="background: var(--dash-surface); color: #ffffff; border-color: var(--dash-border-subtle);">
+          </div>
         </div>
         <div>
           <button type="button" class="btn btn-secondary btn-sm btn-dash-action">Rotate Secret Key</button>
           <button type="button" class="btn btn-primary btn-sm btn-dash-action" style="margin-left: 8px;">Save Settings</button>
+        </div>
+      </section>
+
+      <!-- Section 4: Automated SCADA Alarm Thresholds & Safety Trip Windows -->
+      <section class="card tilt-card" style="background: var(--dash-surface-card); border-color: var(--dash-border-subtle); color: #ffffff;" aria-label="Alarm Thresholds">
+        <h3 style="color: #ffffff; font-size: 1.15rem; margin-bottom: 0.8rem;">SCADA Alarm Thresholds & Protective Trip Limits</h3>
+        <p style="font-size: 0.82rem; color: var(--dash-text-muted); margin-bottom: 1.25rem;">Automated circuit breaker and inverter trip triggers complying with IEEE 1547.</p>
+        <div class="grid-3" style="gap: 1.25rem;">
+          <div style="background: rgba(255, 255, 255, 0.04); padding: 1.2rem; border-radius: var(--radius-md);">
+            <div style="font-weight: 600; margin-bottom: 6px;">Overvoltage Trip Limit</div>
+            <p style="font-size: 0.8rem; color: var(--dash-text-muted); margin-bottom: 10px;">Immediate disconnect if grid voltage exceeds nominal.</p>
+            <input type="range" min="105" max="120" value="110" class="form-control" style="accent-color: var(--dash-cyan);">
+            <div style="display: flex; justify-content: space-between; font-size: 0.75rem; color: var(--dash-text-muted); margin-top: 4px;">
+              <span>105%</span>
+              <span style="color: var(--dash-cyan); font-weight: 700;">110% (+3.3 kV)</span>
+              <span>120%</span>
+            </div>
+          </div>
+
+          <div style="background: rgba(255, 255, 255, 0.04); padding: 1.2rem; border-radius: var(--radius-md);">
+            <div style="font-weight: 600; margin-bottom: 6px;">Rotor Overspeed Pitch Lockout</div>
+            <p style="font-size: 0.8rem; color: var(--dash-text-muted); margin-bottom: 10px;">Full feathering emergency aerodynamic brake cut-out.</p>
+            <input type="range" min="20" max="30" value="25" class="form-control" style="accent-color: var(--dash-yellow);">
+            <div style="display: flex; justify-content: space-between; font-size: 0.75rem; color: var(--dash-text-muted); margin-top: 4px;">
+              <span>20 m/s</span>
+              <span style="color: var(--dash-yellow); font-weight: 700;">25.0 m/s Storm Trip</span>
+              <span>30 m/s</span>
+            </div>
+          </div>
+
+          <div style="background: rgba(255, 255, 255, 0.04); padding: 1.2rem; border-radius: var(--radius-md);">
+            <div style="font-weight: 600; margin-bottom: 6px;">BESS Thermal Runaway Pre-Alarm</div>
+            <p style="font-size: 0.8rem; color: var(--dash-text-muted); margin-bottom: 10px;">Novec 1230 fire suppression armed temperature.</p>
+            <input type="range" min="40" max="70" value="55" class="form-control" style="accent-color: #ef4444;">
+            <div style="display: flex; justify-content: space-between; font-size: 0.75rem; color: var(--dash-text-muted); margin-top: 4px;">
+              <span>40°C</span>
+              <span style="color: #ef4444; font-weight: 700;">55°C Chiller Trip</span>
+              <span>70°C</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 5: Multichannel Notification Webhook Endpoints -->
+      <section class="card tilt-card" style="background: var(--dash-surface-card); border-color: var(--dash-border-subtle); color: #ffffff;" aria-label="Notification Webhooks">
+        <h3 style="color: #ffffff; font-size: 1.15rem; margin-bottom: 0.8rem;">Incident Notification Channels & Dispatch Webhooks</h3>
+        <p style="font-size: 0.82rem; color: var(--dash-text-muted); margin-bottom: 1.25rem;">Deliver high-priority grid telemetry alerts to operations dispatch channels.</p>
+        <div class="grid-3" style="grid-template-columns: 1fr 1fr; gap: 1rem;">
+          <div style="background: rgba(255, 255, 255, 0.03); padding: 1rem; border-radius: var(--radius-md);">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+              <span style="font-weight: 600; font-size: 0.9rem;">PagerDuty Incident Escalation</span>
+              <span class="status-pill online">● Active</span>
+            </div>
+            <input type="text" value="https://events.pagerduty.com/v2/enqueue/stackly_ops" class="form-control" style="background: var(--dash-surface); color: var(--dash-text-muted); font-size: 0.8rem; border-color: var(--dash-border-subtle);">
+          </div>
+          <div style="background: rgba(255, 255, 255, 0.03); padding: 1rem; border-radius: var(--radius-md);">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+              <span style="font-weight: 600; font-size: 0.9rem;">Ops Center Slack Webhook</span>
+              <span class="status-pill online">● Active</span>
+            </div>
+            <input type="text" value="https://hooks.slack.com/services/T0123/B0456/stackly_feed" class="form-control" style="background: var(--dash-surface); color: var(--dash-text-muted); font-size: 0.8rem; border-color: var(--dash-border-subtle);">
+          </div>
+        </div>
+        <div style="margin-top: 1rem;">
+          <button type="button" class="btn btn-secondary btn-sm btn-dash-action">Send Test Webhook</button>
+        </div>
+      </section>
+
+      <!-- Section 6: Multi-Factor Authentication & Cryptographic Session Security -->
+      <section class="card tilt-card" style="background: var(--dash-surface-card); border-color: var(--dash-border-subtle); color: #ffffff;" aria-label="Cryptographic Security">
+        <h3 style="color: #ffffff; font-size: 1.15rem; margin-bottom: 0.8rem;">Multi-Factor Authentication & Hardware Security Keys</h3>
+        <p style="font-size: 0.82rem; color: var(--dash-text-muted); margin-bottom: 1.25rem;">Cryptographic identity verification for SCADA command validation.</p>
+        <div class="grid-3" style="gap: 1.25rem;">
+          <div style="background: rgba(255, 255, 255, 0.03); padding: 1.2rem; border-radius: var(--radius-md);">
+            <div style="font-weight: 600; font-size: 0.95rem; margin-bottom: 4px;">FIDO2 / WebAuthn Hardware Key</div>
+            <p style="font-size: 0.8rem; color: var(--dash-text-muted); margin-bottom: 8px;">Hardware token required for all high-voltage trip commands.</p>
+            <span class="status-pill online">● Key Enrolled (YubiKey 5C)</span>
+          </div>
+          <div style="background: rgba(255, 255, 255, 0.03); padding: 1.2rem; border-radius: var(--radius-md);">
+            <div style="font-weight: 600; font-size: 0.95rem; margin-bottom: 4px;">Session Inactivity Auto-Lock</div>
+            <p style="font-size: 0.8rem; color: var(--dash-text-muted); margin-bottom: 8px;">Automatic session lock after idle inactivity.</p>
+            <span style="font-size: 1.2rem; font-weight: 700; color: var(--dash-cyan);">15 Minutes</span>
+          </div>
+          <div style="background: rgba(255, 255, 255, 0.03); padding: 1.2rem; border-radius: var(--radius-md);">
+            <div style="font-weight: 600; font-size: 0.95rem; margin-bottom: 4px;">IP CIDR Whitelist Range</div>
+            <p style="font-size: 0.8rem; color: var(--dash-text-muted); margin-bottom: 8px;">Restricted to VPN subnet.</p>
+            <span style="font-size: 0.9rem; font-family: monospace; color: var(--dash-green);">10.142.0.0/16 (Active)</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 7: Tamper-Evident SCADA Audit Trail & Compliance Log -->
+      <section class="dash-table-card" aria-label="SCADA Audit Trail">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.25rem;">
+          <div>
+            <h3 style="color: #ffffff; font-size: 1.15rem; margin-bottom: 4px;">Tamper-Evident SCADA Audit Trail (ISO 27001 / NERC CIP)</h3>
+            <p style="font-size: 0.82rem; color: var(--dash-text-muted); margin: 0;">Immutable record of authentication, setpoint adjustments, and firmware updates.</p>
+          </div>
+          <button type="button" class="btn btn-secondary btn-sm btn-dash-action">Download Audit Log</button>
+        </div>
+        <div class="dash-table-wrap">
+          <table class="dash-table" style="font-size: 0.82rem;">
+            <thead>
+              <tr>
+                <th>Timestamp (UTC)</th>
+                <th>Operator</th>
+                <th>Action Scope</th>
+                <th>Target Resource</th>
+                <th>Cryptographic Digest</th>
+                <th>Result</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>2026-10-27 10:48:12</td>
+                <td>James Workman (Admin)</td>
+                <td>Set Overvoltage Trip Limit</td>
+                <td>Substation Alpha Line 1</td>
+                <td><code>5a2f...1e8b</code></td>
+                <td><span class="status-pill online">Success</span></td>
+              </tr>
+              <tr>
+                <td>2026-10-27 09:15:40</td>
+                <td>Elena Rostova (Manager)</td>
+                <td>Exported ESG Q3 Ledger</td>
+                <td>Compliance Module</td>
+                <td><code>9c3d...84a1</code></td>
+                <td><span class="status-pill online">Success</span></td>
+              </tr>
+              <tr>
+                <td>2026-10-27 08:32:04</td>
+                <td>David Chen (Engineer)</td>
+                <td>Calibrated MPPT Channel #4</td>
+                <td>SOLAR-STRING-XAVIER</td>
+                <td><code>7b1a...92cf</code></td>
+                <td><span class="status-pill online">Success</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Section 8: Telemetry Ingestion Quota & Local Edge Buffer Cache -->
+      <section class="card tilt-card" style="background: var(--dash-surface-card); border-color: var(--dash-border-subtle); color: #ffffff;" aria-label="Telemetry Ingestion">
+        <h3 style="color: #ffffff; font-size: 1.15rem; margin-bottom: 0.8rem;">Telemetry Ingestion Quotas & Edge SSD Buffer</h3>
+        <p style="font-size: 0.82rem; color: var(--dash-text-muted); margin-bottom: 1.25rem;">Configure circular buffer retention and offline store-and-forward edge cache.</p>
+        <div class="grid-3" style="gap: 1.25rem;">
+          <div style="background: rgba(255, 255, 255, 0.04); padding: 1.2rem; border-radius: var(--radius-md);">
+            <div style="font-size: 0.8rem; color: var(--dash-text-muted);">Edge Buffer Retention Window</div>
+            <div style="font-size: 1.5rem; font-weight: 700; color: var(--dash-cyan); margin: 4px 0;">90 Days Circular</div>
+            <div style="font-size: 0.75rem; color: var(--dash-text-muted);">NVMe solid-state persistent ring buffer</div>
+          </div>
+          <div style="background: rgba(255, 255, 255, 0.04); padding: 1.2rem; border-radius: var(--radius-md);">
+            <div style="font-size: 0.8rem; color: var(--dash-text-muted);">MQTT Ingestion Rate Limit</div>
+            <div style="font-size: 1.5rem; font-weight: 700; color: var(--dash-green); margin: 4px 0;">10,000 evt/sec</div>
+            <div style="font-size: 0.75rem; color: var(--dash-text-muted);">Zstandard compression enabled (12:1 ratio)</div>
+          </div>
+          <div style="background: rgba(255, 255, 255, 0.04); padding: 1.2rem; border-radius: var(--radius-md);">
+            <div style="font-size: 0.8rem; color: var(--dash-text-muted);">Disconnection Store-and-Forward</div>
+            <div style="font-size: 1.5rem; font-weight: 700; color: #ffffff; margin: 4px 0;">Armed (QoS 1)</div>
+            <div style="font-size: 0.75rem; color: var(--dash-green);">Zero telemetry loss during WAN blackout</div>
+          </div>
         </div>
       </section>
     </main>
@@ -110,18 +394,5 @@
 
   <script src="../assets/js/main.js"></script>
   <script src="../assets/js/dashboard.js"></script>
-  <script>
-    function switchActiveRole(newRole) {
-      const rawUser = localStorage.getItem("stackly_current_user");
-      if (rawUser) {
-        const u = JSON.parse(rawUser);
-        u.role = newRole;
-        localStorage.setItem("stackly_current_user", JSON.stringify(u));
-        localStorage.setItem("stackly_role", newRole);
-        window.location.reload();
-      }
-    }
-  </script>
 </body>
 </html>
-

@@ -93,8 +93,19 @@
       </div>
 
       <div class="dash-topbar-right">
+        <!-- Interactive Role Switcher for instant testing -->
+        <div class="topbar-role-selector">
+          <label for="topbarRoleSelect">Role:</label>
+          <select id="topbarRoleSelect" class="topbar-role-select" aria-label="Select active user role">
+            <option value="Admin">Admin</option>
+            <option value="Manager">Manager</option>
+            <option value="Customer">Customer</option>
+            <option value="Vendor/Engineer">Vendor / Engineer</option>
+          </select>
+        </div>
+
         <!-- Role Badge Display -->
-        <span class="dash-role-badge">Admin</span>
+        <span class="dash-role-badge role-admin">Admin</span>
 
         <!-- Notifications Action Button (Redirects to 404 as required) -->
         <button type="button" class="btn-dash-action" aria-label="View notifications" style="background: rgba(255, 255, 255, 0.05); border: 1px solid var(--dash-border-subtle); color: #ffffff; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer;">
@@ -114,6 +125,14 @@
 
     <!-- Dashboard Content Container (6-8 Rich Sections) -->
     <main class="dash-content">
+      <!-- Role Notification Banner -->
+      <div id="roleBannerAlert" class="role-banner-alert role-admin-banner" role="status">
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <span style="font-size: 1.2rem;">⚡</span>
+          <span class="role-banner-text" style="font-size: 0.88rem; font-weight: 600;">Admin Mode: Full SCADA grid dispatch authority, sub-second telemetry write permissions & API key configuration.</span>
+        </div>
+        <button type="button" class="btn btn-secondary btn-sm btn-dash-action" style="padding: 4px 10px; font-size: 0.75rem;">Audit Logs</button>
+      </div>
       <!-- Section 1: Weather & Rotor Telemetry Bar (Inspired by Video) -->
       <section class="weather-telemetry-card" aria-label="Real-Time Telemetry Conditions">
         <div class="telemetry-item">
