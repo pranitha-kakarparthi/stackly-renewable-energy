@@ -133,25 +133,25 @@ function initSignInHandler() {
     });
     if (errorBanner) errorBanner.style.display = "none";
 
-    // 1. Email validation
+    // 1. Strict RFC email validation
     const emailVal = emailInput.value.trim();
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     if (!emailVal || !emailRegex.test(emailVal)) {
       emailInput.classList.add("is-invalid");
       if (!firstInvalidField) firstInvalidField = emailInput;
     }
 
-    // 2. Password validation
+    // 2. Password validation (cannot be empty and must be minimum 6 characters)
     const passwordVal = passwordInput.value;
     if (!passwordVal || passwordVal.length < 6) {
       passwordInput.classList.add("is-invalid");
       if (!firstInvalidField) firstInvalidField = passwordInput;
     }
 
-    // 3. Role validation
-    const roleVal = roleSelect.value;
+    // 3. Operational Role validation
+    const roleVal = roleSelect ? roleSelect.value : "Admin";
     if (!roleVal) {
-      roleSelect.classList.add("is-invalid");
+      if (roleSelect) roleSelect.classList.add("is-invalid");
       if (!firstInvalidField) firstInvalidField = roleSelect;
     }
 
@@ -160,18 +160,18 @@ function initSignInHandler() {
       return;
     }
 
-    // Check against users or auto-authenticate valid input
+    // Any valid email and password is able to log in successfully
     const users = JSON.parse(localStorage.getItem(STORAGE_KEYS.USERS) || "[]");
     let matchedUser = users.find((u) => u.email.toLowerCase() === emailVal.toLowerCase());
 
     if (!matchedUser) {
-      // If valid email/pass that passes validation, create session for user
       const derivedName = emailVal.split("@")[0].replace(/[._-]/g, " ");
       matchedUser = {
         firstName: derivedName.charAt(0).toUpperCase() + derivedName.slice(1),
-        lastName: "Member",
+        lastName: "Operator",
         username: emailVal.split("@")[0],
         email: emailVal,
+        password: passwordVal,
         role: roleVal,
         mobile: "9876543210",
         countryCode: "+91",
@@ -180,7 +180,8 @@ function initSignInHandler() {
       users.push(matchedUser);
       localStorage.setItem(STORAGE_KEYS.USERS, JSON.stringify(users));
     } else {
-      matchedUser.role = roleVal; // update selected role for session
+      matchedUser.role = roleVal;
+      matchedUser.password = passwordVal;
     }
 
     matchedUser.lastLogin = new Date().toISOString();
@@ -211,6 +212,11 @@ function initSignUpHandler() {
   if (passInput && strengthFill) {
     passInput.addEventListener("input", () => {
       const val = passInput.value;
+      if (!val) {
+        strengthFill.style.width = "0%";
+        if (strengthText) strengthText.textContent = "Enter password (8+ chars, upper, lower, number, special).";
+        return;
+      }
       let score = 0;
       if (val.length >= 8) score++;
       if (/[A-Z]/.test(val)) score++;
@@ -226,26 +232,10 @@ function initSignUpHandler() {
         if (strengthText) strengthText.textContent = "Weak (Needs 8+ chars, upper, lower, number, special)";
       } else if (score <= 4) {
         strengthFill.style.backgroundColor = "#f59e0b";
-        if (strengthText) strengthText.textContent = "Moderate strength";
+        if (strengthText) strengthText.textContent = "Moderate (add missing uppercase/symbol/number)";
       } else {
         strengthFill.style.backgroundColor = "#10b981";
         if (strengthText) strengthText.textContent = "Strong renewable password!";
-      }
-    });
-  }
-
-  // Avatar upload preview
-  const avatarInput = document.getElementById("regAvatar");
-  const avatarPreview = document.getElementById("avatarPreviewImg");
-  if (avatarInput && avatarPreview) {
-    avatarInput.addEventListener("change", (e) => {
-      const file = e.target.files[0];
-      if (file) {
-        const reader = new FileReader();
-        reader.onload = (evt) => {
-          avatarPreview.src = evt.target.result;
-        };
-        reader.readAsDataURL(file);
       }
     });
   }
@@ -294,15 +284,15 @@ function initSignUpHandler() {
       if (!firstInvalidField) firstInvalidField = username;
     }
 
-    // 4. Email: standard format
+    // 4. Email: valid RFC format
     const emailVal = email.value.trim();
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     if (!emailVal || !emailRegex.test(emailVal)) {
       email.classList.add("is-invalid");
       if (!firstInvalidField) firstInvalidField = email;
     }
 
-    // 5. Mobile: exactly 10 digits
+    // 5. Mobile: exact 10 digits
     const mobileVal = mobile.value.trim();
     const mobileRegex = /^\d{10}$/;
     if (!mobileVal || !mobileRegex.test(mobileVal)) {
@@ -322,7 +312,7 @@ function initSignUpHandler() {
     }
 
     // 7. Confirm Password
-    if (confirmPassword.value !== passVal) {
+    if (!confirmPassword.value || confirmPassword.value !== passVal) {
       confirmPassword.classList.add("is-invalid");
       if (!firstInvalidField) firstInvalidField = confirmPassword;
     }
@@ -344,7 +334,7 @@ function initSignUpHandler() {
       return;
     }
 
-    // Register user
+    // Register user (without avatar requirement)
     const newUser = {
       firstName: firstName.value.trim(),
       lastName: lastName.value.trim(),
@@ -354,8 +344,8 @@ function initSignUpHandler() {
       mobile: mobileVal,
       countryCode: countryCode ? countryCode.value : "+91",
       role: role.value,
-      avatar: avatarPreview ? avatarPreview.src : "../assets/images/avatar-david-chen-solar-engineer.webp",
-      address: document.getElementById("regAddress")?.value.trim() || "Salem Clean Tech Zone",
+      avatar: "../assets/images/avatar-david-chen-solar-engineer.webp",
+      address: document.getElementById("regAddress")?.value.trim() || "",
       registeredAt: new Date().toISOString(),
     };
 

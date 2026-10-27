@@ -14,6 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initWindoraBoardTabs();
   init3DCardTilt();
   initAmbientHeroVideos();
+  initBackToTop();
 });
 
 /* =========================================================
@@ -362,21 +363,44 @@ function initAmbientHeroVideos() {
     }
   });
 
-  // Interactive toggle badge if clicked
-  const toggleBadges = document.querySelectorAll(".hero-video-badge");
-  toggleBadges.forEach((badge) => {
-    badge.style.cursor = "pointer";
-    badge.addEventListener("click", () => {
-      videos.forEach((v) => {
-        if (v.paused) {
-          v.play();
-          badge.querySelector(".hero-video-badge-text").textContent = "Video Active";
-        } else {
-          v.pause();
-          badge.querySelector(".hero-video-badge-text").textContent = "Video Paused";
-        }
-      });
+
+}
+
+
+/* =========================================================
+   11. FLOATING BACK TO TOP BUTTON WITH SMOOTH ANIMATION
+   ========================================================= */
+function initBackToTop() {
+  let btn = document.querySelector(".back-to-top-btn");
+  if (!btn) {
+    btn = document.createElement("button");
+    btn.className = "back-to-top-btn";
+    btn.type = "button";
+    btn.setAttribute("aria-label", "Back to top of page");
+    btn.title = "Back to top";
+    btn.innerHTML = `
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M18 15l-6-6-6 6"/>
+      </svg>
+    `;
+    document.body.appendChild(btn);
+  }
+
+  const handleScroll = () => {
+    if (window.scrollY > 280) {
+      btn.classList.add("is-visible");
+    } else {
+      btn.classList.remove("is-visible");
+    }
+  };
+
+  window.addEventListener("scroll", handleScroll, { passive: true });
+  handleScroll();
+
+  btn.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
     });
   });
 }
-

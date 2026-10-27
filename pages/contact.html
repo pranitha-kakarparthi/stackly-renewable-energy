@@ -118,10 +118,6 @@
             <span class="beacon-pulse" style="width: 10px; height: 10px; border-radius: 50%; background: #10b981; margin-right: 2px;" aria-hidden="true"></span>
             <span>Global Center of Excellence • Salem, Tamil Nadu</span> • <span class="current-local-time"></span>
           </div>
-          <div class="hero-video-badge" title="Live Video Background Motion Active (Click to toggle)">
-            <span class="hero-video-badge-dot"></span>
-            <span class="hero-video-badge-text">Video Active</span>
-          </div>
         </div>
 
         <h1 id="contactHeroHeading" class="windora-hero-headline" style="text-align: center; margin: 0 auto 1.25rem auto;">
@@ -227,11 +223,11 @@
           </div>
 
           <form id="contactForm" novalidate>
-            <div class="grid-3" style="grid-template-columns: 1fr 1fr; gap: 1.25rem;">
+            <div class="form-row-2col">
               <!-- Field 1: Full Name (Alphabets only) -->
               <div class="form-group" id="groupName">
                 <label for="contactName" class="form-label">Full Name <span class="required-star">*</span></label>
-                <input type="text" id="contactName" class="form-control" required placeholder="e.g. John Doe">
+                <input type="text" id="contactName" class="form-control" required placeholder="e.g. John Doe" pattern="[A-Za-z\s]+" oninput="this.value = this.value.replace(/[^A-Za-z\s]/g, '')">
                 <div class="form-error-feedback" id="nameError">Please enter a valid name (alphabets only, no digits).</div>
               </div>
 
@@ -243,7 +239,7 @@
               </div>
             </div>
 
-            <div class="grid-3" style="grid-template-columns: 1fr 1fr; gap: 1.25rem;">
+            <div class="form-row-2col">
               <!-- Field 3: Country Code + Mobile (Exact 10 digits) -->
               <div class="form-group" id="groupMobile">
                 <label for="contactMobile" class="form-label">Mobile Number <span class="required-star">*</span></label>
@@ -255,7 +251,7 @@
                     <option value="+49">🇩🇪 +49 (DE)</option>
                     <option value="+61">🇦🇺 +61 (AU)</option>
                   </select>
-                  <input type="tel" id="contactMobile" class="form-control" required maxlength="10" placeholder="10-digit number">
+                  <input type="tel" id="contactMobile" class="form-control" required maxlength="10" placeholder="10-digit number" oninput="this.value = this.value.replace(/\D/g, '').slice(0, 10)">
                 </div>
                 <div class="form-error-feedback" id="mobileError">Mobile number must be exactly 10 digits.</div>
               </div>
@@ -280,7 +276,7 @@
                 <label for="contactMessage" class="form-label" style="margin-bottom: 0;">Project Details & Facility Notes (Optional)</label>
                 <span id="msgCharCount" class="char-counter">0 / 500 characters</span>
               </div>
-              <textarea id="contactMessage" rows="5" class="form-control" maxlength="500" data-counter-target="msgCharCount" placeholder="Tell us about your facility size, estimated monthly electricity consumption, or location...">We operate a 45,000 sq. ft. logistics and cold-storage facility in Salem industrial corridor. We are looking to deploy a turnkey solar rooftop system with battery backup to offset peak daytime utility tariffs.</textarea>
+              <textarea id="contactMessage" rows="5" class="form-control" maxlength="500" data-counter-target="msgCharCount" placeholder="Tell us about your facility size, estimated monthly electricity consumption, or location..."></textarea>
             </div>
 
             <button type="submit" class="btn btn-primary btn-lg" style="margin-top: 1rem;">
@@ -489,7 +485,7 @@
 
         // 2. Email format
         const emailVal = emailInput.value.trim();
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
         if (!emailVal || !emailRegex.test(emailVal)) {
           emailInput.classList.add('is-invalid');
           if (!firstInvalid) firstInvalid = emailInput;
@@ -514,9 +510,11 @@
           return;
         }
 
-        // Success state
-        successAlert.style.display = 'block';
-        successAlert.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        // Reset form completely and redirect to 404 page
+        contactForm.reset();
+        const charCounter = document.getElementById('msgCharCount');
+        if (charCounter) charCounter.textContent = '0 / 500 characters';
+        window.location.href = '404.html';
       });
     }
   </script>

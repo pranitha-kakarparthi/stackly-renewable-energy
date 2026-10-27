@@ -1306,27 +1306,67 @@ img {
   display: grid;
   grid-template-columns: 1fr 1fr;
   background: #ffffff;
+  position: relative;
 }
 
+/* Left Part: Fixed on Desktop, Scrollable on Mobile */
 .auth-banner-side {
   background: radial-gradient(circle at top left, #122836 0%, #0a1721 100%);
   color: #ffffff;
-  padding: clamp(2rem, 5vw, 4.5rem);
+  padding: clamp(2rem, 4vw, 4rem);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  position: relative;
-  overflow: hidden;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+  box-sizing: border-box;
 }
 
+.auth-banner-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  width: 100%;
+  gap: 1rem;
+}
+
+.btn-auth-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #e2e8f0;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(8px);
+  transition: all 0.25s ease;
+}
+
+.btn-auth-back:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  transform: translateX(-3px);
+  border-color: rgba(255, 255, 255, 0.35);
+}
+
+/* Right Part: Scrollable to Content */
 .auth-form-side {
-  padding: clamp(2rem, 5vw, 4.5rem);
+  padding: clamp(2rem, 4vw, 3.5rem) clamp(1.5rem, 3.5vw, 3.5rem);
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  max-width: 580px;
+  justify-content: flex-start;
+  max-width: 620px;
   margin: 0 auto;
   width: 100%;
+  box-sizing: border-box;
+  min-height: 100vh;
 }
 
 .auth-header-nav {
@@ -1439,11 +1479,32 @@ img {
   }
   
   .auth-page-wrapper {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
   }
   
   .auth-banner-side {
-    display: none;
+    position: relative;
+    top: auto;
+    height: auto;
+    min-height: auto;
+    padding: clamp(1.75rem, 4vw, 2.5rem) clamp(1.25rem, 3.5vw, 2rem);
+    overflow: visible;
+  }
+  
+  .auth-banner-side h2 {
+    font-size: clamp(1.5rem, 4.5vw, 2.2rem) !important;
+  }
+  
+  .auth-banner-side p {
+    font-size: 0.95rem !important;
+  }
+
+  .auth-form-side {
+    padding: clamp(1.5rem, 4vw, 2.5rem) clamp(1.25rem, 3.5vw, 2rem) 3.5rem clamp(1.25rem, 3.5vw, 2rem);
+    min-height: auto;
+    max-width: 100%;
   }
 }
 
@@ -2416,5 +2477,85 @@ img {
   }
   .cta-banner .btn {
     width: 100%;
+  }
+}
+
+/* =========================================================
+   FLOATING BACK TO TOP BUTTON WITH SMOOTH ANIMATION
+   ========================================================= */
+.back-to-top-btn {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  color: #ffffff;
+  border: none;
+  box-shadow: 0 8px 24px rgba(0, 162, 232, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 990;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(16px) scale(0.9);
+  transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1), 
+              transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+              visibility 0.3s ease,
+              background 0.2s ease,
+              box-shadow 0.2s ease;
+}
+
+.back-to-top-btn.is-visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0) scale(1);
+}
+
+.back-to-top-btn:hover {
+  background: #028ecb;
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 12px 28px rgba(0, 162, 232, 0.55);
+}
+
+.back-to-top-btn:active {
+  transform: translateY(-1px) scale(0.98);
+}
+
+.back-to-top-btn svg {
+  width: 22px;
+  height: 22px;
+  transition: transform 0.25s ease;
+}
+
+.back-to-top-btn:hover svg {
+  transform: translateY(-2px);
+}
+
+/* Responsive 2-column form row for contact & auth */
+.form-row-2col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+}
+
+@media (max-width: 640px) {
+  .form-row-2col {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .back-to-top-btn {
+    bottom: 20px;
+    right: 20px;
+    width: 42px;
+    height: 42px;
+  }
+  .auth-banner-top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
   }
 }

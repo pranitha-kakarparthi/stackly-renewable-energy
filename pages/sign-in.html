@@ -26,9 +26,15 @@
     <!-- Left Side: Brand Visual & Renewable Trust Messaging -->
     <div class="auth-banner-side">
       <div>
-        <a href="../index.html" aria-label="Return to Homepage">
-          <img src="../assets/images/logoStackly.webp" alt="Stackly Renewable Energy Logo" style="height: 42px; width: auto; margin-bottom: 2.5rem;" width="140" height="48">
-        </a>
+        <div class="auth-banner-top">
+          <a href="../index.html" class="btn-auth-back" aria-label="Return to Homepage">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+            <span>Back to Home</span>
+          </a>
+          <a href="../index.html" aria-label="Stackly Homepage">
+            <img src="../assets/images/logoStackly.webp" alt="Stackly Renewable Energy Logo" style="height: 38px; width: auto;" width="140" height="48">
+          </a>
+        </div>
         <div class="badge-tag badge-accent" style="margin-bottom: 1.25rem;">Enterprise Clean Grid Portal</div>
         <h2 style="color: #ffffff; font-size: clamp(2rem, 3.5vw, 2.8rem); line-height: 1.15; margin-bottom: 1.2rem;">
           Real-Time Clean Energy Telemetry at Your Fingertips.
@@ -58,12 +64,9 @@
 
     <!-- Right Side: Sign In Form -->
     <div class="auth-form-side">
-      <div class="auth-header-nav">
-        <a href="../index.html" class="btn btn-ghost" style="padding-left: 0;">
-          ← Back to Home
-        </a>
+      <div class="auth-header-nav" style="justify-content: flex-end; margin-bottom: 2rem;">
         <div style="font-size: 0.9rem; color: var(--text-muted);">
-          New to Stackly? <a href="sign-up.html" style="font-weight: 700;">Create Account</a>
+          New to Stackly? <a href="sign-up.html" style="font-weight: 700; color: var(--color-primary);">Create Account</a>
         </div>
       </div>
 
@@ -92,7 +95,7 @@
               <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" width="20" height="20"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
             </button>
           </div>
-          <div class="form-error-feedback" id="loginPassError">Please enter your password (minimum 6 characters).</div>
+          <div class="form-error-feedback" id="loginPassError">Please enter a valid password (minimum 6 characters).</div>
         </div>
 
         <!-- Field 3: Login As / Role Selector -->
