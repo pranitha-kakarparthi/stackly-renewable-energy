@@ -5,16 +5,17 @@
    ========================================================= */
 
 :root {
-  --dash-bg: #0b151f;
-  --dash-surface: #12202c;
-  --dash-surface-card: #172837;
-  --dash-surface-hover: #1e3346;
-  --dash-border: rgba(2, 132, 199, 0.16);
-  --dash-border-subtle: rgba(255, 255, 255, 0.08);
+  --dash-bg: #2b2323;              /* Dark warm charcoal background */
+  --dash-surface: #382e2e;         /* Warm deep charcoal sidebar/header */
+  --dash-surface-card: #453b3b;    /* Warm charcoal card */
+  --dash-surface-hover: #524646;   /* Primary dark charcoal #524646 */
+  --dash-border: rgba(236, 91, 56, 0.22);
+  --dash-border-subtle: rgba(168, 164, 146, 0.2);
   
-  --dash-text: #f1f5f9;
-  --dash-text-muted: #94a3b8;
-  --dash-cyan: #38bdf8;
+  --dash-text: #FCF2E5;            /* Alabaster cream text */
+  --dash-text-muted: #A8A492;      /* Warm stone muted text */
+  --dash-cyan: #EC5B38;            /* Vibrant terracotta coral accent */
+  --dash-rose: #FFCED8;            /* Soft blush rose highlight */
   --dash-green: #34d399;
   --dash-purple: #c084fc;
   --dash-yellow: #fbbf24;
@@ -131,7 +132,7 @@ body.dashboard-body {
 
 .sidebar-link.active {
   color: #ffffff;
-  background: linear-gradient(90deg, rgba(2, 132, 199, 0.25) 0%, rgba(2, 132, 199, 0.08) 100%);
+  background: linear-gradient(90deg, rgba(236, 91, 56, 0.25) 0%, rgba(236, 91, 56, 0.08) 100%);
   border-left: 3px solid var(--dash-cyan);
   font-weight: 600;
 }
@@ -352,7 +353,6 @@ body.dashboard-body {
   background: rgba(251, 191, 36, 0.08);
   border-color: rgba(251, 191, 36, 0.25);
   color: #fef3c7;
-}
 }
 
 .user-profile-widget {

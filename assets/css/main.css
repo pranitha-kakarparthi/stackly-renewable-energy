@@ -6,51 +6,58 @@
 
 :root {
   /* Brand Color Palette */
-  --color-primary: #0284c7;        /* Electric Sky Cyan */
-  --color-primary-light: #38bdf8;  /* Vivid Atmospheric Cyan */
-  --color-primary-dark: #0369a1;   /* Deep Blue */
-  --color-primary-gradient: linear-gradient(135deg, #0284c7 0%, #00a2e8 100%);
+  --color-primary: #EC5B38;        /* Vibrant Terracotta Coral */
+  --color-primary-light: #ff7d5c;  /* Radiant Coral Tint */
+  --color-primary-dark: #cc4524;   /* Deep Terracotta Rust */
+  --color-primary-gradient: linear-gradient(135deg, #EC5B38 0%, #ff8364 100%);
   
-  --color-secondary: #0f2a37;      /* Deep Slate Clean Navy */
-  --color-secondary-light: #163d50;
-  --color-secondary-dark: #091a23;
+  --color-secondary: #524646;      /* Deep Warm Charcoal */
+  --color-secondary-light: #6e5f5f;
+  --color-secondary-dark: #3a3030;
   
-  --color-accent: #10b981;         /* Clean Energy Emerald */
-  --color-accent-light: #34d399;
-  --color-accent-dark: #059669;
+  --color-accent: #EC5B38;         /* Energetic Clean Energy Accent */
+  --color-accent-light: #FFCED8;   /* Soft Rose Tint */
+  --color-accent-dark: #cc4524;
+  --color-rose: #FFCED8;           /* Dedicated Rose Accent Code */
+  --color-stone: #A8A492;          /* Dedicated Warm Stone Accent Code */
   
   --color-warning: #f59e0b;
   --color-danger: #ef4444;
   --color-success: #10b981;
   
   /* Surfaces & Backgrounds */
-  --bg-body: #f4f8fb;              /* Light Atmospheric Tint */
+  --bg-body: #FCF2E5;              /* Warm Alabaster Cream */
   --bg-surface: #ffffff;
-  --bg-surface-frosted: rgba(255, 255, 255, 0.88);
+  --bg-surface-frosted: rgba(255, 255, 255, 0.92);
   --bg-card: #ffffff;
-  --bg-dark-container: #121e29;     /* Slate Navy Container from Video */
-  --bg-dark-card: #182836;
+  --bg-rose-tint: #FFCED8;
+  --bg-cream-tint: #FCF2E5;
+  --bg-dark-container: #524646;     /* Deep Warm Charcoal Container */
+  --bg-dark-card: #423737;
   
   /* Text & Typography */
-  --text-main: #0b1e28;            /* High Contrast Body Text (WCAG AA) */
-  --text-muted: #526574;           /* Accessible Muted Text */
+  --text-main: #524646;            /* Deep Warm Charcoal High Contrast */
+  --text-muted: #787364;           /* Warm Earth Muted (WCAG AA compliant on #FCF2E5) */
+  --text-stone: #A8A492;
   --text-light: #ffffff;
-  --text-light-muted: #94a3b8;
+  --text-light-muted: #A8A492;
   
   /* Borders & Shadows */
-  --border-light: rgba(2, 132, 199, 0.12);
-  --border-subtle: #e2e8f0;
-  --border-dark: rgba(255, 255, 255, 0.1);
+  --border-light: rgba(236, 91, 56, 0.2);
+  --border-subtle: rgba(168, 164, 146, 0.35);
+  --border-stone: #A8A492;
+  --border-rose: #FFCED8;
+  --border-dark: rgba(255, 255, 255, 0.14);
   --radius-sm: 8px;
   --radius-md: 14px;
   --radius-lg: 24px;
   --radius-xl: 36px;
   --radius-pill: 9999px;
   
-  --shadow-sm: 0 2px 8px rgba(11, 30, 40, 0.04);
-  --shadow-md: 0 8px 24px -4px rgba(2, 132, 199, 0.08), 0 4px 12px rgba(11, 30, 40, 0.03);
-  --shadow-lg: 0 16px 40px -8px rgba(2, 132, 199, 0.14), 0 8px 20px rgba(11, 30, 40, 0.04);
-  --shadow-glow: 0 0 24px rgba(2, 132, 199, 0.25);
+  --shadow-sm: 0 2px 8px rgba(82, 70, 70, 0.05);
+  --shadow-md: 0 8px 24px -4px rgba(236, 91, 56, 0.12), 0 4px 12px rgba(82, 70, 70, 0.04);
+  --shadow-lg: 0 16px 40px -8px rgba(236, 91, 56, 0.18), 0 8px 20px rgba(82, 70, 70, 0.06);
+  --shadow-glow: 0 0 24px rgba(236, 91, 56, 0.32);
   
   /* Typography System */
   --font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -189,18 +196,20 @@ img {
   gap: 6px;
   padding: 6px 14px;
   border-radius: var(--radius-pill);
-  background: rgba(2, 132, 199, 0.1);
-  color: var(--color-primary);
+  background: #FFCED8;
+  color: #524646;
+  border: 1px solid rgba(82, 70, 70, 0.12);
   font-size: 0.85rem;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 0.03em;
   margin-bottom: 12px;
   text-transform: uppercase;
 }
 
 .badge-tag.badge-accent {
-  background: rgba(16, 185, 129, 0.12);
-  color: var(--color-accent-dark);
+  background: rgba(236, 91, 56, 0.14);
+  color: #EC5B38;
+  border: 1px solid rgba(236, 91, 56, 0.28);
 }
 
 .badge-tag.badge-light {
@@ -233,14 +242,14 @@ img {
 .btn-primary {
   background: var(--color-primary-gradient);
   color: #ffffff;
-  box-shadow: 0 4px 14px rgba(2, 132, 199, 0.35);
+  box-shadow: 0 4px 14px rgba(236, 91, 56, 0.35);
   padding-right: 8px; /* space for round icon pill */
 }
 
 .btn-primary:hover {
-  background: linear-gradient(135deg, #0369a1 0%, #0284c7 100%);
+  background: linear-gradient(135deg, #cc4524 0%, #EC5B38 100%);
   color: #ffffff;
-  box-shadow: 0 6px 20px rgba(2, 132, 199, 0.45);
+  box-shadow: 0 6px 20px rgba(236, 91, 56, 0.45);
   transform: translateY(-2px);
 }
 
@@ -266,7 +275,7 @@ img {
   background: var(--bg-surface-frosted);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border-color: rgba(2, 132, 199, 0.3);
+  border-color: rgba(236, 91, 56, 0.3);
   color: var(--color-primary);
   box-shadow: var(--shadow-sm);
 }
@@ -316,7 +325,7 @@ img {
 }
 
 .btn-ghost:hover {
-  background: rgba(2, 132, 199, 0.08);
+  background: rgba(236, 91, 56, 0.08);
   color: var(--color-primary-dark);
 }
 
@@ -370,7 +379,7 @@ img {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  border: 3.5px solid rgba(2, 132, 199, 0.15);
+  border: 3.5px solid rgba(236, 91, 56, 0.15);
   border-top-color: var(--color-primary);
   border-right-color: var(--color-accent);
   animation: spinLoader 1.8s linear infinite;
@@ -454,12 +463,12 @@ img {
 
 .nav-link:hover {
   color: var(--color-primary);
-  background: rgba(2, 132, 199, 0.06);
+  background: rgba(236, 91, 56, 0.06);
 }
 
 .nav-link.active {
   color: var(--color-primary);
-  background: rgba(2, 132, 199, 0.1);
+  background: rgba(236, 91, 56, 0.1);
   font-weight: 700;
 }
 
@@ -514,7 +523,7 @@ img {
 }
 
 .dropdown-link:hover {
-  background: rgba(2, 132, 199, 0.08);
+  background: rgba(236, 91, 56, 0.08);
   color: var(--color-primary);
 }
 
@@ -627,7 +636,7 @@ img {
 .mobile-dropdown-toggle:hover,
 .mobile-dropdown-toggle:focus-visible {
   color: var(--color-primary);
-  background: rgba(0, 162, 232, 0.08);
+  background: rgba(236, 91, 56, 0.08);
 }
 
 .mobile-dropdown-arrow {
@@ -682,7 +691,7 @@ img {
 .mobile-nav-sublink:hover,
 .mobile-nav-sublink.active {
   color: var(--color-primary);
-  background: rgba(0, 162, 232, 0.1);
+  background: rgba(236, 91, 56, 0.1);
   font-weight: 600;
 }
 
@@ -707,7 +716,7 @@ img {
 
 .hero-section {
   position: relative;
-  background: radial-gradient(100% 85% at 50% 0%, #bde4f4 0%, #d8effa 35%, #f4f8fb 100%);
+  background: radial-gradient(100% 85% at 50% 0%, #FFCED8 0%, #fdece3 35%, #FCF2E5 100%);
   padding-top: clamp(3rem, 7vw, 6rem);
   padding-bottom: clamp(4rem, 9vw, 8rem);
   overflow: hidden;
@@ -731,14 +740,14 @@ img {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 206, 216, 0.45);
   backdrop-filter: blur(10px);
   padding: 6px 16px;
   border-radius: var(--radius-pill);
-  border: 1px solid rgba(2, 132, 199, 0.2);
+  border: 1.5px solid #FFCED8;
   font-size: 0.9rem;
-  font-weight: 600;
-  color: var(--color-primary-dark);
+  font-weight: 700;
+  color: #524646;
   margin-bottom: 1.2rem;
 }
 
@@ -749,7 +758,7 @@ img {
 }
 
 .hero-title .highlight-gradient {
-  background: linear-gradient(120deg, #0284c7 0%, #00a2e8 50%, #0f2a37 100%);
+  background: linear-gradient(120deg, #EC5B38 0%, #ff7a59 50%, #524646 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -799,7 +808,7 @@ img {
   padding: 14px 20px;
   border-radius: var(--radius-lg);
   box-shadow: 0 12px 30px rgba(11, 30, 40, 0.12);
-  border: 1px solid rgba(2, 132, 199, 0.15);
+  border: 1px solid rgba(236, 91, 56, 0.15);
   display: flex;
   align-items: center;
   gap: 14px;
@@ -867,14 +876,14 @@ img {
 .card:hover {
   transform: translateY(-5px);
   box-shadow: var(--shadow-lg);
-  border-color: rgba(2, 132, 199, 0.3);
+  border-color: rgba(236, 91, 56, 0.3);
 }
 
 .card-icon-wrap {
   width: 58px;
   height: 58px;
   border-radius: var(--radius-md);
-  background: rgba(2, 132, 199, 0.1);
+  background: rgba(236, 91, 56, 0.1);
   color: var(--color-primary);
   display: flex;
   align-items: center;
@@ -983,7 +992,7 @@ img {
   height: 52px;
   border-radius: 50%;
   object-fit: cover;
-  border: 2px solid rgba(2, 132, 199, 0.2);
+  border: 2px solid rgba(236, 91, 56, 0.2);
 }
 
 .author-name {
@@ -1061,7 +1070,7 @@ img {
 .form-control:focus {
   outline: none;
   border-color: var(--color-primary);
-  box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.15);
+  box-shadow: 0 0 0 3px rgba(236, 91, 56, 0.15);
 }
 
 .form-control.is-invalid {
@@ -1311,7 +1320,7 @@ img {
 
 /* Left Part: Fixed on Desktop, Scrollable on Mobile */
 .auth-banner-side {
-  background: radial-gradient(circle at top left, #122836 0%, #0a1721 100%);
+  background: radial-gradient(circle at top left, #524646 0%, #3a3030 100%);
   color: #ffffff;
   padding: clamp(2rem, 4vw, 4rem);
   display: flex;
@@ -1440,7 +1449,7 @@ img {
   font-size: clamp(6rem, 15vw, 11rem);
   font-weight: 900;
   line-height: 1;
-  background: linear-gradient(135deg, #0284c7 0%, #10b981 100%);
+  background: linear-gradient(135deg, #EC5B38 0%, #FFCED8 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-bottom: 1rem;
@@ -1601,7 +1610,7 @@ img {
 
 .hero-streamline-path {
   fill: none;
-  stroke: rgba(2, 132, 199, 0.22);
+  stroke: rgba(236, 91, 56, 0.22);
   stroke-width: 2;
   stroke-dasharray: 400 400;
   animation: windStreamFlow 10s linear infinite;
@@ -1638,7 +1647,7 @@ img {
   border-radius: var(--radius-lg);
   padding: 1rem 1.25rem;
   box-shadow: 0 16px 36px -8px rgba(11, 30, 40, 0.12);
-  border: 1px solid rgba(2, 132, 199, 0.18);
+  border: 1px solid rgba(236, 91, 56, 0.18);
   display: flex;
   align-items: center;
   gap: 14px;
@@ -1649,7 +1658,7 @@ img {
 
 .hero-story-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 20px 42px -6px rgba(2, 132, 199, 0.22);
+  box-shadow: 0 20px 42px -6px rgba(236, 91, 56, 0.22);
   border-color: var(--color-primary);
 }
 
@@ -1659,7 +1668,7 @@ img {
   border-radius: var(--radius-md);
   object-fit: cover;
   flex-shrink: 0;
-  border: 1.5px solid rgba(2, 132, 199, 0.2);
+  border: 1.5px solid rgba(236, 91, 56, 0.2);
 }
 
 .hero-metric-card {
@@ -1670,7 +1679,7 @@ img {
   border-radius: var(--radius-lg);
   padding: 1rem 1.25rem;
   box-shadow: 0 16px 36px -8px rgba(11, 30, 40, 0.12);
-  border: 1px solid rgba(2, 132, 199, 0.18);
+  border: 1px solid rgba(236, 91, 56, 0.18);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1684,7 +1693,7 @@ img {
 
 /* Shimmering Headline */
 .shimmer-headline {
-  background: linear-gradient(90deg, #0f2a37 0%, #0284c7 35%, #10b981 70%, #0f2a37 100%);
+  background: linear-gradient(90deg, #524646 0%, #EC5B38 35%, #FFCED8 70%, #524646 100%);
   background-size: 200% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -1698,7 +1707,7 @@ img {
 /* 1. About Hero: Milestone Horizon & Presence Badge */
 .hero-about-wrap {
   position: relative;
-  background: radial-gradient(100% 90% at 50% 0%, #d4eef9 0%, #eaf5fa 40%, #f4f8fb 100%);
+  background: radial-gradient(100% 90% at 50% 0%, #FFCED8 0%, #fdeee7 40%, #FCF2E5 100%);
 }
 
 .milestone-chips-row {
@@ -1717,11 +1726,11 @@ img {
   backdrop-filter: blur(10px);
   padding: 8px 18px;
   border-radius: var(--radius-pill);
-  border: 1px solid rgba(2, 132, 199, 0.2);
+  border: 1px solid rgba(236, 91, 56, 0.2);
   font-size: 0.9rem;
   font-weight: 700;
   color: var(--color-secondary);
-  box-shadow: 0 4px 14px rgba(2, 132, 199, 0.08);
+  box-shadow: 0 4px 14px rgba(236, 91, 56, 0.08);
 }
 
 .milestone-chip span {
@@ -1731,7 +1740,7 @@ img {
 /* 2. Services Hero: Orbiting Clean Energy Ecosystem */
 .hero-services-wrap {
   position: relative;
-  background: radial-gradient(100% 90% at 50% 0%, #c9e8f6 0%, #e2f2fa 45%, #f4f8fb 100%);
+  background: radial-gradient(100% 90% at 50% 0%, #FFCED8 0%, #fdece3 45%, #FCF2E5 100%);
 }
 
 .ecosystem-orbit-banner {
@@ -1750,8 +1759,8 @@ img {
   background: #ffffff;
   padding: 10px 20px;
   border-radius: var(--radius-pill);
-  box-shadow: 0 8px 24px -4px rgba(2, 132, 199, 0.15);
-  border: 1.5px solid rgba(2, 132, 199, 0.15);
+  box-shadow: 0 8px 24px -4px rgba(236, 91, 56, 0.15);
+  border: 1.5px solid rgba(236, 91, 56, 0.15);
   font-weight: 700;
   font-size: 0.95rem;
   color: var(--color-secondary);
@@ -1801,7 +1810,7 @@ img {
 /* 4. Wind Energy Hero: Aerodynamic Air Stream & Tachometer */
 .hero-wind-wrap {
   position: relative;
-  background: radial-gradient(100% 90% at 50% 0%, #bde4f4 0%, #def1fa 40%, #f4f8fb 100%);
+  background: radial-gradient(100% 90% at 50% 0%, #FFCED8 0%, #fde8e5 40%, #FCF2E5 100%);
 }
 
 .wind-tachometer-pill {
@@ -1812,8 +1821,8 @@ img {
   backdrop-filter: blur(12px);
   padding: 8px 20px;
   border-radius: var(--radius-pill);
-  border: 1.5px solid rgba(2, 132, 199, 0.3);
-  box-shadow: 0 8px 24px rgba(2, 132, 199, 0.14);
+  border: 1.5px solid rgba(236, 91, 56, 0.3);
+  box-shadow: 0 8px 24px rgba(236, 91, 56, 0.14);
   font-weight: 700;
   font-size: 0.9rem;
   color: var(--color-primary-dark);
@@ -1823,7 +1832,7 @@ img {
 /* 5. Battery Storage Hero: Liquid Thermal Flow & Cell Grid */
 .hero-storage-wrap {
   position: relative;
-  background: radial-gradient(100% 90% at 50% 0%, #d1fae5 0%, #e6f9f0 40%, #f4f8fb 100%);
+  background: radial-gradient(100% 90% at 50% 0%, #FFCED8 0%, #fdece3 40%, #FCF2E5 100%);
 }
 
 .bess-status-beam {
@@ -1845,7 +1854,7 @@ img {
 /* 6. Projects Hero: Radar Ping Beacon & Megawatt Odometer */
 .hero-projects-wrap {
   position: relative;
-  background: radial-gradient(100% 90% at 50% 0%, #cde8f6 0%, #e4f3fa 40%, #f4f8fb 100%);
+  background: radial-gradient(100% 90% at 50% 0%, #FFCED8 0%, #fdece3 40%, #FCF2E5 100%);
 }
 
 .projects-odometer-pill {
@@ -1856,8 +1865,8 @@ img {
   backdrop-filter: blur(12px);
   padding: 8px 22px;
   border-radius: var(--radius-pill);
-  border: 1.5px solid rgba(2, 132, 199, 0.25);
-  box-shadow: 0 8px 24px rgba(2, 132, 199, 0.12);
+  border: 1.5px solid rgba(236, 91, 56, 0.25);
+  box-shadow: 0 8px 24px rgba(236, 91, 56, 0.12);
   font-weight: 700;
   font-size: 0.92rem;
   color: var(--color-secondary);
@@ -1867,7 +1876,7 @@ img {
 /* 7. Contact Hero: Salem SCADA Gateway Live Ping */
 .hero-contact-wrap {
   position: relative;
-  background: radial-gradient(100% 90% at 50% 0%, #cde8f6 0%, #e3f2fa 40%, #f4f8fb 100%);
+  background: radial-gradient(100% 90% at 50% 0%, #FFCED8 0%, #fdece3 40%, #FCF2E5 100%);
 }
 
 .scada-ping-pill {
@@ -1942,19 +1951,19 @@ img {
   gap: 14px;
   padding: 8px 10px 8px 28px;
   border-radius: 9999px;
-  background: #00a2e8;
+  background: #EC5B38;
   color: #ffffff;
   font-weight: 700;
   font-size: 1.05rem;
   text-decoration: none;
-  box-shadow: 0 10px 28px -4px rgba(0, 162, 232, 0.45);
+  box-shadow: 0 10px 28px -4px rgba(236, 91, 56, 0.45);
   transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .windora-btn-primary:hover {
-  background: #028ecb;
+  background: #cc4524;
   transform: translateY(-2px);
-  box-shadow: 0 14px 34px -4px rgba(0, 162, 232, 0.55);
+  box-shadow: 0 14px 34px -4px rgba(236, 91, 56, 0.55);
   color: #ffffff;
 }
 
@@ -2004,8 +2013,8 @@ img {
 .windora-story-card:hover {
   transform: translateY(-5px);
   background: rgba(255, 255, 255, 0.94);
-  box-shadow: 0 26px 56px -8px rgba(0, 162, 232, 0.2);
-  border-color: rgba(0, 162, 232, 0.3);
+  box-shadow: 0 26px 56px -8px rgba(236, 91, 56, 0.2);
+  border-color: rgba(236, 91, 56, 0.3);
 }
 
 .windora-story-img {
@@ -2051,7 +2060,7 @@ img {
 .windora-metric-card:hover {
   transform: translateY(-5px);
   background: rgba(255, 255, 255, 0.94);
-  box-shadow: 0 26px 56px -8px rgba(0, 162, 232, 0.2);
+  box-shadow: 0 26px 56px -8px rgba(236, 91, 56, 0.2);
 }
 
 .windora-avatar-pair {
@@ -2126,7 +2135,7 @@ img {
 }
 
 .windora-board-tab.active {
-  background: #00a2e8;
+  background: #EC5B38;
   color: #ffffff;
 }
 
@@ -2153,7 +2162,7 @@ img {
 
 .windora-kpi-card:hover {
   background: rgba(255, 255, 255, 0.07);
-  border-color: rgba(0, 162, 232, 0.4);
+  border-color: rgba(236, 91, 56, 0.4);
   transform: translateY(-3px);
 }
 
@@ -2298,7 +2307,7 @@ img {
 
 .windora-telemetry-glass-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 24px 56px -8px rgba(0, 162, 232, 0.22);
+  box-shadow: 0 24px 56px -8px rgba(236, 91, 56, 0.22);
 }
 
 /* Comprehensive Responsive Breakpoints for Mobile & Tablet */
@@ -2493,7 +2502,7 @@ img {
   background: var(--color-primary);
   color: #ffffff;
   border: none;
-  box-shadow: 0 8px 24px rgba(0, 162, 232, 0.45);
+  box-shadow: 0 8px 24px rgba(236, 91, 56, 0.45);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2516,9 +2525,9 @@ img {
 }
 
 .back-to-top-btn:hover {
-  background: #028ecb;
+  background: #cc4524;
   transform: translateY(-4px) scale(1.05);
-  box-shadow: 0 12px 28px rgba(0, 162, 232, 0.55);
+  box-shadow: 0 12px 28px rgba(236, 91, 56, 0.55);
 }
 
 .back-to-top-btn:active {
@@ -2876,7 +2885,7 @@ img[src*="founder"] {
   padding: 9px 24px;
   font-size: 0.92rem;
   font-weight: 700;
-  border: 1.5px solid rgba(0, 162, 232, 0.35);
+  border: 1.5px solid rgba(236, 91, 56, 0.35);
   background: rgba(255, 255, 255, 0.95);
   color: var(--color-secondary);
   cursor: pointer;
@@ -2890,14 +2899,14 @@ img[src*="founder"] {
   color: var(--color-primary);
   border-color: var(--color-primary);
   transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(0, 162, 232, 0.22);
+  box-shadow: 0 6px 18px rgba(236, 91, 56, 0.22);
 }
 
 .filter-btn.active {
   background: var(--color-primary) !important;
   color: #ffffff !important;
   border-color: var(--color-primary) !important;
-  box-shadow: 0 6px 20px rgba(0, 162, 232, 0.4) !important;
+  box-shadow: 0 6px 20px rgba(236, 91, 56, 0.4) !important;
   transform: translateY(-1px);
 }
 
