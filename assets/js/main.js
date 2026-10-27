@@ -163,7 +163,30 @@ function initMobileNav() {
 
   toggleBtn.addEventListener("click", () => toggleMenu());
 
-  // Close when clicking mobile links
+  // Interactive Mobile Dropdown Accordions (Services & Subsystems)
+  const dropdownContainers = overlay.querySelectorAll(".mobile-nav-dropdown");
+  dropdownContainers.forEach((dropdown) => {
+    const toggleBtn = dropdown.querySelector(".mobile-dropdown-toggle");
+    if (!toggleBtn) return;
+
+    toggleBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      const isOpen = dropdown.classList.toggle("is-open");
+      toggleBtn.setAttribute("aria-expanded", isOpen ? "true" : "false");
+    });
+  });
+
+  // Auto-expand dropdown if any sublink or main link inside is active
+  dropdownContainers.forEach((dropdown) => {
+    if (dropdown.querySelector(".active")) {
+      dropdown.classList.add("is-open");
+      const toggleBtn = dropdown.querySelector(".mobile-dropdown-toggle");
+      if (toggleBtn) toggleBtn.setAttribute("aria-expanded", "true");
+    }
+  });
+
+  // Close when clicking mobile links (excluding accordion toggle buttons)
   const links = overlay.querySelectorAll("a");
   links.forEach((l) => {
     l.addEventListener("click", () => toggleMenu(false));

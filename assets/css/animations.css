@@ -552,6 +552,66 @@
   margin-top: 4px;
 }
 
+/* 4. PROJECTS: Infrastructure Topological Survey & Radar Grid Matrix */
+.hero-projects-matrix-wrap {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.projects-topographic-grid {
+  position: absolute;
+  inset: 0;
+  background-size: 70px 70px;
+  background-image: 
+    radial-gradient(circle at 50% 50%, rgba(2, 132, 199, 0.15) 1.5px, transparent 1.5px),
+    linear-gradient(to right, rgba(2, 132, 199, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(2, 132, 199, 0.05) 1px, transparent 1px);
+}
+
+.projects-radar-sweep {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 700px;
+  height: 700px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  border: 1px solid rgba(2, 132, 199, 0.2);
+  box-shadow: 0 0 40px rgba(2, 132, 199, 0.08) inset;
+  animation: radarSweep 12s linear infinite;
+}
+
+@keyframes radarSweep {
+  0% { transform: translate(-50%, -50%) rotate(0deg); }
+  100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+.projects-radar-sweep::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50%;
+  height: 2px;
+  background: linear-gradient(90deg, var(--color-primary), transparent);
+  transform-origin: left center;
+}
+
+.projects-coord-tag {
+  position: absolute;
+  font-family: monospace;
+  font-size: 0.72rem;
+  color: #0369a1;
+  background: rgba(255, 255, 255, 0.75);
+  padding: 3px 8px;
+  border-radius: 4px;
+  border: 1px solid rgba(2, 132, 199, 0.25);
+  letter-spacing: 0.05em;
+}
+
 /* Reduced Motion Safety */
 @media (prefers-reduced-motion: reduce) {
   *, ::before, ::after {
