@@ -15,6 +15,21 @@ document.addEventListener("DOMContentLoaded", () => {
 /* =========================================================
    1. SESSION VERIFICATION (Redirect to sign-in if unauthenticated)
    ========================================================= */
+function getDisplayNameFromUser(user) {
+  if (!user) return "Operator";
+  if (user.email) {
+    const localPart = user.email.split("@")[0] || "";
+    const parts = localPart.split(/[._\-+]+/).filter(Boolean);
+    if (parts.length > 0) {
+      return parts.map(p => p.charAt(0).toUpperCase() + p.slice(1).toLowerCase()).join(" ");
+    }
+  }
+  if (user.firstName) {
+    return `${user.firstName} ${user.lastName || ""}`.trim();
+  }
+  return "Operator";
+}
+
 function verifyDashboardSession() {
   const rawUser = localStorage.getItem("stackly_current_user");
   if (!rawUser) {
@@ -24,10 +39,13 @@ function verifyDashboardSession() {
 
   const user = JSON.parse(rawUser);
 
+  const displayName = getDisplayNameFromUser(user);
+  const firstName = displayName.split(" ")[0] || "Operator";
+
   // Render User Profile Meta in Topbar
   const nameDisplays = document.querySelectorAll(".user-meta-name, .dash-username");
   nameDisplays.forEach((el) => {
-    el.textContent = `${user.firstName} ${user.lastName}`;
+    el.textContent = displayName;
   });
 
   const roleDisplays = document.querySelectorAll(".dash-role-badge, .dash-user-role");
@@ -50,7 +68,7 @@ function verifyDashboardSession() {
     else if (hour >= 17 && hour < 22) timeGreeting = "Good evening";
     else timeGreeting = "Good night";
 
-    greetingEl.textContent = `${timeGreeting}, ${user.firstName}`;
+    greetingEl.textContent = `${timeGreeting}, ${firstName}`;
   }
 
   // Active Login Timestamp
@@ -77,10 +95,16 @@ function initDashboardSidebar() {
 
   if (!sidebar) return;
 
-  // Desktop collapse toggle
+  // Desktop collapse toggle (or close drawer on mobile)
   if (desktopToggle) {
     desktopToggle.addEventListener("click", () => {
-      sidebar.classList.toggle("collapsed");
+      if (window.innerWidth <= 768) {
+        sidebar.classList.remove("is-open");
+        document.body.classList.remove("nav-open");
+        if (mobileToggle) mobileToggle.setAttribute("aria-expanded", "false");
+      } else {
+        sidebar.classList.toggle("collapsed");
+      }
     });
   }
 
@@ -100,8 +124,30 @@ function initDashboardSidebar() {
       if (window.innerWidth <= 768) {
         sidebar.classList.remove("is-open");
         document.body.classList.remove("nav-open");
+        if (mobileToggle) mobileToggle.setAttribute("aria-expanded", "false");
       }
     });
+  });
+
+  // Dedicated Mobile / Smaller Screens Collapse Button
+  const mobileCollapseBtn = sidebar.querySelector(".sidebar-collapse-mobile-btn");
+  if (mobileCollapseBtn) {
+    mobileCollapseBtn.addEventListener("click", () => {
+      sidebar.classList.remove("is-open");
+      document.body.classList.remove("nav-open");
+      if (mobileToggle) mobileToggle.setAttribute("aria-expanded", "false");
+    });
+  }
+
+  // Close when clicking outside sidebar on smaller screens
+  document.addEventListener("click", (e) => {
+    if (window.innerWidth <= 768 && sidebar.classList.contains("is-open")) {
+      if (!sidebar.contains(e.target) && !mobileToggle?.contains(e.target)) {
+        sidebar.classList.remove("is-open");
+        document.body.classList.remove("nav-open");
+        if (mobileToggle) mobileToggle.setAttribute("aria-expanded", "false");
+      }
+    }
   });
 }
 
@@ -153,21 +199,6 @@ const ROLE_PERSONAS = {
       custom2: "Net-Metered Credit"
     },
     banner: "Customer Portal: Contracted solar & wind capacity, monthly utility cost avoidance, verified I-REC certificates."
-  },
-  "Vendor/Engineer": {
-    name: "David Chen",
-    title: "Senior Photovoltaic Field Specialist",
-    avatar: "avatar-david-chen-solar-engineer.webp",
-    badgeClass: "role-vendor",
-    kpis: {
-      gen: "99.4% Eff",
-      feed: "435 RPM Max",
-      offset: "0 Faults",
-      rev: "18 Units Ok",
-      custom1: "41.2°C Thermal Nominal",
-      custom2: "Zero Ground Shorts"
-    },
-    banner: "Vendor / Field Engineer Mode: Hardware diagnostics, inverter MPPT string telemetry, vibration FFT spectrum analysis."
   }
 };
 
@@ -175,16 +206,19 @@ function switchActiveRole(newRole) {
   if (!ROLE_PERSONAS[newRole]) newRole = "Admin";
   const persona = ROLE_PERSONAS[newRole];
   
+  const rawUser = localStorage.getItem("stackly_current_user");
+  const existingUser = rawUser ? JSON.parse(rawUser) : null;
+  
   // Determine relative avatar prefix
   const isSubpage = window.location.pathname.includes("/pages/");
   const avatarPrefix = isSubpage ? "../assets/images/" : "assets/images/";
   
   const updatedUser = {
-    firstName: persona.name.split(" ")[0],
-    lastName: persona.name.split(" ").slice(1).join(" "),
-    email: `${persona.name.toLowerCase().replace(" ", ".")}@stacklyenergy.com`,
+    firstName: existingUser?.firstName || persona.name.split(" ")[0],
+    lastName: existingUser?.lastName !== undefined ? existingUser.lastName : persona.name.split(" ").slice(1).join(" "),
+    email: existingUser?.email || `${persona.name.toLowerCase().replace(/\s+/g, ".")}@stacklyenergy.com`,
     role: newRole,
-    avatar: `${avatarPrefix}${persona.avatar}`
+    avatar: existingUser?.avatar || `${avatarPrefix}${persona.avatar}`
   };
   
   localStorage.setItem("stackly_current_user", JSON.stringify(updatedUser));
@@ -217,13 +251,18 @@ function initDashboardRoleView() {
 }
 
 function applyRoleData(role, user) {
+  if (!ROLE_PERSONAS[role]) role = "Admin";
   const persona = ROLE_PERSONAS[role];
   const isSubpage = window.location.pathname.includes("/pages/");
   const avatarPrefix = isSubpage ? "../assets/images/" : "assets/images/";
   
-  // Update name & role in UI
+  const rawUser = user || JSON.parse(localStorage.getItem("stackly_current_user") || "{}");
+  const displayName = getDisplayNameFromUser(rawUser);
+  const firstName = displayName.split(" ")[0] || "Operator";
+  
+  // Update name & role in UI (Display name derived from email)
   document.querySelectorAll(".user-meta-name, .dash-username").forEach(el => {
-    el.textContent = persona.name;
+    el.textContent = displayName;
   });
   
   document.querySelectorAll(".dash-role-badge, .dash-user-role").forEach(el => {
@@ -245,7 +284,7 @@ function applyRoleData(role, user) {
     else if (hour >= 17 && hour < 22) timeGreeting = "Good evening";
     else timeGreeting = "Good night";
 
-    greetingEl.textContent = `${timeGreeting}, ${persona.name.split(" ")[0]}`;
+    greetingEl.textContent = `${timeGreeting}, ${firstName}`;
   }
 
   // Role Banner

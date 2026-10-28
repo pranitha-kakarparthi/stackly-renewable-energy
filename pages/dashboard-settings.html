@@ -31,6 +31,11 @@
       <button type="button" class="sidebar-toggle-btn" aria-label="Toggle sidebar width" title="Toggle Sidebar">
         <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" width="20" height="20"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 19l-7-7 7-7m8 14l-7-7 7-7"/></svg>
       </button>
+      <!-- Dedicated Collapse Button for Smaller Screens -->
+      <button type="button" class="sidebar-collapse-mobile-btn" aria-label="Collapse side menu" title="Collapse Menu">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+        <span class="collapse-btn-text">Close</span>
+      </button>
     </div>
 
     <ul class="sidebar-menu">
@@ -53,25 +58,12 @@
         </a>
       </li>
       <li>
-        <a href="dashboard-assets.html" class="sidebar-link" data-tooltip="Wind & Solar Fleet">
-          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
-          <span class="sidebar-link-text">Turbine & Solar Fleet</span>
-        </a>
-      </li>
-      <li>
         <a href="dashboard-settings.html" class="sidebar-link active" data-tooltip="System Settings">
           <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
           <span class="sidebar-link-text">Settings</span>
         </a>
       </li>
     </ul>
-
-    <div class="sidebar-footer">
-      <button type="button" class="btn btn-secondary btn-sm btn-sign-out" style="width: 100%; gap: 8px;">
-        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" width="16" height="16"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"/></svg>
-        <span class="sidebar-link-text">Sign Out</span>
-      </button>
-    </div>
   </aside>
 
   <!-- Main Content -->
@@ -95,7 +87,6 @@
             <option value="Admin">Admin</option>
             <option value="Manager">Manager</option>
             <option value="Customer">Customer</option>
-            <option value="Vendor/Engineer">Vendor / Engineer</option>
           </select>
         </div>
 
@@ -128,14 +119,13 @@
       <!-- Section 1: User Profile Settings Card -->
       <section class="card" style="background: var(--dash-surface-card); border-color: var(--dash-border-subtle); color: #ffffff;" aria-label="Profile Details">
         <h2 style="font-size: 1.25rem; color: #ffffff; margin-bottom: 1.25rem;">Active Profile Details & Role Switching</h2>
-        <div class="grid-3" style="grid-template-columns: 1fr 1fr; gap: 1.25rem;">
+        <div class="dash-grid-2col">
           <div class="form-group">
             <label class="form-label" style="color: var(--dash-text-muted);">Current Active Role</label>
             <select id="roleSwitcherSelect" class="form-control" style="background: var(--dash-surface); color: #ffffff; border-color: var(--dash-border-subtle);">
               <option value="Admin">Admin (Full Control Center & SCADA)</option>
               <option value="Manager">Manager (Operations, PPA & ESG)</option>
               <option value="Customer">Customer (Solar Billing & Savings)</option>
-              <option value="Vendor/Engineer">Vendor / Engineer (Diagnostics)</option>
             </select>
             <div style="font-size: 0.78rem; color: var(--dash-cyan); margin-top: 4px;">Updates active profile role in local session immediately.</div>
           </div>
@@ -156,7 +146,7 @@
         <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.25rem;">
           <div>
             <h3 style="color: #ffffff; font-size: 1.15rem; margin-bottom: 4px;">Role-Based Access Control (RBAC) Matrix</h3>
-            <p style="font-size: 0.82rem; color: var(--dash-text-muted); margin: 0;">Granular operational permissions defined across the 4 distinct user tiers.</p>
+            <p style="font-size: 0.82rem; color: var(--dash-text-muted); margin: 0;">Granular operational permissions defined across the 3 distinct user tiers (Admin, Manager, Customer).</p>
           </div>
           <span class="badge-tag badge-accent">Strict Least-Privilege</span>
         </div>
@@ -168,7 +158,7 @@
                 <th>Admin</th>
                 <th>Manager</th>
                 <th>Customer</th>
-                <th>Vendor / Engineer</th>
+                
               </tr>
             </thead>
             <tbody>
@@ -177,26 +167,24 @@
                 <td><span class="status-pill online">Full Read/Write</span></td>
                 <td><span class="status-pill standby">Read Only</span></td>
                 <td><span style="color: var(--dash-text-muted);">No Access</span></td>
-                <td><span class="status-pill online">Field Override</span></td>
+                
               </tr>
               <tr>
                 <td><strong>PPA Financial Settlement & Tariffs</strong></td>
                 <td><span class="status-pill online">Full Access</span></td>
                 <td><span class="status-pill online">Approve Invoices</span></td>
                 <td><span class="status-pill standby">View Own Bill</span></td>
-                <td><span style="color: var(--dash-text-muted);">No Access</span></td>
               </tr>
               <tr>
                 <td><strong>Inverter MPPT Calibration Setpoints</strong></td>
                 <td><span class="status-pill online">Full Access</span></td>
                 <td><span class="status-pill standby">Audit Only</span></td>
                 <td><span style="color: var(--dash-text-muted);">No Access</span></td>
-                <td><span class="status-pill online">Full Calibrate</span></td>
+                
               </tr>
               <tr>
                 <td><strong>SCADA Cloud API Key Management</strong></td>
                 <td><span class="status-pill online">Full Key Admin</span></td>
-                <td><span style="color: var(--dash-text-muted);">No Access</span></td>
                 <td><span style="color: var(--dash-text-muted);">No Access</span></td>
                 <td><span style="color: var(--dash-text-muted);">No Access</span></td>
               </tr>
@@ -212,7 +200,7 @@
           <label class="form-label" style="color: var(--dash-text-muted);">Client Telemetry Secret Key</label>
           <input type="text" readonly value="stackly_live_sec_7894129487123984712039841" class="form-control" style="background: var(--dash-surface); color: var(--dash-cyan); border-color: var(--dash-border-subtle);">
         </div>
-        <div class="grid-3" style="grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem;">
+        <div class="dash-grid-2col" style="margin-bottom: 1rem;">
           <div>
             <label class="form-label" style="color: var(--dash-text-muted); font-size: 0.82rem;">Modbus-TCP Edge Gateway IP</label>
             <input type="text" value="192.168.10.50:502" class="form-control" style="background: var(--dash-surface); color: #ffffff; border-color: var(--dash-border-subtle);">
@@ -272,7 +260,7 @@
       <section class="card tilt-card" style="background: var(--dash-surface-card); border-color: var(--dash-border-subtle); color: #ffffff;" aria-label="Notification Webhooks">
         <h3 style="color: #ffffff; font-size: 1.15rem; margin-bottom: 0.8rem;">Incident Notification Channels & Dispatch Webhooks</h3>
         <p style="font-size: 0.82rem; color: var(--dash-text-muted); margin-bottom: 1.25rem;">Deliver high-priority grid telemetry alerts to operations dispatch channels.</p>
-        <div class="grid-3" style="grid-template-columns: 1fr 1fr; gap: 1rem;">
+        <div class="dash-grid-2col">
           <div style="background: rgba(255, 255, 255, 0.03); padding: 1rem; border-radius: var(--radius-md);">
             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
               <span style="font-weight: 600; font-size: 0.9rem;">PagerDuty Incident Escalation</span>

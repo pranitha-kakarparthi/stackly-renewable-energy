@@ -31,6 +31,11 @@
       <button type="button" class="sidebar-toggle-btn" aria-label="Toggle sidebar width" title="Toggle Sidebar">
         <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" width="20" height="20"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 19l-7-7 7-7m8 14l-7-7 7-7"/></svg>
       </button>
+      <!-- Dedicated Collapse Button for Smaller Screens -->
+      <button type="button" class="sidebar-collapse-mobile-btn" aria-label="Collapse side menu" title="Collapse Menu">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+        <span class="collapse-btn-text">Close</span>
+      </button>
     </div>
 
     <ul class="sidebar-menu">
@@ -53,25 +58,12 @@
         </a>
       </li>
       <li>
-        <a href="dashboard-assets.html" class="sidebar-link" data-tooltip="Wind & Solar Fleet">
-          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
-          <span class="sidebar-link-text">Turbine & Solar Fleet</span>
-        </a>
-      </li>
-      <li>
         <a href="dashboard-settings.html" class="sidebar-link" data-tooltip="System Settings">
           <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
           <span class="sidebar-link-text">Settings</span>
         </a>
       </li>
     </ul>
-
-    <div class="sidebar-footer">
-      <button type="button" class="btn btn-secondary btn-sm btn-sign-out" style="width: 100%; gap: 8px;">
-        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" width="16" height="16"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"/></svg>
-        <span class="sidebar-link-text">Sign Out</span>
-      </button>
-    </div>
   </aside>
 
   <!-- Main Content -->
@@ -95,7 +87,6 @@
             <option value="Admin">Admin</option>
             <option value="Manager">Manager</option>
             <option value="Customer">Customer</option>
-            <option value="Vendor/Engineer">Vendor / Engineer</option>
           </select>
         </div>
 
@@ -167,10 +158,10 @@
             <line x1="40" y1="200" x2="680" y2="200" stroke="rgba(255,255,255,0.15)"/>
 
             <!-- Solar Curve (Gold fill) -->
-            <path d="M 60 200 Q 180 200 240 180 Q 350 40 460 180 Q 520 200 640 200 Z" fill="rgba(251, 191, 36, 0.18)" stroke="#fbbf24" stroke-width="2.5"/>
+            <path d="M 60 200 Q 180 200 240 180 Q 350 40 460 180 Q 520 200 640 200 Z" fill="rgba(241, 196, 15, 0.18)" stroke="#F1C40F" stroke-width="2.5"/>
 
             <!-- Wind Baseload Curve (Cyan stroke) -->
-            <path d="M 60 130 C 140 150 220 110 320 120 C 420 130 520 90 640 110" fill="none" stroke="#EC5B38" stroke-width="2.5"/>
+            <path d="M 60 130 C 140 150 220 110 320 120 C 420 130 520 90 640 110" fill="none" stroke="#00D2D3" stroke-width="2.5"/>
 
             <text x="60" y="220" fill="#94a3b8" font-size="11">00:00</text>
             <text x="200" y="220" fill="#94a3b8" font-size="11">06:00</text>
@@ -181,7 +172,7 @@
         </div>
       </section>
 
-      <div class="grid-3" style="grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+      <div class="dash-grid-2col">
         <!-- Section 3: Predictive Weather & Cloud Deflection Forecast -->
         <section class="card tilt-card" style="background: var(--dash-surface-card); border-color: var(--dash-border-subtle); color: #ffffff;" aria-label="Predictive Weather Forecast">
           <h3 style="color: #ffffff; font-size: 1.15rem; margin-bottom: 0.8rem;">4-Hour Neural Weather Forecast</h3>
@@ -255,7 +246,7 @@
         <div class="grid-3" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
           <div style="background: rgba(255, 255, 255, 0.04); padding: 1rem; border-radius: var(--radius-md);">
             <span style="font-size: 0.78rem; color: var(--dash-text-muted);">Direct Normal (DNI)</span>
-            <div style="font-size: 1.4rem; font-weight: 700; color: #fbbf24; margin-top: 4px;">884 W/m²</div>
+            <div style="font-size: 1.4rem; font-weight: 700; color: #F1C40F; margin-top: 4px;">884 W/m²</div>
             <div style="font-size: 0.72rem; color: var(--dash-green); margin-top: 2px;">Direct beam radiation</div>
           </div>
           <div style="background: rgba(255, 255, 255, 0.04); padding: 1rem; border-radius: var(--radius-md);">

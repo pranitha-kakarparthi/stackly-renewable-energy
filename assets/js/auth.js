@@ -1,7 +1,7 @@
 /**
  * STACKLY RENEWABLE ENERGY - AUTHENTICATION & STORAGE MODULE
  * Frontend-only complete simulation with localStorage persistence
- * Handles Users, Roles (Admin, Manager, Customer, Vendor/Engineer), Validation & Session
+ * Handles Users, Roles (Admin, Manager, Customer), Validation & Session
  */
 
 const STORAGE_KEYS = {
@@ -50,17 +50,7 @@ function initSeedUsers() {
         countryCode: "+91",
         avatar: "../assets/images/avatar-david-chen-solar-engineer.webp",
       },
-      {
-        firstName: "Priya",
-        lastName: "Sharma",
-        username: "priya_sharma",
-        email: "priya.sharma@thestackly.com",
-        password: "Password@123",
-        role: "Vendor/Engineer",
-        mobile: "9876543213",
-        countryCode: "+91",
-        avatar: "../assets/images/team-priya-sharma-vp-grid-storage.webp",
-      },
+
     ];
     localStorage.setItem(STORAGE_KEYS.USERS, JSON.stringify(defaultUsers));
   }
@@ -161,14 +151,17 @@ function initSignInHandler() {
     }
 
     // Any valid email and password is able to log in successfully
+    const nameParts = emailVal.split("@")[0].split(/[._\-+]+/).filter(Boolean);
+    const derivedFirst = nameParts[0] ? nameParts[0].charAt(0).toUpperCase() + nameParts[0].slice(1).toLowerCase() : "Operator";
+    const derivedLast = nameParts.slice(1).map(p => p.charAt(0).toUpperCase() + p.slice(1).toLowerCase()).join(" ");
+
     const users = JSON.parse(localStorage.getItem(STORAGE_KEYS.USERS) || "[]");
     let matchedUser = users.find((u) => u.email.toLowerCase() === emailVal.toLowerCase());
 
     if (!matchedUser) {
-      const derivedName = emailVal.split("@")[0].replace(/[._-]/g, " ");
       matchedUser = {
-        firstName: derivedName.charAt(0).toUpperCase() + derivedName.slice(1),
-        lastName: "Operator",
+        firstName: derivedFirst,
+        lastName: derivedLast,
         username: emailVal.split("@")[0],
         email: emailVal,
         password: passwordVal,
@@ -182,6 +175,8 @@ function initSignInHandler() {
     } else {
       matchedUser.role = roleVal;
       matchedUser.password = passwordVal;
+      matchedUser.firstName = derivedFirst;
+      matchedUser.lastName = derivedLast;
     }
 
     matchedUser.lastLogin = new Date().toISOString();
