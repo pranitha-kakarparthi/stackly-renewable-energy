@@ -285,8 +285,8 @@
 .hero-video-overlay {
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at 50% 25%, rgba(228, 245, 252, 0.4) 0%, rgba(178, 226, 246, 0.68) 55%, rgba(126, 199, 232, 0.88) 100%);
-  mix-blend-mode: multiply;
+  background: radial-gradient(circle at 50% 25%, rgba(255, 206, 216, 0.3) 0%, rgba(253, 236, 227, 0.65) 50%, rgba(252, 242, 229, 0.88) 100%);
+  mix-blend-mode: normal;
 }
 
 /* Ambient Video Active Indicator Pill */
