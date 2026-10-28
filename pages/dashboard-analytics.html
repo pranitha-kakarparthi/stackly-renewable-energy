@@ -80,15 +80,6 @@
       </div>
 
       <div class="dash-topbar-right">
-        <!-- Interactive Role Switcher -->
-        <div class="topbar-role-selector">
-          <label for="topbarRoleSelect">Role:</label>
-          <select id="topbarRoleSelect" class="topbar-role-select" aria-label="Select active user role">
-            <option value="Admin">Admin</option>
-            <option value="Manager">Manager</option>
-            <option value="Customer">Customer</option>
-          </select>
-        </div>
 
         <span class="dash-role-badge role-admin">Admin</span>
 
@@ -109,7 +100,7 @@
     <main class="dash-content">
       <!-- Role Notification Banner -->
       <div id="roleBannerAlert" class="role-banner-alert role-admin-banner" role="status">
-        <div style="display: flex; align-items: center; gap: 10px;">
+        <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
           <span style="font-size: 1.2rem;">⚡</span>
           <span class="role-banner-text" style="font-size: 0.88rem; font-weight: 600;">Admin Mode: Full SCADA grid dispatch authority, sub-second telemetry write permissions & API key configuration.</span>
         </div>
@@ -178,15 +169,15 @@
           <h3 style="color: #ffffff; font-size: 1.15rem; margin-bottom: 0.8rem;">4-Hour Neural Weather Forecast</h3>
           <p style="font-size: 0.85rem; color: var(--dash-text-muted); margin-bottom: 1.25rem;">Predictive AI anticipating cloud passage over Salem array.</p>
           <div style="display: flex; flex-direction: column; gap: 10px;">
-            <div style="display: flex; justify-content: space-between; font-size: 0.85rem; border-bottom: 1px solid rgba(255,255,255,0.06); padding-bottom: 6px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 4px; font-size: 0.85rem; border-bottom: 1px solid rgba(255,255,255,0.06); padding-bottom: 6px;">
               <span>+1 Hour (19:45)</span>
               <span style="color: var(--dash-cyan); font-weight: 700;">Clear Sky • 0% Derate</span>
             </div>
-            <div style="display: flex; justify-content: space-between; font-size: 0.85rem; border-bottom: 1px solid rgba(255,255,255,0.06); padding-bottom: 6px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 4px; font-size: 0.85rem; border-bottom: 1px solid rgba(255,255,255,0.06); padding-bottom: 6px;">
               <span>+2 Hours (20:45)</span>
               <span style="color: var(--dash-yellow); font-weight: 700;">Thin Cirrus • 4% Derate</span>
             </div>
-            <div style="display: flex; justify-content: space-between; font-size: 0.85rem; border-bottom: 1px solid rgba(255,255,255,0.06); padding-bottom: 6px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 4px; font-size: 0.85rem; border-bottom: 1px solid rgba(255,255,255,0.06); padding-bottom: 6px;">
               <span>+3 Hours (21:45)</span>
               <span style="color: var(--dash-green); font-weight: 700;">Wind Gust +3 m/s Ramp</span>
             </div>
@@ -197,13 +188,13 @@
         <section class="card tilt-card" style="background: var(--dash-surface-card); border-color: var(--dash-border-subtle); color: #ffffff;" aria-label="Inverter Thermal Dissipation">
           <h3 style="color: #ffffff; font-size: 1.15rem; margin-bottom: 0.8rem;">Inverter Health & Thermal Dissipation</h3>
           <p style="font-size: 0.85rem; color: var(--dash-text-muted); margin-bottom: 1.25rem;">Core IGBT junction temperatures across 18 strings.</p>
-          <div style="display: flex; gap: 1.5rem; align-items: center;">
+          <div style="display: flex; gap: 1.5rem; align-items: center; flex-wrap: wrap;">
             <div style="font-size: 2.6rem; font-weight: 800; color: var(--dash-green); line-height: 1;">41.2°C</div>
             <div style="font-size: 0.85rem; color: var(--dash-text-muted);">
               Average core temperature (nominal operating threshold is &lt; 75°C). Forced liquid cooling operating at 40% pump duty.
             </div>
           </div>
-          <div style="margin-top: 1.25rem; background: rgba(255,255,255,0.04); padding: 8px 12px; border-radius: var(--radius-sm); font-size: 0.8rem; display: flex; justify-content: space-between;">
+          <div style="margin-top: 1.25rem; background: rgba(255,255,255,0.04); padding: 8px 12px; border-radius: var(--radius-sm); font-size: 0.8rem; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px;">
             <span>Coolant Flow: <strong>42 L/min</strong></span>
             <span>Loop Pressure: <strong>2.4 Bar</strong></span>
             <span style="color: var(--dash-green);">● Nominal</span>
@@ -213,7 +204,7 @@
 
       <!-- Section 5: High-Voltage Grid Frequency & Phase Angle Stability (PMU Phasor) -->
       <section class="card tilt-card" style="background: var(--dash-surface-card); border-color: var(--dash-border-subtle); color: #ffffff;" aria-label="Frequency & Phase Stability">
-        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.25rem;">
+        <div class="dash-card-header">
           <div>
             <h3 style="color: #ffffff; font-size: 1.15rem; margin-bottom: 4px;">High-Voltage Grid Frequency & Phasor Measurement (PMU)</h3>
             <p style="font-size: 0.82rem; color: var(--dash-text-muted); margin: 0;">Substation synchronization to IEEE 1547 and ENTSO-E grid code standards.</p>
@@ -269,7 +260,7 @@
 
       <!-- Section 7: BESS Electrochemical Degradation & Cell Impedance Matrix -->
       <section class="card tilt-card" style="background: var(--dash-surface-card); border-color: var(--dash-border-subtle); color: #ffffff;" aria-label="BESS Degradation Analytics">
-        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.25rem;">
+        <div class="dash-card-header">
           <div>
             <h3 style="color: #ffffff; font-size: 1.15rem; margin-bottom: 4px;">BESS Degradation & Cell Impedance Matrix</h3>
             <p style="font-size: 0.82rem; color: var(--dash-text-muted); margin: 0;">Electrochemical impedance spectroscopy (EIS) and cycle life tracking.</p>
@@ -302,7 +293,7 @@
 
       <!-- Section 8: Sub-Second SCADA Sampling Telemetry Stream Table -->
       <section class="dash-table-card" aria-label="Telemetry Stream Ledger">
-        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+        <div class="dash-card-header">
           <div>
             <h3 style="color: #ffffff; font-size: 1.1rem; margin: 0;">Real-Time Sampling Telemetry Stream</h3>
             <div style="font-size: 0.8rem; color: var(--dash-text-muted);">High-frequency data buffer captured directly from edge gateways</div>

@@ -1,468 +1,936 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
+
   <meta charset="UTF-8">
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>About Us | Stackly Renewable Energy</title>
+
   <meta name="description" content="Discover Stackly Renewable Energy's mission, leadership team, and global commitment to reliable, zero-carbon clean energy infrastructure.">
+
   <link rel="icon" type="image/webp" href="../assets/images/logoStackly.webp">
+
   <link rel="stylesheet" href="../assets/css/main.css">
+
   <link rel="stylesheet" href="../assets/css/animations.css">
+
 </head>
+
 <body>
+
   <a href="#mainContent" class="skip-to-content">Skip to main content</a>
 
+
+
   <!-- Loader -->
+
   <div id="pageLoader" class="page-loader" role="status" aria-live="polite" aria-label="Loading About Us">
+
     <div class="loader-logo-wrap">
+
       <img src="../assets/images/logoStackly-dark.webp" alt="Stackly Renewable Energy Logo" width="170" height="58">
+
     </div>
+
     <div class="loader-spinner" aria-hidden="true"></div>
+
     <p class="loader-text">Loading Stackly Leadership...</p>
+
   </div>
+
+
 
   <!-- Sticky Header -->
+
   <header class="site-header" role="banner">
+
     <div class="container nav-container">
+
       <a href="../index.html" class="brand-logo-link" aria-label="Stackly Renewable Energy Home">
+
         <img src="../assets/images/logoStackly-dark.webp" alt="Stackly Renewable Energy" class="brand-logo-img" width="138" height="46">
+
       </a>
 
+
+
       <nav class="desktop-nav" aria-label="Main Navigation">
+
         <div class="nav-item"><a href="../index.html" class="nav-link">Home</a></div>
+
         <div class="nav-item"><a href="about.html" class="nav-link active">About Us</a></div>
+
         <div class="nav-item has-dropdown">
+
           <a href="services.html" class="nav-link" aria-haspopup="true" aria-expanded="false">
+
             Services
+
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+
           </a>
+
           <ul class="dropdown-menu" role="menu">
+
             <li role="none"><a href="solar-energy.html" class="dropdown-link" role="menuitem">☀️ Solar Solutions</a></li>
+
             <li role="none"><a href="wind-energy.html" class="dropdown-link" role="menuitem">💨 Wind Power Systems</a></li>
+
             <li role="none"><a href="energy-storage.html" class="dropdown-link" role="menuitem">🔋 Battery Energy Storage</a></li>
+
           </ul>
+
         </div>
+
         <div class="nav-item"><a href="projects.html" class="nav-link">Projects</a></div>
+
         <div class="nav-item"><a href="pricing.html" class="nav-link">Pricing</a></div>
+
         <div class="nav-item"><a href="contact.html" class="nav-link">Contact</a></div>
+
       </nav>
 
+
+
       <div class="header-actions">
+
         <a href="sign-in.html" class="btn btn-secondary btn-sm">Sign In</a>
+
         <a href="sign-up.html" class="btn btn-primary btn-sm">
+
           Get Started
+
           <span class="btn-icon-capsule" aria-hidden="true">
+
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+
           </span>
+
         </a>
+
         <button class="mobile-nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+
           <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+
         </button>
+
       </div>
+
     </div>
+
   </header>
 
+
+
   <!-- Mobile Overlay -->
+
   <div class="mobile-nav-overlay" role="dialog" aria-modal="true" aria-label="Mobile Navigation Menu">
+
     <ul class="mobile-nav-list">
+
       <li><a href="../index.html" class="mobile-nav-link">Home</a></li>
+
       <li><a href="about.html" class="mobile-nav-link active">About Us</a></li>
+
       <li class="mobile-nav-item mobile-nav-dropdown">
+
         <div class="mobile-dropdown-header">
+
           <a href="services.html" class="mobile-nav-link">Services</a>
+
           <button type="button" class="mobile-dropdown-toggle" aria-expanded="false" aria-label="Toggle Services submenu">
+
             <svg class="mobile-dropdown-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+
           </button>
+
         </div>
+
         <ul class="mobile-nav-sublist">
+
           <li><a href="solar-energy.html" class="mobile-nav-sublink"><span class="sublink-icon">☀️</span> Solar Solutions</a></li>
+
           <li><a href="wind-energy.html" class="mobile-nav-sublink"><span class="sublink-icon">💨</span> Wind Power Systems</a></li>
+
           <li><a href="energy-storage.html" class="mobile-nav-sublink"><span class="sublink-icon">🔋</span> Battery Storage (BESS)</a></li>
+
         </ul>
+
       </li>
+
       <li><a href="projects.html" class="mobile-nav-link">Projects & Impact</a></li>
+
       <li><a href="pricing.html" class="mobile-nav-link">Commercial Pricing</a></li>
+
       <li><a href="contact.html" class="mobile-nav-link">Contact Support</a></li>
+
     </ul>
+
     <div class="mobile-nav-actions">
+
       <a href="sign-in.html" class="btn btn-secondary" style="width: 100%;">Sign In</a>
+
       <a href="sign-up.html" class="btn btn-primary" style="width: 100%;">Register Account</a>
+
     </div>
+
   </div>
 
+
+
   <main id="mainContent">
+
     <!-- Section 1: Hero & Breadcrumb (Windora Aesthetic with Video Animation) -->
+
     <section class="windora-page-hero" aria-labelledby="aboutHeroHeading">
+
       <!-- Cinematic Ambient Background Video Animation -->
+
       <div class="hero-video-ambient-wrap" aria-hidden="true">
+
         <video class="hero-bg-video" autoplay muted loop playsinline preload="auto">
+
           <source src="../assets/videos/hero-about.mp4" type="video/mp4">
+
         </video>
+
         <div class="hero-video-overlay"></div>
+
       </div>
+
+
 
       <!-- Aerodynamic Streamline Ambient SVG -->
+
       <div class="hero-streamlines-wrap" aria-hidden="true">
+
         <svg viewBox="0 0 1440 400" width="100%" height="100%" preserveAspectRatio="none">
+
           <path class="hero-streamline-path" d="M -100 80 C 400 160 800 40 1540 100"/>
+
           <path class="hero-streamline-path delay-1" d="M -100 220 C 350 120 900 280 1540 180"/>
+
         </svg>
+
       </div>
+
+
 
       <div class="container windora-page-hero-centered">
+
         <nav aria-label="Breadcrumb" style="margin-bottom: 1.25rem;">
+
           <ol style="display: inline-flex; gap: 8px; list-style: none; font-size: 0.9rem; color: var(--text-muted); align-items: center; justify-content: center; background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(10px); padding: 6px 18px; border-radius: 9999px; border: 1px solid rgba(255, 255, 255, 0.8);">
+
             <li><a href="../index.html">Home</a></li>
+
             <li>/</li>
+
             <li aria-current="page" style="color: var(--color-primary); font-weight: 700;">About Us</li>
+
           </ol>
+
         </nav>
 
+
+
         <div style="display: flex; align-items: center; justify-content: center; gap: 12px; flex-wrap: wrap; margin-bottom: 1.25rem;">
+
           <div class="hero-greeting-pill">
+
             <span class="beacon-pulse" style="width: 10px; height: 10px; border-radius: 50%; background: #2ECC71; margin-right: 2px;" aria-hidden="true"></span>
+
             <span>Pioneering Clean Power Since 2011</span> • <span class="current-local-time"></span>
+
           </div>
+
         </div>
+
+
 
         <h1 id="aboutHeroHeading" class="windora-hero-headline" style="text-align: center; margin: 0 auto 1.25rem auto;">
+
           Empowering the Planet with <br>
+
           <span class="highlight-word">Sustainable Energy</span>
+
         </h1>
 
+
+
         <p class="windora-hero-subtitle" style="text-align: center; margin: 0 auto 2.5rem auto;">
+
           Stackly Renewable Energy is an international clean-tech infrastructure developer uniting wind aerodynamics, high-density photovoltaics, and intelligent microgrids across 38 global facilities.
+
         </p>
 
+
+
         <!-- Interactive Milestone Chips Glass Ribbon -->
+
         <div class="milestone-chips-row reveal" style="justify-content: center; margin-bottom: 2.5rem;">
+
           <div class="milestone-chip hover-lift" style="background: rgba(255, 255, 255, 0.88); backdrop-filter: blur(16px); border: 1.5px solid rgba(255, 255, 255, 0.95); box-shadow: 0 10px 24px rgba(0,0,0,0.05); padding: 12px 22px;">
+
             <span style="font-size: 1.1rem; font-weight: 800; color: var(--color-primary);">⚡ 15+ Years</span> Excellence
+
           </div>
+
           <div class="milestone-chip hover-lift" style="background: rgba(255, 255, 255, 0.88); backdrop-filter: blur(16px); border: 1.5px solid rgba(255, 255, 255, 0.95); box-shadow: 0 10px 24px rgba(0,0,0,0.05); padding: 12px 22px;">
+
             <span style="font-size: 1.1rem; font-weight: 800; color: var(--color-primary);">☀️ 4.8 GW</span> Installed
+
           </div>
+
           <div class="milestone-chip hover-lift" style="background: rgba(255, 255, 255, 0.88); backdrop-filter: blur(16px); border: 1.5px solid rgba(255, 255, 255, 0.95); box-shadow: 0 10px 24px rgba(0,0,0,0.05); padding: 12px 22px;">
+
             <span style="font-size: 1.1rem; font-weight: 800; color: var(--color-primary);">👥 12M+</span> Customers
+
           </div>
+
           <div class="milestone-chip hover-lift" style="background: rgba(255, 255, 255, 0.88); backdrop-filter: blur(16px); border: 1.5px solid rgba(255, 255, 255, 0.95); box-shadow: 0 10px 24px rgba(0,0,0,0.05); padding: 12px 22px;">
+
             <span style="font-size: 1.1rem; font-weight: 800; color: #2ECC71;">🌿 ISO 14064</span> Certified
+
           </div>
+
         </div>
+
+
 
         <!-- Unique Windora About Spotlight Floating Card -->
+
         <div class="reveal reveal-delay-2" style="max-width: 680px; margin: 0 auto; width: 100%;">
+
           <div class="windora-telemetry-glass-card about-council-card">
+
             <div class="council-header">
+
               <div class="avatar-stack" aria-hidden="true">
-                <img src="../assets/images/team-dr-arun-kulkarni-chief-scientist.webp" alt="Dr. Arun Kulkarni" width="44" height="44" style="border-radius: 50%; border: 2.5px solid #fff; object-fit: cover; object-position: top center;">
-                <img src="../assets/images/team-maya-lin-head-of-wind-engineering.webp" alt="Maya Lin" width="44" height="44" style="border-radius: 50%; border: 2.5px solid #fff; object-fit: cover; object-position: top center;">
-                <img src="../assets/images/team-priya-sharma-vp-grid-storage.webp" alt="Priya Sharma" width="44" height="44" style="border-radius: 50%; border: 2.5px solid #fff; object-fit: cover; object-position: top center;">
+
+                <img src="../assets/images/avatar-marcus-vance-sustainability-lead.webp" alt="Marcus Vance" width="44" height="44" style="border-radius: 50%; border: 2.5px solid #fff; object-fit: cover; object-position: center center;">
+
+                <img src="../assets/images/testimonial-sophia-martinez-clean-tech-investor.webp" alt="Sophia Martinez" width="44" height="44" style="border-radius: 50%; border: 2.5px solid #fff; object-fit: cover; object-position: center center;">
+
+                <img src="../assets/images/contact-support-specialist-portrait.webp" alt="Dr. Rachel Evans" width="44" height="44" style="border-radius: 50%; border: 2.5px solid #fff; object-fit: cover; object-position: center center;">
+
               </div>
+
               <div>
+
                 <div style="font-weight: 800; font-size: 0.95rem; color: var(--color-secondary);">Global Scientific Council</div>
+
                 <div style="font-size: 0.8rem; color: var(--text-muted);">Salem HQ & International Research Fellows</div>
+
               </div>
+
             </div>
+
             <div class="council-status">
+
               <span class="beacon-pulse" style="width: 8px; height: 8px; border-radius: 50%; background: #2ECC71; display: inline-block; margin-right: 4px;" aria-hidden="true"></span>
+
               <span style="font-size: 0.82rem; font-weight: 700; color: #2ECC71;">100% Operational</span>
+
             </div>
+
           </div>
+
         </div>
+
       </div>
+
     </section>
+
+
 
     <!-- Section 2: Executive Leadership & Team (Real Human Faces) -->
+
     <section class="section" style="background: #ffffff;" aria-labelledby="leadershipHeading">
+
       <div class="container">
+
         <div class="section-header reveal">
+
           <span class="badge-tag badge-accent">Leadership Team</span>
+
           <h2 id="leadershipHeading">World-Class Renewable Specialists</h2>
+
           <p>Our engineers, scientists, and project architects bring decades of clean energy experience across five continents.</p>
+
         </div>
 
+
+
         <div class="grid-3">
+
           <!-- Member 1 -->
+
           <div class="card tilt-card reveal" style="text-align: center; align-items: center;">
+
             <img src="../assets/images/team-dr-arun-kulkarni-chief-scientist.webp" alt="Dr. Arun Kulkarni, Chief Scientist" style="width: 110px; height: 110px; border-radius: 50%; object-fit: cover; margin-bottom: 1rem; border: 3px solid var(--color-primary);" width="110" height="110">
+
             <h3 style="font-size: 1.25rem; margin-bottom: 4px;">Dr. Arun Kulkarni</h3>
+
             <p style="color: var(--color-primary); font-weight: 600; font-size: 0.85rem; margin-bottom: 10px;">Chief Scientist & Founder</p>
+
             <p style="font-size: 0.9rem; color: var(--text-muted);">Former MIT Solar Lab lead with 24 patents in perovskite bifacial photovoltaic efficiency and grid synchronization.</p>
+
           </div>
+
+
 
           <!-- Member 2 -->
+
           <div class="card tilt-card reveal reveal-delay-1" style="text-align: center; align-items: center;">
-            <img src="../assets/images/team-maya-lin-head-of-wind-engineering.webp" alt="Maya Lin, Head of Wind Engineering" style="width: 110px; height: 110px; border-radius: 50%; object-fit: cover; margin-bottom: 1rem; border: 3px solid var(--color-primary);" width="110" height="110">
+
+            <img src="../assets/images/team-maya-lin-head-of-wind-engineering.webp" alt="Maya Lin, Head of Wind Engineering" style="width: 110px; height: 110px; border-radius: 50%; object-fit: cover; object-position: center center; margin-bottom: 1rem; border: 3px solid var(--color-primary);" width="110" height="110">
+
             <h3 style="font-size: 1.25rem; margin-bottom: 4px;">Maya Lin</h3>
+
             <p style="color: var(--color-primary); font-weight: 600; font-size: 0.85rem; margin-bottom: 10px;">Head of Wind Engineering</p>
+
             <p style="font-size: 0.9rem; color: var(--text-muted);">Pioneered low-noise Vertical Axis Wind Turbines (VAWT) and offshore aerodynamic blade composites.</p>
+
           </div>
+
+
 
           <!-- Member 3 -->
+
           <div class="card tilt-card reveal reveal-delay-2" style="text-align: center; align-items: center;">
-            <img src="../assets/images/team-alexander-wright-director-solar-systems.webp" alt="Alexander Wright, Director of Solar Systems" style="width: 110px; height: 110px; border-radius: 50%; object-fit: cover; margin-bottom: 1rem; border: 3px solid var(--color-primary);" width="110" height="110">
+
+            <img src="../assets/images/team-alexander-wright-director-solar-systems.webp" alt="Alexander Wright, Director of Solar Systems" style="width: 110px; height: 110px; border-radius: 50%; object-fit: cover; object-position: center center; margin-bottom: 1rem; border: 3px solid var(--color-primary);" width="110" height="110">
+
             <h3 style="font-size: 1.25rem; margin-bottom: 4px;">Alexander Wright</h3>
+
             <p style="color: var(--color-primary); font-weight: 600; font-size: 0.85rem; margin-bottom: 10px;">Director of Solar Systems</p>
+
             <p style="font-size: 0.9rem; color: var(--text-muted);">Over 1.8 GW of utility solar parks commissioned across North America, Europe, and India.</p>
+
           </div>
+
+
 
           <!-- Member 4 -->
+
           <div class="card tilt-card reveal" style="text-align: center; align-items: center;">
+
             <img src="../assets/images/team-priya-sharma-vp-grid-storage.webp" alt="Priya Sharma, VP Grid Storage" style="width: 110px; height: 110px; border-radius: 50%; object-fit: cover; margin-bottom: 1rem; border: 3px solid var(--color-primary);" width="110" height="110">
+
             <h3 style="font-size: 1.25rem; margin-bottom: 4px;">Priya Sharma</h3>
+
             <p style="color: var(--color-primary); font-weight: 600; font-size: 0.85rem; margin-bottom: 10px;">VP of Grid Storage (BESS)</p>
+
             <p style="font-size: 0.9rem; color: var(--text-muted);">Architect of liquid-cooled Lithium Iron Phosphate battery storage arrays for extreme weather reliability.</p>
+
           </div>
+
+
 
           <!-- Member 5 -->
+
           <div class="card tilt-card reveal reveal-delay-1" style="text-align: center; align-items: center;">
+
             <img src="../assets/images/team-claire-bennett-chief-sustainability-officer.webp" alt="Claire Bennett, Chief Sustainability Officer" style="width: 110px; height: 110px; border-radius: 50%; object-fit: cover; object-position: center center; margin-bottom: 1rem; border: 3px solid var(--color-primary);" width="110" height="110">
+
             <h3 style="font-size: 1.25rem; margin-bottom: 4px;">Claire Bennett</h3>
+
             <p style="color: var(--color-primary); font-weight: 600; font-size: 0.85rem; margin-bottom: 10px;">Chief Sustainability Officer</p>
+
             <p style="font-size: 0.9rem; color: var(--text-muted);">Directs corporate ESG reporting, carbon offset accounting, and biodiversity preservation guidelines.</p>
+
           </div>
+
+
 
           <!-- Member 6 -->
+
           <div class="card tilt-card reveal reveal-delay-2" style="text-align: center; align-items: center;">
+
             <img src="../assets/images/team-james-workman-field-operations-lead.webp" alt="James Workman, Field Operations Lead" style="width: 110px; height: 110px; border-radius: 50%; object-fit: cover; margin-bottom: 1rem; border: 3px solid var(--color-primary);" width="110" height="110">
+
             <h3 style="font-size: 1.25rem; margin-bottom: 4px;">James Workman</h3>
+
             <p style="color: var(--color-primary); font-weight: 600; font-size: 0.85rem; margin-bottom: 10px;">Lead Field Operations Engineer</p>
+
             <p style="font-size: 0.9rem; color: var(--text-muted);">Oversees high-voltage substation commissioning, turbine safety testing, and 24/7 telemetry monitoring.</p>
+
           </div>
+
         </div>
+
       </div>
+
     </section>
+
+
 
     <!-- Section 3: Mission, Vision, and Values In-Depth -->
+
     <section class="section" aria-labelledby="corePillarsHeading">
+
       <div class="container">
+
         <div class="section-header reveal">
+
           <span class="badge-tag">Our Guiding North Star</span>
+
           <h2 id="corePillarsHeading">Built on Transparency, Precision, and Resilience</h2>
+
           <p>Every turbine we erect and every solar cell we calibrate adheres to our strict operational doctrine.</p>
+
         </div>
+
+
 
         <div class="grid-3">
+
           <div class="card tilt-card reveal">
+
             <div class="card-icon-wrap">⚡</div>
+
             <h3 class="card-title">Resilience Over Hype</h3>
+
             <p class="card-description">We design energy grids capable of handling harsh storm events, voltage surges, and grid blackouts with automatic microgrid islanding.</p>
+
           </div>
+
+
 
           <div class="card tilt-card reveal reveal-delay-1">
+
             <div class="card-icon-wrap">🌿</div>
+
             <h3 class="card-title">Circular Lifecycle</h3>
+
             <p class="card-description">96% of the materials used in our solar mounting racks and turbine nacelles are recyclable at decommission, avoiding landfill impact.</p>
+
           </div>
+
+
 
           <div class="card tilt-card reveal reveal-delay-2">
+
             <div class="card-icon-wrap">📊</div>
+
             <h3 class="card-title">Audited Open Telemetry</h3>
+
             <p class="card-description">No black boxes. Clients access real-time generation vs consumption metrics through our open API and responsive dashboard.</p>
+
           </div>
+
         </div>
+
       </div>
+
     </section>
+
+
 
     <!-- Section 4: 15-Year Journey & Sustainability Milestones -->
+
     <section class="section" style="background: #ffffff;" aria-labelledby="timelineHeading">
+
       <div class="container">
+
         <div class="section-header reveal">
+
           <span class="badge-tag badge-accent">Our Journey</span>
+
           <h2 id="timelineHeading">Fifteen Years of Clean Energy Milestones</h2>
+
           <p>Tracing our evolution from a boutique solar research lab to a global renewable energy powerhouse.</p>
+
         </div>
+
+
 
         <div class="reveal" style="max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; gap: 1.5rem;">
+
           <div class="card tilt-card" style="display: flex; flex-direction: row; gap: 1.5rem; align-items: center;">
+
             <div style="font-size: 1.6rem; font-weight: 800; color: var(--color-primary); min-width: 90px;">2011</div>
+
             <div>
+
               <h4 style="margin-bottom: 4px;">Founding & Solar Photovoltaic Lab</h4>
+
               <p style="font-size: 0.9rem; margin-bottom: 0;">Launched initial engineering research into high-efficiency solar cells and thermal dissipation frames.</p>
+
             </div>
+
           </div>
 
+
+
           <div class="card tilt-card" style="display: flex; flex-direction: row; gap: 1.5rem; align-items: center;">
+
             <div style="font-size: 1.6rem; font-weight: 800; color: var(--color-primary); min-width: 90px;">2017</div>
+
             <div>
+
               <h4 style="margin-bottom: 4px;">Vertical Axis Wind Turbine (VAWT) Breakthrough</h4>
+
               <p style="font-size: 0.9rem; margin-bottom: 0;">Patented omnidirectional low-cut-in turbine rotor, bringing whisper-quiet wind power to industrial parks.</p>
+
             </div>
+
           </div>
 
+
+
           <div class="card tilt-card" style="display: flex; flex-direction: row; gap: 1.5rem; align-items: center;">
+
             <div style="font-size: 1.6rem; font-weight: 800; color: var(--color-primary); min-width: 90px;">2022</div>
+
             <div>
+
               <h4 style="margin-bottom: 4px;">Enterprise Battery Storage (BESS) Expansion</h4>
+
               <p style="font-size: 0.9rem; margin-bottom: 0;">Commissioned multi-megawatt liquid-cooled battery containers capable of frequency regulation and black-start.</p>
+
             </div>
+
           </div>
+
+
 
           <div class="card tilt-card" style="display: flex; flex-direction: row; gap: 1.5rem; align-items: center; border-color: var(--color-primary);">
+
             <div style="font-size: 1.6rem; font-weight: 800; color: var(--color-accent); min-width: 90px;">2026</div>
+
             <div>
+
               <h4 style="margin-bottom: 4px;">12M+ Customers & Global Telemetry Cloud</h4>
+
               <p style="font-size: 0.9rem; margin-bottom: 0;">Surpassed 4.8 GW in aggregate generation capacity with AI predictive balancing across 38 enterprise facilities.</p>
+
             </div>
+
           </div>
+
         </div>
+
       </div>
+
     </section>
+
+
 
     <!-- Section 5: Why Choose Stackly Renewable -->
+
     <section class="section" aria-labelledby="whyChooseHeading">
+
       <div class="container">
+
         <div class="competitive-adv-grid">
+
           <div class="reveal">
+
             <span class="badge-tag">Competitive Advantage</span>
+
             <h2 id="whyChooseHeading" style="margin-bottom: 1.2rem;">Why Fortune 500 Enterprises Partner With Stackly</h2>
+
             <p style="margin-bottom: 1rem;">We remove the complexity of multi-vendor clean energy projects by providing fully integrated engineering, procurement, construction, and cloud operations under one roof.</p>
+
             <ul style="list-style: none; display: flex; flex-direction: column; gap: 12px; margin-top: 1.5rem;">
+
               <li style="display: flex; gap: 10px; align-items: center; font-weight: 600; color: var(--color-secondary);">
+
                 <span style="color: var(--color-accent); font-size: 1.2rem;">✓</span> Guaranteed 99.98% clean energy grid availability SLA
+
               </li>
+
               <li style="display: flex; gap: 10px; align-items: center; font-weight: 600; color: var(--color-secondary);">
+
                 <span style="color: var(--color-accent); font-size: 1.2rem;">✓</span> Tier-1 bankability rating approved by major financial institutions
+
               </li>
+
               <li style="display: flex; gap: 10px; align-items: center; font-weight: 600; color: var(--color-secondary);">
+
                 <span style="color: var(--color-accent); font-size: 1.2rem;">✓</span> Real-time IoT performance tracking and automatic alert dispatch
+
               </li>
+
               <li style="display: flex; gap: 10px; align-items: center; font-weight: 600; color: var(--color-secondary);">
+
                 <span style="color: var(--color-accent); font-size: 1.2rem;">✓</span> Comprehensive 25-year performance warranty on solar and wind hardware
+
               </li>
+
             </ul>
+
           </div>
+
+
 
           <div class="reveal reveal-delay-1">
+
             <div class="card tilt-card" style="padding: 1.5rem;">
+
               <img src="../assets/images/about-sustainability-headquarters.webp" alt="Stackly Renewable modern sustainable architectural headquarters powered by rooftop solar panels" style="border-radius: var(--radius-md); width: 100%; aspect-ratio: 16/10; object-fit: cover;" width="600" height="375">
+
               <div style="margin-top: 1rem; font-size: 0.9rem; color: var(--text-muted); text-align: center;">
+
                 Stackly Energy Center of Excellence & Telemetry Command Hub
+
               </div>
+
             </div>
+
           </div>
+
         </div>
+
       </div>
+
     </section>
+
+
 
     <!-- Section 6: CTA Banner -->
+
     <section class="section" style="padding-bottom: 0;">
+
       <div class="container">
+
         <div class="cta-banner reveal">
+
           <h2>Partner with the Leaders in Clean Energy Engineering</h2>
+
           <p>Let our certified engineers conduct a complimentary site audit and generate your comprehensive transition roadmap.</p>
+
           <div style="display: flex; gap: 14px; justify-content: center; flex-wrap: wrap;">
+
             <a href="404.html" class="btn btn-primary btn-lg zoom-hover">Request Site Feasibility Audit</a>
+
             <a href="404.html" class="btn btn-secondary btn-lg zoom-hover" style="color: #ffffff; border-color: rgba(255, 255, 255, 0.4); background: rgba(255, 255, 255, 0.1);">Explore Services</a>
+
           </div>
+
         </div>
+
       </div>
+
     </section>
+
   </main>
 
+
+
   <!-- =========================================================
+
        SITE FOOTER (Standardized Across All Pages)
+
        ========================================================= -->
+
   <footer class="site-footer" role="contentinfo">
+
     <div class="container">
+
       <div class="footer-top-grid">
+
         <!-- Col 1: Brand & Bio -->
+
         <div class="footer-brand">
+
           <a href="../index.html" aria-label="Stackly Renewable Energy Homepage">
+
             <img src="../assets/images/logoStackly.webp" alt="Stackly Renewable Energy" class="brand-logo-img" width="140" height="48">
+
           </a>
+
           <p>Stackly is a visionary renewable energy company focused on harnessing the power of wind, solar, and battery storage to meet the growing demand for sustainable baseload energy.</p>
+
           <div style="font-size: 0.88rem; color: #F4F7F6; line-height: 1.55; opacity: 0.95;">
+
             <strong>Headquarters:</strong><br>
+
             MMR Complex, Chinna Thirupathi, Salem, Tamil Nadu 636008
+
           </div>
+
         </div>
+
+
 
         <!-- Col 2: Quick Links (Functional navigation links) -->
+
         <div>
+
           <h4 class="footer-title">Quick Links</h4>
+
           <ul class="footer-links">
+
             <li><a href="../index.html" class="footer-link">Home</a></li>
+
             <li><a href="about.html" class="footer-link">About Us</a></li>
+
             <li><a href="services.html" class="footer-link">Renewable Services</a></li>
+
             <li><a href="solar-energy.html" class="footer-link">Solar PV Solutions</a></li>
+
             <li><a href="wind-energy.html" class="footer-link">Wind Turbines</a></li>
+
             <li><a href="energy-storage.html" class="footer-link">Battery Storage (BESS)</a></li>
+
             <li><a href="projects.html" class="footer-link">Project Portfolio</a></li>
+
             <li><a href="pricing.html" class="footer-link">Commercial Pricing</a></li>
+
             <li><a href="contact.html" class="footer-link">Contact Support</a></li>
+
           </ul>
+
         </div>
+
+
 
         <!-- Col 3: Solutions & Topics (All redirect to 404.html) -->
+
         <div>
+
           <h4 class="footer-title">Solutions & Topics</h4>
+
           <ul class="footer-links">
+
             <li><a href="404.html" class="footer-link">Grid Interconnection</a></li>
+
             <li><a href="404.html" class="footer-link">Virtual Power Plants (VPP)</a></li>
+
             <li><a href="404.html" class="footer-link">Hydroelectric Microgrids</a></li>
+
             <li><a href="404.html" class="footer-link">Green Hydrogen Systems</a></li>
+
             <li><a href="404.html" class="footer-link">ESG Compliance Auditing</a></li>
+
             <li><a href="404.html" class="footer-link">Carbon Offset Certificates</a></li>
+
             <li><a href="404.html" class="footer-link">Turbine Aerodynamics Lab</a></li>
+
           </ul>
+
         </div>
+
+
 
         <!-- Col 4: Stay Energized Newsletter & Social Media (Redirects to 404.html) -->
+
         <div>
+
           <h4 class="footer-title">Stay Energized</h4>
+
           <p style="color: #F4F7F6; font-size: 0.9rem; margin-bottom: 1rem; opacity: 0.95;">Subscribe to our bi-weekly clean tech intelligence briefing.</p>
+
           <form action="404.html" method="GET" class="footer-newsletter-wrap">
+
             <label for="footerEmail" class="sr-only" style="position: absolute; left: -9999px;">Enter your email</label>
+
             <input type="email" id="footerEmail" name="email" placeholder="Enter Your Email" class="footer-newsletter-input" required>
+
             <button type="submit" class="footer-newsletter-btn" aria-label="Subscribe to newsletter">
+
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+
             </button>
+
           </form>
 
+
+
           <h5 style="color: #ffffff; font-size: 0.95rem; margin-top: 1.5rem; margin-bottom: 0.5rem;">Connect With Stackly</h5>
+
           <div class="social-links-grid">
+
             <a href="404.html" class="social-pill-link" aria-label="LinkedIn Profile">
+
               <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+
               LinkedIn
+
             </a>
+
             <a href="404.html" class="social-pill-link" aria-label="Twitter X Profile">
+
               <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+
               Twitter / X
+
             </a>
+
             <a href="404.html" class="social-pill-link" aria-label="YouTube Channel">
+
               <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+
               YouTube
+
             </a>
+
             <a href="404.html" class="social-pill-link" aria-label="Facebook Page">
+
               <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+
               Facebook
+
             </a>
+
             <a href="404.html" class="social-pill-link" aria-label="Instagram Profile">
+
               <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+
               Instagram
+
             </a>
+
           </div>
+
         </div>
+
       </div>
+
+
 
       <!-- Footer Bottom -->
+
       <div class="footer-bottom">
+
         <div>
+
           &copy; 2026 Stackly Renewable Energy Inc. All Rights Reserved. Clean Energy for a Greener World.
+
         </div>
+
         <ul class="footer-bottom-links">
+
           <li><a href="404.html">Privacy Policy</a></li>
+
           <li><a href="404.html">Terms of Service</a></li>
+
           <li><a href="404.html">Cookie Preferences</a></li>
+
           <li><a href="404.html">Security & Compliance</a></li>
+
         </ul>
+
       </div>
+
     </div>
+
   </footer>
 
+
+
   <script src="../assets/js/main.js"></script>
+
 </body>
+
 </html>
+
+
 

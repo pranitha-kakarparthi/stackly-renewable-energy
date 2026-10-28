@@ -80,15 +80,6 @@
       </div>
 
       <div class="dash-topbar-right">
-        <!-- Interactive Role Switcher -->
-        <div class="topbar-role-selector">
-          <label for="topbarRoleSelect">Role:</label>
-          <select id="topbarRoleSelect" class="topbar-role-select" aria-label="Select active user role">
-            <option value="Admin">Admin</option>
-            <option value="Manager">Manager</option>
-            <option value="Customer">Customer</option>
-          </select>
-        </div>
 
         <span class="dash-role-badge role-admin">Admin</span>
 
@@ -109,7 +100,7 @@
     <main class="dash-content">
       <!-- Role Notification Banner -->
       <div id="roleBannerAlert" class="role-banner-alert role-admin-banner" role="status">
-        <div style="display: flex; align-items: center; gap: 10px;">
+        <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
           <span style="font-size: 1.2rem;">⚡</span>
           <span class="role-banner-text" style="font-size: 0.88rem; font-weight: 600;">Admin Mode: Full SCADA grid dispatch authority, sub-second telemetry write permissions & API key configuration.</span>
         </div>
@@ -142,7 +133,7 @@
 
       <!-- Section 2: Certified Document Downloads Table -->
       <section class="dash-table-card" aria-label="ESG Certificates Table">
-        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.25rem;">
+        <div class="dash-card-header">
           <div>
             <h2 style="font-size: 1.15rem; font-weight: 700; color: #ffffff;">Download Official ESG Certificates & Audits</h2>
             <div style="font-size: 0.8rem; color: var(--dash-text-muted);">Cryptographically signed environmental compliance documents</div>
@@ -250,7 +241,7 @@
 
       <!-- Section 4: Grid Interconnection Compliance & LVRT Log -->
       <section class="card tilt-card" style="background: var(--dash-surface-card); border-color: var(--dash-border-subtle); color: #ffffff;" aria-label="Grid Interconnection Compliance">
-        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.25rem;">
+        <div class="dash-card-header">
           <div>
             <h3 style="color: #ffffff; font-size: 1.15rem; margin-bottom: 4px;">Grid Interconnection & IEEE 1547 Ride-Through Log</h3>
             <p style="font-size: 0.82rem; color: var(--dash-text-muted); margin: 0;">Automated compliance logging of low-voltage ride-through (LVRT) and frequency support.</p>
@@ -297,7 +288,7 @@
                 <td><strong>REC-2026-SLM-00841</strong></td>
                 <td>Salem Photovoltaic Park</td>
                 <td>64.0 MWh</td>
-                <td><code style="color: var(--dash-cyan); font-size: 0.75rem;">7f83b165...9b84a2</td>
+                <td><code style="color: var(--dash-cyan); font-size: 0.75rem;">7f83b165...9b84a2</code></td>
                 <td>Oct 24, 2026</td>
                 <td><span class="status-pill online">● Verified</span></td>
               </tr>
@@ -305,7 +296,7 @@
                 <td><strong>REC-2026-WND-00392</strong></td>
                 <td>Coastal Wind Ridge #1</td>
                 <td>82.4 MWh</td>
-                <td><code style="color: var(--dash-cyan); font-size: 0.75rem;">e3b0c442...4c718a</td>
+                <td><code style="color: var(--dash-cyan); font-size: 0.75rem;">e3b0c442...4c718a</code></td>
                 <td>Oct 20, 2026</td>
                 <td><span class="status-pill online">● Verified</span></td>
               </tr>
@@ -313,7 +304,7 @@
                 <td><strong>REC-2026-BES-00109</strong></td>
                 <td>Urban Storage Cluster</td>
                 <td>34.0 MWh</td>
-                <td><code style="color: var(--dash-cyan); font-size: 0.75rem;">3a98d10b...f72021</td>
+                <td><code style="color: var(--dash-cyan); font-size: 0.75rem;">3a98d10b...f72021</code></td>
                 <td>Oct 15, 2026</td>
                 <td><span class="status-pill online">● Verified</span></td>
               </tr>
@@ -328,7 +319,7 @@
         <p style="font-size: 0.82rem; color: var(--dash-text-muted); margin-bottom: 1.25rem;">Standardized Greenhouse Gas Protocol Corporate Accounting and Reporting Standard.</p>
         <div class="grid-3" style="gap: 1.25rem;">
           <div style="background: rgba(255, 255, 255, 0.04); padding: 1.2rem; border-radius: var(--radius-md);">
-            <div style="display: flex; justify-content: space-between; align-items: center;">
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 6px;">
               <span style="font-weight: 700; color: #ffffff;">Scope 1: Direct</span>
               <span class="badge-tag">Zero Direct</span>
             </div>
@@ -337,7 +328,7 @@
           </div>
 
           <div style="background: rgba(255, 255, 255, 0.04); padding: 1.2rem; border-radius: var(--radius-md);">
-            <div style="display: flex; justify-content: space-between; align-items: center;">
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 6px;">
               <span style="font-weight: 700; color: #ffffff;">Scope 2: Market</span>
               <span class="badge-tag badge-accent">Net Negative</span>
             </div>
@@ -346,7 +337,7 @@
           </div>
 
           <div style="background: rgba(255, 255, 255, 0.04); padding: 1.2rem; border-radius: var(--radius-md);">
-            <div style="display: flex; justify-content: space-between; align-items: center;">
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 6px;">
               <span style="font-weight: 700; color: #ffffff;">Scope 3: Value Chain</span>
               <span class="badge-tag">Monitored</span>
             </div>
@@ -358,7 +349,7 @@
 
       <!-- Section 7: Power Purchase Agreement (PPA) Billing Reconciliation & Tariff Arbitrage Ledger -->
       <section class="dash-table-card" aria-label="PPA Tariff Billing">
-        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.25rem;">
+        <div class="dash-card-header">
           <div>
             <h3 style="color: #ffffff; font-size: 1.15rem; margin-bottom: 4px;">PPA Billing Reconciliation & Tariff Arbitrage Ledger</h3>
             <p style="font-size: 0.82rem; color: var(--dash-text-muted); margin: 0;">Net-metering credits and peak-shaving economic savings reconciliation.</p>
